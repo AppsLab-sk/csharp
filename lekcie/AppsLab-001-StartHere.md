@@ -1,4 +1,4 @@
-# AppsLab - 001 - Začíname tu
+# AppsLab-001-StartHere - Začíname
 
 Tento projekt je určený pre prvú úlohu v našom kurze C#. Vašou úlohou je zmeniť výsledok funkcie `Hello()` tak, aby namiesto reťazca `"Hello World!"` vrátila `"Hello AppsLab!"`.
 

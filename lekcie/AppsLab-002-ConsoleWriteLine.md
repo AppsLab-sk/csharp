@@ -1,4 +1,4 @@
-# Ako používať Console.WriteLine v `C#`
+# AppsLab-002-Console.WriteLine - Ako používať Console.WriteLine v `C#`
 
 `Console.WriteLine` je metóda v jazyku C#, ktorá sa používa na výpis textu do konzoly.
 

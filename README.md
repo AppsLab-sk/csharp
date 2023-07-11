@@ -73,5 +73,9 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 
 ## Zoznam úloh
 
-- [AppsLab-001-StartHere](lekcie/AppsLab-001-StartHere.md)
-- [AppsLab-002-Console.WriteLine](/lekcie/AppsLab-002-ConsoleWriteLine.md)
+- [AppsLab-001 Začíname](lekcie/AppsLab-001-StartHere.md)
+- [AppsLab-002 Console.WriteLine](/lekcie/AppsLab-002-ConsoleWriteLine.md)
+- [AppsLab-003 Komentáre](/lekcie/AppsLab-003-Comments.md)
+- [AppsLab-004 Premenné](/lekcie/AppsLab-004-Variables.md)
+- [AppsLab-005 Dátové typy](/lekcie/AppsLab-005-DataTypes.md)
+- [AppsLab-006 Konštanty](/lekcie/AppsLab-006-Constants.md)
