@@ -41,7 +41,7 @@ https://github.com/AppsLab-sk/csharp
 
 ### 5. Vyriešite prvú úlohu
 
-- [AppsLab-001-StartHere](lekcie/AppsLab-001-StartHere.md)
+- [AppsLab-001 Začíname](lekcie/AppsLab-001-StartHere.md)
 
 ### 6. "Commit" vašich zmien v lokálnom repozitári
 
