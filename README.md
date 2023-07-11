@@ -31,13 +31,13 @@ https://github.com/AppsLab-sk/csharp
 
 - Vytvorite "fork" repozitára do vlastného účtu na GitHub.
 
-> "Fork" je kópia repozitára, ktorá vám umožní experimentovať a robiť zmeny bez ovplyvnenia pôvodného projektu.
+> [Čo je fork?](/lekcie/What_is_fork.md)
 
 ### 4. Naklonujte si svoj "fork" repozitár - z vlastného účtu
 
 - Naklonujte si repozitár z vlastného účtu, ktorý ste vytvorili pomocou "fork" do svojho lokálneho prostredia.
 
-> "**Klonovanie (Clone)**" je proces stiahnutia kópie repozitára na váš počítač, čo vám umožňuje pracovať na projekte mimo GitHub.
+> [Ako naklonovať GitHub repozitár?](/lekcie/How_to_clone_GitHub_repository.md)
 
 ### 5. Vyriešite prvú úlohu
 
@@ -47,21 +47,21 @@ https://github.com/AppsLab-sk/csharp
 
 - Urobte "commit" vašich zmien na vašom lokálnom repozitári
 
-> **"Commit"** je proces ukladania zmien do repozitára. Každý commit zaznamenáva vaše zmeny a vytvára referenčný bod, ktorý môžete použiť na vrátenie zmien, ak je to potrebné.
+> [Čo je commit?](/lekcie/What_is_commit.md)
 
 ### 7. "Push" vašich commitov do vzdialeného repozitára na GitHube
 
 - Urobte "push" vašich commitov do vzdialeného repozitára na GitHube.
 
-> **"Push"** je proces odosielania zmien z vášho lokálneho repozitára do vzdialeného repozitára na GitHube.
+> [Čo je push?](/lekcie/What_is_push.md)
 
 ### 8. Vytvorte "pull request" do hlavného repozitára "csharp"
 
 - Vytvorte "pull request" do hlavného repozitára "csharp", z ktorého ste urobili "fork".
 
-> **"Pull request"** je návrh na zmenu, ktorý umožňuje ostatným vidieť vaše zmeny a komentovať ich, skôr ako sa zmeny zapoja do hlavného projektu.
+> [Čo je pull request a ako ho vytvoriť?](/lekcie/How_to_create_pull_request.md)
 
-Poznámka: V našom školskom prostredí "pull request" nebude zlúčený (merged), je vytvorený pre Lab Mastera, aby mohol vidieť zmeny študenta a aby bol schopný poskytnúť spätnú väzbu na prácu študenta vo forme komentárov v "pull requeste".
+Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár nebude zlúčený (merged). Je vytvorený len pre lab mástra, aby mohol vidieť zmeny študenta a aby bol schopný poskytnúť spätnú väzbu na prácu študenta vo forme komentárov v "pull requeste".
 
 ### 9. Pokračujte s ďalšími úlohami
 
