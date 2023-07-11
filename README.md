@@ -74,3 +74,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 ## Zoznam úloh
 
 - [AppsLab-001-StartHere](lekcie/AppsLab-001-StartHere.md)
+- [AppsLab-002-Console.WriteLine](/lekcie/AppsLab-002-ConsoleWriteLine.md)

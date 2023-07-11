@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FC89E9B9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-001-StartHere.Tests", "tests\AppsLab-001-StartHere.Tests\AppsLab-001-StartHere.Tests.csproj", "{FE64EA2A-841F-49D7-94C6-BB7E50FC972D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-002-ConsoleWriteLine", "src\AppsLab-002-ConsoleWriteLine\AppsLab-002-ConsoleWriteLine.csproj", "{8CA6707B-A381-4131-909F-50D592953588}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,9 +50,22 @@ Global
 		{FE64EA2A-841F-49D7-94C6-BB7E50FC972D}.Release|x64.Build.0 = Release|Any CPU
 		{FE64EA2A-841F-49D7-94C6-BB7E50FC972D}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE64EA2A-841F-49D7-94C6-BB7E50FC972D}.Release|x86.Build.0 = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|x64.Build.0 = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|x64.ActiveCfg = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|x64.Build.0 = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CA6707B-A381-4131-909F-50D592953588}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{57860CA2-0054-465E-BD1E-024FF8D81354} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{FE64EA2A-841F-49D7-94C6-BB7E50FC972D} = {FC89E9B9-1723-4328-B6F1-00EE62E6260F}
+		{8CA6707B-A381-4131-909F-50D592953588} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 	EndGlobalSection
 EndGlobal
