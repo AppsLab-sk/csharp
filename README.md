@@ -10,11 +10,12 @@ Tento repozitár slúži ako vzdelávacie centrum pre študentov, ktorí sa zauj
 
 Na úspešné dokončenie týchto úloh je očakávané, že budete:
 
-### 1. Vytvorenie účtu pre GitHub
+1. Vytvorenie účtu pre GitHub
 
-- Vytvorte si účet na GitHube: [https://github.com/](https://github.com/)
+- Vytvorte si účet na GitHube: [https://github.com/](https://github.com/). Pri vytváraní účtu použite svoje meno a priezvisko, aby bolo jasné, že zmeny, ktoré ste vykonali, sú skutočne vaše.
+- Príklad: Peter Miľovčík má vytvorený účet na GitHube: [https://github.com/petermilovcik](https://github.com/petermilovcik)
 
-> **GitHub** je platforma, kde môžete uchovávať svoj kód online. Je to vynikajúce miesto na spoluprácu a zdieľanie projektov s ostatnými.
+> [Čo je GitHub?](/lekcie/What_is_GitHub.md)
 
 ### 2. C# GitHub repozitár s úlohami
 
@@ -24,7 +25,7 @@ Na úspešné dokončenie týchto úloh je očakávané, že budete:
 https://github.com/AppsLab-sk/csharp
 ```
 
-> **Repozitár** je miesto, kde sa uchovávajú všetky súbory, kód a revízie kódu pre konkrétny projekt.
+> [Čo je GiHub repozitár?](/lekcie/What_is_GitHub_repository.md)
 
 ### 3. Fork repozitára
 
