@@ -23,7 +23,7 @@ namespace AppsLab_001_StartHere
 
 ## Testovanie vašich zmien
 
-Aby ste overili, či vaše zmeny sú správne, mali by ste spustiť jednotkové testy. Testy nájdete v priečinku `tests\AppsLab-001-StartHere.Tests` v súbore `GreetingsTests.cs`.
+Aby ste overili, či vaše zmeny sú správne, mali by ste spustiť jednotkové (unit) testy. Testy nájdete v priečinku `tests\AppsLab-001-StartHere.Tests` v súbore `GreetingsTests.cs`.
 
 Tento súbor obsahuje triedu `GreetingsTests` s testovacou metódou `HelloAppsLab()`. Táto metóda overuje, či funkcia `Hello()` vráti `"Hello AppsLab!"`.
 
@@ -31,6 +31,14 @@ Po správnom vykonaní úprav by mal tento test prejsť.
 
 ## Spustenie testov
 
-Pre spustenie testov použite príkaz `dotnet test` v termináli vo vrcholovom priečinku vášho projektu. Testy by mali ukázať, či vaše zmeny sú správne.
+Pre spustenie testov je potrebné sa navigovať do priečinka `tests\AppsLab-001-StartHere.Tests`.
+
+Môžete to urobiť otvorením terminálu a zadáním nasledujúceho príkazu:
+
+``` terminal
+cd tests\AppsLab-001-StartHere.Tests
+```
+
+Následne môžete spustiť testy príkazom `dotnet test`. Tento príkaz spustí len tie testy, ktoré sú relevantné pre túto konkrétnu úlohu.
 
 Veľa šťastia a dobre sa zabavte!
