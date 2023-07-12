@@ -86,4 +86,6 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-011 Reťazce](/lekcie/AppsLab-011-Strings.md)
 - [AppsLab-012 Boolean](/lekcie/AppsLab-012-Boolean.md)
 - [AppsLab-013 Podmienky](/lekcie/AppsLab-013-Conditions.md)
-- [AppsLab-013 Switch](/lekcie/AppsLab-014-Switch.md)
+- [AppsLab-014 Switch](/lekcie/AppsLab-014-Switch.md)
+- [AppsLab-015 Polia](/lekcie/AppsLab-015-Arrays.md)
+- [AppsLab-016 Cykly](/lekcie/AppsLab-016-Loops.md)
