@@ -79,3 +79,5 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-004 Premenné](/lekcie/AppsLab-004-Variables.md)
 - [AppsLab-005 Dátové typy](/lekcie/AppsLab-005-DataTypes.md)
 - [AppsLab-006 Konštanty](/lekcie/AppsLab-006-Constants.md)
+- [AppsLab-007 Implicitné a explicitné pretypovanie](/lekcie/AppsLab-007-Casting.md)
+- [AppsLab-008 Console.ReadLine](/lekcie/AppsLab-008-ConsoleReadLine.md)
