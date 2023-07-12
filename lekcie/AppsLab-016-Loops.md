@@ -136,6 +136,48 @@ Console.WriteLine(number);  // vypíše číslo menšie ako 0.5
 
 V tomto príklade, `do-while` cyklus generuje náhodné číslo (medzi 0 a 1) a pokračuje, pokiaľ je číslo väčšie alebo rovné 0.5. Keďže podmienka je kontrolovaná až po vykonaní bloku kódu, garantujeme, že aspoň jedno náhodné číslo bude vygenerované.
 
+### Použitie `break`
+
+`break` je kľúčové slovo, ktoré sa používa na ukončenie vykonávania najbližšieho obklopujúceho cyklu alebo príkazu `switch`. Ak sa `break` použije v cykle, vykonávanie cyklu sa okamžite ukončí, bez ohľadu na podmienku cyklu.
+
+Pozrime sa na jednoduchý príklad:
+
+```csharp
+for(int i = 0; i < 10; i++)
+{
+    if (i == 5)
+    {
+        break;
+    }
+    Console.WriteLine(i);
+}
+```
+
+V tomto príklade je výstup 0, 1, 2, 3, 4. Keď `i` dosiahne hodnotu 5, príkaz `break` ukončí cyklus a žiadne ďalšie čísla sa nevypíšu.
+
+`break` sa často používa, keď hľadáme nejakú konkrétnu hodnotu alebo keď chceme ukončiť cyklus v prípade, že nastane určitý stav. Môžeme ho napríklad použiť pri hľadaní konkrétneho prvku v poli.
+
+### Použitie `continue`
+
+`continue` je ďalšie kľúčové slovo, ktoré sa používa pri práci s cyklami. Rozdiel medzi `break` a `continue` je v tom, že `continue` preskočí zvyšok aktuálnej iterácie a pokračuje v ďalšej iterácii cyklu.
+
+Pozrime sa na príklad:
+
+```csharp
+for(int i = 0; i < 10; i++)
+{
+    if (i == 5)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
+}
+```
+
+V tomto príklade je výstup 0, 1, 2, 3, 4, 6, 7, 8, 9. Keď `i` dosiahne hodnotu 5, príkaz `continue` preskočí zvyšok aktuálnej iterácie a pokračuje ďalej na ďalšiu iteráciu. Číslo 5 sa nevypíše, pretože príkaz `Console.WriteLine(i);` sa preskočí.
+
+`continue` je užitočné, keď chceme preskočiť určitú časť kódu pre aktuálnu iteráciu, ale nechceme ukončiť celý cyklus. Môže sa napríklad používať pri filtrovaní výstupu - ak nechceme vypísať určité hodnoty, môžeme použiť `continue` na preskočenie výpisu pre tieto hodnoty.
+
 ### Cvičenie: Štatistika počasia
 
 V projekte v adresári `src\AppsLab-016-Loops` už je vytvorená trieda `WeatherStats` s prázdnymi metódami, ktoré potrebujete implementovať.
