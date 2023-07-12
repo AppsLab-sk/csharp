@@ -105,3 +105,5 @@ Konverzia medzi stringami a ostatnými typmi je trochu komplikovanejšia a vyža
 Po dokončení implementácie každej metódy si môžete skontrolovať svoje riešenia spustením jednotkových testov.
 
 > [Ako spustiť unit testy?](/lekcie/Ako_spustit_unit_testy.md)
+
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.

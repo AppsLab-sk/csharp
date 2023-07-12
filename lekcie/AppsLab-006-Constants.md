@@ -85,6 +85,8 @@ Console.WriteLine(WelcomeMessage);
 
 **Poznámka:** V tomto cvičení si môžete vyskúšať rôzne dátové typy a vidieť, ako fungujú konštanty v praxi. Nezabudnite, že hodnota konštanty nemôže byť zmenená po jej deklarácii.
 
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
+
 ---
 
 Viac informácii o konštantách najdete na oficiálnej stránke od Microsoft:

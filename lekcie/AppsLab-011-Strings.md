@@ -242,6 +242,8 @@ Po implementácii týchto metód môžete spustiť unit testy, ktoré sme pre v�
 Unit testy spustíte nasledujúcim spôsobom:
 > [Ako spustiť unit testy?](/lekcie/Ako_spustit_unit_testy.md)
 
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
+
 ## Ďalšie štúdium
 
 Hoci sme prešli niektorými základnými operáciami s reťazcami, C# poskytuje mnoho ďalších možností pre prácu s reťazcami. Reťazce sú jedným z najpoužívanejších typov pri programovaní, takže je dôležité porozumieť tomu, ako s nimi pracovať efektívne a správne.

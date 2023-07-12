@@ -103,3 +103,5 @@ Toto cvičenie je zamerané na prácu s rôznymi dátovými typmi v C#. Vytvoren
 - Skúste priradiť rôzne typy hodnôt a pozorujte, čo sa stane.
 
 Tieto úlohy sú zamerané na to, aby ste pochopili, ako pracovať s rôznymi dátovými typmi v C#. Väčšina programovacích jazykov má podobné dátové typy, takže všeobecné porozumenie týmto konceptom vám bude prospešné nielen v C#, ale aj v ostatných jazykoch.
+
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.

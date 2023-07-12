@@ -106,6 +106,8 @@ Po implementácii týchto metód skontrolujte svoju prácu pomocou unit testov v
 Unit testy spustíte nasledujúcim spôsobom:
 > [Ako spustiť unit testy?](/lekcie/Ako_spustit_unit_testy.md)
 
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
+
 ## Ďalšie štúdium
 
 V prípade, že by ste chceli vedieť viac o logických operátoroch v jazyku C# (AND, OR, NOT, XOR), odporúčam navštíviť oficiálnu dokumentáciu od Microsoftu, ktorá poskytuje podrobné informácie o každom z týchto operátorov. Dokumentácia obsahuje aj príklady kódu, ktoré vám pomôžu lepšie porozumieť, ako sa tieto operátory používajú.
