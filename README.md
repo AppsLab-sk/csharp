@@ -81,3 +81,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-006 Konštanty](/lekcie/AppsLab-006-Constants.md)
 - [AppsLab-007 Implicitné a explicitné pretypovanie](/lekcie/AppsLab-007-Casting.md)
 - [AppsLab-008 Console.ReadLine](/lekcie/AppsLab-008-ConsoleReadLine.md)
+- [AppsLab-009 Operátory](/lekcie/AppsLab-009-Operators.md)
