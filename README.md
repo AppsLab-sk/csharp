@@ -89,3 +89,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-014 Switch](/lekcie/AppsLab-014-Switch.md)
 - [AppsLab-015 Polia](/lekcie/AppsLab-015-Arrays.md)
 - [AppsLab-016 Cykly](/lekcie/AppsLab-016-Loops.md)
+- [AppsLab-017 List](/lekcie/AppsLab-017-List.md)
