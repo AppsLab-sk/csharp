@@ -83,3 +83,5 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-008 Console.ReadLine](/lekcie/AppsLab-008-ConsoleReadLine.md)
 - [AppsLab-009 Operátory](/lekcie/AppsLab-009-Operators.md)
 - [AppsLab-010 Matematická trieda](/lekcie/AppsLab-010-Math.md)
+- [AppsLab-011 Reťazce](/lekcie/AppsLab-011-Strings.md)
+- [AppsLab-012 Boolean](/lekcie/AppsLab-012-Boolean.md)
