@@ -76,7 +76,34 @@ Ako vidíte, `List<T>` poskytuje množstvo funkcií, ktoré vám pomôžu efekt�
 
 V tomto tutoriále sme sa zoznámili s dátovou štruktúrou `List<T>` v jazyku C#. Ukázali sme si, ako vytvoriť zoznam, ako pridať, odstrániť a vložiť prvky, ako zistiť, či zoznam obsahuje konkrétnu hodnotu, a ako zistiť počet prvkov v zozname.
 
-## Cvičenie: Práca so zoznamom mien
+## Cvičenie: Implementácia fronty (Queue) pomocou `List<T>`
+
+V tomto cvičení budete pracovať na implementácii základnej fronty (Queue) pomocou triedy `List<string>`. Fronta je špeciálny typ dátového štruktúru, ktorý pracuje na princípe FIFO (First-In, First-Out). Toto znamená, že prvok, ktorý je pridaný ako prvý, bude aj prvý odstránený.
+
+Vašou úlohou je v triede `Queue` implementovať dve metódy: `Enqueue(string item)` a `Dequeue()`.
+
+Metóda `Enqueue(string item)` pridáva prvok na koniec fronty. Metóda `Dequeue()` odstraňuje prvok zo začiatku fronty a vracia ho.
+
+Zdrojový kód pre triedu `Queue` je už vytvorený v projekte konzolovej aplikácie `"src\AppsLab-017-List"`, avšak nebude použitý v konzolovej aplikácii - namiesto toho budeme overovať jeho správnosť pomocou unit testov.
+
+Toto cvičenie vám poskytne praktickú skúsenosť s prácou so zoznamom a zároveň vám umožní lepšie pochopiť, ako funguje fronta.
+
+**Vysvetlenie:**
+
+1. `private List<string> elements;` je field v našej triede `Queue`. Fields, tiež známe ako dátové členy triedy alebo atribúty, sú premenné, ktoré uchovávajú dáta, ktoré sú relevantné pre objekty danej triedy. V tomto prípade je `elements` zoznam reťazcov, ktorý uchováva prvky našej fronty.
+
+    `private` je modifikátor prístupu, ktorý určuje, kde je pole viditeľné alebo prístupné. Keď je pole označené ako `private`, znamená to, že je prístupné len z metód v rámci rovnakej triedy. Inými slovami, iba metódy v triede `Queue` môžu pristupovať k tomuto poľu. To je užitočné pre zapuzdrenie alebo skrytie vnútorných detailov triedy a zabránenie neoprávnenému prístupu k dátam.
+
+2. `public Queue() {..}` je konštruktor triedy `Queue`. Konštruktory sú špeciálne metódy v triede, ktoré sa automaticky vyvolajú pri vytváraní novej inštancie triedy (nového objektu). Slúžia hlavne na inicializáciu fieldu triedy. V tomto prípade konštruktor `Queue()` inicializuje náš field `elements` ako nový zoznam reťazcov. Bez tohto konštruktora by náš field `elements` zostal neinicializovaný a ak by sme sa pokúsili na ňom vykonať akúkoľvek operáciu, program by vygeneroval výnimku - chybu.
+
+Po dokončení implementácie si môžete svoju prácu otestovať pomocou unit testov, ktoré sú k dispozícii v projekte `AppsLab-017-List.Tests`.
+
+Unit testy spustíte nasledujúcim spôsobom:
+> [Ako spustiť unit testy?](/lekcie/Ako_spustit_unit_testy.md)
+
+Po dokončení úloh nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
+
+## Bonusové cvičenie: Práca so zoznamom mien
 
 V tomto cvičení budete vytvárať jednoduchú konzolovú aplikáciu, ktorá bude obsahovať zoznam mien. Na manipuláciu so zoznamom budeme používať triedu `List<string>`.
 
