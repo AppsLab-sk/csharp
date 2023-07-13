@@ -119,3 +119,19 @@ Pre viac informácií o interfaces navštívte oficiálnu dokumentáciu Microsof
 [Interfaces - define behavior for multiple types](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)
 
 Študovanie týchto zdrojov vám umožní lepšie pochopiť a efektívne využívať interfaces v C#.
+
+## Možné úlohy na precvičenie rozhraní
+
+1. **Textové dobrodružstvo**: Vytvor konzolovú hru, kde hráč môže preskúmavať miestnosti, nachádzať predmety a porážať nepriateľov pomocou príkazov. Rozhrania by sa mohli použiť na definovanie vlastností predmetov a nepriateľov.
+
+2. **Zoznam kontaktov**: Navrhnite jednoduchý zoznam kontaktov, kde môže užívateľ pridávať, odstraňovať, upravovať a vyhľadávať kontakty. Rozhrania by sa mohli použiť na definovanie operácií so zoznamom kontaktov.
+
+3. **Kvízová aplikácia**: Vytvorte kvíz s otázkami s viacerými možnosťami. Rozhrania by sa mohli použiť na definovanie štruktúry otázok a odpovedí.
+
+4. **To-Do List**: Vytvorte konzolovú aplikáciu to-do list, kde môže užívateľ pridávať úlohy, označiť úlohy ako hotové a zobraziť svoje úlohy. Rozhrania by sa mohli použiť na definovanie operácií so zoznamom úloh.
+
+5. **Simulátor Bitky RPG**: Rozšírte základný systém bitky pre hru na hrdinov (RPG) z predchádzajúceho cvičenia. Môžete mať triedy postáv, schopnosti a jednoduchú AI pre nepriateľov. Rozhrania by sa mohli použiť na definovanie vlastností postáv a nepriateľov.
+
+Pracujte v konzolovom projekte `src\AppsLab-021-Interfaces`.
+
+Po dokončení úlohy nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
