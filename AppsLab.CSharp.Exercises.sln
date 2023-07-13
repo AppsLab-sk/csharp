@@ -27,8 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-009-Operators", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-009-Operators.Tests", "tests\AppsLab-009-Operators.Tests\AppsLab-009-Operators.Tests.csproj", "{A6659FD2-5F11-432B-91B7-C64EAEAF669C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-010-Math", "srcňAppsLab-010-Math\AppsLab-010-Math.csproj", "{B141B973-9C0B-4512-B8B4-1237B596A8D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-010-Math", "src\AppsLab-010-Math\AppsLab-010-Math.csproj", "{FD645D4C-9DC8-4603-A77B-8A4782F175F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-010-Math.Tests", "tests\AppsLab-010-Math.Tests\AppsLab-010-Math.Tests.csproj", "{A4527295-4BEE-4E42-8855-B0503A4515E4}"
