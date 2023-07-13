@@ -8,7 +8,7 @@ Nasledujúci príklad ukazuje, ako získať meno používateľa:
 
 ```csharp
 Console.WriteLine("Ako sa voláš?");
-string meno = Console.ReadLine();
+string? meno = Console.ReadLine();
 Console.WriteLine("Ahoj, " + meno);
 ```
 
@@ -16,14 +16,32 @@ V tomto príklade program vypíše otázku `"Ako sa voláš?"`, potom použije m
 
 Ak chcete konvertovať vstup získaný pomocou `Console.ReadLine` na iný dátový typ, napríklad `int` alebo `double`, môžete použiť metódy `int.Parse` alebo `double.Parse`. Napríklad:
 
+**Poznámka:**
+
+Znak `?` za typom `string` v C# označuje tzv. nullable referenčný typ. Tento koncept bol predstavený v C# 8.0 a umožňuje, aby referenčné typy mohli bezpečne reprezentovať a manipulovať stav `null`.
+
+V našom prípade `string? meno = Console.ReadLine();` to znamená, že premenná `meno` môže obsahovať buď reťazec alebo `null`. Toto je užitočné v prípadoch, keď nevieme, či nám metóda vráti platnú hodnotu alebo `null`. Metóda `Console.ReadLine()` napríklad vráti `null`, keď je konzolový vstup zatvorený.
+
+K tomuto sa ešte treba dodať, že v niektorých konfiguráciách projektu môže byť používanie nullable referenčných typov vypnuté. V takom prípade by kód `string? meno = Console.ReadLine();` mohol spôsobiť chybu kompilátora. Ak chceme v takom projekte používať nullable referenčné typy, môžeme to povoliť v nastaveniach projektu.
+
 ```csharp
 Console.WriteLine("Koľko máš rokov?");
-string vstup = Console.ReadLine();
+string vstup = Console.ReadLine() ?? "0";
 int vek = int.Parse(vstup);
 Console.WriteLine("Máš " + vek + " rokov.");
 ```
 
 V tomto príklade program vypíše otázku "Koľko máš rokov?", načíta vstup od používateľa, premení ho na celé číslo a vypíše vek používateľa. Ak používateľ zadá niečo, čo nie je možné premeniť na celé číslo, program vygeneruje chybu. Preto je dôležité pridať ošetrenie chýb pri práci s užívateľským vstupom.
+
+**Poznámka:**
+
+Kód `string vstup = Console.ReadLine() ?? "0";` využíva tzv. "null-coalescing operator", ktorý je označený ako `??`.
+
+Tento operátor sa používa na poskytnutie výchozej hodnoty pre nullable hodnoty. Konkrétne, operátor `??` vráti ľavý operand, ak ten nie je `null`. Ak je však ľavý operand `null`, potom vráti pravý operand.
+
+V našom prípade, ak `Console.ReadLine()` vráti `null` (čo sa stane, ak je konzolový vstup prázdny), potom operátor `??` vráti hodnotu "0". Takže premenná `vstup` bude mať hodnotu "0". Ak `Console.ReadLine()` vráti nejaký reťazec, potom `vstup` bude mať túto hodnotu.
+
+Tento operátor je užitočný pri práci s nullable hodnotami, pretože nám umožňuje jednoducho poskytnúť výchozí hodnotu v prípade, že hodnota je `null`.
 
 ## Spustenie príkladov v konzolovej aplikácii
 
