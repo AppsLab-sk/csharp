@@ -10,11 +10,15 @@
 
 ## Príklady použitia
 
+### Deklarácia
+
 Vytváranie nového zoznamu je jednoduché, ako je zobrazené v nasledujúcom príklade:
 
 ```csharp
 List<int> numbers = new List<int>();
 ```
+
+### Pridávanie prvkov
 
 Teraz máme prázdny zoznam čísel. Prvky do zoznamu môžeme pridať použitím metódy `Add`:
 
@@ -24,13 +28,17 @@ numbers.Add(10);
 numbers.Add(15);
 ```
 
+V tomto príklade sme pridali tri čísla do zoznamu a potom ich vypísali. Ako vidíte, práca s `List<T>` je veľmi jednoduchá a intuitívna.
+
+### Výpis prvkov
+
 Na výpis prvkov zoznamu môžeme použiť napr. metódu `ForEach` a `Console.WriteLine`:
 
 ```csharp
 numbers.ForEach(Console.WriteLine);
 ```
 
-V tomto príklade sme pridali tri čísla do zoznamu a potom ich vypísali. Ako vidíte, práca s `List<T>` je veľmi jednoduchá a intuitívna.
+### Čítanie prvku na konkrétnej pozícii
 
 Ak chceme získať konkrétny prvok zo zoznamu, môžeme to urobiť pomocou indexu, podobne ako pri poliach, napríklad:
 
@@ -38,13 +46,15 @@ Ak chceme získať konkrétny prvok zo zoznamu, môžeme to urobiť pomocou inde
 int firstNumber = numbers[0]; // získame prvý prvok zo zoznamu
 ```
 
+### Počet prvkov
+
 Môžeme tiež zistiť, koľko prvkov je v zozname, pomocou property (vlastnosti) `Count`:
 
 ```csharp
 int count = numbers.Count; // zistíme počet prvkov v zozname
 ```
 
-Ďalšou výhodou `List<T>` je možnosť použitia viacerých funkcií, ktoré sú k dispozícii pre prácu s dátami.
+### Odstránenie prvku
 
 Predstavme si, že chceme vymazať konkrétny prvok zo zoznamu. Môžeme na to použiť metódu `Remove`:
 
@@ -52,11 +62,15 @@ Predstavme si, že chceme vymazať konkrétny prvok zo zoznamu. Môžeme na to p
 numbers.Remove(10); // odstráni číslo 10 zo zoznamu
 ```
 
+### Odstránenie prvku na konkrétnej pozícii
+
 Alebo ak chceme vymazať prvok na konkrétnej pozícii, môžeme použiť metódu `RemoveAt`:
 
 ```csharp
 numbers.RemoveAt(0); // odstráni prvok na indexe 0
 ```
+
+### Vloženie prvku na konkrétnu pozíciu
 
 Ak chcete vložiť prvok na konkrétnu pozíciu v zozname, môžete použiť metódu `Insert`:
 
@@ -64,15 +78,47 @@ Ak chcete vložiť prvok na konkrétnu pozíciu v zozname, môžete použiť met
 numbers.Insert(1, 20); // vloží číslo 20 na druhú pozíciu v zozname
 ```
 
+### Kontrola, či zoznam obsahuje prvok
+
 Na otestovanie, či zoznam obsahuje konkrétnu hodnotu, môžeme použiť metódu `Contains`:
 
 ```csharp
 bool hasFive = numbers.Contains(5); // vráti true, ak zoznam obsahuje číslo 5, inak vráti false
 ```
 
-Ako vidíte, `List<T>` poskytuje množstvo funkcií, ktoré vám pomôžu efektívne manipulovať s dátami. Všetko, čo potrebujete, je pochopiť, ako tieto funkcie fungujú a kedy ich použiť. Práca s `List<T>` je jednou z najzákladnejších zručností, ktoré by ste mali ovládať pri práci s jazykom C#.
+### Triedenie zoznamu
+
+Pozrime sa na to, ako je možné zoradiť čísla v zozname. C# poskytuje metódu `Sort()`, ktorú môžete zavolať na objekte typu `List<T>`.
+
+Predstavme si, že máme `List<int>` s názvom `numbers`, ktorý obsahuje nasledovné hodnoty: `4, 2, 9, 6`.
+
+```csharp
+List<int> numbers = new List<int> {4, 2, 9, 6};
+```
+
+Ak chceme zoradiť tento zoznam od najmenšieho po najväčšie číslo, použijeme metódu `Sort()`:
+
+```csharp
+numbers.Sort();
+```
+
+Po zavolaní tejto metódy bude náš zoznam `numbers` vyzerať nasledovne: `2, 4, 6, 9`.
+
+Ak by sme chceli zoradiť čísla v opačnom poradí (od najväčšieho po najmenšie), môžeme použiť metódu `Reverse()`:
+
+```csharp
+numbers.Reverse();
+```
+
+Po zavolaní tejto metódy bude náš zoznam `numbers` vyzerať nasledovne: `9, 6, 4, 2`.
+
+Je dôležité si uvedomiť, že metódy `Sort()` a `Reverse()` menia pôvodný zoznam, nie vracajú nový zoznam. Ak nechcete zmeniť pôvodný zoznam, budete musieť skopírovať zoznam do nového zoznamu pred zoradením alebo reverzíciou.
+
+Tiež je možné zoradiť zoznam podľa vlastnej funkcie porovnávania, ale to je pokročilé téma, ktoré by ste mohli preskúmať po zvládnutí základov.
 
 ## Zhrnutie
+
+Ako vidíte, `List<T>` poskytuje množstvo funkcií, ktoré vám pomôžu efektívne manipulovať s dátami. Všetko, čo potrebujete, je pochopiť, ako tieto funkcie fungujú a kedy ich použiť. Práca s `List<T>` je jednou z najzákladnejších zručností, ktoré by ste mali ovládať pri práci s jazykom C#.
 
 V tomto tutoriále sme sa zoznámili s dátovou štruktúrou `List<T>` v jazyku C#. Ukázali sme si, ako vytvoriť zoznam, ako pridať, odstrániť a vložiť prvky, ako zistiť, či zoznam obsahuje konkrétnu hodnotu, a ako zistiť počet prvkov v zozname.
 
