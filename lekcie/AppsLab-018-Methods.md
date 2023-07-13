@@ -187,3 +187,11 @@ V projekte "src\AppsLab-018-Methods" nájdete konzolovú aplikáciu, v ktorej m�
 Pozn.: Predtým, ako budete spúšťať konzolovú aplikáciu, uistite sa, že ste správne implementovali metódu `FizzBuzz` vo vašej triede `Exercise`. Ak ste tak urobili, mali by ste byť schopní spustiť konzolovú aplikáciu a zadávať čísla do konzoly, aby ste videli výsledky. Ak nájdete chyby alebo nezrovnalosti, skúste sa vrátiť k implementácii a skontrolovať, či ste všetko správne pochopili a implementovali.
 
 Toto cvičenie vám pomôže lepšie pochopiť, ako fungujú metódy a ako ich využiť v rôznych situáciách. Veľa šťastia!
+
+## Ďalšie štúdium
+
+Pre viac informácií o metódach navštívte oficiálnu dokumentáciu Microsoftu na nasledujúcom odkaze:
+
+[Methods (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)
+
+Študovanie týchto zdrojov vám umožní lepšie pochopiť a efektívne využívať metódy v C#.
