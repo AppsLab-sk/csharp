@@ -102,6 +102,10 @@ Pretypovanie v C# sa uskutočňuje pomocou syntaxe `(type)value`, kde `type` je 
 
 Konverzia medzi stringami a ostatnými typmi je trochu komplikovanejšia a vyžaduje použitie metód ako `int.Parse()`, `double.Parse()`, `bool.Parse()`, `ToString()` a podobne.
 
+Tu môžete násť návod:
+
+> [Ako "vrátiť" alebo odoslať pretypovanú hodnotu v metóde](/lekcie/Navratove_hodnoty_metod.md)
+
 Po dokončení implementácie každej metódy si môžete skontrolovať svoje riešenia spustením jednotkových testov.
 
 > [Ako spustiť unit testy?](/lekcie/Ako_spustit_unit_testy.md)

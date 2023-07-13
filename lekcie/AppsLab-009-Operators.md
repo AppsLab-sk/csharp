@@ -144,6 +144,12 @@ public int Add(int a, int b)
 
 V tomto príklade metóda `Add` prijíma dva parametre `a` a `b`, sčíta ich hodnoty a výsledok vráti.
 
+### Pomoc
+
+Tu môžete násť návod:
+
+> [Ako "vrátiť" alebo odoslať návratovú hodnotu v metóde](/lekcie/Navratove_hodnoty_metod.md)
+
 ## Spustenie testov
 
 Pre overenie správnosti vášho riešenia, máte k dispozícii testy. Spustenie týchto testov vám poskytne rýchlu spätnú väzbu a pomôže vám identifikovať a opraviť chyby vo vašom kóde.

@@ -66,6 +66,12 @@ Pracujte v priečinku `src\AppsLab-010-Math`. Po dokončení úloh nezabudnite v
 
 **Poznámka:** Pri práci s matematickými výpočtami je dôležité mať na pamäti, že výsledky nemusia byť presne rovné očakávaným hodnotám kvôli chybam zaokrúhľovania pri práci s číslami s plávajúcou desatinnou čiarkou (`double`).
 
+### Pomoc
+
+Tu môžete násť návod:
+
+> [Ako "vrátiť" alebo odoslať návratovú hodnotu v metóde](/lekcie/Navratove_hodnoty_metod.md)
+
 ## Otázky na kontrolu porozumenia
 
 1. Čo je to trieda `Math` v C# a na čo sa používa?
