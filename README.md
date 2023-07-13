@@ -93,3 +93,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-018 Metódy](/lekcie/AppsLab-018-Methods.md)
 - [AppsLab-019 Preťaženie metód](/lekcie/AppsLab-019-MethodsOverloading.md)
 - [AppsLab-020 Objektovo orientované programovanie (OOP)](/lekcie/AppsLab-020-OOP.md)
+- [AppsLab-021 Rozhrania (Interfaces)](/lekcie/AppsLab-021-Interfaces.md)
