@@ -52,4 +52,4 @@ Toto vytvorí XML súbor s nasledujúcim obsahom:
 
 Existujú rôzne spôsoby, ako pracovať s XML dátami v triede `XDocument`. Môžete napríklad prechádzať prvky pomocou metód `Descendants` alebo `Elements`, vyhľadávať prvky pomocou metódy `XPathSelectElements`, modifikovať prvky a ich obsah a mnoho ďalších.
 
-Prejdite do priečinka "src\AppsLab-031-XML" a použite konzolovú aplikáciu s názvom `"AppsLab-031-XML"`, kde môžete experimentovať s triedou `XDocument` a ďalšími triedami LINQ pre XML.
+Prejdite do priečinka `"src\AppsLab-031-XML"` a použite konzolovú aplikáciu s názvom `"AppsLab-031-XML"`, kde môžete experimentovať s triedou `XDocument` a ďalšími triedami LINQ pre XML.
