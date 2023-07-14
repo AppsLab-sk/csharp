@@ -100,7 +100,7 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-025 Lambda](/lekcie/AppsLab-025-Lambda.md)
 - [AppsLab-026 LINQ](/lekcie/AppsLab-026-LINQ.md)
 - [AppsLab-027 Generické typy](/lekcie/AppsLab-027-Generics.md)
-- [AppsLab-028 Indexátori](/lekcie/AppsLab-028-Indexers)
+- [AppsLab-028 Indexátori](/lekcie/AppsLab-028-Indexers.md)
 - [AppsLab-029 Asynchrónne programovanie](/lekcie/AppsLab-029-Async.md)
 - [AppsLab-030 JSON](/lekcie/AppsLab-030-JSON.md)
 - [AppsLab-031 XML](/lekcie/AppsLab-031-XML.md)
