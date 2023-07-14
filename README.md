@@ -99,3 +99,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-024 Udalosti](/lekcie/AppsLab-024-Events.md)
 - [AppsLab-025 Lambda](/lekcie/AppsLab-025-Lambda.md)
 - [AppsLab-026 LINQ](/lekcie/AppsLab-026-LINQ.md)
+- [AppsLab-027 Generické typy](/lekcie/AppsLab-027-Generics.md)
