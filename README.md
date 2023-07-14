@@ -104,3 +104,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-029 Asynchrónne programovanie](/lekcie/AppsLab-029-Async.md)
 - [AppsLab-030 JSON](/lekcie/AppsLab-030-JSON.md)
 - [AppsLab-031 XML](/lekcie/AppsLab-031-XML.md)
+- [AppsLab-032 SQL](/lekcie/AppsLab-032-SQL.md)
