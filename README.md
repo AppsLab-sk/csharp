@@ -97,3 +97,4 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-022 Súbory](/lekcie/AppsLab-022-Files.md)
 - [AppsLab-023 Výnimky](/lekcie/AppsLab-023-Exceptions.md)
 - [AppsLab-024 Udalosti](/lekcie/AppsLab-024-Events.md)
+- [AppsLab-025 Lambda](/lekcie/AppsLab-025-Lambda.md)
