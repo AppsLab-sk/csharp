@@ -147,3 +147,7 @@ Niektoré z týchto cvičení môžu byť upravené tak, aby boli vhodné na pre
 2. **Test rýchlosti písania**: Použi lambda výrazy na porovnanie rýchlosti písania užívateľa s priemernou rýchlosťou.
 
 3. **Virtuálne zviera**: Implementuj funkciu, ktorá kontroluje, či je zviera hladné, unavené atď., pomocou lambda výrazov.
+
+Pracujte v konzolovom projekte `src\AppsLab-025-Lambda`.
+
+Po dokončení úlohy nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.

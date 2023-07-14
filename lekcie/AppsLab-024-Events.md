@@ -93,8 +93,3 @@ Pamätajte, že tieto cvičenia sú určené na to, aby ste sa naučili riešiť
 Pracujte v konzolovom projekte `src\AppsLab-024-Events`.
 
 Po dokončení úlohy nezabudnite váš program uložiť, zmeny komitnúť (commit) a pushnúť do zdieľaného repozitára.
-
-
-
-
-## Možné úlohy na precvičenie práce so súbormi
