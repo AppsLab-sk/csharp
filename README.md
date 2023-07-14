@@ -106,3 +106,5 @@ Poznámka: V našom školskom prostredí "pull request" pre `csharp` repozitár 
 - [AppsLab-031 XML](/lekcie/AppsLab-031-XML.md)
 - [AppsLab-032 SQL](/lekcie/AppsLab-032-SQL.md)
 - [AppsLab-033 .NET knižnice a NuGet balíčky](/lekcie/AppsLab-033-NuGet.md)
+- [AppsLab-034 Debugovanie a testovanie](/lekcie/AppsLab-034-Debug.md)
+- [AppsLab-035 Základy softvérového inžinierstva](/lekcie/AppsLab-035-SoftwareEngineering.md)
