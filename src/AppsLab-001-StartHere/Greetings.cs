@@ -4,6 +4,6 @@ public class Greetings
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Michal");
+        Console.WriteLine("Hello Michal + second commit");
     }
 }
