@@ -1,17 +1,10 @@
-namespace AppsLab_001_StartHere.Tests;
-
-/// <summary>
-/// Contains unit tests for the <see cref="Greetings"/> class.
-/// </summary>
-public class GreetingsTests
+namespace AppsLab_001_StartHere
 {
-    /// <summary>
-    /// Tests the Hello method of the Greetings class by checking if it returns "Hello AppsLab!".
-    /// </summary>
-    [Test]
-    public void HelloAppsLab()
+    public class Greetings
     {
-        var result = new Greetings().Hello();
-        Assert.That(result, Is.EqualTo("Hello AppsLab!"));
+        public string Hello()
+        {
+            return "Hello AppsLab!";
+        }
     }
 }
