@@ -1,5 +1,6 @@
 ﻿namespace AppsLab_007_Casting;
 
+
 /// <summary>
 /// This class contains methods to convert between different data types.
 /// </summary>
@@ -10,8 +11,8 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
-    }
+        double myDouble = (double)5;
+        return myDouble;
 
     /// <summary>
     /// This method converts a double to an integer.
