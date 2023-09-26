@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int mojeCisielko = 25;
+string mojeSlovicko = "mam rad pizzu";
+bool mojaHodnota = true;
+DateTime datum = DateTime.Now;
+
+
+
+Console.WriteLine(mojeCisielko);
+Console.WriteLine(mojeSlovicko);
+Console.WriteLine(mojaHodnota);
+Console.WriteLine(datum);
