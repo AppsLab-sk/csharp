@@ -1,16 +1,17 @@
-﻿namespace AppsLab_001_StartHere;
-
-/// <summary>
-/// Represents a class that provides greeting messages.
-/// </summary>
-public class Greetings
+﻿namespace AppsLab_001_StartHere
 {
     /// <summary>
-    /// Returns a greeting message.
+    /// Represents a class that provides greeting messages.
     /// </summary>
-    /// <returns>A string containing the greeting message.</returns>
-    public string Hello()
+    public class Greetings
     {
-        return "Hello World!";
+        /// <summary>
+        /// Returns a greeting message.
+        /// </summary>
+        /// <returns>A string containing the greeting message.</returns>
+        public string Hello()
+        {
+            return "Hello AppsLab!";
+        }
     }
 }
