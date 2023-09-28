@@ -19,7 +19,8 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
+        int mojInt = (int)number;
+        return mojInt;
     }
 
     /// <summary>
@@ -27,15 +28,17 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        string a = number;
+        string result = a.Replace(".", ",");
+        return Convert.ToDouble(result);
     }
-
     /// <summary>
     /// This method converts a double to a string.
     /// </summary>
     public string DoubleToString(double number)
     {
-        throw new NotImplementedException();
+        
+
     }
 
     /// <summary>
