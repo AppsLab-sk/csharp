@@ -42,8 +42,8 @@ public class Converter
         //return ("7.8");
         double a = number;
         string b = Convert.ToString(a);
-        string result = b.Replace(",", ".");
-        return result;
+        b=b.Replace(",", ".");
+        return b;
     }
 
     /// <summary>
