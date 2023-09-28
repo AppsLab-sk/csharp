@@ -27,7 +27,11 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        return Convert.ToDouble(number);
+        //return 7.8;
+        //return Convert.ToDouble(number);
+        string a = number;
+        string result = a.Replace(".", ",");
+        return Convert.ToDouble(result);
     }
     
     /// <summary>
@@ -35,7 +39,11 @@ public class Converter
     /// </summary>
     public string DoubleToString(double number)
     {
-        return number.ToString();
+        //return ("7.8");
+        double a = number;
+        string b = Convert.ToString(a);
+        string result = b.Replace(",", ".");
+        return result;
     }
 
     /// <summary>
