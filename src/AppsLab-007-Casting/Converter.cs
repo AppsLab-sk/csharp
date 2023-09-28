@@ -11,31 +11,31 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        double myDouble = (double)5;
-        return myDouble;
+        return Convert.ToDouble(number);
+    }
 
     /// <summary>
     /// This method converts a double to an integer.
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
+        return (int)number;
     }
-
+    
     /// <summary>
     /// This method converts a string to a double.
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        return Convert.ToDouble(number);
     }
-
+    
     /// <summary>
     /// This method converts a double to a string.
     /// </summary>
     public string DoubleToString(double number)
     {
-        throw new NotImplementedException();
+        return number.ToString();
     }
 
     /// <summary>
@@ -43,7 +43,7 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        return number.ToString();
     }
 
     /// <summary>
@@ -51,7 +51,7 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        return Convert.ToBoolean(boolValue);
     }
 
     /// <summary>
@@ -59,6 +59,6 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
     {
-        throw new NotImplementedException();
+        return boolValue.ToString();
     }
 }
