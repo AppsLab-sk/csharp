@@ -11,12 +11,8 @@ public class Greetings
     /// <returns>A string containing the greeting message.</returns>
 
 
-{
-    public class Greetings
-    {
         public string Hello()
         {
             return "Ahoj svet!";
         }
-    }
 }
