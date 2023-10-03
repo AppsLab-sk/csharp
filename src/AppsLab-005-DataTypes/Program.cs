@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Diagnostics;
+
+string name = "Jakub";
+Console.WriteLine("Hello " + name);
+
+int age = 15;
+Console.WriteLine("Your age is " + age + """ years old""");
+
+DateTime dateTime = DateTime.Now;
+Console.WriteLine(dateTime.ToString());
