@@ -18,7 +18,6 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
     }
 
     /// <summary>
