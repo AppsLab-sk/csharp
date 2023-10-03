@@ -37,8 +37,10 @@ public class Converter
     /// </summary>
     public string DoubleToString(double number)
     {
-        
-
+        double a = number;
+        string b = Convert.ToString(a);
+        b = b.Replace(",", ".");
+        return b;
     }
 
     /// <summary>
@@ -46,7 +48,10 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        int a = number;
+        string b = Convert.ToString(a);
+        b = b.Replace(",", ".");
+        return b;
     }
 
     /// <summary>
@@ -54,7 +59,10 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+       string a = boolValue;
+       bool b = Convert.ToBoolean(a);
+       
+       return b;
     }
 
     /// <summary>
@@ -62,6 +70,8 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
     {
-        throw new NotImplementedException();
+        bool a = boolValue;
+        string b = Convert.ToString(a);
+        return b;
     }
 }
