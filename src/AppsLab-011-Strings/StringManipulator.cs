@@ -13,7 +13,8 @@ public class StringManipulator
     /// <returns>The concatenated string.</returns>
     public string AppendStrings(string first, string second)
     {
-        throw new NotImplementedException();
+        string message = first + second;
+        return message;
     }
 
     /// <summary>
@@ -23,7 +24,9 @@ public class StringManipulator
     /// <returns>The uppercase string.</returns>
     public string ConvertToUpper(string input)
     {
-        throw new NotImplementedException();
+        string message = input;
+        message = message.ToUpper();
+        return message;
     }
 
     /// <summary>
@@ -33,7 +36,9 @@ public class StringManipulator
     /// <returns>The lowercase string.</returns>
     public string ConvertToLower(string input)
     {
-        throw new NotImplementedException();
+        string message = input;
+        message = message.ToLower();
+        return message;
     }
 
     /// <summary>
