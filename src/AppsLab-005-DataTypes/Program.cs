@@ -6,4 +6,3 @@ DateTime dnesnyDatum = DateTime.Now;
 Console.WriteLine(mojeCislo);
 Console.WriteLine(mojeSlovo);
 Console.WriteLine(dnesnyDatum);
-Console.WriteLine(mojaBoolHodnota);

@@ -1,6 +1,4 @@
-﻿namespace AppsLab_007_Casting;
-
-/// <summary>
+﻿/// <summary>
 /// This class contains methods to convert between different data types.
 /// </summary>
 public class Converter
@@ -10,7 +8,9 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = (int)number;
+        return result;
     }
 
     /// <summary>
