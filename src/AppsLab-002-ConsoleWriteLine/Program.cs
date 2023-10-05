@@ -1,1 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿
+string name = "DankoPanko";
+Console.WriteLine(name);
+
