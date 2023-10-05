@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppsLab-006-Constants\AppsLab-006-Constants.csproj" />
+  </ItemGroup>
+
 </Project>
