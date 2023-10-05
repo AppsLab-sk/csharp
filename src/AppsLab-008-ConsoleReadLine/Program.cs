@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Ako sa voláš?");
-string? Juraj = Console.ReadLine();
+string Juraj = Console.ReadLine();
 Console.WriteLine("Ahoj, " + Juraj);
 
 Console.WriteLine("Koľko máš rokov?");
