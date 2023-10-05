@@ -60,10 +60,6 @@ public class Calculator
     {
         throw new NotImplementedException();
     }
-
-    /// <summary>
-    /// This method returns true if the first integer is greater than the second.
-    /// </summary>
     public bool IsGreater(int a, int b)
     {
         throw new NotImplementedException();
