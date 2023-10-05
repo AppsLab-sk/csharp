@@ -6,11 +6,14 @@
 public class Converter
 {
     /// <summary>
-    /// This method converts a string to an integer.
-    /// </summary>
+    /// This method converts a string to an integer. 
+    /// </summary>;                               
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = (int)number;
+        return result;  
+        
     }
 
     /// <summary>
@@ -18,14 +21,18 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
+        throw new NotImplementedException();
     }
 
+        
+   
     /// <summary>
     /// This method converts a string to a double.
     /// </summary>
     public double StringToDouble(string number)
     {
         throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -42,6 +49,7 @@ public class Converter
     public string IntToString(int number)
     {
         throw new NotImplementedException();
+
     }
 
     /// <summary>
@@ -50,13 +58,17 @@ public class Converter
     public bool StringToBool(string boolValue)
     {
         throw new NotImplementedException();
+
     }
+
 
     /// <summary>
     /// This method converts a boolean to a string.
     /// </summary>
     public string BoolToString(bool boolValue)
-    {
-        throw new NotImplementedException();
+        {
+            throw new NotImplementedException();
+
+        }
     }
-}
+    
