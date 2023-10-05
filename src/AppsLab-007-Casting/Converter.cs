@@ -11,7 +11,7 @@ public class Converter
     public double IntToDouble(int number)
     {
         double result;
-        result = (int)number;
+        result = (double)number;
         return result;
     }
 
@@ -20,7 +20,9 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
+        int result;
+        result = (int)number;
+        return result;
     }
 
     /// <summary>
@@ -28,7 +30,10 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = Double.Parse(number);
+        return result;
+
     }
 
     /// <summary>

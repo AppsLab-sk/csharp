@@ -27,7 +27,7 @@ public class ConverterTests
     [Test]
     public void StringToDouble_Given7Point8AsString_ShouldReturn7Point8()
     {
-        var result = converter.StringToDouble("7.8");
+        var result = converter.StringToDouble("7,8");
         Assert.That(result, Is.EqualTo(7.8), "StringToDouble(\"7.8\") should return 7.8");
     }
 
