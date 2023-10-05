@@ -11,29 +11,22 @@ public class Converter
     public double IntToDouble(int number)
     {
         double result;
-        result = (int)number;
+        result = (double)number;
         return result;  
         
     }
 
     /// <summary>
     /// This method converts a double to an integer.
-    /// </summary>
-    public int DoubleToInt(double number)
+     public double DoubleToDouble(string number) 
     {
-        throw new NotImplementedException();
-    }
+        double result;
+        result = Double.Parse(number);
+        return result;
+      }   
 
-        
+     
    
-    /// <summary>
-    /// This method converts a string to a double.
-    /// </summary>
-    public double StringToDouble(string number)
-    {
-        throw new NotImplementedException();
-        
-    }
 
     /// <summary>
     /// This method converts a double to a string.
