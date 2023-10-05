@@ -10,7 +10,9 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = (double)number;
+        return result;
     }
 
     /// <summary>
@@ -26,7 +28,9 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = Double.Parse(number);
+        return result;
     }
 
     /// <summary>
