@@ -1,4 +1,7 @@
-﻿namespace AppsLab_010_Math;
+﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace AppsLab_010_Math;
 
 /// <summary>
 /// Calculates the surface area and volume of a sphere.
@@ -12,7 +15,7 @@ public class SphereCalculator
     /// <returns>The surface area of the sphere.</returns>
     public double CalculateSurface(double radius)
     {
-        throw new NotImplementedException();
+        return 4 * Math.PI * Math.Pow(radius, 2);
     }
 
     /// <summary>
@@ -22,6 +25,6 @@ public class SphereCalculator
     /// <returns>The volume of the sphere.</returns>
     public double CalculateVolume(double radius)
     {
-        throw new NotImplementedException();
+        return (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3);
     }
 }

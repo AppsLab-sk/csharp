@@ -52,7 +52,9 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        string r;
+        r = number.ToString();
+        return r;
     }
 
     /// <summary>
@@ -60,7 +62,9 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        bool r;
+        r = bool.Parse(boolValue);
+        return r;
     }
 
     /// <summary>
@@ -68,6 +72,8 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
     {
-        throw new NotImplementedException();
+        string r;
+        r = boolValue.ToString();
+        return r;
     }
 }
