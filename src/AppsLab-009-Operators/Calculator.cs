@@ -1,7 +1,5 @@
 ﻿public class Calculator
 {
-    int a = 5;
-    int b = 6;
     public int Add(int a, int b)
     {
         return  a + b;
@@ -50,5 +48,9 @@
     public bool IsLesserOrEqual(int a, int b)
     {
         return  a <= b;
+    }
+    public double Divide(int a, int b)
+    {
+        return (double)a / (double)b;
     }
 }
