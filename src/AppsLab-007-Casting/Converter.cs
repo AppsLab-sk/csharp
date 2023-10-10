@@ -15,8 +15,15 @@ public class Converter
         return result;  
         
     }
+    public int DoubleToInt(double number)
+    {
+        int result;
+        result = (int)number;
+        return result;
 
-    /// <summary>
+    }     
+
+ /// <summary>
     /// This method converts a double to an integer.
      public double DoubleToDouble(string number) 
     {
@@ -41,7 +48,9 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        String result;
+        result = number + "";
+        return result;
 
     }
 
@@ -50,7 +59,9 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        bool result;
+        result= Convert.ToBoolean(boolValue);
+        return result;
 
     }
 
@@ -60,8 +71,23 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
         {
-            throw new NotImplementedException();
+            string result;  
+            result = boolValue.ToString();
+            return result;
 
         }
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+   

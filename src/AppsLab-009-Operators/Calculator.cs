@@ -6,11 +6,11 @@ public class Calculator
     {
         return a + b;
     }
-public int Subtract(int a, int b)
+    public int Subtract(int a, int b)
     {
         return a - b;
-     }
-     public int Multiply(int a, int b)
+    }
+    public int Multiply(int a, int b)
     {
         return a * b;
     }
@@ -21,19 +21,19 @@ public int Subtract(int a, int b)
     }
     public int Remainder(int a, int b)
     {
-      return a % b;
+        return a % b;
     }
     public bool AreEqual(int a, int b)
     {
         return a == b;
-     }
+    }
     public bool AreNotEqual(int a, int b)
     {
         return a != b;
     }
     public bool IsGreater(int a, int b)
     {
-       return a > b;
+        return a > b;
     }
     public bool IsLesser(int a, int b)
     {
@@ -47,4 +47,4 @@ public int Subtract(int a, int b)
     {
         return a <= b;
     }
-    
+}
