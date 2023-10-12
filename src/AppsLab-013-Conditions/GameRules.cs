@@ -1,4 +1,8 @@
-﻿namespace AppsLab_013_Conditions;
+﻿using System.ComponentModel.Design;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+namespace AppsLab_013_Conditions;
 
 /// <summary>
 /// Represents the rules of a game.
@@ -13,17 +17,47 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
-    }
+       if (playerName == string.Empty)
+            return false;      
+        if (playerName == null)
+        {
+            Console.WriteLine("You can not enter the game");
+            return false;
+        }
+            
+        else
+        {
+            Console.WriteLine("You can enter the game");
 
-    /// <summary>
-    /// Determines whether the game is over based on the player's health.
-    /// </summary>
-    /// <param name="playerHealth">The health of the player.</param>
-    /// <returns>True if the game is over, false otherwise.</returns>
-    public bool IsGameOver(int playerHealth)
-    {
-        throw new NotImplementedException();
+        }        
+        if (playerAge >= 15)
+        {
+            Console.WriteLine("You can enter the game.");
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("You can not enter the game");
+            return false;
+        }
+    }
+        /// <summary>
+        /// Determines whether the game is over based on the player's health.
+        /// </summary>
+        /// <param name="playerHealth">The health of the player.</param>
+        /// <returns>True if the game is over, false otherwise.</returns>
+        public bool IsGameOver(int playerHealth)
+    {     
+        if (playerHealth <= 0)
+        {
+            Console.WriteLine("GAME OVER");
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("You are alive");
+            return false;
+        }
     }
 
     /// <summary>
@@ -34,6 +68,6 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+        if (!hasKey) { }
     }
 }
