@@ -1,4 +1,6 @@
-﻿namespace AppsLab_016_Loops;
+﻿using System.ComponentModel;
+
+namespace AppsLab_016_Loops;
 
 /// <summary>
 /// Class to calculate weather statistics.
@@ -12,7 +14,18 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double[] doubleArray = temperatures ;
+        int[] numbers = doubleArray.Select(d => (int)d).ToArray();
+        //int[] numbers = temperatures;
+        int sum = 0;
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += numbers[i];
+        }
+
+        double average = (double)sum / numbers.Length;
+        return average;
     }
 
     /// <summary>
