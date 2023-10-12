@@ -1,7 +1,9 @@
-﻿const string Welcome = "Vytaj v hre!";
-const int MaxPts = 50;
-const int MinidriversLicenseage = 18;
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
 
-Console.WriteLine(Welcome);
-Console.WriteLine(MaxPts);  
-Console.WriteLine(MinidriversLicenseage);
+const int MaxPoints = 100;
+Console.WriteLine(MaxPoints);
+const int MinAgeForDriversLicense = 18;
+Console.WriteLine(MinAgeForDriversLicense);
+const string WelcomeMessage = "Vitajte v našej krajine!";
+Console.WriteLine(WelcomeMessage);
