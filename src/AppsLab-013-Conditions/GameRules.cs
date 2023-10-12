@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Design;
 using System.Reflection.Metadata.Ecma335;
+using System.Transactions;
 
 namespace AppsLab_013_Conditions;
 
@@ -50,6 +51,13 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        
+        if (hasKey == true)
+        {
+            if (knowsPassword == true)
+            {
+                return true;
+            }
+            else { return false; }
+        } else {  return false; }
     }
 }
