@@ -36,15 +36,3 @@ public class BooleanLogic
     }
 }
 
-to select
- 
- 
-rtatigua
-rtatigua
-ABOUT ME
-"What doesn't kill you just isn't finished yet."  🐀🐀
-
-+421 903 506 050
-DISCORD MEMBER SINCE
-Aug 30, 2017
-NOTE

@@ -1,4 +1,7 @@
-﻿namespace AppsLab_007_Casting;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+
+namespace AppsLab_007_Casting;
 
 /// <summary>
 /// This class contains methods to convert between different data types.
@@ -30,6 +33,7 @@ public class Converter
         double result;
         result = Double.Parse(number);
         return result;
+
       }   
 
      
@@ -76,7 +80,7 @@ public class Converter
             return result;
 
         }
-    }
+       }
     
 
 
