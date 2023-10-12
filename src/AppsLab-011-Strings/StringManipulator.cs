@@ -45,7 +45,7 @@ public class StringManipulator
     /// <returns>True if the substring is found, false otherwise.</returns>
     public bool ContainsSubstring(string input, string substring)
     {
-        return ContainsSubstring(input);
+        return input.Contains(substring);
     }
 
     /// <summary>
@@ -56,6 +56,6 @@ public class StringManipulator
     /// <returns>True if the string starts with the substring, false otherwise.</returns>
     public bool StartsWithSubstring(string input, string substring)
     {
-        return StartsWithSubstring(input);
+        return input.StartsWith(substring);
     }
 }
