@@ -25,8 +25,8 @@ public class StringManipulator
     public string ConvertToUpper(string input)
     {
         string message = input;
-            message = message.ToUpper();
-            return message;
+        message = message.ToUpper();
+        return message;
     }
 
     /// <summary>
@@ -50,7 +50,7 @@ public class StringManipulator
     public bool ContainsSubstring(string input, string substring)
     {
         string message = input;
-            bool contain = message.Contains(substring);
+        bool contain = message.Contains(substring);
         return contain;
     }
 
