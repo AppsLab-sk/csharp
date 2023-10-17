@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml;
 
 namespace AppsLab_013_Conditions;
 
@@ -17,19 +18,19 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-       if (playerName == string.Empty)
-            return false;      
+        if (playerName == string.Empty)
+            return false;
         if (playerName == null)
         {
             Console.WriteLine("You can not enter the game");
             return false;
         }
-            
+
         else
         {
             Console.WriteLine("You can enter the game");
 
-        }        
+        }
         if (playerAge >= 15)
         {
             Console.WriteLine("You can enter the game.");
@@ -41,13 +42,13 @@ public class GameRules
             return false;
         }
     }
-        /// <summary>
-        /// Determines whether the game is over based on the player's health.
-        /// </summary>
-        /// <param name="playerHealth">The health of the player.</param>
-        /// <returns>True if the game is over, false otherwise.</returns>
-        public bool IsGameOver(int playerHealth)
-    {     
+    /// <summary>
+    /// Determines whether the game is over based on the player's health.
+    /// </summary>
+    /// <param name="playerHealth">The health of the player.</param>
+    /// <returns>True if the game is over, false otherwise.</returns>
+    public bool IsGameOver(int playerHealth)
+    {
         if (playerHealth <= 0)
         {
             Console.WriteLine("GAME OVER");
@@ -68,6 +69,9 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        if (!hasKey) { }
+        if (hasKey && knowsPassword) 
+            return true;
+        else 
+            return false;
     }
 }
