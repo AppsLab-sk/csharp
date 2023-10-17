@@ -13,6 +13,7 @@ namespace AppsLab_017_List
         public Queue()
         {
             elements = new List<string>();
+            elements.Count();
         }
 
         /// <summary>
@@ -21,7 +22,8 @@ namespace AppsLab_017_List
         /// <param name="item">The item to add to the queue.</param>
         public void Enqueue(string item)
         {
-            throw new NotImplementedException();
+            int count = elements.Count();
+            elements.Insert(count, item);
         }
 
         /// <summary>
@@ -30,7 +32,8 @@ namespace AppsLab_017_List
         /// <returns>The first item in the queue.</returns>
         public string Dequeue()
         {
-            throw new NotImplementedException();
+            elements.RemoveAt(0);
+            return elements[0];
         }
     }
 }
