@@ -16,8 +16,8 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        int age = 20;
-        if (age > 18)
+        int age = 18;
+        if (age >= 18)
             Console.WriteLine("You Are An Adult.");
     
             else 
