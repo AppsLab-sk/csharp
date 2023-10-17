@@ -21,6 +21,7 @@ public class GameRules
             return true;
         }
         else if (playerAge <= 15 || playerName == "")
+        {
             Console.WriteLine("You're either underage, or you haven't filled in your name.");
             return false;
         }
@@ -38,7 +39,7 @@ public class GameRules
             Console.WriteLine("Game over.");
             return true;
         }
-        else
+        else if (playerHealth >=1)
         {
             Console.WriteLine("Game's not over yet!");
                     return false;
@@ -58,9 +59,9 @@ public class GameRules
             Console.WriteLine("You can enter!");
             return true;
         }
-        else
+        else if (hasKey == false || knowsPassword == false)
         {
-            Console.WriteLine("Error! No key or password has been found.");
+            Console.WriteLine("Error! You're still missing the key or the password is incorrect!");
             return false;
         }
     }
