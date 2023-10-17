@@ -1,4 +1,6 @@
-﻿namespace AppsLab_014_Switch;
+﻿using System;
+
+namespace AppsLab_014_Switch;
 
 /// <summary>
 /// Provides methods for working with movie ratings.
@@ -12,6 +14,25 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+        switch (GetRatingDescription)
+        {
+            case 1:
+                Console.WriteLine("Veľmi zlý");
+                break;
+            case 2:
+                Console.WriteLine("Zlý");
+                break;
+            case 3:
+                Console.WriteLine("Priemerný");
+                break;
+            case 4:
+                Console.WriteLine("Dobrý");
+;                break;
+            case 5:
+                Console.WriteLine("Výborný");
+                break;
+            default:
+                Console.WriteLine("Neplatný hodnotenie");
+                break;
+        }
     }
-}
