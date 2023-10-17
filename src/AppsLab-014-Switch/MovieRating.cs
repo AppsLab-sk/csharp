@@ -18,22 +18,22 @@ public class MovieRating
         {
             case 1:
                 return "Veľmi zlý";
-                break;
+                
             case 2:
                 return "Zlý";
-                break;
+                
             case 3:
                 return "Priemerný";
-                break;
+                
             case 4:
                 return "Dobrý";
-                break;
+                
             case 5:
                 return "Výborný";
-                break;
+                
             default:
                 return "Neplatné hodnotenie";
-                    break;
+                    
 
 
         } 
