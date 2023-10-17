@@ -13,7 +13,8 @@ public class ArrayProcessor
     /// <returns>First element of the array, or 0 if array is empty.</returns>
     public int GetFirstElement(int[] numbers)
     {
-        throw new NotImplementedException();
+        int FirstElement = numbers.First();
+        return FirstElement;
     }
 
     /// <summary>
@@ -24,7 +25,8 @@ public class ArrayProcessor
     /// <returns>Last element of the array, or 0 if array is empty.</returns>
     public int GetLastElement(int[] numbers)
     {
-        throw new NotImplementedException();
+        int LastElement = numbers.Last();
+        return LastElement;
     }
 
     /// <summary>
@@ -36,7 +38,8 @@ public class ArrayProcessor
     /// <returns>Element at the specified position, or 0 if position is out of range.</returns>
     public int GetElementAtPosition(int[] numbers, int position)
     {
-        throw new NotImplementedException();
+        int ElementAtPosition = numbers.Length - position;
+        return ElementAtPosition;
     }
 
     /// <summary>
@@ -46,6 +49,7 @@ public class ArrayProcessor
     /// <returns>Length of the array.</returns>
     public int GetLength(int[] numbers)
     {
-        throw new NotImplementedException();
+        int length = numbers.Length;
+        return GetLength(numbers);
     }
 }
