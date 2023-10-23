@@ -35,9 +35,6 @@ public class WeatherStats
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-        double[] doubleArray = temperatures;
-        int[] numbers = doubleArray.Select(d => (int)d).ToArray();
-
         return temperatures.Max();
     }
 
