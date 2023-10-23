@@ -14,18 +14,7 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        double[] doubleArray = temperatures;
-        int[] numbers = doubleArray.Select(d => (int)d).ToArray();
-        //int[] numbers = temperatures;
-        int sum = 0;
-
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            sum += numbers[i];
-        }
-
-        double average = (double)sum / numbers.Length;
-        return average;
+        return temperatures.Average();
     }
 
     /// <summary>
@@ -45,9 +34,6 @@ public class WeatherStats
     /// <returns>Minimum temperature.</returns>
     public double MinTemperature(double[] temperatures)
     {
-        double[] doubleArray = temperatures;
-        int[] numbers = doubleArray.Select(d => (int)d).ToArray();
-
-        return numbers.Min();
+        return temperatures.Min();
     }
 }
