@@ -1,4 +1,6 @@
-﻿namespace AppsLab_013_Conditions;
+﻿using System.ComponentModel.Design;
+
+namespace AppsLab_013_Conditions;
 
 /// <summary>
 /// Represents the rules of a game.
@@ -18,10 +20,14 @@ public class GameRules
             Console.WriteLine("Welcome " + playerName);
             return true;
         }
-        if (playerAge <= 18);
+        if (playerAge < 18);
         {
             Console.WriteLine("You can not play this game.");
-            return true;
+            return false;
+        }
+        if (playerAge == null)
+        {
+            return false;
         }
     }
 
@@ -35,7 +41,7 @@ public class GameRules
         if (playerHealth <= 0);
         {
             Console.WriteLine("You are dead.");
-                return true;
+            return true;
         }
     }
 
@@ -55,7 +61,12 @@ public class GameRules
         else if (knowsPassword)
         {
             Console.WriteLine("You have opend secret door.");
+            return true;
         }
-        return false;
+        else
+        {
+            Console.WriteLine("You can not open the door.");
+            return false;
+        }
     }
 }
