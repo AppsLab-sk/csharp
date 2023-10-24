@@ -12,7 +12,7 @@ public class GameRules
     /// <param name="playerAge">The age of the player.</param>
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
-    {  
+    {
 
     }
 
@@ -23,8 +23,9 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
-        throw new NotImplementedException();
+
     }
+
 
     /// <summary>
     /// Determines whether the secret door should be opened based on whether the player has the key and knows the password.
@@ -34,6 +35,6 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+
     }
 }

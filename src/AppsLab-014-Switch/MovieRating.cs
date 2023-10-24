@@ -12,7 +12,6 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        switch (rating) 
-        
+        throw new NotImplementedException();
     }
 }
