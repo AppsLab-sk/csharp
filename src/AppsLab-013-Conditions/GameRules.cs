@@ -12,8 +12,8 @@ public class GameRules
     /// <param name="playerAge">The age of the player.</param>
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
-    {
-        throw new NotImplementedException();
+    {  
+
     }
 
     /// <summary>
