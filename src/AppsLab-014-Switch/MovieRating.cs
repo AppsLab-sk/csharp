@@ -36,5 +36,6 @@ public class MovieRating
                 Console.WriteLine(MovieRating);
                 break;
         }
+        return MovieRating;
     }
 }
