@@ -22,18 +22,16 @@ public class GameRules
             Console.WriteLine("You can enter the game.");
             return true;
         }
-        else
-        {
-            Console.WriteLine("You cannot enter the game.");
-            return false;
-        }
+        
         string? playername = Console.ReadLine();
         if (playername == null)
-        { return false; }
+        { return false; 
+        
+        }
         else
         {
             Console.WriteLine("Welcome " + playername + "!");
-            return true;
+          return true;
         }
     }
 
@@ -60,9 +58,9 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        if (hasKey == true)
+        if (hasKey)
         {
-            if (knowsPassword == true)
+            if (knowsPassword)
             {
                 return true;
             }
