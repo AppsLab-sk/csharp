@@ -33,8 +33,9 @@ public class ArrayProcessor
         {
             return 0;
         }
-        return numbers[n.Length - 1];
+        //return numbers[n.Length - 1];
         //return n.AsQueryable().Last();
+        return numbers.Last();
     }
 
     /// <summary>
