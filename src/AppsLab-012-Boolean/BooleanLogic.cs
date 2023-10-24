@@ -24,7 +24,7 @@ public class BooleanLogic
     /// <returns>The result of the logical OR operation.</returns>
     public bool Or(bool a, bool b)
     {
-        return !a || b;
+        return a || b;
     }
 
     /// <summary>
