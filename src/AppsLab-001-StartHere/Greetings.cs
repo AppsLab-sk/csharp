@@ -11,6 +11,6 @@ public class Greetings
     /// <returns>A string containing the greeting message.</returns>
     public string Hello()
     {
-        return "Hello Appslab!";
+        return "Hello AppsLab!";
     }
 }
