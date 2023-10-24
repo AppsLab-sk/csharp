@@ -13,7 +13,14 @@ public class ArrayProcessor
     /// <returns>First element of the array, or 0 if array is empty.</returns>
     public int GetFirstElement(int[] numbers)
     {
-        throw new NotImplementedException();
+        int value;
+        
+        value = numbers[0];
+
+        
+        return value;
+
+        return numbers[0];
     }
 
     /// <summary>
@@ -24,7 +31,10 @@ public class ArrayProcessor
     /// <returns>Last element of the array, or 0 if array is empty.</returns>
     public int GetLastElement(int[] numbers)
     {
-        throw new NotImplementedException();
+
+
+        int lastpoint = numbers.Length - 1;
+        return numbers.[lastpoint];
     }
 
     /// <summary>
