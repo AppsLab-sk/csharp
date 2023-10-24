@@ -51,7 +51,7 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        string result;  
     }
 
     /// <summary>
