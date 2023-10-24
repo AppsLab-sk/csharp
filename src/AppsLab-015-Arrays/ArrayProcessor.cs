@@ -18,6 +18,7 @@ public class ArrayProcessor
             return numbers[0];
         }
 
+  
         return 0;
     }
 
