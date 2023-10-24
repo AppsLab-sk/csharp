@@ -16,23 +16,15 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        int playerage = 16;
-        if (playerage >= 18)
-        {
-            Console.WriteLine("You can enter the game.");
-            return true;
-        }
         
-        string? playername = Console.ReadLine();
-        if (playername == null)
-        { return false; 
-        
-        }
-        else
+        if (playerAge >= 18)
         {
-            Console.WriteLine("Welcome " + playername + "!");
-          return true;
+            if (playerName != null && playerName != "")
+            {
+                return true;
+            }
         }
+        return false;
     }
 
 
