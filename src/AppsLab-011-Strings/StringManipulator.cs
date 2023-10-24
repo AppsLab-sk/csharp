@@ -13,7 +13,11 @@ public class StringManipulator
     /// <returns>The concatenated string.</returns>
     public string AppendStrings(string first, string second)
     {
-        throw new NotImplementedException();
+       
+        string concatenatedString = first + second;
+
+        
+        return concatenatedString;
     }
 
     /// <summary>
@@ -22,8 +26,11 @@ public class StringManipulator
     /// <param name="input">The string to convert.</param>
     /// <returns>The uppercase string.</returns>
     public string ConvertToUpper(string input)
-    {
-        throw new NotImplementedException();
+    {    
+        string uppercaseString = input.ToUpper();
+
+ 
+        return uppercaseString;
     }
 
     /// <summary>
@@ -33,7 +40,11 @@ public class StringManipulator
     /// <returns>The lowercase string.</returns>
     public string ConvertToLower(string input)
     {
-        throw new NotImplementedException();
+        
+        string lowercaseString = input.ToLower();
+
+        
+        return lowercaseString;
     }
 
     /// <summary>
@@ -44,7 +55,9 @@ public class StringManipulator
     /// <returns>True if the substring is found, false otherwise.</returns>
     public bool ContainsSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        bool contains = input.Contains(substring);
+
+        return contains;
     }
 
     /// <summary>
@@ -55,6 +68,8 @@ public class StringManipulator
     /// <returns>True if the string starts with the substring, false otherwise.</returns>
     public bool StartsWithSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        bool startsWith = input.StartsWith(substring);
+
+        return startsWith;
     }
 }
