@@ -12,17 +12,23 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double sum = 0;
+        foreach (var temperature in temperatures)
+        {
+            sum += temperature;
+        }
+        return sum / temperatures.Length;
     }
 
     /// <summary>
     /// Find the maximum temperature from the provided values.
     /// </summary>
     /// <param name="temperatures">Array of temperatures.</param>
-    /// <returns>Maximum temperature.</returns>
+    /// <returns>Maximum tem   perature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        return temperatures.Max( );
+
     }
 
     /// <summary>
@@ -32,6 +38,7 @@ public class WeatherStats
     /// <returns>Minimum temperature.</returns>
     public double MinTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        return temperatures.Min();
+
     }
 }
