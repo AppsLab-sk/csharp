@@ -18,7 +18,7 @@ public class ArrayProcessor
             return numbers[0];
         }
 
-  
+   
         return 0;
     }
 
@@ -48,12 +48,12 @@ public class ArrayProcessor
     /// <returns>Element at the specified position, or 0 if position is out of range.</returns>
     public int GetElementAtPosition(int[] numbers, int position)
     {
-        if (position >= 0 && position < numbers.Length)
+        if (position >= numbers.Length)
         {
-            return numbers[position];
+            return 0;
         }
 
-        return 0;
+        return numbers[position];
     }
 
     /// <summary>
