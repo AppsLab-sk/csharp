@@ -24,16 +24,14 @@ public class ArrayProcessor
     /// <returns>Last element of the array, or 0 if array is empty.</returns>
     public int GetLastElement(int[] numbers)
     {
-        if (numbers == 0 || numbers == null)
+        if (numbers.Last())
         {
             return 0;
         }
-        else
+        else 
         {
-            return numbers.Last;
+           return numbers.AsQueryable().Last();
         }
-
-
     }
 
     /// <summary>
