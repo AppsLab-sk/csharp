@@ -5,6 +5,7 @@
     <RootNamespace>AppsLab_015_Arrays</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
 </Project>
