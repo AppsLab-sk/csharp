@@ -4,7 +4,9 @@
 /// Class to calculate weather statistics.
 /// </summary>
 public class WeatherStats
-{
+{ 
+    private double temperature;
+
     /// <summary>
     /// Calculate the average temperature from the provided values.
     /// </summary>
@@ -12,18 +14,29 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
-    }
+        double sum = 0;
+        foreach (double temperature in temperatures) ;
+        {
 
+            //sum += temperature;   
+        }
+
+        return temperatures.Average();
+    }
     /// <summary>
     /// Find the maximum temperature from the provided values.
     /// </summary>
     /// <param name="temperatures">Array of temperatures.</param>
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
+
     {
-        throw new NotImplementedException();
+        return temperatures.Max();
     }
+   
+  
+
+        
 
     /// <summary>
     /// Find the minimum temperature from the provided values.
@@ -32,6 +45,7 @@ public class WeatherStats
     /// <returns>Minimum temperature.</returns>
     public double MinTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+    return temperatures.Min();
     }
+
 }
