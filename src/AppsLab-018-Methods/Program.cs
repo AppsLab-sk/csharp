@@ -4,7 +4,6 @@ var exercise = new Exercise();
 
 // Inštrukcie pre ukončenie aplikácie
 Console.WriteLine("Pre ukončenie aplikácie zadajte 'quit'");
-
 // Neustále načítavajte vstup a vypíšte výsledok metódy FizzBuzz
 while (true)
 {

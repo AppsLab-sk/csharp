@@ -1,3 +1,6 @@
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.Serialization;
+
 namespace AppsLab_017_List
 {
     /// <summary>
@@ -12,7 +15,7 @@ namespace AppsLab_017_List
         /// </summary>
         public Queue()
         {
-            elements = new List<string>();
+            elements = new List<string>();  
         }
 
         /// <summary>
@@ -21,7 +24,7 @@ namespace AppsLab_017_List
         /// <param name="item">The item to add to the queue.</param>
         public void Enqueue(string item)
         {
-            throw new NotImplementedException();
+            elements.Add(item);
         }
 
         /// <summary>
@@ -30,7 +33,14 @@ namespace AppsLab_017_List
         /// <returns>The first item in the queue.</returns>
         public string Dequeue()
         {
-            throw new NotImplementedException();
+            if (elements.Count == 0)
+            {
+                throw new InvalidCastException("The quetue is empty");
+            }
+                string item = elements[0];
+                elements.RemoveAt(0);
+                return item;
         }
+
     }
 }
