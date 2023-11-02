@@ -36,6 +36,9 @@ public class WeatherStats
             Console.WriteLine(i);
         }
         return 0;
+        //alebo
+        double Last = temperatures.Length - 1;
+        return last;
     }
 
     /// <summary>
@@ -52,5 +55,8 @@ public class WeatherStats
             Console.WriteLine(i);
         }
         return 0;
+        //alebo
+        double First = temperatures[0];
+        return First;
     }
 }
