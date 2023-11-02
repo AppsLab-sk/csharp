@@ -1,3 +1,6 @@
+using System.Security;
+using System.Xml.Serialization;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -18,7 +21,12 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < DefaultLength; i++)
+            {
+                password += Alphabet[i];
+            }
+            return password;
         }
 
         /// <summary>
@@ -28,7 +36,12 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                password += Alphabet[i];
+            }
+            return password;
         }
 
         /// <summary>
@@ -40,7 +53,12 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            
+            
+            
+            
+
+            
         }
     }
 }
