@@ -11,6 +11,11 @@ namespace AppsLab_019_MethodsOverloading
         private const string Numbers = "0123456789";
 
         private readonly Random _random = new();
+        readonly string _password;  
+        readonly string _salt;  
+        private readonly string _salt2;
+        private readonly string _salt3;
+        
 
         /// <summary>
         /// Generates a random password with the default length of 8 characters and no special characters or numbers.
@@ -18,7 +23,15 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            var random = new Random();
+            var result = "";
+
+            for (int i = 0; i < 8; i++)
+            {
+                result += Alphabet[random.Next(0, 25)];
+            }
+            return result;
+
         }
 
         /// <summary>
@@ -28,7 +41,15 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            var random = new Random();
+            var result = "";
+
+            for (int i = 0; i < length; i++) ;
+            {
+                result += Alphabet[random.Next(0, 25)];
+            }
+            return result;
+        
         }
 
         /// <summary>
@@ -40,7 +61,23 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            var charBook = Alphabet;
+            var random = new Random();
+            var result = "";
+
+            if (includeSpecialChars)
+            {
+                charBook += SpecialChars;
+            }
+            if (includeNumbers)
+            {
+                charBook += Numbers;
+            }
+
+            for (int i = 0; i < length; i++ )
+            {
+                result += Alphabet[random.Next(0, 25)];
+            }
+            return result;
+
         }
-    }
-}
