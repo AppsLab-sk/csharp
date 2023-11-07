@@ -13,7 +13,22 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
+       
+        int minimumAgeRequired = 18;
 
+        
+        if (playerAge >= minimumAgeRequired)
+        {
+            
+            if (!string.IsNullOrWhiteSpace(playerName))
+            {
+                
+                return true;
+            }
+        }
+
+        
+        return false;
     }
 
     /// <summary>
@@ -23,6 +38,16 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
+        if (playerHealth <= 0)
+        {
+           
+            return true;
+        }
+        else
+        {
+            
+            return false;
+        }
 
     }
 
@@ -35,6 +60,17 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
+        
+        if (hasKey && knowsPassword)
+        {
+            
+            return true;
+        }
+        else
+        {
+            
+            return false;
+        }
 
     }
 }
