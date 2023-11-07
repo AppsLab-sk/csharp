@@ -18,15 +18,23 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
-        }
+            public class PasswordGenerator
+        
+            public string GeneratePassword()
+               
+            private const string = "abcdefghijklmnopqrstuvwxyz";
 
-        /// <summary>
-        /// Generates a random password with the specified length and no special characters or numbers.
-        /// </summary>
-        /// <param name="length">The length of the password to generate.</param>
-        /// <returns>A randomly generated password.</returns>
-        public string GeneratePassword(int length)
+
+
+
+    }
+
+    /// <summary>
+    /// Generates a random password with the specified length and no special characters or numbers.
+    /// </summary>
+    /// <param name="length">The length of the password to generate.</param>
+    /// <returns>A randomly generated password.</returns>
+    public string GeneratePassword(int length)
         {
             throw new NotImplementedException();
         }
