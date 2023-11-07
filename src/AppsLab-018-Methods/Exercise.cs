@@ -14,23 +14,23 @@ public class Exercise
     /// <returns>A string representation of the FizzBuzz game for the given number.</returns>
     public string FizzBuzz(int number)
     {
-        string f = "Fizz";
-        string b = "Buzz";
-        string fb = "FizzBuzz";
-        if (number % 3 == 0)
+       
+       
+        if (number % 3 == 0 && number % 5 == 0)
         {
-            return f;
+            return "FizzBuzz";
         }
-        else if (number % 5 == 0) 
+        else if (number % 5 == 0 && number % 3 != 0) 
         {
-            return b;
+            return "Buzz";
         }
-        else if (number % 3 == 0 && number % 5 == 0)
+        else if (number % 3 == 0 && number % 5 != 0)
         {
-            return fb;
+            return "Fizz";
         }
-        else
+        else if (number % 3 != 0 && number % 5 != 0)
         {
+
             return number;
         }
 
