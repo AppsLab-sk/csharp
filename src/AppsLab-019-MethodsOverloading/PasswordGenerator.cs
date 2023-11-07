@@ -10,7 +10,7 @@ namespace AppsLab_019_MethodsOverloading
         private const string SpecialChars = "!@#$%^&*()";
         private const string Numbers = "0123456789";
 
-        private readonly Random _random = new();
+        private readonly Random _random = new(55423);
 
         private char RandomChar()
         { 
