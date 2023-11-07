@@ -12,31 +12,36 @@ namespace AppsLab_019_MethodsOverloading
 
         private readonly Random _random = new();
 
+        private char RandomChar()
+        {
+            string allChar = Alphabet + SpecialChars + Numbers;
+            int index = _random.Next(allChar.Length);
+            return allChar[index];
+        }
+
         /// <summary>
         /// Generates a random password with the default length of 8 characters and no special characters or numbers.
         /// </summary>
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            public class PasswordGenerator
-        
-            public string GeneratePassword()
-               
-            private const string = "abcdefghijklmnopqrstuvwxyz";
+            string password = "";
+            for (int i = 0; i < DefaultLength; i++)
+                password += Alphabet[i];
+            return password;
+        }
 
-
-
-
-    }
-
-    /// <summary>
-    /// Generates a random password with the specified length and no special characters or numbers.
-    /// </summary>
-    /// <param name="length">The length of the password to generate.</param>
-    /// <returns>A randomly generated password.</returns>
-    public string GeneratePassword(int length)
+        /// <summary>
+        /// Generates a random password with the specified length and no special characters or numbers.
+        /// </summary>
+        /// <param name="length">The length of the password to generate.</param>
+        /// <returns>A randomly generated password.</returns>
+        public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < length; i++)
+                password += Alphabet[i];
+            return password;
         }
 
         /// <summary>
@@ -48,7 +53,10 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < length; i++)
+                password += RandomChar();
+            return password;
         }
     }
 }
