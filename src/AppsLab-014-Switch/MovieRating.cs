@@ -10,7 +10,7 @@ public class MovieRating
     /// </summary>
     /// <param name="rating">The movie rating to get a description for.</param>
     /// <returns>A string describing the specified movie rating.</returns>
-    {
+ 
         public string GetRatingDescription(int rating)
     {
         string MovieRating = "";
