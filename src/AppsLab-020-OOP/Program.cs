@@ -13,7 +13,7 @@ public class Program
         var warrior = new Warrior();
         warrior.Name = "Bojovník";
         warrior.AttackPower = 50;
-        warrior.Health = 100;
+        warrior.Health = 200;
 
         var wizzard = new Wizzard();
         wizzard.Name = "Čarodej";
@@ -43,10 +43,10 @@ public class Program
 
             if (wizzard.Health > 0)
             {
-                if (wizzard.Health < warrior.AttackPower) 
+                if (wizzard.Health <= warrior.AttackPower) 
                 { 
                     wizzard.Heal(wizzard);
-                }wizzard.Attack(warrior);
+                }else { wizzard.Attack(warrior); }
             }
             stats.Stats(warrior, wizzard);
 
