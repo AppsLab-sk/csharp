@@ -10,11 +10,11 @@ using System;
           Wizard mojwizard = new Wizard();
           mojwizard.name = "Dakoty";
           mojwizard.health = 130;
-            mojwizard.Attack = 200;
-            warior mojwarior = new warior();
-            mojwarior.name = "Minduri";
-            mojwarior.health = 300;
-            mojwarior.Attack = 80; 
+          mojwizard.Attack = 200;
+          warior mojwarior = new warior();
+          mojwarior.name = "Mindzuri";
+          mojwarior.health = 300;
+          mojwarior.Attack = 80; 
         }
     }
-}
+}  
