@@ -1,83 +1,62 @@
+using System;
+using System.Text;
+
 namespace AppsLab_019_MethodsOverloading
 {
-    /// <summary>
-    /// Represents a password generator that can generate random passwords.
-    /// </summary>
     public class PasswordGenerator
     {
-        private const int DefaultLength = 8;
-        private const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
-        private const string SpecialChars = "!@#$%^&*()";
-        private const string Numbers = "0123456789";
+        private const string Letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string SpecialChars = "!@#$%^&*()_+-=[]{}|;:'\",.<>?";
 
-        private readonly Random _random = new();
-        readonly string _password;  
-        readonly string _salt;  
-        private readonly string _salt2;
-        private readonly string _salt3;
-        
-
-        /// <summary>
-        /// Generates a random password with the default length of 8 characters and no special characters or numbers.
-        /// </summary>
-        /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            var random = new Random();
-            var result = "";
-
-            for (int i = 0; i < 8; i++)
-            {
-                result += Alphabet[random.Next(0, 25)];
-            }
-            return result;
-
+            return GeneratePassword(8, false, false);
         }
 
-        /// <summary>
-        /// Generates a random password with the specified length and no special characters or numbers.
-        /// </summary>
-        /// <param name="length">The length of the password to generate.</param>
-        /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            var random = new Random();
-            var result = "";
-
-            for (int i = 0; i < length; i++) ;
-            {
-                result += Alphabet[random.Next(0, 25)];
-            }
-            return result;
-        
+            return GeneratePassword(length, false, false);
         }
 
-        /// <summary>
-        /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
-        /// </summary>
-        /// <param name="length">The length of the password to generate.</param>
-        /// <param name="includeSpecialChars">Whether to include special characters in the password.</param>
-        /// <param name="includeNumbers">Whether to include numbers in the password.</param>
-        /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            var charBook = Alphabet;
-            var random = new Random();
-            var result = "";
+            if (length <= 0)
+            {
+                throw new ArgumentException("Length must be greater than zero.");
+            }
 
+            StringBuilder password = new StringBuilder();
+
+            // Pridaj písmená
+            password.Append(GenerateRandomCharacters(Letters, length));
+
+            // Pridaj špeciálne znaky, ak je požadované
             if (includeSpecialChars)
             {
-                charBook += SpecialChars;
+                password.Append(GenerateRandomCharacters(SpecialChars, 1));
             }
+
+            // Pridaj èísla, ak je požadované
             if (includeNumbers)
             {
-                charBook += Numbers;
+                password.Append(GenerateRandomCharacters("0123456789", 1));
             }
 
-            for (int i = 0; i < length; i++ )
-            {
-                result += Alphabet[random.Next(0, 25)];
-            }
-            return result;
-
+            return password.ToString();
         }
+
+        private string GenerateRandomCharacters(string characterSet, int count)
+        {
+            Random random = new Random();
+            StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i < count; i++)
+            {
+                int index = random.Next(characterSet.Length);
+                result.Append(characterSet[index]);
+            }
+
+            return result.ToString();
+        }
+    }
+}
