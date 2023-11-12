@@ -10,17 +10,21 @@ public class Program
         var intro = new Intro();
         intro.Print();
 
-        var warrior = new Warrior();
-        warrior.Name = "Bojovník";
-        warrior.AttackPower = 50;
-        warrior.Health = 200;
-        warrior.HealAmount = 2;
+        var warrior = new Warrior
+        {
+            Name = "Bojovník",
+            AttackPower = 50,
+            Health = 200,
+            HealAmount = 2
+        };
 
-        var wizzard = new Wizzard();
-        wizzard.Name = "Čarodej";
-        wizzard.AttackPower = 60;
-        wizzard.Health = 100;
-        wizzard.HealAmount = 2;
+        var wizzard = new Wizzard
+        {
+            Name = "Čarodej",
+            AttackPower = 60,
+            Health = 100,
+            HealAmount = 2
+        };
 
         var stats = new Statistick();
 
@@ -37,32 +41,52 @@ public class Program
             if (action == 1) 
             {
                 warrior.Attack(wizzard);
-                Console.WriteLine(warrior.Name + " ubral: " + warrior.AttackPower + " životov " + wizzard.Name);
+                stats.WarriorAttack(warrior, wizzard);
             }
             if (action == 2)
             {
-                warrior.Heal(warrior, wizzard);
-                Console.WriteLine("Ostávajúci počet uzdravení: " + warrior.HealAmount);
+                //warrior.Heal(warrior, wizzard);
+                if (warrior.HealAmount > 0) 
+                {
+                    warrior.HealAmount = Math.Max(0, warrior.HealAmount - 1);
+                    warrior.Heal(warrior);
+                    Console.WriteLine("Ostávajúci počet uzdravení: " + warrior.HealAmount);
+                }
+                else
+                {
+                    warrior.Attack(wizzard);
+                    stats.WarriorAttack(warrior, wizzard);
+                }
             }
 
             if (wizzard.Health > 0)
             {
-                if (wizzard.Health <= warrior.AttackPower) 
-                { 
-                    wizzard.Heal(wizzard, warrior);
-                    Console.WriteLine("Ostávajúci počet uzdravení: " + wizzard.HealAmount + " pre " + wizzard.Name);
+                if (wizzard.Health <= warrior.AttackPower)
+                {
+                    if (wizzard.HealAmount > 0)
+                    {
+                        wizzard.HealAmount = Math.Max(0, wizzard.HealAmount - 1);
+                        wizzard.Heal(wizzard);
+                        Console.WriteLine("Ostávajúci počet uzdravení: " + wizzard.HealAmount + " pre " + wizzard.Name);
+                    }
+                    else 
+                    {
+                        wizzard.Attack(warrior);
+                        stats.WizzardAttack(warrior, wizzard);
+                    }
                 }
-                else 
+                else
                 {
                     wizzard.Attack(warrior);
-                    Console.WriteLine(wizzard.Name + " ubral: " + wizzard.AttackPower + " životov " + warrior.Name);
+                    stats.WizzardAttack(warrior, wizzard);
                 }
             }
             stats.Stats(warrior, wizzard);
-
+            
             if (warrior.Health > 0 && wizzard.Health > 0) 
             {
-                Thread.Sleep(2000);
+                Console.WriteLine("Stlač akúkoľvek klávesu pre pokračovanie . . .");
+                Console.ReadKey(true);
                 Console.Clear();
                 intro.Print();
                 stats.NewRound(intro);

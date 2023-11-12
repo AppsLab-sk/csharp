@@ -11,17 +11,9 @@ public class Warrior
         wizzard.Health = Math.Max(0, wizzard.Health - AttackPower);
     }
 
-    public void Heal(Warrior warrior, Wizzard wizzard)
+    public void Heal(Warrior warrior)
     {
-        //warrior.Health += 40;
-        if (warrior.HealAmount > 0) 
-        {
-            warrior.HealAmount = Math.Max(0, warrior.HealAmount - 1);
-            warrior.Health += 40;
-        }
-        else 
-        {
-            warrior.Attack(wizzard);
-        }
+        warrior.Health += 40;
+        
     }
 }

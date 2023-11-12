@@ -14,6 +14,8 @@
                                                                          by Martas_SK
 
 ";
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(text);
+        Console.ResetColor();
     }
 }

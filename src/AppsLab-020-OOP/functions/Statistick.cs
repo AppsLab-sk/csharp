@@ -76,4 +76,14 @@
         Thread.Sleep(1000);
         Console.Clear();
     }
+
+    public void WarriorAttack(Warrior warrior, Wizzard wizzard) 
+    {
+        Console.WriteLine(warrior.Name + " ubral: " + warrior.AttackPower + " životov " + wizzard.Name);
+    }
+
+    public void WizzardAttack(Warrior warrior, Wizzard wizzard)
+    {
+        Console.WriteLine(wizzard.Name + " ubral: " + wizzard.AttackPower + " životov " + warrior.Name);
+    }
 }
