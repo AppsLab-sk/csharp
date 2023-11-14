@@ -21,6 +21,13 @@ namespace AppsLab_019_MethodsOverloading
         public string GeneratePassword()
         {
             return GeneratePassword(8, false, false);
+            //alebo
+            string pasword = "";
+            for (int i = 0; i<DefaultLength;i++)
+            {
+                pasword += Alphabet[_random.Next(Alphabet.Length-1)];
+            }
+            return pasword;
         }
 
         /// <summary>
@@ -31,6 +38,18 @@ namespace AppsLab_019_MethodsOverloading
         public string GeneratePassword(int length)
         {
             return GeneratePassword(length, false, false);
+            //alebo
+            if (length <= 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                password += Alphabet[_random.Next(Alphabet.Length - 1)];
+            }
+            return password;
         }
 
         /// <summary>
@@ -42,6 +61,8 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
+            return GeneratePassword(length, true, true);
+            //alebo
             StringBuilder password = new StringBuilder();
             string charSet = Alphabet;
 
@@ -67,6 +88,28 @@ namespace AppsLab_019_MethodsOverloading
             }
 
             return password.ToString();
+            //alebo
+            string password = Alphabet + SpecialChars + Numbers;
+            string characters = Alphabet;
+            if (includeNumbers)
+            {
+                characters += Numbers;
+            }
+            if (includeSpecialChars)
+            {
+                characters += SpecialChars;
+            }
+            if (length <= 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                password += characters[_random.Next(characters.Length - 1)];
+            }
+            return password;
         }
     }
 }
