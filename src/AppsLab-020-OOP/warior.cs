@@ -16,7 +16,7 @@ namespace AppsLab_020_OOP
         {
            Random random = new Random();
             int attackpower = random.Next(AttackPower);
-            enemy.healthh-=attackpower;
+            enemy.health-=attackpower;
         }
         public void Defend()
         {

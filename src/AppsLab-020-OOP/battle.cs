@@ -21,7 +21,3 @@ namespace AppsLab_020_OOP
 
         }
     }
-
-
-}
-}

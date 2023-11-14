@@ -10,12 +10,14 @@ namespace AppsLab_020_OOP
     internal class Wizard
     {
     public string name {  get; set; }
-    public int healthh { get; set; }
-    public int attackpower { get; set; }
+    public int health { get; set; }
+    public int Attackpower { get; set; }
 
-        public int Attack()
+        public void Attack( Warior enemy)
         {
-            return 0;
+            Random random = new Random();
+            int attackpower = random.Next(Attackpower);
+            enemy.health -= attackpower;
         }
         public void Defend()
         {
