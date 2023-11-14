@@ -54,24 +54,25 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            var pass = "";
+            string pass = "";
+            string characters = Alphabet;
 
-            for (int i = 0; i < length; i++)
+            if (includeSpecialChars) 
             {
-                if (includeSpecialChars == true && includeNumbers == true)
-                {
-                    return pass += Alphabet[_random.Next(Alphabet.Length -1) + (SpecialChars.Length -1) + (Numbers.Length - 1)];
-                }
-                else if (includeSpecialChars == true && includeNumbers != true)
-                {
-                    return pass += Alphabet[_random.Next(Alphabet.Length - 1) + (SpecialChars.Length - 1)];
-                }
-                else if (includeSpecialChars != true && includeNumbers == true)
-                {
-                    return pass += Alphabet[_random.Next(Alphabet.Length - 1) + (Numbers.Length - 1)];
-                }
-                else return pass += Alphabet[_random.Next(Alphabet.Length - 1)];
+                characters += SpecialChars;
             }
+            if (includeNumbers)
+            {
+                characters += Numbers;
+                    
+            }
+            for (int i = 0; i <= length; i++)
+            {
+                pass += characters[_random.Next(characters.Length - 1)];
+            }
+            return pass;
+            
+            
            
         }
     }
