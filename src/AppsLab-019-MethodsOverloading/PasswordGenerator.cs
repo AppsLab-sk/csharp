@@ -89,7 +89,7 @@ namespace AppsLab_019_MethodsOverloading
 
             return password.ToString();
             //alebo
-            string password = Alphabet + SpecialChars + Numbers;
+            string pasword = Alphabet + SpecialChars + Numbers;
             string characters = Alphabet;
             if (includeNumbers)
             {
@@ -107,9 +107,9 @@ namespace AppsLab_019_MethodsOverloading
 
             for (int i = 0; i < length; i++)
             {
-                password += characters[_random.Next(characters.Length - 1)];
+                pasword += characters[_random.Next(characters.Length - 1)];
             }
-            return password;
+            return pasword;
         }
     }
 }
