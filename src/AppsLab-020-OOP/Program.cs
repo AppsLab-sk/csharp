@@ -10,13 +10,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Wizard mojwizard = new Wizard();
-            mojwizard.name = "Zbojo";
-            mojwizard.health = 300;
-            mojwizard.Attack = 190;
+            mojwizard.Name = "Zbojo";
+            mojwizard.Health = 300;
+            mojwizard.Attackpower = 190;
             Warior mojwarior = new Warior();
-            mojwarior.name = "Lojzo";
-            mojwizard.health = 500;
-            mojwizard.Attack = 150;
+            mojwarior.Name = "Lojzo";
+            mojwizard.Health = 500;
+            mojwizard.Attackpower = 150;
 
 
         }

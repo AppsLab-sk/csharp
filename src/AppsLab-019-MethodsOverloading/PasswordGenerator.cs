@@ -52,7 +52,7 @@ namespace AppsLab_019_MethodsOverloading
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
             string password = "";
-            string characters = Alphabet);
+            string characters = Alphabet) ;
             if (includeSpecialChars) 
             {
                 characters += Numbers;

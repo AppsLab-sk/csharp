@@ -13,7 +13,7 @@ namespace AppsLab_020_OOP
         public int Attackpower { get; set; }
         
 
-        public int Attack()
+        public int Attack(Wizard enemy)
         { 
             return 0; 
         }
