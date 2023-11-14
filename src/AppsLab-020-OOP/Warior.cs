@@ -8,9 +8,25 @@ namespace AppsLab_020_OOP
 {
     internal class Warior
     {
-        public string name { get; set; }
-        public int health { get; set; }
-        public int Attack { get; set; }
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public int Attackpower { get; set; }
+        
 
-    }
-}
+        public int Attack()
+        { 
+            return 0; 
+        }
+    
+        public void Defend()
+        {
+
+        }
+        public void Heal()
+        {
+
+        }
+
+     }
+
+ }

@@ -8,8 +8,8 @@ namespace AppsLab_020_OOP
 {
     internal class Wizard
     {
-        public string name { get; set; }
-        public int health { get; set; }
+        public string Name { get; set; }
+        public int Health { get; set; }
         public int Attack { get; set; }
 
         
