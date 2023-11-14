@@ -18,14 +18,13 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            var random = new Random();
-            var result = "";
-
-            for (int i = 0; i < length; i++)
+            string password = "";
+            for (int i = 0; i < 8; i++)
             {
-                result += Alphabet[random.Next(0, 25)];
+                password += Alphabet[i];
             }
-            return result;
+            return password;
+
         }
 
         /// <summary>
@@ -35,7 +34,12 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                password += Alphabet[i];
+            }
+            return password;
         }
 
         /// <summary>
@@ -47,11 +51,10 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            var charBook = Alphabet;
-            var random = new Random();
-            var result = "";
+            string password = Alphabet + SpecialChars + Numbers;
+            int index = _random.Next(0, length);
+            return password;
 
-                
         }
     }
 }
