@@ -6,11 +6,27 @@ using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
 {
-    internal class warior
+    internal class Warior
     {
         public string name { get; set; }
         public int health { get; set; }
-        public int Attack { get; set; }
+        public int AttackPower  { get; set; }
+
+    public void Attack (Wizard enemy)
+        {
+           Random random = new Random();
+            int attackpower = random.Next(AttackPower);
+            enemy.healthh-=attackpower;
+        }
+        public void Defend()
+        {
+
+        }
+        public void Heal()
+        {
+
+        }
+    
     }
 
 }

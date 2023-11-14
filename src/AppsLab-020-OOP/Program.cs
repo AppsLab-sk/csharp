@@ -8,13 +8,13 @@ using System;
         static void Main(string[] args)
         {
           Wizard mojwizard = new Wizard();
-          mojwizard.name = "Dakoty";
-          mojwizard.health = 130;
-          mojwizard.Attack = 200;
-          warior mojwarior = new warior();
-          mojwarior.name = "Mindzuri";
+            mojwizard.name = "Dakoty";
+            mojwizard.healthh = 130;
+            mojwizard.attackpower = 200;
+            Warior mojwarior = new Warior();
+          mojwarior.name = "Ferenci";
           mojwarior.health = 300;
-          mojwarior.Attack = 80; 
+            mojwarior.AttackPower = 80;
         }
     }
 }  
