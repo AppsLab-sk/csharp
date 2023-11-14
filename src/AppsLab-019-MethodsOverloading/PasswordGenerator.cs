@@ -18,13 +18,14 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            var random = new Random();
-            var result = "";
-
-            for (int i = 0; i < 8; i++)
             {
-                result += Alphabet[random.Next(0, 25)];
-                return result;
+                var pass = "";
+
+                for (int i = 0; i < DefaultLength; i++)
+                {
+                    pass += Alphabet[_random.Next(Alphabet.Length-1)];
+                }
+                return pass;
             }
         }
 
@@ -35,14 +36,13 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            var random = new Random();
-            var result = "";
+            var pass = "";
 
             for (int i = 0; i < length; i++)
             {
-                result += Alphabet[random.Next(0, 25)];
-                return result;
+                pass += Alphabet[_random.Next(Alphabet.Length - 1)];
             }
+            return pass;
         }
 
         /// <summary>
@@ -54,7 +54,25 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            var pass = "";
+
+            for (int i = 0; i < length; i++)
+            {
+                if (includeSpecialChars == true && includeNumbers == true)
+                {
+                    return pass += Alphabet[_random.Next(Alphabet.Length -1) + (SpecialChars.Length -1) + (Numbers.Length - 1)];
+                }
+                else if (includeSpecialChars == true && includeNumbers != true)
+                {
+                    return pass += Alphabet[_random.Next(Alphabet.Length - 1) + (SpecialChars.Length - 1)];
+                }
+                else if (includeSpecialChars != true && includeNumbers == true)
+                {
+                    return pass += Alphabet[_random.Next(Alphabet.Length - 1) + (Numbers.Length - 1)];
+                }
+                else return pass += Alphabet[_random.Next(Alphabet.Length - 1)];
+            }
+           
         }
     }
 }
