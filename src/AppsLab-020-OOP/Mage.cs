@@ -10,8 +10,22 @@ namespace AppsLab_020_OOP
     {
         public string name { get; set; }
         public int Health { get; set; }
-        public int Attack { get; set; }
-        
+        public int AttackPower { get; set; }
 
+        public void Attack(Warrior mojwar)
+        {
+            Random r = new Random();
+            int attackPower = r.Next(AttackPower);
+            mojwar.Health -= attackPower;
+
+        }
+        public void Defend()
+        {
+
+        }
+        public void Heal()
+        {
+
+        }
     }
 }

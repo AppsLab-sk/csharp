@@ -3,22 +3,18 @@ using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
-    internal class Program
+    internal class Character
     {
         static void Main(string[] args)
         {
             Mage mojmag = new Mage();
             mojmag.name = "Ferenci";
-            mojmag.Health = 250;
-            mojmag.Attack = 80;
+            mojmag.Health = 275;
+            mojmag.AttackPower = 78;
             Warrior mojwar = new Warrior();
             mojwar.name = "Darius";
-            mojmag.Health = 300;
-            mojmag.Attack = 65;
-            Tank mojtan = new Tank();
-            mojtan.name = "Sion";
-            mojtan.Health = 500;
-            mojtan.Attack = 35;
+            mojmag.Health = 325;
+            mojmag.AttackPower = 65;           
         }
     }
 }
