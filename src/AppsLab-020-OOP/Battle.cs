@@ -1,14 +1,18 @@
-﻿using AppsLab_020_OOP;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace AppsLab_020_OOP
 {
-    internal class Battle
+    public class Battle
     {
-        static void Main(string[] args)
+        public Mage mage;
+        public Warrior warrior;
+        public void Simulate()
         {
-            
 
+        }
     }
 }
-
