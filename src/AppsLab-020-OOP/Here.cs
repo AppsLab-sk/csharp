@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
 {
-    internal class Class1
+    public class Character
     {
+        public string Name {  get; set; }
+        public int Health {  get; set; }
+        public int AttackPower {  get; set; }
+
+        public int Attack(Enemy enemy)
+        {
+            Random random = new Random();
+            int attackPower = random.Next(AttackPower);
+            enemy.Health-=attackPower;
+        }
+    
+        public void Defend()
+        {
+
+        }
+
+        public void Heal()
+        {
+
+        }
     }
+
 }

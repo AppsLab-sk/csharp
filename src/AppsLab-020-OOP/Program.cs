@@ -1,25 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-using System.Xml.Linq;
+﻿using System.Reflection.PortableExecutable;
+using System.Security.Cryptography;
+using AppsLab_020_OOP;
 
-Console.WriteLine("Hello, World!");
-class Character 
-{
-    def __init__(self, name, health, attack_power)
-        self.name = name
-        self.health = health
-        self.attack_power = attack_power
-
-    def attack(self, enemy):
-        enemy.defend(self.attack_power)
-
-    def defend(self, attack_power)
-        self.health -= attack_power
-
-    def heal(self, amount):
-        self.health += amount
-}
-
-
+public static class Program
+{ 
+    static void Main(string[] args)
+    {
+        Character ch1 = new Character();
+        ch1.Name = "First";
+        ch1.At
+    }
 
                         
