@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
 {
-    public class Enemy
+    public class Warrior
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public int Attack { get; set; }
+        public int Attack {  get; set; }
         public int Health { get; set; }
 
     }
-    public void Attack(Warrior warrior)
+    public int Attack()
     {
-        Random r = new Random();
-        int Attack = r.Next(Attack);
-        warrior.Health -= Attack;
+        return 0;
     }
 
     public void Defend()
@@ -29,5 +27,4 @@ namespace AppsLab_020_OOP
     {
 
     }
-
 }
