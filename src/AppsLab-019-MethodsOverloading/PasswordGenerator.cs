@@ -37,7 +37,7 @@ namespace AppsLab_019_MethodsOverloading
             string password = "";
             for (int i = 0; i < length; i++)
             {
-                password += Alphabet[i];
+                password += Alphabet[_random.Next(Alphabet.Length - 1)];
             }
             return password;
         }
@@ -51,8 +51,28 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            string password = Alphabet + SpecialChars + Numbers;
-            int index = _random.Next(0, length);
+            string password = "";
+            string characters = Alphabet);
+            if (includeSpecialChars) 
+            {
+                characters += Numbers;
+            }
+
+            if (includeNumbers) 
+            {
+                characters = SpecialChars;
+            }
+
+            if (length <= 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+            for (int i = 0; i < length; i++)
+            {
+                password += characters[_random.Next(characters.Length - 1)];
+            }
+
             return password;
 
         }
