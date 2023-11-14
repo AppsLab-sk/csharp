@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -28,7 +30,7 @@ namespace AppsLab_019_MethodsOverloading
 
             for (int i = 0; i < 8; i++)
             {
-                result += Alphabet[random.Next(0, 25)];
+                result += Alphabet[random.Next(Alphabet.Length -1)];
             }
             return result;
 
@@ -44,9 +46,10 @@ namespace AppsLab_019_MethodsOverloading
             var random = new Random();
             var result = "";
 
+            string password = "";
             for (int i = 0; i < length; i++) ;
             {
-                result += Alphabet[random.Next(0, 25)];
+                result += Alphabet[random.Next(Alphabet.Length - 1)];
             }
             return result;
         
@@ -61,23 +64,23 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            var charBook = Alphabet;
-            var random = new Random();
-            var result = "";
-
-            if (includeSpecialChars)
+            string password = "";
+            string characters = Alphabet;
+            if (includeNumbers) 
             {
-                charBook += SpecialChars;
-            }
-            if (includeNumbers)
-            {
-                charBook += Numbers;
+                characters += SpecialChars;
             }
 
-            for (int i = 0; i < length; i++ )
+            if (length <= 0);
             {
-                result += Alphabet[random.Next(0, 25)];
+                Console.WriteLine("Error");
+                return "";
             }
-            return result;
+            for (int i = 0; i < length;i++)
+            {
+                password += characters[_random.Next(characters.Length - 1)];
+            }
+            return password;
+        } 
 
-        }
+
