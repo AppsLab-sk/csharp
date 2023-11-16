@@ -18,6 +18,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
             mojwarior.Health = 500;
             mojwarior.Attackpower = 150;
 
+            int round = 0;
+            while (mojwizard.StillAlive() && mojwarior.StillAlive())
+            {
+                mojwizard.Attack(mojwarior);
+                mojwarior.Attack(mojwizard);
+                Console.WriteLine((round++) + " " + mojwarior + " vs " + mojwizard);
+            }
+       
+            if (mojwarior.StillAlive())
+            {
+                Console.WriteLine("vyhral bojovnik warior");
+            }
+            if (mojwizard.StillAlive())
+            {
+                Console.WriteLine("vyhral bojovnik wizard");
+            }
+            if (!mojwizard.StillAlive() && !mojwarior.StillAlive())
+            {
+                Console.WriteLine("remizka");
+            }
+
+
 
         }
     }
