@@ -1,46 +1,24 @@
+using System.Reflection.Metadata;
 using System.Xml.Linq;
 
 public class Warrior
 {
-    private string? name;
-    private int health;
-    private int attackpower;
-    private int healamount;
-    private List<Warrior> warriorsList;
+    public string? Name;
+    public int Health;
+    public int AttackPower;
+    public int HealAmount;
+    private string v1;
+    private int v2;
+    private int v3;
+    private int v4;
 
-    public Warrior(List<Warrior> warriorsList)
+    public Warrior(string v1, int v2, int v3, int v4)
     {
-        this.warriorsList = warriorsList;
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+        this.v4 = v4;
     }
-
-    public Warrior(string name, int health, int attackpower, int healamount) 
-    { 
-        this.name = name;
-        this.health = health;
-        this.attackpower = attackpower;
-        this.healamount = healamount;
-    }
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public int Health 
-    { 
-        get { return health; }
-        set { health = value; }
-    }
-    public int AttackPower 
-    {
-        get { return attackpower; }
-        set { attackpower = value; }
-    }
-    public int HealAmount 
-    {
-        get { return healamount; }
-        set { healamount = value; }
-    }
-
 
     public void Attack(Wizzard wizzard)
     {
@@ -50,6 +28,24 @@ public class Warrior
 
     public void Heal(Warrior warrior)
     {
-        warrior.health += 40;        
+        warrior.Health += 40;        
     }
 }
+
+public class Warrior2 : Warrior
+{
+    public Warrior2(string v1, int v2, int v3, int v4) : base(v1, v2, v3, v4)
+    {
+    }
+}
+
+
+//public class WarriorList 
+//{ 
+//    private var warriorlist = new List<Warrior>();
+
+  //  public void AddWarrior(string name, int health, int attackpower, int healamount) 
+    //{
+      //  warriorlist.Add(new Warrior {  Name = name, Health = health, AttackPower = attackpower, HealAmount = healamount }); 
+   // }
+//}

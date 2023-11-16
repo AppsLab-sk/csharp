@@ -16,28 +16,21 @@ namespace AppsLab_020_OOP.functions
             var intro = new Intro();
             intro.Print();
 
-            List<Warrior> WarriorsList = new List<Warrior>
+            var warrior = new Warrior
             {
-
+                Name = "Bojovník",
+                Health = 200,
+                AttackPower = 50,
+                HealAmount = 2
             };
 
-            var warrior = new Warrior(WarriorsList);
-            warrior.Name = "Bojovník";
-            warrior.Health = 200;
-            warrior.AttackPower = 50;
-            warrior.HealAmount = 2;
-
-
-            List<Wizzard> WizzardList = new List<Wizzard>
+            var wizzard = new Wizzard
             {
-                
+                Name = "Čarodej",
+                Health = 100,
+                AttackPower = 60,
+                HealAmount = 2
             };
-
-            var wizzard = new Wizzard(WizzardList);
-            wizzard.Name = "Čarodej";
-            wizzard.Health = 100;
-            wizzard.AttackPower = 60;
-            wizzard.HealAmount = 2;
 
             var stats = new Statistick();
 

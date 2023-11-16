@@ -2,43 +2,21 @@ using System.Threading;
 
 public class Wizzard //: Warrior
 {
-    private string? name;
-    private int health;
-    private int attackpower;
-    private int healamount;
-    private List<Wizzard> wizzardList;
+    public string? Name;
+    public int Health;
+    public int AttackPower;
+    public int HealAmount;
+    private string v1;
+    private int v2;
+    private int v3;
+    private int v4;
 
-    public Wizzard(List<Wizzard> wizzardList)
+    public Wizzard(string v1, int v2, int v3, int v4)
     {
-        this.wizzardList = wizzardList;
-    }
-
-    public Wizzard(string name, int health, int attackpower, int healamount)
-    {
-        this.name = name;
-        this.health = health;
-        this.attackpower = attackpower;
-        this.healamount = healamount;
-    }
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public int Health
-    {
-        get { return health; }
-        set { health = value; }
-    }
-    public int AttackPower
-    {
-        get { return attackpower; }
-        set { attackpower = value; }
-    }
-    public int HealAmount
-    {
-        get { return healamount; }
-        set { healamount = value; }
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+        this.v4 = v4;
     }
 
     public void Attack(Warrior warrior)
@@ -50,5 +28,12 @@ public class Wizzard //: Warrior
     public void Heal(Wizzard wizzard)
     {
        wizzard.Health += 40;
+    }
+}
+
+public class Wizzard2 : Warrior
+{
+    public Wizzard2(string v1, int v2, int v3, int v4) : base(v1, v2, v3, v4)
+    {
     }
 }
