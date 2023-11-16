@@ -15,8 +15,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             mojwizard.Attackpower = 190;
             Warior mojwarior = new Warior();
             mojwarior.Name = "Lojzo";
-            mojwizard.Health = 500;
-            mojwizard.Attackpower = 150;
+            mojwarior.Health = 500;
+            mojwarior.Attackpower = 150;
 
 
         }

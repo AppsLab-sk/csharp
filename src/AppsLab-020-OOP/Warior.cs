@@ -11,11 +11,23 @@ namespace AppsLab_020_OOP
         public string Name { get; set; }
         public int Health { get; set; }
         public int Attackpower { get; set; }
-        
 
-        public int Attack(Wizard enemy)
-        { 
-            return 0; 
+        public bool StillAlive()
+        {
+            return Health > 0;
+        }
+
+        public override string? ToString()
+        {
+            return Name + "(" + Health + ")";
+        }
+
+
+        public void Attack(Wizard enemy)
+        {
+            Random random = new Random();
+            int attackpower = random.Next(Attackpower);
+            enemy.Health -= attackpower;
         }
     
         public void Defend()
