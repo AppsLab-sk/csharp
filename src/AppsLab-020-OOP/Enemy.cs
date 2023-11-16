@@ -9,16 +9,30 @@ namespace AppsLab_020_OOP
     internal class Enemy
     {
         public string Name { get; set; }
-        public int Age { get; set; }
         public int AttackPower { get; set; }
         public int Health { get; set; }
+        public int Mana { get; set; } = 100;
 
-        public int Attack()
+        public void Attack(Warior enemy)
         {
-            return 0;
+            if (Mana > 0)
+            {
+                enemy.Health -= AttackPower;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "oddychuje");
 
+            }
         }
-
+        public bool StillAlive()
+        { return Health > 0; 
+        }
+        public override string ToString()
+        {
+            return Name + "(" + Health + ")";
+        }
         public void Defend()
         {
 

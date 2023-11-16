@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
 {
-         public class Character  
-         {
-           
-         }
+    internal class fighters
+    {
+    }
 }
