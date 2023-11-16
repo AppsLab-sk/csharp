@@ -9,12 +9,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Mage mojmag = new Mage();
             mojmag.name = "Ferenci";
-            mojmag.Health = 275;
+            mojmag.Health = 4000000;
             mojmag.AttackPower = 78;
+            mojmag.Mana = 75;
             Warrior mojwar = new Warrior();
             mojwar.name = "Darius";
-            mojmag.Health = 325;
-            mojmag.AttackPower = 65;           
+            mojwar.Health = 4000000;
+            mojwar.AttackPower = 80;
+
+            int round = 0;
+            while (mojmag.StillAlive() && mojwar.StillAlive())
+            {
+                mojmag.Attack(mojwar);
+                mojwar.Attack(mojmag);
+                Console.WriteLine((round++) + " " + mojwar + "vs." + mojmag);
+            }
+            if (mojmag.StillAlive())
+            Console.WriteLine("Mage wins");
+            if(mojwar.StillAlive())
+            Console.WriteLine("Warrior wins");
+            if (!mojmag.StillAlive() && !mojwar.StillAlive())
+            Console.WriteLine("Remíza");
         }
     }
 }
+

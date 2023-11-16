@@ -12,20 +12,33 @@ namespace AppsLab_020_OOP
         public int Health { get; set; }
         public int AttackPower { get; set; }
 
+        public int Mana { get; set; } = 100;
+
         public void Attack(Warrior mojwar)
         {
-            Random r = new Random();
-            int attackPower = r.Next(AttackPower);
-            mojwar.Health -= attackPower;
+            if (Mana > 0)
+            {
+                mojwar.Health -= AttackPower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "Oddychuje");
+            }
 
         }
-        public void Defend()
+        public bool StillAlive()
         {
-
+            return Health > 0;
         }
-        public void Heal()
+        public override string? ToString()
         {
+            return name + "(" + Health + ")";
+        }
+        
 
         }
+        
     }
-}
+
