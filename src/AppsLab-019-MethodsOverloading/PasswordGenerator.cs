@@ -18,7 +18,7 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+           
         }
 
         /// <summary>
@@ -27,9 +27,16 @@ namespace AppsLab_019_MethodsOverloading
         /// <param name="length">The length of the password to generate.</param>
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
-        {
-            throw new NotImplementedException();
-        }
+        
+           public string GeneratePassword;
+            {
+                if (length <= 0) ;
+                Console.WriteLine("Error");
+
+
+            }
+
+       
 
         /// <summary>
         /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
@@ -40,7 +47,8 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            
+            тт
         }
     }
 }
