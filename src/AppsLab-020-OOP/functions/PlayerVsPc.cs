@@ -16,72 +16,56 @@ namespace AppsLab_020_OOP.functions
             var intro = new Intro();
             intro.Print();
 
-            var warrior = new Warrior
-            {
-                Name = "Bojovník",
-                Health = 200,
-                AttackPower = 50,
-                HealAmount = 2
-            };
+            var warrior = new Warrior("Bojovník", 200, 50, 2);
 
-            var wizzard = new Wizzard
-            {
-                Name = "Čarodej",
-                Health = 100,
-                AttackPower = 60,
-                HealAmount = 2
-            };
-
+            var wizzard = new Wizzard("Čarodej", 100, 60, 2);
+            
             var stats = new Statistick();
 
-            while (warrior.Health > 0 && wizzard.Health > 0)
+            while (warrior.Health > 0 && wizzard.Health > 0) //pokiaľ sú všetci nažive
             {
-                //warrior.Attack(wizzard);
-                //wizzard.Attack(warrior);
-
                 stats.Stats(warrior, wizzard);
 
                 Console.WriteLine("Vyberte schopnosť: \n1 = Útok \n2 = Uzdraviť (počet: " + warrior.HealAmount + ")");
                 int action = int.Parse(Console.ReadLine());
 
-                if (action == 1)
+                if (action == 1) //útok
                 {
                     warrior.Attack(wizzard);
                     stats.WarriorAttack(warrior, wizzard);
                 }
-                if (action == 2)
+                if (action == 2) //uzdravenie
                 {
-                    //warrior.Heal(warrior, wizzard);
-                    if (warrior.HealAmount > 0)
+                    if (warrior.HealAmount > 0) //ak je čím, uzdraviť
                     {
                         warrior.HealAmount = Math.Max(0, warrior.HealAmount - 1);
                         warrior.Heal(warrior);
                         Console.WriteLine("Ostávajúci počet uzdravení: " + warrior.HealAmount);
                     }
-                    else
+                    else //ak nie je čím, útok
                     {
                         warrior.Attack(wizzard);
                         stats.WarriorAttack(warrior, wizzard);
                     }
                 }
 
-                if (wizzard.Health > 0)
+                if (wizzard.Health > 0) //ak je nepriateľ naživu, tak sa pokračuje
                 {
-                    if (wizzard.Health <= warrior.AttackPower)
+                    if (wizzard.Health <= warrior.AttackPower) //ak má nepriateľ menej životov ako bojovník, skúsi sa uzdraviť
                     {
-                        if (wizzard.HealAmount > 0)
+                        if (wizzard.HealAmount > 0) //ak sa má čím nepriateľ uzdraviť
                         {
                             wizzard.HealAmount = Math.Max(0, wizzard.HealAmount - 1);
                             wizzard.Heal(wizzard);
                             Console.WriteLine("Ostávajúci počet uzdravení: " + wizzard.HealAmount + " pre " + wizzard.Name);
                         }
-                        else
+                        else //ak nie, zaútočí
                         {
                             wizzard.Attack(warrior);
                             stats.WizzardAttack(warrior, wizzard);
                         }
                     }
-                    else
+                    else //ak má dostatok životov, zaútočí
                     {
                         wizzard.Attack(warrior);
                         stats.WizzardAttack(warrior, wizzard);
@@ -89,7 +73,7 @@ namespace AppsLab_020_OOP.functions
                 }
                 stats.Stats(warrior, wizzard);
 
-                if (warrior.Health > 0 && wizzard.Health > 0)
+                if (warrior.Health > 0 && wizzard.Health > 0) //pokiaľ sú obydvaja naživu, ide nové kolo
                 {
                     Console.WriteLine("Stlač akúkoľvek klávesu pre pokračovanie . . .");
                     Console.ReadKey(true);
@@ -99,7 +83,7 @@ namespace AppsLab_020_OOP.functions
                     intro.Print();
                 }
             }
-            if (warrior.Health == 0 && wizzard.Health == 0)
+            if (warrior.Health == 0 && wizzard.Health == 0) //remíza
             {
                 Thread.Sleep(2000);
                 Console.Clear();
@@ -107,7 +91,7 @@ namespace AppsLab_020_OOP.functions
                 stats.Stats(warrior, wizzard);
                 Console.WriteLine("Remíza.");
             }
-            if (warrior.Health <= 0 && wizzard.Health > 0)
+            if (warrior.Health <= 0 && wizzard.Health > 0) //nepriateľ vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();
@@ -115,7 +99,7 @@ namespace AppsLab_020_OOP.functions
                 stats.Stats(warrior, wizzard);
                 Console.WriteLine(wizzard.Name + " vyhral.");
             }
-            if (wizzard.Health <= 0 && warrior.Health > 0)
+            if (wizzard.Health <= 0 && warrior.Health > 0) //bojovník vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();

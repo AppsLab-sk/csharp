@@ -1,39 +1,100 @@
 using System.Threading;
 
-public class Wizzard //: Warrior
+public interface IWizzard
 {
-    public string? Name;
-    public int Health;
-    public int AttackPower;
-    public int HealAmount;
-    private string v1;
-    private int v2;
-    private int v3;
-    private int v4;
+    string Name { get; set; }
+    int Health { get; set; }
+    int AttackPower { get; set; }
+    int HealAmount { get; set; }
 
-    public Wizzard(string v1, int v2, int v3, int v4)
-    {
-        this.v1 = v1;
-        this.v2 = v2;
-        this.v3 = v3;
-        this.v4 = v4;
-    }
-
-    public void Attack(Warrior warrior)
+    public void Attack(IWarrior warrior)
     {
         //warrior.Health -= AttackPower;
         warrior.Health = Math.Max(0, warrior.Health - AttackPower);
     }
 
-    public void Heal(Wizzard wizzard)
+    public void Heal(IWizzard wizzard)
     {
-       wizzard.Health += 40;
+        wizzard.Health += 40;
     }
 }
 
-public class Wizzard2 : Warrior
+public class Wizzard : IWizzard
 {
-    public Wizzard2(string v1, int v2, int v3, int v4) : base(v1, v2, v3, v4)
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public int AttackPower { get; set; }
+    public int HealAmount { get; set; }
+
+    public Wizzard(string name, int health, int attackpower, int healamount)
     {
+        Name = name;
+        Health = health;
+        AttackPower = attackpower;
+        HealAmount = healamount;
+    }
+}
+
+public class Wizzard2 : IWizzard
+{
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public int AttackPower { get; set; }
+    public int HealAmount { get; set; }
+
+    public Wizzard2(string name, int health, int attackpower, int healamount)
+    {
+        Name = name;
+        Health = health;
+        AttackPower = attackpower;
+        HealAmount = healamount;
+    }
+}
+
+public class Wizzard3 : IWizzard
+{
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public int AttackPower { get; set; }
+    public int HealAmount { get; set; }
+
+    public Wizzard3(string name, int health, int attackpower, int healamount)
+    {
+        Name = name;
+        Health = health;
+        AttackPower = attackpower;
+        HealAmount = healamount;
+    }
+}
+
+public class Wizzard4 : IWizzard
+{
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public int AttackPower { get; set; }
+    public int HealAmount { get; set; }
+
+    public Wizzard4(string name, int health, int attackpower, int healamount)
+    {
+        Name = name;
+        Health = health;
+        AttackPower = attackpower;
+        HealAmount = healamount;
+    }
+}
+
+public class Wizzard5 : IWizzard
+{
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public int AttackPower { get; set; }
+    public int HealAmount { get; set; }
+
+    public Wizzard5(string name, int health, int attackpower, int healamount)
+    {
+        Name = name;
+        Health = health;
+        AttackPower = attackpower;
+        HealAmount = healamount;
     }
 }

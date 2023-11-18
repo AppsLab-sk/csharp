@@ -2,7 +2,7 @@
 {
     //var intro = new Intro();
 
-    public void Stats(Warrior warrior, Wizzard wizzard)
+    public void Stats(IWarrior warrior, IWizzard wizzard)
     {
         Console.WriteLine(warrior.Name + " " + warrior.Health + " : " + wizzard.Name + " " + wizzard.Health);
     }
@@ -77,12 +77,12 @@
         Console.Clear();
     }
 
-    public void WarriorAttack(Warrior warrior, Wizzard wizzard) 
+    public void WarriorAttack(IWarrior warrior, IWizzard wizzard) 
     {
         Console.WriteLine(warrior.Name + " ubral: " + warrior.AttackPower + " životov " + wizzard.Name);
     }
 
-    public void WizzardAttack(Warrior warrior, Wizzard wizzard)
+    public void WizzardAttack(IWarrior warrior, IWizzard wizzard)
     {
         Console.WriteLine(wizzard.Name + " ubral: " + wizzard.AttackPower + " životov " + warrior.Name);
     }
