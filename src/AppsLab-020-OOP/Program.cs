@@ -15,6 +15,20 @@ using System;
             mojwarior.name = "Ferenci";
             mojwarior.health = 300;
             mojwarior.AttackPower = 80;
+
+            int round = 0;
+            while (mojwarior.StillAlive() && mojwizard.StillAlive()) 
+            {
+                mojwarior.Attack(mojwizard);
+                mojwarior.Attack(mojwizard);
+                Console.WriteLine((round++) + " " + mojwarior + "vs." + mojwizard);
+            }
+            if (mojwizard.StillAlive())
+                Console.WriteLine("Wizard wins");
+            if (mojwarior.StillAlive())
+                Console.WriteLine("Warrior wins");
+            if (!mojwizard.StillAlive() && !mojwarior.StillAlive())
+                Console.WriteLine("Remíza");
         }
     }
 }  

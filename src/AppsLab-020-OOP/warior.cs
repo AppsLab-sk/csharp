@@ -18,15 +18,14 @@ namespace AppsLab_020_OOP
             int attackpower = random.Next(AttackPower);
             enemy.health-=attackpower;
         }
-        public void Defend()
+        public bool StillAlive()
         {
-
+            return health > 0;
         }
-        public void Heal()
+        public override string? ToString()
         {
-
+            return name + "(" + health + ")";
         }
-    
+
     }
-
 }
