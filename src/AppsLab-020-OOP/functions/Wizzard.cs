@@ -33,6 +33,17 @@ public class Wizzard : IWizzard
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWarrior warrior)
+    {
+        //warrior.Health -= AttackPower;
+        warrior.Health = Math.Max(0, warrior.Health - AttackPower);
+    }
+
+    public void Heal(IWizzard wizzard)
+    {
+        wizzard.Health += 40;
+    }
 }
 
 public class Wizzard2 : IWizzard

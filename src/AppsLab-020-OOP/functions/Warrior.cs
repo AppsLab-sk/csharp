@@ -34,6 +34,17 @@ public class Warrior : IWarrior
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWizzard wizzard)
+    {
+        //wizzard.Health -= AttackPower;
+        wizzard.Health = Math.Max(0, wizzard.Health - AttackPower);
+    }
+
+    public void Heal(IWarrior warrior)
+    {
+        warrior.Health += 40;
+    }
 }
 
 public class Warrior2 : IWarrior

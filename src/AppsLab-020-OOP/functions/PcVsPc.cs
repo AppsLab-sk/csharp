@@ -38,6 +38,9 @@ namespace AppsLab_020_OOP.functions
             {
                 new Wizzard("Čarodej", 100, 60, 2),
                 new Wizzard2("Čarodej2", 100, 60, 2),
+                new Wizzard3("Čarodej3", 100, 60, 2),
+                new Wizzard4("Čarodej4", 100, 60, 2),
+                new Wizzard5("Čarodej5", 100, 60, 2),
             };
             
             Random wrandom = new Random();
