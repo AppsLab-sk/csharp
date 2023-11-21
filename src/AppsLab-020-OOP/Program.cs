@@ -3,26 +3,19 @@ using System.Threading;
 
 public static class Program
 {
-     static void Main(string[] args)
-     {
-        Mage mage = new Mage();
-        mage.Name = "Octavius";
-        mage.Health = 190;
-        mage.AttackPower = 25;
-        mage.Mana = 200;
-        mage.HealthPots = 2;
-        Warrior warrior = new Warrior();
-        warrior.Name = "Ed";
-        warrior.Health = 240;
-        warrior.AttackPower = 15;
-        warrior.Bandages = 2;
+    static void Main(string[] args)
+    {
+        Mage mage = new Mage("Al" , 190, 25, 200, 2);
+        Warrior warrior = new Warrior("Ed", 240, 15, 2);
 
         int round = 0;
         while (warrior.StillAlive() && mage.StillAlive())
         {
             warrior.Attack(mage);
             mage.Attack(warrior);
-            Console.WriteLine((round++) + " " + warrior + "vs" + mage);
+            mage.Heal();
+            warrior.Heal();
+            Console.WriteLine((round++) + " " + warrior + " vs " + mage);
         }
             if (mage.StillAlive())
             {

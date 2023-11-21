@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AppsLab_020_OOP
 {
@@ -14,18 +15,27 @@ namespace AppsLab_020_OOP
         public int AttackPower { get; set; }
         public int Bandages { get; set; }
 
+        public Warrior(string name, int health, int attackPower, int bandages)
+        {
+            Name = name;
+            Health = health;
+            AttackPower = attackPower;
+            Bandages = bandages;
+        }
+
         public void Attack(Mage mage)
         {
             mage.Health -= AttackPower;
         }
-        public void Heal(Warrior warrior)
+        public void Heal()
         {
-            if (Health <= 50)
+            if (Health <= 50 && Bandages >= 1)
             {
-                Health += 20;
+                Health += 50;
                 Bandages -= 1;
+                Console.WriteLine(this + Name + " is using a bandage.");
             }
-            else if (Bandages <= 0)
+            else if (Bandages == 0)
             {
                 Health += 0;
             }
@@ -36,19 +46,7 @@ namespace AppsLab_020_OOP
         }
         public override string ToString()
         {
-            return Name + "(" + Health + ")";
-        }
-        public void Ultimate(Mage mage)
-        {
-            if (Health <= 40)
-            {
-                Console.WriteLine(Name + " is unleashing ultimate!");
-                mage.Health -= 3 * AttackPower;
-            }
-            else
-            {
-                mage.Health -= AttackPower;
-            }
+            return Name + " (" + Health + ")";
         }
     }
 }
