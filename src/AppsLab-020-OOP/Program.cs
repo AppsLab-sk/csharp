@@ -24,11 +24,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
        
             if (Warior.StillAlive())
             {
-                Console.WriteLine("vyhral bojovnik warior");
+                Console.WriteLine("vyhral warior " + Warior.Name);
             }
             if (mojwizard.StillAlive())
             {
-                Console.WriteLine("vyhral bojovnik wizard");
+                Console.WriteLine("vyhral wizard " + mojwizard.Name);
             }
             if (!mojwizard.StillAlive() && !Warior.StillAlive())
             {
