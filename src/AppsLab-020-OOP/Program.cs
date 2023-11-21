@@ -9,10 +9,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Wizard mojwizard = new Wizard("janko", 1000 , 100 , 100);
+            var save = File.ReadAllLines("Save/Saves.txt");
+            var wariorData = save[0].Split(',');
+            var wizardData = save[0].Split(',');
 
-            var Warior = new Warior("pišta", 500 , 100);
-           
+          
+        
+            Wizard mojwizard = new Wizard("dano", 1000 , 100 , 100);
+
+            var Warior = new Warior(wariorData[0], wariorData[1], wariorData[2]);
+            var Wizard = new Wizard(wizardData[0], wizardData[1], wizardData[2], wizardData[3]);
+
 
             int round = 0;
             while (mojwizard.StillAlive() && Warior.StillAlive())
