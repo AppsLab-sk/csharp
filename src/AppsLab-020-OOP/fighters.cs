@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppsLab_020_OOP
+﻿namespace AppsLab_020_OOP
 {
-    internal class fighters
+    internal class fighters 
     {
      public string Name { get; set; }
      public int Health { get; set; }
