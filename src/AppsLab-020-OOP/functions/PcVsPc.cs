@@ -42,7 +42,7 @@ namespace AppsLab_020_OOP.functions
                 new Wizzard4("Čarodej4", 100, 60, 2),
                 new Wizzard5("Čarodej5", 100, 60, 2),
             };
-            
+
             Random wrandom = new Random();
             int randomWIndex = wrandom.Next(wizzards.Count);
             var choosenWizzard = wizzards[randomWIndex];
@@ -50,6 +50,8 @@ namespace AppsLab_020_OOP.functions
 
             while (warrior.Health > 0 && wizzard.Health > 0)
             {
+                Console.WriteLine(warrior.Name + " " + wizzard.Name);
+
                 if (warrior.Health <= wizzard.AttackPower)
                 {
                     if (warrior.HealAmount > 0)
@@ -69,7 +71,7 @@ namespace AppsLab_020_OOP.functions
                     warrior.Attack(wizzard);
                     stats.WarriorAttack(warrior, wizzard);
                 }
-            
+
                 if (wizzard.Health > 0) //ak je nepriateľ naživu, tak sa pokračuje
                 {
                     if (wizzard.Health <= warrior.AttackPower) //ak má nepriateľ menej životov ako bojovník, skúsi sa uzdraviť
@@ -92,7 +94,7 @@ namespace AppsLab_020_OOP.functions
                         stats.WizzardAttack(warrior, wizzard);
                     }
                 }
-            
+
                 stats.Stats(warrior, wizzard);
                 Thread.Sleep(2000);
 
@@ -104,7 +106,7 @@ namespace AppsLab_020_OOP.functions
                     intro.Print();
                 }
             }
-            
+
             if (warrior.Health == 0 && wizzard.Health == 0) //remíza
             {
                 Thread.Sleep(2000);
