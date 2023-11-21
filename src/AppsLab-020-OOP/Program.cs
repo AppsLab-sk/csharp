@@ -5,8 +5,13 @@ public static class Program
 {
     static void Main(string[] args)
     {
-        Mage mage = new Mage("Al" , 190, 25, 200, 2);
-        Warrior warrior = new Warrior("Ed", 240, 15, 2);
+        var save = File.ReadAllLines("Save/saves.txt");
+
+        string[] mageData = save[0].Split(";");
+        string[] warriorData = save[1].Split(';');
+
+        Mage mage = new Mage(mageData[0] , Int32.Parse(mageData[1]), Int32.Parse(mageData[2]), Int32.Parse(mageData[3]), Int32.Parse(mageData[4]));
+        Warrior warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
 
         int round = 0;
         while (warrior.StillAlive() && mage.StillAlive())
