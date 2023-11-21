@@ -12,10 +12,18 @@ namespace AppsLab_020_OOP
         public int AttackPower { get; set; }
         public int Health { get; set; }
 
-        public void Attack(Warior enemy)
-               { Random r = new Random();
+        public Warior(string name, int attackPower, int health)
+        {
+            Name = name;
+            AttackPower = attackPower;
+            Health = health;
+        }
+
+        public void Attack(Enemy enemy)
+        {
+            Random r = new Random();
             int attackPower = r.Next(AttackPower);
-            enemy.Health-=attackPower;
+            enemy.Health -= attackPower;
 
 
 

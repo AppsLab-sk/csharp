@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,20 @@ using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
 {
-    internal class Enemy
+    public class Enemy
     {
         public string Name { get; set; }
         public int AttackPower { get; set; }
         public int Health { get; set; }
         public int Mana { get; set; } = 100;
+
+        public Enemy(string name, int attackPower, int health, int mana)
+        {
+            Name = name;
+            AttackPower = attackPower;
+            Health = health;
+            Mana = mana;
+        }
 
         public void Attack(Warior enemy)
         {

@@ -4,32 +4,35 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World!");
+        var save = File.ReadAllLines("Save/Saves.txt");
 
-        var warior = new Warior();
-        warior.Name = "Anton";
-        warior.Health = 2000;
-        warior.AttackPower = 10;
+        string[] wariorData = save[0].Split(";");
+        string[] enemyData = save[1].Split(";");
 
-        var enemy = new Enemy();
-        enemy.Name = "Juraj";
-        enemy.Health = 1000;
-        enemy.Mana = 100;
-        enemy.AttackPower = 20;
-    
+        var warior = new Warior(wariorData[0],Int32.Parse(wariorData[1]),Int32.Parse(wariorData[2]));
+        var enemy = new Enemy(enemyData[0], Int32.Parse(enemyData[1]), Int32.Parse(enemyData[2]), Int32.Parse(enemyData[3]));
+
+
+
         int round = 0;
         while (enemy.StillAlive() && warior.StillAlive())
         {
             enemy.Attack(warior);
             warior.Attack(enemy);
             Console.WriteLine((round++) + " " + warior + " vs. " + enemy);
+        } 
 
-
-
-
-
-
-
+        if (warior.StillAlive())
+        {
+            Console.WriteLine("vyhral bojovnik s menom " + warior.Name);
+        }
+        if (enemy.StillAlive())
+        {
+            Console.WriteLine("vyhral bojovnik s menom " + enemy.Name);
+        }
+        if (!enemy.StillAlive() && !warior.StillAlive())
+        {
+            Console.WriteLine("remiza :( ");
         }
     }
 }
