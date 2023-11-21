@@ -7,28 +7,28 @@ using System;
     {
         static void Main(string[] args)
         {
-          Wizard mojwizard = new Wizard();
-            mojwizard.name = "Dakoty";
-            mojwizard.health = 500;
-            mojwizard.Attackpower = 20;
-            Warior mojwarior = new Warior();
-            mojwarior.name = "Ferenci";
-            mojwarior.health = 300;
-            mojwarior.AttackPower = 80;
+            
+           Wizard mojwizard= new Wizard("Dakoty",400,250,100);
+            
+            Warior mojwarior = new Warior("Ferenci", 500, 150);
+            
 
-            int round = 0;
+             int round = 0;
             while (mojwarior.StillAlive() && mojwizard.StillAlive()) 
             {
-                mojwarior.Attack(mojwizard);
+                mojwizard.Attack(mojwarior);
                 mojwarior.Attack(mojwizard);
                 Console.WriteLine((round++) + " " + mojwarior + "vs." + mojwizard);
             }
             if (mojwizard.StillAlive())
-                Console.WriteLine("Wizard wins");
+                Console.WriteLine(" Wizardwins" + mojwarior.name);
             if (mojwarior.StillAlive())
-                Console.WriteLine("Warrior wins");
+                Console.WriteLine("Warrior wins" + mojwizard.name );
             if (!mojwizard.StillAlive() && !mojwarior.StillAlive())
-                Console.WriteLine("Remíza");
+                Console.WriteLine("Remíza"); 
+            
         }
     }
 }  
+            
+            
