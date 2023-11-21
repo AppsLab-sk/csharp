@@ -14,6 +14,14 @@ namespace AppsLab_020_OOP
 
         public int Mana { get; set; } = 100;
 
+        public Mage(string name, int health, int attackPower, int mana)
+        {
+            this.name = name;
+            Health = health;
+            AttackPower = attackPower;
+            Mana = mana;
+        }
+
         public void Attack(Warrior mojwar)
         {
             if (Mana > 0)

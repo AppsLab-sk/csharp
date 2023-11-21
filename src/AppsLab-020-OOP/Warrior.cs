@@ -13,6 +13,13 @@ namespace AppsLab_020_OOP
         public int Health { get; set; }
          public int AttackPower { get; set; }
 
+        public Warrior(string name, int health, int attackPower)
+        {
+            this.name = name;
+            Health = health;
+            AttackPower = attackPower;
+        }
+
         public void Attack(Mage mojmag)
         {
             Random r = new Random();
