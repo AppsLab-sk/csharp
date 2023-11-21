@@ -13,6 +13,14 @@ namespace AppsLab_020_OOP
         public int Attackpower { get; set; }
         public int Mana { get; set; }
 
+        public Wizard(string name, int health, int attackpower, int mana)
+        {
+            Name = name;
+            Health = health;
+            Attackpower = attackpower;
+            Mana = mana;
+        }
+
         public bool StillAlive()
         {
             return Health > 0;

@@ -12,6 +12,13 @@ namespace AppsLab_020_OOP
         public int Health { get; set; }
         public int Attackpower { get; set; }
 
+        public Warior(string name, int health, int attackpower)
+        {
+            Name = name;
+            Health = health;
+            Attackpower = attackpower;
+        }
+
         public bool StillAlive()
         {
             return Health > 0;

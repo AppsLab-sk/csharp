@@ -9,24 +9,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Wizard mojwizard = new Wizard();
-            mojwizard.Name = "Zbojo";
-            mojwizard.Health = 300;
-            mojwizard.Attackpower = 190;
-            Warior mojwarior = new Warior();
-            mojwarior.Name = "Lojzo";
-            mojwarior.Health = 500;
-            mojwarior.Attackpower = 150;
+            Wizard mojwizard = new Wizard("janko", 1000 , 100 , 100);
+
+            var Warior = new Warior("pišta", 500 , 100);
+           
 
             int round = 0;
-            while (mojwizard.StillAlive() && mojwarior.StillAlive())
+            while (mojwizard.StillAlive() && Warior.StillAlive())
             {
-                mojwizard.Attack(mojwarior);
-                mojwarior.Attack(mojwizard);
-                Console.WriteLine((round++) + " " + mojwarior + " vs " + mojwizard);
+                mojwizard.Attack(Warior);
+                Warior.Attack(mojwizard);
+                Console.WriteLine((round++) + " " + Warior + " vs " + mojwizard);
             }
        
-            if (mojwarior.StillAlive())
+            if (Warior.StillAlive())
             {
                 Console.WriteLine("vyhral bojovnik warior");
             }
@@ -34,7 +30,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine("vyhral bojovnik wizard");
             }
-            if (!mojwizard.StillAlive() && !mojwarior.StillAlive())
+            if (!mojwizard.StillAlive() && !Warior.StillAlive())
             {
                 Console.WriteLine("remizka");
             }
