@@ -1,5 +1,7 @@
 ﻿using AppsLab_020_OOP;
 using System;
+using static System.Net.Mime.MediaTypeNames;
+using System.Threading;
 
  namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -7,13 +9,17 @@ using System;
     {
         static void Main(string[] args)
         {
-            
-           Wizard mojwizard= new Wizard("Dakoty",400,250,100);
-            
-            Warior mojwarior = new Warior("Ferenci", 500, 150);
-            
+            var save = File.ReadAllLines("Save/Saves.txt");
+            var wariorData = save[0].Split(";");
+            var wizardData = save[1].Split(";");
 
-             int round = 0;
+            Wizard mojwizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            Warior mojwarior = new Warior(wariorData[0], Int32.Parse(wariorData[1]), Int32.Parse(wariorData[2]));
+
+
+
+
+            int round = 0;
             while (mojwarior.StillAlive() && mojwizard.StillAlive()) 
             {
                 mojwizard.Attack(mojwarior);
