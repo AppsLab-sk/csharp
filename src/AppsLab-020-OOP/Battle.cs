@@ -6,13 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AppsLab_020_OOP
-using System;
-
-namespace AppsLab_020_OOP
 {
     public class Battle
     {
-        public static void SimulateBattle(Wizard wizard, Ork ork, int maxRounds)
+        public void SimulateBattle(Wizard wizard, Ork ork, int maxRounds)
         {
             Console.WriteLine($"Battle begins between {wizard.Name} and {ork.Name}");
 
@@ -21,8 +18,8 @@ namespace AppsLab_020_OOP
                 Console.WriteLine($"Round {round}");
 
                 // Wizard attacks Ork
-                wizard.Attack(ork);
-                Console.WriteLine($"{wizard.Name} attacks {ork.Name}. {ork.Name}'s health: {ork.Health}");
+                wizard.Attack(wizard);
+                Console.WriteLine($"{ork.Name} attacks {ork.Name}. {ork.Name}'s health: {ork.Health}");
 
                 // Check if Ork is still alive
                 if (!ork.StillAlive())

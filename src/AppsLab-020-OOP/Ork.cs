@@ -12,8 +12,15 @@ namespace AppsLab_020_OOP
     public class Ork
     {
         public string Name { get; set; }
-        public int Health = 80;
-        public int AttackPower = 30;
+        public int Health { get; set; } = 80;
+        public int AttackPower { get; set; } = 30;
+
+        public Ork(string name, int health, int attackPower)
+        {
+            Name = name;
+            Health = health;
+            AttackPower = attackPower;
+        }
 
         public void Attack(Wizard wizard)
         {

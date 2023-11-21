@@ -8,4 +8,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Save\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Save\Saves.txt.txt">
+      <CopyToOutputDirectory>copy allways</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
