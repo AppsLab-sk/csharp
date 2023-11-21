@@ -9,8 +9,8 @@ using System;
         {
           Wizard mojwizard = new Wizard();
             mojwizard.name = "Dakoty";
-            mojwizard.health = 130;
-            mojwizard.Attackpower = 200;
+            mojwizard.health = 500;
+            mojwizard.Attackpower = 20;
             Warior mojwarior = new Warior();
             mojwarior.name = "Ferenci";
             mojwarior.health = 300;
