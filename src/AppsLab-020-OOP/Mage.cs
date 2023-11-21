@@ -27,46 +27,43 @@ namespace AppsLab_020_OOP
             }
         }
         public void ManaRegen()
-        { 
-        if (Mana <= 0)
-            {
-           Mana += 25;
-           Console.WriteLine(this + Name + "is resting.");
-        }
-        public void Heal()
         {
-            if (Health <= 50)
+            if (Mana <= 0)
             {
-                Health += 20;
-                HealthPots -= 1;
-                    Console.WriteLine("Using Health potion.");
+                Mana += 25;
+                Console.WriteLine(this + Name + "is resting.");
             }
-            else if (HealthPots <= 0)
+            public void Heal()
             {
-                Health += 0;
+                if (Health <= 50)
+                {
+                    Health += 20;
+                    HealthPots -= 1;
+                    Console.WriteLine("Using health potion.");
+                }
+                else if (HealthPots <= 0)
+                {
+                    Health += 0;
+                }
             }
         }
-        public bool StillAlive()
-        {
-            return Health > 0;
-        }
+            public bool StillAlive()
+            {
+                return Health > 0;
+            }
         public override string ToString()
         {
-            return Name + "(" + Health + ")"; 
+            return Name + "(" + Health + ")";
         }
         public void Ultimate(Warrior warrior)
         {
-            if (Health <= 20 && Mana >=40)
+            if (Health <= 20 && Mana >= 40)
             {
                 Console.WriteLine(Name + "is unleashing ultimate!");
                 Mana -= 40;
                 warrior.Health -= 3 * AttackPower;
             }
-            else
-            {
-                warrior.Health -= AttackPower;
-                Mana -= 20;
-            }
+
         }
     }
 }
