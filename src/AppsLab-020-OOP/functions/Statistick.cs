@@ -77,9 +77,51 @@
         Console.Clear();
     }
 
+    public IWarrior ChooseWarrior(List<IWarrior> warriors)
+    {
+        Random random = new Random();
+        int randomIndex;
+        IWarrior chosenWarrior;
+
+        do
+        {
+            randomIndex = random.Next(warriors.Count);
+            chosenWarrior = warriors[randomIndex];
+        }
+        while (chosenWarrior.Health == 0);
+
+        return chosenWarrior;
+    }
+
+    public bool HasAlliveWarrior(List<IWarrior> warriors)
+    {
+        return warriors.Any(warrior => warrior.Health > 0);
+    }
+
     public void WarriorAttack(IWarrior warrior, IWizzard wizzard) 
     {
         Console.WriteLine(warrior.Name + " ubral: " + warrior.AttackPower + " životov " + wizzard.Name);
+    }
+
+    public IWizzard ChooseWizzard(List<IWizzard> wizzards)
+    {
+        Random random = new Random();
+        int randomIndex;
+        IWizzard chosenWizzard;
+
+        do
+        {
+            randomIndex = random.Next(wizzards.Count);
+            chosenWizzard = wizzards[randomIndex];
+        }
+        while (chosenWizzard.Health == 0);
+
+        return chosenWizzard;
+    }
+
+    public bool HasAlliveWizzard(List<IWizzard> wizzards)
+    {
+        return wizzards.Any(wizzard => wizzard.Health > 0);
     }
 
     public void WizzardAttack(IWarrior warrior, IWizzard wizzard)
