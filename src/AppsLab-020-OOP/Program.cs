@@ -13,8 +13,8 @@ using System.Threading;
             var wariorData = save[0].Split(";");
             var wizardData = save[1].Split(";");
 
-            Wizard mojwizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
-            Warior mojwarior = new Warior(wariorData[0], Int32.Parse(wariorData[1]), Int32.Parse(wariorData[2]));
+            var mojwizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            var mojwarior = new Wizard(wariorData[0], Int32.Parse(wariorData[1]), Int32.Parse(wariorData[2]), Int32.Parse(wariorData[3]));
 
 
 

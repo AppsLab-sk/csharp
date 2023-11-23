@@ -44,6 +44,23 @@ namespace AppsLab_020_OOP
             }
 
         }
+        public void Attack(Wizard enemy)
+        {
+            Random r = new Random();
+            int attackPower = r.Next(Attackpower);
+            enemy.health -= attackPower;
+            if (Mana > 0)
+            {
+                enemy.health -= Attackpower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "Oddychuje");
+            }
+
+        }
 
         internal bool StillAlive()
         {
