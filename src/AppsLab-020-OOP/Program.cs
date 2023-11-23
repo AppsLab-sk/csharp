@@ -9,7 +9,7 @@ internal class Program
         string[] wariorData = save[0].Split(";");
         string[] enemyData = save[1].Split(";");
 
-        var warior = new Warior(wariorData[0],Int32.Parse(wariorData[1]),Int32.Parse(wariorData[2]));
+        var warior = new Enemy(wariorData[0], Int32.Parse(wariorData[1]), Int32.Parse(wariorData[2]), Int32.Parse(wariorData[3]));
         var enemy = new Enemy(enemyData[0], Int32.Parse(enemyData[1]), Int32.Parse(enemyData[2]), Int32.Parse(enemyData[3]));
 
 

@@ -35,6 +35,19 @@ namespace AppsLab_020_OOP
 
             }
         }
+        public void Attack(Enemy enemy)
+        {
+            if (Mana > 0)
+            {
+                enemy.Health -= AttackPower;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "oddychuje");
+
+            }
+        }
         public bool StillAlive()
         { return Health > 0; 
         }
