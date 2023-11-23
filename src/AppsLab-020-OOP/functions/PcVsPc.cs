@@ -23,20 +23,20 @@ namespace AppsLab_020_OOP.functions
             List<IWarrior> warriors = new List<IWarrior>
             {
                 new Warrior("Bojovník", 200, 50, 2),
-                new Warrior2("Bojovník2", 200, 50, 2),
-                new Warrior3("Bojovník3", 200, 50, 2),
-                new Warrior4("Bojovník4", 200, 50, 2),
-                new Warrior5("Bojovník5", 200, 50, 2),
+                new Warrior("Bojovník2", 200, 50, 2),
+                new Warrior("Bojovník3", 200, 50, 2),
+                new Warrior("Bojovník4", 200, 50, 2),
+                new Warrior("Bojovník5", 200, 50, 2),
             };
             var warrior = stats.ChooseWarrior(warriors);
 
             List<IWizzard> wizzards = new List<IWizzard>
             {
                 new Wizzard("Čarodej", 100, 60, 2),
-                new Wizzard2("Čarodej2", 100, 60, 2),
-                new Wizzard3("Čarodej3", 100, 60, 2),
-                new Wizzard4("Čarodej4", 100, 60, 2),
-                new Wizzard5("Čarodej5", 100, 60, 2),
+                new Wizzard("Čarodej2", 100, 60, 2),
+                new Wizzard("Čarodej3", 100, 60, 2),
+                new Wizzard("Čarodej4", 100, 60, 2),
+                new Wizzard("Čarodej5", 100, 60, 2),
             };
             var wizzard = stats.ChooseWizzard(wizzards);
 

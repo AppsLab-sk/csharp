@@ -1,4 +1,6 @@
-﻿public class Statistick
+﻿using System.Security.Cryptography.X509Certificates;
+
+public class Statistick
 {
     //var intro = new Intro();
 
@@ -79,18 +81,20 @@
 
     public IWarrior ChooseWarrior(List<IWarrior> warriors)
     {
-        Random random = new Random();
-        int randomIndex;
-        IWarrior chosenWarrior;
-
-        do
+        if (HasAlliveWarrior(warriors) == true)
         {
-            randomIndex = random.Next(warriors.Count);
-            chosenWarrior = warriors[randomIndex];
-        }
-        while (chosenWarrior.Health == 0);
-
-        return chosenWarrior;
+            Random random = new Random();
+            int randomIndex;
+            IWarrior chosenWarrior;
+            do
+            {
+                randomIndex = random.Next(warriors.Count);
+                chosenWarrior = warriors[randomIndex];
+            }
+            while (chosenWarrior.Health == 0);
+            return chosenWarrior;
+        } 
+        else{ return null; }      
     }
 
     public bool HasAlliveWarrior(List<IWarrior> warriors)
@@ -105,18 +109,20 @@
 
     public IWizzard ChooseWizzard(List<IWizzard> wizzards)
     {
-        Random random = new Random();
-        int randomIndex;
-        IWizzard chosenWizzard;
-
-        do
-        {
-            randomIndex = random.Next(wizzards.Count);
-            chosenWizzard = wizzards[randomIndex];
+        if (HasAlliveWizzard(wizzards) == true) 
+        { 
+            Random random = new Random();
+            int randomIndex;
+            IWizzard chosenWizzard;
+            do
+            {
+                randomIndex = random.Next(wizzards.Count);
+                chosenWizzard = wizzards[randomIndex];
+            }
+            while (chosenWizzard.Health == 0);
+            return chosenWizzard;
         }
-        while (chosenWizzard.Health == 0);
-
-        return chosenWizzard;
+        else { return null; }
     }
 
     public bool HasAlliveWizzard(List<IWizzard> wizzards)

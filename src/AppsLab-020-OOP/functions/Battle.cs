@@ -75,10 +75,18 @@ namespace AppsLab_020_OOP.functions
                     if (warrior.Health == 0 && stats.HasAlliveWarrior(warriors) == true)
                     {
                         stats.ChooseWarrior(warriors);
+                        if (warrior == null) 
+                        {
+                            Console.WriteLine("Neostali žiadny bojovníci!");
+                        }
                     }
                     if (wizzard.Health == 0 && stats.HasAlliveWizzard(wizzards) == true)
                     {
                         stats.ChooseWizzard(wizzards);
+                        if (wizzard == null)
+                        {
+                            Console.WriteLine("Neostali žiedny nepriatelia!");
+                        }
                     }
                 }
             }
