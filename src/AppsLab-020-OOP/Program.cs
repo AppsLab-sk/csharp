@@ -7,12 +7,14 @@ internal class Program
     {
         Console.WriteLine("Hello World!");
 
+        var save = File.ReadAllLines("Save/Saves.txt"); 
 
-        var warrior = new Warrior("Octaine", 1500, 50);
+        string[] warriorData = save[0].Split(';');
+        string[] mageData = save[1].Split(";");
 
+        var warrior = new Mage(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
+        var mage = new Mage(mageData[0], Int32.Parse(mageData[1]), Int32.Parse(mageData[2]), Int32.Parse(mageData[3]));
        
-        var mage = new Mage("Measing", 1500, 150, 75);
-
         int round = 0;
         while (mage.StillALive() && warrior.StillALive())
         {

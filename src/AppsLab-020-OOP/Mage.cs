@@ -20,6 +20,19 @@ namespace AppsLab_020_OOP
             Attackpower = attackpower;
             Mana = mana;
         }
+        public void Attack(Mage enemy)
+        {
+            if (Mana > 0)
+            {
+                enemy.Health -= Attackpower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 20;
+                Console.WriteLine(this + "oddychuje");
+            }
+        }
         public void Attack(Warrior enemy)
         {
             if (Mana > 0)
@@ -33,7 +46,6 @@ namespace AppsLab_020_OOP
                 Console.WriteLine(this + "oddychuje");
             }
         }
-
         public bool StillALive()
         {
             return Health > 0;
