@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppsLab_020_OOP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,22 @@ namespace AppsLab_020_OOP
             {
                 Mana += 25;
                 Console.WriteLine(this + "Oddychuje");
+
+            }
+
+        }
+        public void Attack(Mage mojwar)
+        {
+            if (Mana > 0)
+            {
+                mojwar.Health -= AttackPower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "Oddychuje");
+
             }
 
         }

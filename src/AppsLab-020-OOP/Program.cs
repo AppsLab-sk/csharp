@@ -11,11 +11,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             var save = File.ReadAllLines("Save/Saves.txt");
             var warriorData = save[0].Split(';');
             var wizardData = save[1].Split(";");
-            
 
 
-            Mage mojmag = new Mage(wizardData[0], Int32.Parse(wizardData[1]) , Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
-            Warrior mojwar = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]));
+
+            Mage mojmag = new Mage(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            Mage mojwar = new Mage(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
 
             int round = 0;
             while (mojmag.StillAlive() && mojwar.StillAlive())
@@ -25,12 +25,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine((round++) + " " + mojwar + "vs." + mojmag);
             }
             if (mojmag.StillAlive())
-            Console.WriteLine("Mage wins");
-            if(mojwar.StillAlive())
-            Console.WriteLine("Warrior wins");
+                Console.WriteLine("Miloš wins");
+            if (mojwar.StillAlive())
+                Console.WriteLine("Gregor wins");
             if (!mojmag.StillAlive() && !mojwar.StillAlive())
-            Console.WriteLine("Remíza");
+                Console.WriteLine("Remíza");
         }
     }
 }
-
