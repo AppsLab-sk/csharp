@@ -1,26 +1,32 @@
-﻿// See https://aka.ms/new-console-template for more information
-using AppsLab_020_OOP;
+﻿using AppsLab_020_OOP;
+using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 
-
-using System;
-
-namespace MyApp // Note: actual namespace depends on the project name.
+public static class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Enemy enemy = new Enemy("Jožo", 20, 50, 200);
+        Warrior warrior = new Warrior ("Hugo", 25,50, 150);
+        int round = 0;
+        while (warrior.StillAlive() && enemy.StillAlive())
         {
-            var enemy = new Enemy();
-            enemy.Age = 20;
-            enemy.Name = "Hugo";
-            enemy.Attack = 40;
-            enemy.Health = 160;
-
-            var warrior = new Warrior();
-            warrior.Age = 5;
-            warrior.Name = "Jožo";
-            warrior.Attack = 30;
-            warrior.Health = 180;
+            warrior.Attack(enemy);
+            enemy.Attack(warrior);
+            Console.WriteLine((round++) + " " + warrior + " vs " + enemy);
         }
-    }   
+        if (enemy.StillAlive())
+        {
+            Console.WriteLine("Enemy" + " " + enemy.Name + " " + "won.");
+        }
+        if (warrior.StillAlive())
+        {
+            Console.WriteLine("Warrior" + " " + warrior.Name + " " + "won.");
+        }
+        if (!warrior.StillAlive() && !enemy.StillAlive())
+        {
+            Console.WriteLine("Tie.");
+        }
+
+    }
 }

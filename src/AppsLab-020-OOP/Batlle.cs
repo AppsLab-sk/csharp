@@ -8,11 +8,12 @@ namespace AppsLab_020_OOP
 {
     public class Battle
     {
-        public Enemy Enemy;
-        public Warrior Warrior;
-    }
-    public void Simulate()
-    {
+        public Enemy enemy;
+        public Warrior warrior;
 
+        public void Simulate()
+        {
+
+        }
     }
 }
