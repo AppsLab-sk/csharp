@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,13 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Save\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Save\Saves.txt.txt">
-      <CopyToOutputDirectory>copy allways</CopyToOutputDirectory>
-    </None>
+    <Compile Remove="Save\**" />
+    <EmbeddedResource Remove="Save\**" />
+    <None Remove="Save\**" />
   </ItemGroup>
 
 </Project>

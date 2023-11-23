@@ -22,6 +22,19 @@ namespace AppsLab_020_OOP
             AttackPower = attackPower;
         }
 
+        public void Attack(Ork wizard)
+        {
+            if (wizard.StillAlive())
+            {
+                Health -= AttackPower;
+                wizard.Health -= 30;
+            }
+            else
+            {
+                wizard.Health += 25;
+                Console.WriteLine($"Ork is resting");
+            }
+        }
         public void Attack(Wizard wizard)
         {
             if (wizard.StillAlive())

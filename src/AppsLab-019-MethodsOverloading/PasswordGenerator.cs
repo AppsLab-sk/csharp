@@ -81,6 +81,8 @@ namespace AppsLab_019_MethodsOverloading
                 password += characters[_random.Next(characters.Length - 1)];
             }
             return password;
-        } 
+        }
+    }
+}
 
 

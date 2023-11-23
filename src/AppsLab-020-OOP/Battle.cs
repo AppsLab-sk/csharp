@@ -16,7 +16,7 @@ namespace AppsLab_020_OOP
             for (int round = 1; round <= maxRounds; round++)
             {
                 Console.WriteLine($"Round {round}");
-
+                
                 // Wizard attacks Ork
                 wizard.Attack(wizard);
                 Console.WriteLine($"{ork.Name} attacks {ork.Name}. {ork.Name}'s health: {ork.Health}");
