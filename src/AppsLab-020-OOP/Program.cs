@@ -15,10 +15,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
           
         
-            Wizard mojwizard = new Wizard("dano", 1000 , 100 , 100);
+            
 
-            var Warior = new Warior(wariorData[0], wariorData[1], wariorData[2]);
-            var Wizard = new Wizard(wizardData[0], wizardData[1], wizardData[2], wizardData[3]);
+            Wizard mojwizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            var mojwarior = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
 
 
             int round = 0;

@@ -43,7 +43,20 @@ namespace AppsLab_020_OOP
                 Mana += 25;
                 Console.WriteLine(this + "oddychuje");
             }
-        }   
+        }
+        public void Attack(Wizard enemy)
+        {
+            if (Mana > 0)
+            {
+                enemy.Health -= Attackpower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "oddychuje");
+            }
+        }
 
         public void Defend()
         {
