@@ -12,11 +12,14 @@ public class Warrior
 {
     public string Name { get; set; }
     public int Health { get; set; }
-
     public int AttackPower { get; set; }
 
-    
+    public void Attack(Wizzard enemy) 
+    {
+        enemy.Health = Math.Max(0, enemy.Health - AttackPower);
+    }
 }
+
 
 
 
