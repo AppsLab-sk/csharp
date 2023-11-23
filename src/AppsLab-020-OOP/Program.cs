@@ -37,13 +37,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             if (Archer.Health <= 0)
             {
                 Console.WriteLine(Archer.Name + " was defeated ");
-            
+                Console.WriteLine(Enemy.Name + " wins !!!");
             }
             
             if (Enemy.Health <= 0)
             {
                 Console.WriteLine(Enemy.Name + " was defeated ");
-            
+                Console.WriteLine(Archer.Name  + " wins !!!");
             }
             
             if (Enemy.Health <= 0 && Archer.Health <= 0)
