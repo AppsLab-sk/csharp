@@ -13,7 +13,17 @@ namespace AppsLab_020_OOP
         public int Attackpower { get; set; }
         public int Mana { get; set; } = 100;
 
-
+        public wizard()
+        {
+            
+        }
+        public wizard(string name, int health, int attackPower, int mana)
+        {
+            this.name = name;
+            health = health;
+            attackPower = attackPower;
+            Mana = mana;
+        }
         public bool StillAlive()
         {
            return health > 0;
@@ -35,24 +45,29 @@ namespace AppsLab_020_OOP
                 Mana += 25;
                 Console.WriteLine(this + "oddychuje");
             }
-
-            
-            
         }
-        public void Defend()
+        public void Attack(wizard enemy)
         {
-
+            if (Mana > 0)
+            {
+                enemy.health -= Attackpower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + "oddychuje");
+            }
         }
-        public void Heal()
-        
-        {
+       
 
-        }
+
+    }
        
 
 
 
     }
 
-}
+
 

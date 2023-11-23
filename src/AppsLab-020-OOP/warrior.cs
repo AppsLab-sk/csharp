@@ -16,7 +16,16 @@ namespace AppsLab_020_OOP
         {
             return health > 0;
         }
-
+        public warrior()
+        {
+            
+        }
+        public warrior(string name, int health, int attackPower, int mana)
+        {
+            this.name = name;
+            health = health;
+            attackPower = attackPower;
+        }
         public override string ToString()
         {
             return name + "(" + health + ")";

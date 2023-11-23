@@ -1,39 +1,37 @@
 ﻿using AppsLab_020_OOP;
 using System;
+using static System.Net.Mime.MediaTypeNames;
+using System.Threading;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
-    internal class Program
+    internal class Character
     {
         static void Main(string[] args)
         {
-            wizard mojwizard = new wizard();
-            mojwizard.name = "Dakoty";
-            mojwizard.health = 400;
-            mojwizard.Attackpower = 100;
-            mojwizard.Mana = 100;
 
-            warrior mojwarior = new warrior();
-            mojwarior.name = "Ferenci";
-            mojwarior.health = 600;
-            mojwarior.Attackpower = 100;
-            
+            var save = File.ReadAllLines("svae/saves.txt");
+            var warriorData = save[0].Split(';');
+            var wizardData = save[1].Split(";");
+
+
+
+            var mojmag = new wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            var mojwar = new wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+
             int round = 0;
-            while (mojwizard.StillAlive() && mojwarior.StillAlive())
+            while (mojmag.StillAlive() && mojmag.StillAlive())
             {
-                mojwizard.Attack(mojwarior);
-                mojwarior.Attack(mojwizard);
-                Console.WriteLine((round++) + " " + mojwarior + " vs. " + mojwizard);
+                mojmag.Attack(mojmag);
+                mojwar.Attack(mojmag);
+                Console.WriteLine((round++) + " " + mojmag + "vs." + mojmag);
             }
-            if (mojwizard.StillAlive())
-                Console.WriteLine("Wizard wins!");
-            else
-                Console.WriteLine("warior wins!");
-            if (mojwizard.StillAlive() && mojwarior.StillAlive())
-            {
-                Console.WriteLine("remiza :( ");
-            }
-
+            if (mojmag.StillAlive())
+                Console.WriteLine("Mage wins");
+            if (mojmag.StillAlive())
+                Console.WriteLine("Warrior wins");
+            if (!mojmag.StillAlive() && !mojmag.StillAlive())
+                Console.WriteLine("Remíza");
         }
     }
 }
