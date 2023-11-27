@@ -28,7 +28,10 @@ namespace AppsLab_020_OOP.functions
                 new Warrior("Bojovník4", 200, 50, 2),
                 new Warrior("Bojovník5", 200, 50, 2),
             };
-            var warrior = stats.ChooseWarrior(warriors);
+            List<IWarrior> bWarriors = new List<IWarrior> { };
+            bWarriors.AddRange(warriors);
+
+            var warrior = stats.ChooseWarrior(bWarriors);
 
             List<IWizzard> wizzards = new List<IWizzard>
             {
@@ -38,16 +41,18 @@ namespace AppsLab_020_OOP.functions
                 new Wizzard("Čarodej4", 100, 60, 2),
                 new Wizzard("Čarodej5", 100, 60, 2),
             };
-            var wizzard = stats.ChooseWizzard(wizzards);
+            List<IWizzard> bWizzards = new List<IWizzard> { };
+            bWizzards.AddRange(wizzards);
+            var wizzard = stats.ChooseWizzard(bWizzards);
 
             var battle = new Battle();
 
-            while (stats.HasAlliveWarrior(warriors) && stats.HasAlliveWizzard(wizzards) == true) 
+            while (stats.HasAlliveWarrior(bWarriors) && stats.HasAlliveWizzard(bWizzards) == true) 
             { 
-                battle.Execute(warrior, wizzard, stats, intro, warriors, wizzards);
+                battle.Execute(warrior, wizzard, stats, intro, bWarriors, bWizzards);
             }
 
-            if (stats.HasAlliveWarrior(warriors) == false && stats.HasAlliveWizzard(wizzards) == false) //remíza
+            if (stats.HasAlliveWarrior(bWarriors) == false && stats.HasAlliveWizzard(bWizzards) == false) //remíza
             {
                 Thread.Sleep(2000);
                 Console.Clear();
@@ -55,7 +60,7 @@ namespace AppsLab_020_OOP.functions
                 stats.Stats(warrior, wizzard);
                 Console.WriteLine("Remíza.");
             }
-            if (stats.HasAlliveWarrior(warriors) == false && stats.HasAlliveWizzard(wizzards) == true) //nepriateľ vyhral
+            if (stats.HasAlliveWarrior(bWarriors) == false && stats.HasAlliveWizzard(bWizzards) == true) //nepriateľ vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();
@@ -63,7 +68,7 @@ namespace AppsLab_020_OOP.functions
                 stats.Stats(warrior, wizzard);
                 Console.WriteLine(wizzard.Name + " vyhral.");
             }
-            if (stats.HasAlliveWarrior(warriors) == true && stats.HasAlliveWizzard(wizzards) == false) //bojovník vyhral
+            if (stats.HasAlliveWarrior(bWarriors) == true && stats.HasAlliveWizzard(bWizzards) == false) //bojovník vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();

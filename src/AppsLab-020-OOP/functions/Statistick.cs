@@ -79,17 +79,17 @@ public class Statistick
         Console.Clear();
     }
 
-    public IWarrior ChooseWarrior(List<IWarrior> warriors)
+    public IWarrior ChooseWarrior(List<IWarrior> bWarriors)
     {
-        if (HasAlliveWarrior(warriors) == true)
+        if (HasAlliveWarrior(bWarriors) == true)
         {
             Random random = new Random();
             int randomIndex;
             IWarrior chosenWarrior;
             do
             {
-                randomIndex = random.Next(warriors.Count);
-                chosenWarrior = warriors[randomIndex];
+                randomIndex = random.Next(bWarriors.Count);
+                chosenWarrior = bWarriors[randomIndex];
             }
             while (chosenWarrior.Health == 0);
             return chosenWarrior;
@@ -97,9 +97,13 @@ public class Statistick
         else{ return null; }      
     }
 
-    public bool HasAlliveWarrior(List<IWarrior> warriors)
+    public bool HasAlliveWarrior(List<IWarrior> bWarriors)
     {
-        return warriors.Any(warrior => warrior.Health > 0);
+        if (bWarriors.Any(warrior => warrior.Health > 0) == true)
+        {
+            return true;
+        }
+        else { return false; }
     }
 
     public void WarriorAttack(IWarrior warrior, IWizzard wizzard) 
@@ -107,17 +111,17 @@ public class Statistick
         Console.WriteLine(warrior.Name + " ubral: " + warrior.AttackPower + " životov " + wizzard.Name);
     }
 
-    public IWizzard ChooseWizzard(List<IWizzard> wizzards)
+    public IWizzard ChooseWizzard(List<IWizzard> bWizzards)
     {
-        if (HasAlliveWizzard(wizzards) == true) 
+        if (HasAlliveWizzard(bWizzards) != false) 
         { 
             Random random = new Random();
             int randomIndex;
             IWizzard chosenWizzard;
             do
             {
-                randomIndex = random.Next(wizzards.Count);
-                chosenWizzard = wizzards[randomIndex];
+                randomIndex = random.Next(bWizzards.Count);
+                chosenWizzard = bWizzards[randomIndex];
             }
             while (chosenWizzard.Health == 0);
             return chosenWizzard;
@@ -125,9 +129,13 @@ public class Statistick
         else { return null; }
     }
 
-    public bool HasAlliveWizzard(List<IWizzard> wizzards)
+    public bool HasAlliveWizzard(List<IWizzard> bWizzards)
     {
-        return wizzards.Any(wizzard => wizzard.Health > 0);
+        if (bWizzards.Any(wizzard => wizzard.Health > 0) == true)
+        {
+            return true;
+        }
+        else { return false; }
     }
 
     public void WizzardAttack(IWarrior warrior, IWizzard wizzard)

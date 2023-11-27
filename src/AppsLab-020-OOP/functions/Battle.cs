@@ -11,7 +11,7 @@ namespace AppsLab_020_OOP.functions
 {
     public class Battle
     {
-        public void Execute(IWarrior warrior, IWizzard wizzard, Statistick stats, Intro intro, List<IWarrior> warriors, List<IWizzard> wizzards) 
+        public void Execute(IWarrior warrior, IWizzard wizzard, Statistick stats, Intro intro, List<IWarrior> bWarriors, List<IWizzard> bWizzards) 
         {
             while (warrior.Health > 0 && wizzard.Health > 0)
             {
@@ -72,17 +72,19 @@ namespace AppsLab_020_OOP.functions
                 }
                 else
                 {
-                    if (warrior.Health == 0 && stats.HasAlliveWarrior(warriors) == true)
+                    if (warrior.Health == 0 && stats.HasAlliveWarrior(bWarriors) == true)
                     {
-                        stats.ChooseWarrior(warriors);
+                        bWarriors.Remove(bWarriors.Where(warrior => warrior.Health == 0).First());
+                        stats.ChooseWarrior(bWarriors);
                         if (warrior == null) 
                         {
                             Console.WriteLine("Neostali žiadny bojovníci!");
                         }
                     }
-                    if (wizzard.Health == 0 && stats.HasAlliveWizzard(wizzards) == true)
+                    if (wizzard.Health == 0 && stats.HasAlliveWizzard(bWizzards) == true)
                     {
-                        stats.ChooseWizzard(wizzards);
+                        bWizzards.Remove(bWizzards.Where(wizzard => wizzard.Health == 0).First());
+                        stats.ChooseWizzard(bWizzards);
                         if (wizzard == null)
                         {
                             Console.WriteLine("Neostali žiedny nepriatelia!");
