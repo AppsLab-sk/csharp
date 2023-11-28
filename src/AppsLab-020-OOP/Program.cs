@@ -33,25 +33,13 @@ for (int i = 7; i <= 11; i++)
 
 }
 
-Console.WriteLine("Hello World!");
-
-var warrior = new Warrior();
-warrior.Name = warriorData[0];
-warrior.Health = Int32.Parse(warriorData[1]);
-warrior.attackpower = Int32.Parse(warriorData[2]);
-warrior.mana = Int32.Parse(wizardData[3]);
-
-
-var wizard = new Wizard();
-wizard.Name = wizardData[0];
-wizard.Health = Int32.Parse(wizardData[1]);
-wizard.mana = Int32.Parse(wizardData[2]);
-wizard.attackpower = Int32.Parse(wizardData[3]);
-
-
 int round = 0;
 while (wizard.StillAlive() && warrior.StillAlive())
 {
+    int wizardindex = r.Next(maxvalue wizards.Count - 1)
+    int warriordindex = r.Next(maxvalue warriors.Count - 1)
+
+
     wizard.Attack(warrior);
     warrior.Attack(wizard);
     Console.WriteLine((round++) + " " + warrior.Name + " vs." + wizard.Name);
