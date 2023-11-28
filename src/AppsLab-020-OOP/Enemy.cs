@@ -12,19 +12,30 @@ namespace AppsLab_020_OOP
         public int Age { get; set; }
         public int AttackPower { get; set; }
         public int Health { get; set; }
+        public int Mana { get; set; }
 
-        public Enemy(string name, int age, int attackpower, int health)
+        public Enemy(string name, int age, int attackpower, int health, int mana)
         {
             Name = name;
             Age = age;
             AttackPower = attackpower;
             Health = health;
+            Mana = mana; 
         }
 
 
         public void Attack(Warrior warrior)
         {
-            warrior.Health -= AttackPower;
+            if (Mana > 20)
+            {
+                warrior.Health -= AttackPower;
+                Mana -= 20;
+            }
+            else
+            {
+                Mana += 25;
+                Console.WriteLine(this + Name + "oddychuje.");
+            }
         }
 
         public override string? ToString()
