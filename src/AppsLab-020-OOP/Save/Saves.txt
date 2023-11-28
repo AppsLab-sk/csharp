@@ -1,2 +1,12 @@
-Octaine;1500;50;75
-Measing;1750;150;75 
+Red
+Octaine1;1500;50
+Octaine2;1500;50
+Octaine3;1500;50
+Octaine4;1500;50
+Octaine5;1500;50
+Blue
+Measing1;1750;150;75
+Measing2;1750;150;75
+Measing3;1750;150;75
+Measing4;1750;150;75
+Measing5;1750;150;75
