@@ -17,6 +17,13 @@ namespace AppsLab_020_OOP
 
         public int Mana { get; set; }
 
+        public Wizzard(string name, int health, int attackPower, int mana)
+        {
+            Name = name;
+            Health = health;
+            AttackPower = attackPower;
+            Mana = mana;
+        }
 
         public void Attack(Warrior enemy)
         {
