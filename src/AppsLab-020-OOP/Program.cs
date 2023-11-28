@@ -7,19 +7,42 @@ public static class Program
     {
         var save = File.ReadAllLines("Save/saves.txt");
 
-        string[] mageData = save[0].Split(";");
-        string[] warriorData = save[1].Split(';');
+        string teamA = save[0];
+        string teamB = save[6];
+        
 
-        Mage mage = new Mage(mageData[0] , Int32.Parse(mageData[1]), Int32.Parse(mageData[2]), Int32.Parse(mageData[3]), Int32.Parse(mageData[4]));
-        Warrior warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
+        List<Mage> mages = new List<Mage>();
+        List<Warrior> warriors = new List<Warrior>();
 
-        int round = 0;
-        while (warrior.StillAlive() && mage.StillAlive())
+        for (int i = 1; i <= 5; i++)
         {
-            warrior.Attack(mage);
-            mage.Attack(warrior);
-            mage.Heal();
-            warrior.Heal();
+            string[] mageData = save[i].Split(';');
+            var mage = new Mage(mageData[0], Int32.Parse(mageData[1]), Int32.Parse(mageData[2]), Int32.Parse(mageData[3]), Int32.Parse(mageData[4]));
+            mages.Add(mage);
+        }
+        for (int i = 7; i <= 11; i++)
+        {
+            string[] warriorData = save[i].Split(';');
+            var warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
+            warriors.Add(warrior);
+        }
+        Random r = new Random();
+        int round = 0;
+        while (warriors.Count>0 && mages.Count>0)
+        {
+            int mageIndex = r.Next(mages.Count - 1);
+            int warriorIndex = r.Next(warriors.Count - 1);
+
+
+            warriors[warriorIndex].Attack(mages[mageIndex]);
+            mages[mageIndex].Attack(warriors[warriorIndex]);
+            mages[mageIndex].Heal();
+            warriors[warriorIndex].Heal();
+
+            if (mages[mageIndex].Health < 0)
+                mages.RemoveAt(mageIndex);
+            if (warriors[warriorIndex].Health < 0)  
+
             Console.WriteLine((round++) + " " + warrior + " vs " + mage);
         }
             if (mage.StillAlive())
