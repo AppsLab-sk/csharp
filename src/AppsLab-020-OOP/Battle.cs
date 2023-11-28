@@ -1,57 +1,76 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AppsLab_020_OOP
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Orc orc = new Orc();
-            Wizard wizard = new Wizard();
-
-            Battle.SimulateBattle(orc, wizard);
-
-            Console.ReadLine();
-        }
-    }
-
     public static class Battle
     {
-        public static void SimulateBattle(Orc orc, Wizard wizard)
+        private static Random random = new Random();
+
+        public static void SimulateBattle(List<ICharacter> orcs, List<ICharacter> wizards)
         {
             Console.WriteLine("Battle Start!");
 
-            while (orc.StillAlive() && wizard.StillAlive())
+            int round = 1;
+
+            while (AllStillAlive(orcs) && AllStillAlive(wizards))
             {
-                orc.Attack(wizard);
+                Console.WriteLine("Round " + round);
 
-                if (!wizard.StillAlive())
+                // Reset actions for the new round
+                foreach (var orc in orcs)
                 {
-                    Console.WriteLine(wizard.Name + " has been defeated. Orc wins!");
+                    ((Orc)orc).ResetAction();
+                }
+
+                foreach (var wizard in wizards)
+                {
+                    ((Wizard)wizard).ResetAction();
+                }
+
+                ICharacter randomOrc = orcs[random.Next(orcs.Count)];
+                ICharacter randomWizard = wizards[random.Next(wizards.Count)];
+
+                ((Orc)randomOrc).Attack((Wizard)randomWizard);
+                if (!randomWizard.StillAlive())
+                {
+                    Console.WriteLine(((Wizard)randomWizard).Name + " has been defeated. Orc wins!");
                     break;
                 }
 
-                wizard.Attack(orc);
-
-                if (!orc.StillAlive())
+                ((Wizard)randomWizard).Attack((Orc)randomOrc);
+                if (!randomOrc.StillAlive())
                 {
-                    Console.WriteLine(orc.Name + " has been defeated. Wizard wins!");
+                    Console.WriteLine(((Orc)randomOrc).Name + " has been defeated. Wizard wins!");
                     break;
                 }
 
-                wizard.IncrementRoundCounter();
-                wizard.GainMana();
-
-                orc.ResetAction();
-                wizard.ResetAction();
-
+                round++;
                 Console.WriteLine("Current Status:");
-                Console.WriteLine("Orc: " + orc);
-                Console.WriteLine("Wizard: " + wizard);
+                foreach (var orc in orcs)
+                {
+                    Console.WriteLine("Orc: " + orc);
+                }
+                foreach (var wizard in wizards)
+                {
+                    Console.WriteLine("Wizard: " + wizard);
+                }
                 Console.WriteLine("----------------------");
             }
 
             Console.WriteLine("Battle End!");
+        }
+
+        private static bool AllStillAlive(List<ICharacter> creatures)
+        {
+            foreach (var creature in creatures)
+            {
+                if (!creature.StillAlive())
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

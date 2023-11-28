@@ -2,7 +2,7 @@
 
 namespace AppsLab_020_OOP
 {
-    public class Wizard
+    public class Wizard : ICharacter
     {
         private static Random random = new Random();
 
@@ -12,18 +12,10 @@ namespace AppsLab_020_OOP
         public int Defense { get; set; } = 34;
         public int AttackPower { get; set; }
         private bool hasTakenAction = false;
-        private int roundsSinceLastDebuffRemoval = 0;
 
         public Wizard()
         {
-            if (Hp + Defense >= 50)
-            {
-                AttackPower = 60;
-            }
-            else
-            {
-                AttackPower = random.Next(30, 46);
-            }
+            AttackPower = random.Next(30, 46);
         }
 
         public void Attack(Orc enemy)
@@ -34,7 +26,7 @@ namespace AppsLab_020_OOP
                 {
                     Console.WriteLine("Wizard is attacking with magic: " + AttackPower);
                     int damage = AttackPower - enemy.Defense;
-                    damage = Math.Max(0, damage); // Ensure damage is not negative
+                    damage = Math.Max(0, damage);
                     enemy.Hp -= damage;
 
                     Console.WriteLine("Enemy's Health after attack is: " + enemy.Hp);
@@ -57,41 +49,6 @@ namespace AppsLab_020_OOP
             {
                 Console.WriteLine("Wizard has already taken an action this turn.");
             }
-        }
-
-        public void Heal()
-        {
-            if (!hasTakenAction)
-            {
-                if (Manna >= 28)
-                {
-                    Console.WriteLine("Wizard is healing. Hp before healing: " + Hp);
-                    Hp += 40;
-                    Console.WriteLine("Hp after healing: " + Hp);
-
-                    Manna -= 28;
-                }
-                else
-                {
-                    Console.WriteLine("Not enough mana to perform the heal!");
-                }
-
-                hasTakenAction = true;
-            }
-            else
-            {
-                Console.WriteLine("Wizard has already taken an action this turn.");
-            }
-        }
-
-        public void IncrementRoundCounter()
-        {
-            roundsSinceLastDebuffRemoval++;
-        }
-
-        public void GainMana()
-        {
-            Manna += 9;
         }
 
         public void ResetAction()
