@@ -4,6 +4,8 @@ public class Statistick
 {
     //var intro = new Intro();
 
+    public int WarriorsWins { get; set; }
+    public int WizzardsWins { get; set; }
     public void Stats(IWarrior warrior, IWizzard wizzard)
     {
         Console.WriteLine(warrior.Name + " " + warrior.Health + " : " + wizzard.Name + " " + wizzard.Health);
@@ -86,12 +88,10 @@ public class Statistick
             Random random = new Random();
             int randomIndex;
             IWarrior chosenWarrior;
-            do
-            {
-                randomIndex = random.Next(bWarriors.Count);
-                chosenWarrior = bWarriors[randomIndex];
-            }
-            while (chosenWarrior.Health == 0);
+            
+            randomIndex = random.Next(bWarriors.Count);
+            chosenWarrior = bWarriors[randomIndex];
+  
             return chosenWarrior;
         } 
         else{ return null; }      
@@ -99,11 +99,15 @@ public class Statistick
 
     public bool HasAlliveWarrior(List<IWarrior> bWarriors)
     {
-        if (bWarriors.Any(warrior => warrior.Health > 0) == true)
+        if (bWarriors.Count() > 0)
         {
             return true;
-        }
-        else { return false; }
+        }else { return false; }
+    }
+
+    public void AddWinWarriors() 
+    {
+        WarriorsWins += 1;
     }
 
     public void WarriorAttack(IWarrior warrior, IWizzard wizzard) 
@@ -113,17 +117,15 @@ public class Statistick
 
     public IWizzard ChooseWizzard(List<IWizzard> bWizzards)
     {
-        if (HasAlliveWizzard(bWizzards) != false) 
+        if (HasAlliveWizzard(bWizzards) == true) 
         { 
             Random random = new Random();
             int randomIndex;
             IWizzard chosenWizzard;
-            do
-            {
-                randomIndex = random.Next(bWizzards.Count);
-                chosenWizzard = bWizzards[randomIndex];
-            }
-            while (chosenWizzard.Health == 0);
+            
+            randomIndex = random.Next(bWizzards.Count);
+            chosenWizzard = bWizzards[randomIndex];
+                
             return chosenWizzard;
         }
         else { return null; }
@@ -131,11 +133,14 @@ public class Statistick
 
     public bool HasAlliveWizzard(List<IWizzard> bWizzards)
     {
-        if (bWizzards.Any(wizzard => wizzard.Health > 0) == true)
+        if (bWizzards.Count() > 0)
         {
             return true;
-        }
-        else { return false; }
+        }else { return false; }
+    }
+    public void AddWinWizzards()
+    {
+        WizzardsWins += 1;
     }
 
     public void WizzardAttack(IWarrior warrior, IWizzard wizzard)
