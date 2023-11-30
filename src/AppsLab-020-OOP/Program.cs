@@ -31,7 +31,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             {
                 string[] enemyData = save[i].Split(',');
-                var enemy = new Enemy(enemyData[0],
+                var enemy = new enemy(enemyData[0],
                 Int32.Parse(enemyData[1]),
                 Int32.Parse(enemyData[2]),
                 Int32.Parse(enemyData[3]));
