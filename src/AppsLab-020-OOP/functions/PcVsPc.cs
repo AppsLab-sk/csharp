@@ -160,6 +160,7 @@ namespace AppsLab_020_OOP.functions
                 //stats.Stats(warrior, wizzard);
                 Console.WriteLine("Počet víťazstiev pre Bojovníkov: " + stats.WarriorsWins);
                 Console.WriteLine("Počet víťazstiev pre Čarodej: " + stats.WizzardsWins);
+                Console.WriteLine("Čarodeji naživu: " + bWizzards.Count);
                 Console.WriteLine("Čarodeji vyhrali.");
             }
             if (stats.HasAlliveWarrior(bWarriors) == true && stats.HasAlliveWizzard(bWizzards) == false) //bojovník vyhral
@@ -170,6 +171,7 @@ namespace AppsLab_020_OOP.functions
                 //stats.Stats(warrior, wizzard);
                 Console.WriteLine("Počet víťazstiev pre Bojovníkov: " + stats.WarriorsWins);
                 Console.WriteLine("Počet víťazstiev pre Čarodej: " + stats.WizzardsWins);
+                Console.WriteLine("Bojovníci naživu: " + bWarriors.Count);
                 Console.WriteLine("Bojovníci vyhrali.");
             }
         }
