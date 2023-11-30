@@ -1,59 +1,76 @@
 ﻿using System.Reflection.PortableExecutable;
 using System.Security.Cryptography;
+using System.Threading;
 using AppsLab_020_OOP;
+using static System.Net.Mime.MediaTypeNames;
 
-public static class Programe
+public static class Program
 {
     static void Main(string[] args)
     {
-        var save = File.ReadAllLines("Save\\Saves.txt");
-        string[] wizardData = save[0].Split(';');
-        string[] orkData = save[0].Split(';');
+        var save = File.ReadAllLines("NewFolder1/save.txt");
+
+        string orksTeamName = save[0];
+        string wizardsTeamName = save[6];
 
 
+        List<Wizard> wizards = new List<Wizard>();
+        List<Ork> orks = new List<Ork>();
 
+        for (int i = 1; i <= 5; i++)
+        {  
+             string[] wizardData = save[i].Split(';');
+             var wizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]));
+             wizards.Add(wizard);
+        }
 
+        for (int i = 7; i <= 11; i++)
+        {
+            string[] orkData = save[i].Split(';');
+            var ork = new Ork(orkData[0], Int32.Parse(orkData[1]), Int32.Parse(orkData[2]));
+            orks.Add(ork);
+        }
 
-        
-        var wizard = new Ork(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]));
-        var ork = new Ork(orkData[0], Int32.Parse(orkData[1]), Int32.Parse(orkData[2]));
         //var battle = new Battle();
 
         //public void SimulateBattle(Wizard wizard, Ork ork, int maxRounds)
 
-        Console.WriteLine($"Battle begins between {wizard.Name} and {ork.Name}");
-        int maxRounds = 5;
-        for (int round = 1; round <= maxRounds; round++)
+        Random r = new Random();
+        int round = 0;
+        while (orks.Count>0 && wizards.Count>0)
+       
         {
-            Console.WriteLine($"Round {round}");
+            int wizardIndex = r.Next(wizards.Count - 1);
+            int orkIndex = r.Next(orks.Count - 1);
 
-            // Wizard attacks Ork
-            wizard.Attack(ork);
-            Console.WriteLine($"{ork.Name} attacks {ork.Name}. {ork.Name}'s health: {ork.Health}");
 
-            // Check if Ork is still alive
-            if (!ork.StillAlive())
-            {
-                Console.WriteLine($"{ork.Name} has been defeated!");
-                break;
-            }
+            orks[orkIndex].Attack(wizards[wizardIndex]);
+            wizards[wizardIndex].Attack(orks[orkIndex]);
 
-            // Ork attacks Wizard
-            ork.Attack(wizard);
-            Console.WriteLine($"{ork.Name} attacks {wizard.Name}. {wizard.Name}'s health: {wizard.Health}");
 
-            // Check if Wizard is still alive
-            if (!wizard.StillAlive())
-            {
-                Console.WriteLine($"{wizard.Name} has been defeated!");
-                break;
-            }
+            if (wizards[wizardIndex].Health < 0)
+                wizards.RemoveAt(wizardIndex);
+            if (orks[orkIndex].Health < 0)
+                orks.RemoveAt(orkIndex);
+
         }
-
-        Console.WriteLine("Battle ended.");
+        if (wizards.Count>0)
+        {
+            Console.WriteLine("vyhral team s menom: " + wizardsTeamName);
+        }
+        if (orks.Count>0)
+        {
+            Console.WriteLine("vyhral team s menom: " + orksTeamName);
+        }
+        if (orks.Count ==0 && wizards.Count==0)
+            Console.WriteLine("Tie.");
     }
+
 }
 
 
 
-                        
+
+
+
+

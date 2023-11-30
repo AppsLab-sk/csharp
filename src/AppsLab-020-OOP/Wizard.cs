@@ -22,9 +22,9 @@ public class Wizard
     }
 
     // Attack method to attack an enemy
-    public void Attack(Wizard enemy)
+    public void Attack(Ork ork)
     {
-        enemy.Health -= AttackPower;
+        ork.Health -= AttackPower;
     }
 
     // Defend method for defending

@@ -18,7 +18,7 @@ namespace AppsLab_020_OOP
                 Console.WriteLine($"Round {round}");
                 
                 // Wizard attacks Ork
-                wizard.Attack(wizard);
+                wizard.Attack(ork);
                 Console.WriteLine($"{ork.Name} attacks {ork.Name}. {ork.Name}'s health: {ork.Health}");
 
                 // Check if Ork is still alive

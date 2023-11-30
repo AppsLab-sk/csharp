@@ -9,9 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\**" />
     <Compile Remove="Save\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
     <EmbeddedResource Remove="Save\**" />
+    <None Remove="NewFolder\**" />
     <None Remove="Save\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
 
 </Project>
