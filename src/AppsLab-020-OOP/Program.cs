@@ -20,9 +20,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 string[] archerData = save[i].Split(',');
                 var archer = new Archer(archerData[0],
                 Int32.Parse(archerData[1]),
-                Int32.Parse(archerData[2]),
-                //Int32.Parse(archerData[3]));
-                archers.Add(archer));
+                Int32.Parse(archerData[2]));
+
+
+                archers.Add(archer);
 
             }
             Console.WriteLine(archers.Count);
@@ -31,10 +32,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             {
                 string[] enemyData = save[i].Split(',');
-                var enemy = new enemy(enemyData[0],
+                var enemy = new Enemy(enemyData[0],
                 Int32.Parse(enemyData[1]),
-                Int32.Parse(enemyData[2]),
-                Int32.Parse(enemyData[3]));
+                Int32.Parse(enemyData[2]));
+                ;
                 enemies.Add(enemy);
 
             }
