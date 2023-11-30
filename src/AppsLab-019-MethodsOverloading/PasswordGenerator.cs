@@ -1,28 +1,10 @@
-using System.Text.Json.Serialization;
-
 namespace AppsLab_019_MethodsOverloading
 {
-    /// <summary>
-    /// Represents a password generator that can generate random passwords.
-    /// </summary>
     public class PasswordGenerator
     {
-        private const int DefaultLength = 8;
-        private const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
-        private const string SpecialChars = "!@#$%^&*()";
-        private const string Numbers = "0123456789";
+        private const string Letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string SpecialChars = "!@#$%^&*()_+-=[]{}|;:'\",.<>?";
 
-        private readonly Random _random = new();
-        readonly string _password;  
-        readonly string _salt;  
-        private readonly string _salt2;
-        private readonly string _salt3;
-        
-
-        /// <summary>
-        /// Generates a random password with the default length of 8 characters and no special characters or numbers.
-        /// </summary>
-        /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
             var random = new Random();
@@ -30,30 +12,21 @@ namespace AppsLab_019_MethodsOverloading
 
             for (int i = 0; i < 8; i++)
             {
-                result += Alphabet[random.Next(Alphabet.Length -1)];
+                result += Alphabet[random.Next(0, 25)];
             }
             return result;
 
-        }
-
-        /// <summary>
-        /// Generates a random password with the specified length and no special characters or numbers.
-        /// </summary>
-        /// <param name="length">The length of the password to generate.</param>
-        /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            var random = new Random();
-            var result = "";
+            return GeneratePassword(length, false, false);
+        }
 
-            string password = "";
             for (int i = 0; i < length; i++) ;
             {
-                result += Alphabet[random.Next(Alphabet.Length - 1)];
+                result += Alphabet[random.Next(0, 25)];
             }
-            return result;
-        
-        }
+
+            StringBuilder password = new StringBuilder();
 
         /// <summary>
         /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
@@ -64,25 +37,23 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            string password = "";
-            string characters = Alphabet;
-            if (includeNumbers) 
+            var charBook = Alphabet;
+            var random = new Random();
+            var result = "";
+
+            if (includeSpecialChars)
             {
-                characters += SpecialChars;
+                charBook += SpecialChars;
+            }
+            if (includeNumbers)
+            {
+                charBook += Numbers;
             }
 
-            if (length <= 0);
+            for (int i = 0; i < length; i++ )
             {
-                Console.WriteLine("Error");
-                return "";
+                result += Alphabet[random.Next(0, 25)];
             }
-            for (int i = 0; i < length;i++)
-            {
-                password += characters[_random.Next(characters.Length - 1)];
-            }
-            return password;
+            return result;
+
         }
-    }
-}
-
-
