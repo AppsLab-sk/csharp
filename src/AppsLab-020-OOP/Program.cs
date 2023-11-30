@@ -2,6 +2,8 @@
 using AppsLab_020_OOP;
 
 using System;
+using static System.Net.Mime.MediaTypeNames;
+using System.Threading;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -10,40 +12,68 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             var save = File.ReadAllLines("Save/Saves.txt");
-            var wariorData = save[0].Split(',');
-            var wizardData = save[0].Split(',');
+            string wariorsTeamName = save[0];
+            string wizardsTeamName = save[6];
 
-          
-        
-            
+            List<Warior> wariors = new List<Warior>();
+            List<Wizard> wizards = new List<Wizard>();
 
-            Wizard mojwizard = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
-            var mojwarior = new Wizard(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]), Int32.Parse(wizardData[3]));
+            for (int i = 1; i <= 5; i++)
+            {
+                string[] wizardData = save[i].Split(";");
+                var wizard = new Warior(wizardData[0], Int32.Parse(wizardData[1]), Int32.Parse(wizardData[2]));
+                wariors.Add(wizard);
+            }
 
-
+            for (int i = 7; i <= 11; i++)
+            {
+                string[] warriorData = save[i].Split(';');
+                var wizard  = new Wizard(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
+                wizards.Add(wizard);
+            }
+            Random r = new Random();
             int round = 0;
-            while (mojwizard.StillAlive() && Warior.StillAlive())
+            while (wizards.Count > 0 && wariors.Count > 0)
             {
-                mojwizard.Attack(Warior);
-                Warior.Attack(mojwizard);
-                Console.WriteLine((round++) + " " + Warior + " vs " + mojwizard);
-            }
+                int wizardIndex = r.Next(wizards.Count - 1);
+                int wariorIndex = r.Next(wariors.Count - 1);
+
+
+                wizards[wizardIndex].Attack(wariors[wariorIndex]);
+                wariors[wariorIndex].Attack(wizards[wizardIndex]);
+
+                if (wizards[wizardIndex].Health < 0)
+                {
+                    wizards.RemoveAt(wizardIndex);
+                    Console.WriteLine("Team " + wizardsTeamName + " na: " + wizards.Count);
+                    Console.WriteLine("Team " + wariorsTeamName + " na: " + wariors.Count);
+                }   
+                   
+                if (wariors[wariorIndex].Health < 0)
+                {
+                    wariors.RemoveAt(wariorIndex);
+                    Console.WriteLine("Team " + wizardsTeamName + " na: " + wizards.Count);
+                    Console.WriteLine("Team " + wariorsTeamName + " na: " + wariors.Count);
+                }
+                        
+
+            } 
        
-            if (Warior.StillAlive())
+            if (wariors.Count > 0)
             {
-                Console.WriteLine("vyhral warior " + Warior.Name);
+                Console.WriteLine("vyhral team s menom  " + wariorsTeamName);
             }
-            if (mojwizard.StillAlive())
+            if (wizards.Count > 0)
             {
-                Console.WriteLine("vyhral wizard " + mojwizard.Name);
+                Console.WriteLine("vyhral team s menom  " + wizardsTeamName);
             }
-            if (!mojwizard.StillAlive() && !Warior.StillAlive())
+            if (wizards.Count==0 && wariors.Count==0)
             {
                 Console.WriteLine("remizka");
             }
+            Console.ReadLine();
 
-
-
+            
         }
     }
 }
