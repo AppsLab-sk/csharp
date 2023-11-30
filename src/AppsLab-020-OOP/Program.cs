@@ -19,10 +19,10 @@ public static class Program
             var enemy = new Enemy(enemyData[0], Int32.Parse(enemyData[1]), Int32.Parse(enemyData[2]), Int32.Parse(enemyData[3]), Int32.Parse(enemyData[4]));
             enemies.Add(enemy);
         }
-        for (int i = 1;i <= 5; i++)
+        for (int i = 7;i <= 11; i++)
         {
             string[] warriorData = save[i].Split(";");
-            var warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse((warriorData[3]));
+            var warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]), Int32.Parse(warriorData[3]));
             warriors.Add(warrior);
         }
 
@@ -49,20 +49,21 @@ public static class Program
             if (enemies[enemyIndex].Health < 0)
                 enemies.RemoveAt(enemyIndex);
 
-            Console.WriteLine((round++) + " " + warrior + " vs " + enemy);
+         
         }
-        if (enemy.StillAlive())
+        if (warriors.Count > 0 )
         {
-            Console.WriteLine("Enemy" + " " + enemy.Name + " " + "won.");
+            Console.WriteLine("vyhral team s menom " + teamB);
         }
-        if (warrior.StillAlive())
+        if (enemies.Count > 0)
         {
-            Console.WriteLine("Warrior" + " " + warrior.Name + " " + "won.");
+            Console.WriteLine("vyhral team s menom" + teamA);
         }
-        if (!warrior.StillAlive() && !enemy.StillAlive())
+        if (warriors.Count == 0 && enemies.Count == 0)
         {
             Console.WriteLine("Tie.");
         }
 
     }
+    
 }
