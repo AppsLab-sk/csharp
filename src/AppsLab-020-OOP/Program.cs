@@ -7,7 +7,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            var save = File.ReadAllLines("Save / Saves.txt");
+            var save = File.ReadAllLines("Saves.txt");
 
             string teamA = save[0];
             string teamB = save[6];
@@ -16,16 +16,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             List<Enemy> enemies = new List<Enemy>();
 
             for (int i = 1; i < 5; i++)
-
             {
                 string[] archerData = save[i].Split(',');
                 var archer = new Archer(archerData[0],
                 Int32.Parse(archerData[1]),
                 Int32.Parse(archerData[2]),
-                Int32.Parse(archerData[3]));
-                archers.Add(archer);
+                //Int32.Parse(archerData[3]));
+                archers.Add(archer));
 
             }
+            Console.WriteLine(archers.Count);
 
             for (int i = 7; i < 11; i++)
 
@@ -40,7 +40,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
 
             Random r = new Random();
-            int round = 0;
+            //int round = 0;
             while (archers.Count > 0 && enemies.Count > 0)
             {
                 int archerIndex = r.Next(archers.Count - 1);
@@ -58,5 +58,4 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
     }
-}
 }
