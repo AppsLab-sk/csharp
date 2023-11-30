@@ -12,7 +12,14 @@ namespace AppsLab_020_OOP
     {
         public string Name { get; set; }
         public int Health { get; set; }
-        public int attackpower { get; set; }
+        public int AttackPower { get; set; }
+
+        public Warrior(string name, int health, int attackPower)
+        {
+            Name = name;
+            Health = health;
+            AttackPower = attackPower;
+        }
 
         public bool StillAlive()
         {
@@ -26,7 +33,7 @@ namespace AppsLab_020_OOP
 
         public void Attack(Wizard wizard) 
         {
-            wizard.Health -= attackpower;
+            wizard.Health -= AttackPower;
         }
 
 
