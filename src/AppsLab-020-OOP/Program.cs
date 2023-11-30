@@ -7,50 +7,56 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            var Archer = new Archer();
-            Archer.Name = "Legolas";
-            Archer.Health = 800;
-            Archer.AttackPower = 145;
-            Archer.Defend = 100;
+            var save = File.ReadAllLines("Save / Saves.txt");
 
-            var Enemy = new Enemy();
-            Enemy.Name = "Shelob";
-            Enemy.Health = 400;
-            Enemy.AttackPower = 180;
-            Enemy.Heal = 90;
+            string teamA = save[0];
+            string teamB = save[6];
 
-            while (Enemy.Health > 0 && Archer.Health > 0)
+            List<Archer> archers = new List<Archer>();
+            List<Enemy> enemies = new List<Enemy>();
+
+            for (int i = 1; i < 5; i++)
+
             {
-                Console.WriteLine(Archer.Name + " attacks " + Enemy.Name + " with " + Archer.AttackPower + " AP");
-                Thread.Sleep(500);
-                Enemy.Health -= Archer.AttackPower;
-                Thread.Sleep(500);
-                Console.WriteLine(Enemy.Name + " attacks " + Archer.Name + " with " + Enemy.AttackPower + " AP");
-                Thread.Sleep(500);
-                Archer.Health -= Enemy.AttackPower;
-                Thread.Sleep(500);
-                Console.WriteLine(Enemy.Name + " has " + Enemy.Health + " HP ");
-                Thread.Sleep(500);
-                Console.WriteLine(Archer.Name + " has " + Archer.Health + " HP ");
+                string[] archerData = save[i].Split(',');
+                var archer = new Archer(archerData[0],
+                Int32.Parse(archerData[1]),
+                Int32.Parse(archerData[2]),
+                Int32.Parse(archerData[3]));
+                archers.Add(archer);
 
             }
-            if (Archer.Health <= 0)
+
+            for (int i = 7; i < 11; i++)
+
             {
-                Console.WriteLine(Archer.Name + " was defeated ");
-                Console.WriteLine(Enemy.Name + " wins !!!");
+                string[] enemyData = save[i].Split(',');
+                var enemy = new Enemy(enemyData[0],
+                Int32.Parse(enemyData[1]),
+                Int32.Parse(enemyData[2]),
+                Int32.Parse(enemyData[3]));
+                enemies.Add(enemy);
+
             }
-            
-            if (Enemy.Health <= 0)
+
+            Random r = new Random();
+            int round = 0;
+            while (archers.Count > 0 && enemies.Count > 0)
             {
-                Console.WriteLine(Enemy.Name + " was defeated ");
-                Console.WriteLine(Archer.Name  + " wins !!!");
-            }
-            
-            if (Enemy.Health <= 0 && Archer.Health <= 0)
-                Console.WriteLine("It is a Tie !!!!");
+                int archerIndex = r.Next(archers.Count - 1);
+                int enemyIndex = r.Next(enemies.Count - 1);
+                archers[archerIndex].Attack(enemies[enemyIndex]);
+                enemies[enemyIndex].Attack(archers[archerIndex]);
+
+                if (archers[archerIndex].Health > 0)
+                    archers.RemoveAt(archerIndex);
+                if (enemies[enemyIndex].Health > 0)
+                    enemies.RemoveAt(enemyIndex);
 
 
+
+            }
         }
     }
 }
-
+}
