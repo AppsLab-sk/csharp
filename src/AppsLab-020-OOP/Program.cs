@@ -41,19 +41,18 @@ public static class Program
 
             if (mages[mageIndex].Health < 0)
                 mages.RemoveAt(mageIndex);
-            if (warriors[warriorIndex].Health < 0)  
-
-            Console.WriteLine((round++) + " " + warrior + " vs " + mage);
+            if (warriors[warriorIndex].Health < 0)
+                warriors.RemoveAt(warriorIndex);
         }
-            if (mage.StillAlive())
+            if (mages.Count > 0)
             {
-                Console.WriteLine("Mage" + " " + mage.Name + " " + "won.");
+                Console.WriteLine("Team" + " " + teamA + " has" + " " + "won.");
             }
-            if (warrior.StillAlive())
+            if (warriors.Count > 0)
             {
-                Console.WriteLine("Warrior" + " "  + warrior.Name + " " + "won.");
-            }
-            if (!warrior.StillAlive() && !mage.StillAlive())
+                Console.WriteLine("Team" + " " + teamB + " has" + " " + "won.");
+        }
+            if (mages.Count == 0 && warriors.Count == 0)
             {
                 Console.WriteLine("Tie.");
             }
