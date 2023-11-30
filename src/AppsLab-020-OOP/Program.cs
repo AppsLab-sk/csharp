@@ -63,7 +63,7 @@ public static class Program
             Console.WriteLine("vyhral team s menom: " + orksTeamName);
         }
         if (orks.Count ==0 && wizards.Count==0)
-            Console.WriteLine("Tie.");//
+            Console.WriteLine("Tie.");
     }
 
 }
