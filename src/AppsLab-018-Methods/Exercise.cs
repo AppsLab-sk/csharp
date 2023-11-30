@@ -12,6 +12,21 @@ public class Exercise
     /// <returns>A string representation of the FizzBuzz game for the given number.</returns>
     public string FizzBuzz(int number)
     {
-        return "not implemented";
+        if (number % 5 == 0 && number % 3 == 0)
+        {
+            Console.WriteLine("FizzBuzz");
+        }
+        else if (number % 3 == 0)
+        {
+            Console.WriteLine("Fizz");
+        }
+        else if (number % 5 == 0)
+        {
+            Console.WriteLine("Buzz");
+        }
+        else
+        {
+            Console.WriteLine(number);
+        }
+        return "true";
     }
-}

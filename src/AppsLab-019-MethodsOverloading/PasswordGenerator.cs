@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -18,7 +20,14 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            return GeneratePassword(8, false, false);
+            //alebo
+            string pasword = "";
+            for (int i = 0; i<DefaultLength;i++)
+            {
+                pasword += Alphabet[_random.Next(Alphabet.Length-1)];
+            }
+            return pasword;
         }
 
         /// <summary>
@@ -28,7 +37,19 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            return GeneratePassword(length, false, false);
+            //alebo
+            if (length <= 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                password += Alphabet[_random.Next(Alphabet.Length - 1)];
+            }
+            return password;
         }
 
         /// <summary>
@@ -40,7 +61,55 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            return GeneratePassword(length, true, true);
+            //alebo
+            StringBuilder password = new StringBuilder();
+            string charSet = Alphabet;
+
+            if (includeSpecialChars)
+            {
+                charSet += SpecialChars;
+            }
+
+            if (includeNumbers)
+            {
+                charSet += Numbers;
+            }
+
+            if (charSet == Alphabet)
+            {
+                password.Append(Alphabet[_random.Next(Alphabet.Length)]);
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                int index = _random.Next(charSet.Length);
+                password.Append(charSet[index]);
+            }
+
+            return password.ToString();
+            //alebo
+            string pasword = Alphabet + SpecialChars + Numbers;
+            string characters = Alphabet;
+            if (includeNumbers)
+            {
+                characters += Numbers;
+            }
+            if (includeSpecialChars)
+            {
+                characters += SpecialChars;
+            }
+            if (length <= 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                pasword += characters[_random.Next(characters.Length - 1)];
+            }
+            return pasword;
         }
     }
 }

@@ -12,6 +12,24 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+        switch (rating)
+        {
+            case 1:
+                Console.WriteLine($"Veľmi zlý");
+                break;
+            case 2:
+                Console.WriteLine($"Zlý");
+                break;
+            case 3:
+                Console.WriteLine($"Priemerný");
+                break;
+            case 4:
+                Console.WriteLine($"Dobrý");
+                break;
+            case 5:
+                Console.WriteLine($"Veľmi dobrý");
+                break;
+        }
+        return GetRatingDescription(rating);
     }
 }
