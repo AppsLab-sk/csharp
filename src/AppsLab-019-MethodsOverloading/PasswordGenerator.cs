@@ -1,3 +1,8 @@
+using System.Reflection.Metadata.Ecma335;
+using System.Reflection.PortableExecutable;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -16,9 +21,12 @@ namespace AppsLab_019_MethodsOverloading
         /// Generates a random password with the default length of 8 characters and no special characters or numbers.
         /// </summary>
         /// <returns>A randomly generated password.</returns>
-        public string GeneratePassword()
+        public string GeneratePassword();
+        private char RandomChar()
         {
-            throw new NotImplementedException();
+            string allChar = DefaultLength + Alphabet;
+            int index = _random.Next(allChar.Length);
+            return = allChar[index]; 
         }
 
         /// <summary>
@@ -28,8 +36,15 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                password += RandomChar();
+
+            }
+                return password;
         }
+
 
         /// <summary>
         /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
@@ -40,7 +55,23 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+          string password = SpecialChars + Numbers + Alphabet ;
+            string characters = Alphabet;
+            if (includeNumbers)
+        {
+                characters += Numbers;
+                characters += SpecialChars;
+                if (length <= 0 )
+                {
+                    Console.WriteLine("Error ");
+                    return "";
+                }
+                for (int i = 0; i < length; i++)
+                {
+                    password += characters[_random.Next(characters.Length - 1)];
+                }
+            return password ;
+            
         }
     }
 }

@@ -36,6 +36,9 @@ public class BooleanLogic
     /// <returns>The result of the logical NOT operation.</returns>
     public bool Not(bool a)
     {
+        bool aa =true;
+        bool b =false; 
+        bool c =Or(aa,b);
         bool YesOrNo =!a;
         return YesOrNo;
     }
