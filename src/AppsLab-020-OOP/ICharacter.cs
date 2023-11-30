@@ -1,6 +1,6 @@
 ﻿namespace AppsLab_020_OOP
 {
-    interface ICharacter
+    public interface ICharacter
     {
         bool StillAlive();
         void ResetAction();

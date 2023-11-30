@@ -4,7 +4,7 @@ namespace AppsLab_020_OOP
 {
     public class Wizard : ICharacter
     {
-        private static Random random = new Random();
+        private static readonly Random random = new Random();
 
         public string Name { get; set; } = "Wizard";
         public int Hp { get; set; } = 57;
@@ -29,11 +29,11 @@ namespace AppsLab_020_OOP
                     damage = Math.Max(0, damage);
                     enemy.Hp -= damage;
 
-                    Console.WriteLine("Enemy's Health after attack is: " + enemy.Hp);
+                    Console.WriteLine("Orc's Health after attack is: " + enemy.Hp);
 
                     if (enemy.Hp <= 0)
                     {
-                        Console.WriteLine("Enemy has died!");
+                        Console.WriteLine("Orc has died!");
                     }
 
                     Manna -= 4;

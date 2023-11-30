@@ -28,7 +28,7 @@ namespace AppsLab_020_OOP
 
             if (enemy.Hp <= 0)
             {
-                Console.WriteLine("Orc has died!");
+                Console.WriteLine("Wizard has died!");
             }
 
             hasTakenAction = true;
