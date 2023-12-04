@@ -7,16 +7,11 @@ public interface IWizzard
     int AttackPower { get; set; }
     int HealAmount { get; set; }
 
-    public void Attack(IWarrior warrior)
-    {
-        //warrior.Health -= AttackPower;
-        warrior.Health = Math.Max(0, warrior.Health - AttackPower);
-    }
+    void Attack(IWarrior warrior);
 
-    public void Heal(IWizzard wizzard)
-    {
-        wizzard.Health += 40;
-    }
+
+    void Heal(IWizzard wizzard);
+    
 }
 
 public class Wizzard : IWizzard
@@ -60,6 +55,16 @@ public class Wizzard2 : IWizzard
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Wizzard3 : IWizzard
@@ -75,6 +80,16 @@ public class Wizzard3 : IWizzard
         Health = health;
         AttackPower = attackpower;
         HealAmount = healamount;
+    }
+
+    public void Attack(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
     }
 }
 
@@ -92,6 +107,16 @@ public class Wizzard4 : IWizzard
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Wizzard5 : IWizzard
@@ -107,5 +132,15 @@ public class Wizzard5 : IWizzard
         Health = health;
         AttackPower = attackpower;
         HealAmount = healamount;
+    }
+
+    public void Attack(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
     }
 }

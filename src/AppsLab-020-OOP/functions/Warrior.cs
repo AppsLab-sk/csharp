@@ -8,16 +8,10 @@ public interface IWarrior
     int AttackPower { get; set; }
     int HealAmount { get; set; }
 
-    public void Attack(IWizzard wizzard)
-    {
-        //wizzard.Health -= AttackPower;
-        wizzard.Health = Math.Max(0, wizzard.Health - AttackPower);
-    }
+    void Attack(IWizzard wizzard);
 
-    public void Heal(IWarrior warrior)
-    {
-        warrior.Health += 40;
-    }
+    void Heal(IWarrior warrior);
+    
 }
 
 public class Warrior : IWarrior
@@ -61,6 +55,16 @@ public class Warrior2 : IWarrior
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Warrior3 : IWarrior 
@@ -76,6 +80,16 @@ public class Warrior3 : IWarrior
         Health = health;
         AttackPower = attackpower;
         HealAmount = healamount;
+    }
+
+    public void Attack(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWarrior warrior)
+    {
+        throw new NotImplementedException();
     }
 }
 
@@ -93,6 +107,16 @@ public class Warrior4 : IWarrior
         AttackPower = attackpower;
         HealAmount = healamount;
     }
+
+    public void Attack(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWarrior warrior)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Warrior5 : IWarrior
@@ -108,5 +132,15 @@ public class Warrior5 : IWarrior
         Health = health;
         AttackPower = attackpower;
         HealAmount = healamount;
+    }
+
+    public void Attack(IWizzard wizzard)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(IWarrior warrior)
+    {
+        throw new NotImplementedException();
     }
 }
