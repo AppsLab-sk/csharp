@@ -1,8 +1,8 @@
 Vjednotejesila
 Zajac;4000;160;80
 Gregor;4800;180;88
-Palenik;5000;200;70
-Cyprich;7000;9999;60
+Palenik;50;200;70
+Cyprich;7000;100;60
 ľavak;900;3000;90
 Lidltaspravnavolba
 Pempin;40000;200
