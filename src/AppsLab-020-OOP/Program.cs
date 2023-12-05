@@ -57,7 +57,7 @@ public static class Program
         }
         if (enemies.Count > 0)
         {
-            Console.WriteLine("vyhral team s menom" + teamA);
+            Console.WriteLine("vyhral team s menom " + teamA);
         }
         if (warriors.Count == 0 && enemies.Count == 0)
         {
