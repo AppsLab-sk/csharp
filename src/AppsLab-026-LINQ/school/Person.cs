@@ -4,25 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppsLab_026_LINQ.school
+namespace AppsLab_026_LINQ.School
 {
     public class Person
     {
+        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Age { get; set; }
-        public int Id { get; set; }
         public string City { get; set; }
+        public int Age { get; set; }
         public double Height { get; set; }
 
-        public Person(string firstName, string lastName, int age, int id, string city, double height)
+        public Person()
         {
+        }
+        public Person(int iD, string firstName, string lastName, string city, int age, double height)
+        {
+            ID = iD;
             FirstName = firstName;
             LastName = lastName;
-            Age = age;
-            Id = id;
             City = city;
+            Age = age;
             Height = height;
+        }
+
+        public override string? ToString()
+        {
+            return "ID:" + ID + ",FirstName:" + FirstName + "" + ",LastName:" + LastName;
         }
     }
 }

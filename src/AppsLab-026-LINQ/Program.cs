@@ -12,4 +12,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             var studentDva = new Student("Hugo", "Dolinský", 15, 2, "Kysuca", 1.6, "1.BI", 2);
         }
     }
+
 }
+
+

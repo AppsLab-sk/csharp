@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppsLab_026_LINQ.school
+namespace AppsLab_026_LINQ.School
 {
-    public class Student:Person
+    public class Student : Person
     {
-        public string Class { get; set; }  
+        public string Class { get; set; }
+        public int Behaviour { get; set; }
         public List<int> Grades { get; set; } = new List<int>();
-        public int Behavior { get; set; }
 
-        public Student(string firstName, string lastName, int age, int id, string city, double height, string @class, int behavior)
+        public Student(int iD, string firstName, string lastName, string city, int age, double height, string @class, int behaviour) : base(iD, firstName, lastName, city, age, height)
         {
             Class = @class;
-            Behavior = behavior;
+            Behaviour = behaviour;
         }
+
+
     }
 }
