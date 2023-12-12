@@ -66,8 +66,20 @@ namespace AppsLab_026_LINQ.School
             Random rnd = new Random();
 
             for (int i = numberOfTeachers; i > 0; i--)
-            { 
-            
+            {
+                int rndIndexID = rnd.Next(0, 1000);
+                int rndIndexFN = rnd.Next(FirstName.Count);
+                int rndIndexLN = rnd.Next(LastName.Count);
+                int rndIndexCi = rnd.Next(Cities.Count);
+                int rndIndexAg = rnd.Next(14, 18);
+                int rndIndexHg = rnd.Next(15000, 21000) / 100;
+
+                int ID = rndIndexID;
+                string firstName = FirstName[rndIndexFN];
+                string lastName = LastName[rndIndexLN];
+                string city = Cities[rndIndexCi];
+                int age = rndIndexAg;
+                double height = rndIndexHg;
             }
 
             return result;
