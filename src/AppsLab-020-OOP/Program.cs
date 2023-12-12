@@ -1,7 +1,9 @@
 ﻿
+using AppsLab_020_OOP;
+
 public class Program
 {
-    static void Main()
+    static void Main(object wizardData)
     {
         var save = File.ReadAllLines("Save/Saves.txt");
 
@@ -15,20 +17,20 @@ public class Program
         {
             var warriorData = save[0].Split(";");
             var warrior = new Warrior(warriorData[0], Int32.Parse(warriorData[1]), Int32.Parse(warriorData[2]));
-            warrior.mana = Int32.Parse(warriorData[3]);
-            warriors.Add(warrior)
-         }
+
+            warriors.Add(warrior);
+        }
 
         for (int i = 7; i <= 11; i++)
 
-            var wizardData = save[1].Split(";");
+           string[] wizardData = save[1].Split(";");
         {
             var wizard = new Wizard();
             wizard.Name = wizardData[0];
             wizard.Health = Int32.Parse(wizardData[1]);
-            wizard.mana = Int32.Parse(wizardData[2]);
-            wizard.attackpower = Int32.Parse(wizardData[3]);
-            wizard.Add(wizards)
+            wizard.Mana = Int32.Parse(wizardData[2]);
+            wizard.AttackPower = Int32.Parse(wizardData[3]);
+            wizard.Add (wizards)
         
 }
 

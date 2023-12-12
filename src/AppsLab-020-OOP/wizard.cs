@@ -25,6 +25,9 @@ namespace AppsLab_020_OOP
             Mana = mana;
         }
 
+        public Wizard()
+        {
+        }
 
         public void Attack(Wizard enemy)
         {
