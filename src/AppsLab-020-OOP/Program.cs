@@ -41,7 +41,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
 
             Random r = new Random();
-            //int round = 0;
+            
             while (archers.Count > 0 && enemies.Count > 0)
             {
                 int archerIndex = r.Next(archers.Count - 1);

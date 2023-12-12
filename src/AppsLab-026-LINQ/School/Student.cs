@@ -12,7 +12,8 @@ namespace AppsLab_026_LINQ.School
         public int Behaviour { get; set; }
         public List<int> Grades { get; set; } = new List<int>();  
 
-        public Student(string @class, int behaviour,   int iD, string name, string lastName, string city, int age, double height)
+        public Student( int iD, string name, string lastName, string city, int age, double height, string @class, int behaviour, List<int> Grades) 
+        : base (iD,name,lastName,city,age,height)
         {
             Class = @class;
             Behaviour = behaviour;

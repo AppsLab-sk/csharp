@@ -26,12 +26,12 @@ namespace AppsLab_026_LINQ
             this.students = students;
             this.teachers = teachers;
         
-        public void AddTeachers (Teacher teacher)
+        public void AddTeacher(Teacher teacher)
             {
                 teachers.Add(teacher);
             }
         
-        public void AddStudents (Student student)
+        public void AddStudent(Student student)
 
             { 
                 students.Add(student); 

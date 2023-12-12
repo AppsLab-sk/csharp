@@ -7,7 +7,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            var student = new Student("1.AI", 3, 0, "Samuel", "Bojko", "Raková ", 56, 133);
+            var student = new Student(0 , "Samuel", "Bojko", "CA ", 15, 188 , "1.AI", 3, w);
+            var teacher = new Teacher(0, "Erika", "Miková", "KNM", 58, 150, 5, -85);
         
         
         

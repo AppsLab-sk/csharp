@@ -12,7 +12,8 @@ namespace AppsLab_026_LINQ.School
         public int Mood { get; set; }
 
 
-        public Teacher(int salary, int mood,int iD, string name, string lastName, string city, int age, double height)
+        public Teacher(int iD, string name, string lastName, string city, int age, double height, int salary, int mood ) 
+        : base(iD,name,lastName,city,age,height)
      {       
             Salary = salary;
             Mood = mood;
