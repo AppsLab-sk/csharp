@@ -19,12 +19,13 @@ public class Program
             Mood = 50,
         };
 
-        student.AddGrade(5);
-        student.AddGrade(7);
+        //student.AddGrade(5);
+        //student.AddGrade(7);
 
-        Console.WriteLine(student.FirstName + " " + student.LastName + " : " + student.Grades.Count);
-        Console.WriteLine(teacher.FirstName + " " + teacher.LastName + " : " + teacher.Salary + " " + teacher.Mood);
+        //schoolSystem.AddStudent(student);
+        //schoolSystem.AddTeacher(teacher);
 
-        
+        //Console.WriteLine(student.FirstName + " " + student.LastName + " : " + student.Grades.Count);
+        //Console.WriteLine(teacher.FirstName + " " + teacher.LastName + " : " + teacher.Salary + " " + teacher.Mood);        
     }
 }
