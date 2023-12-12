@@ -14,19 +14,19 @@ namespace AppsLab_019_MethodsOverloading
         private const string Numbers = "0123456789";
 
         private readonly Random _random = new();
-    
-    /// <summary>
-    /// Generates a random password with the default length of 8 characters and no special characters or numbers.
-    /// </summary>
-    /// <returns>A randomly generated password.</returns>
-    public string GeneratePassword()
-    {
-            string passwoerd = "";
-            for (int i = 0;i <DefaultLength; i++)
+
+        /// <summary>
+        /// Generates a random password with the default length of 8 characters and no special characters or numbers.
+        /// </summary>
+        /// <returns>A randomly generated password.</returns>
+        public string GeneratePassword()
         {
-            passwoerd += Alphabet[_random.Next(Alphabet.Lenght -1)];
+            string passwoerd = "";
+            for (int i = 0; i < DefaultLength; i++)
+            {
+                passwoerd += Alphabet[_random.Next(Alphabet.Lenght - 1)];
+            }
         }
-    }
         /// <summary>
         /// Generates a random password with the specified length and no special characters or numbers.
         /// </summary>
@@ -36,47 +36,29 @@ namespace AppsLab_019_MethodsOverloading
         {
             if (length == 0)
             {
-                Console.WriteLine("Error")
-                    return "";
+                Console.WriteLine("Error");
+                return "";
             }
             string passwoard = "";
-            for (int i = 0; i < length; i++)
-        }
-           return passwoard;
+
+            return passwoard;
         }
 
-    /// <summary>
-    /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
-    /// </summary>
-    /// <param name="length">The length of the password to generate.</param>
-    /// <param name="includeSpecialChars">Whether to include special characters in the password.</param>
-    /// <param name="includeNumbers">Whether to include numbers in the password.</param>
-    /// <returns>A randomly generated password.</returns>
-    public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
+        /// <summary>
+        /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
+        /// </summary>
+        /// <param name="length">The length of the password to generate.</param>
+        /// <param name="includeSpecialChars">Whether to include special characters in the password.</param>
+        /// <param name="includeNumbers">Whether to include numbers in the password.</param>
+        /// <returns>A randomly generated password.</returns>
+        public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            string password= "";// = Alphabet + SpecialChars + Numbers;
-            string characters = Alphabet;
-            {
-                if (includeNumbers)
-            }
+            string password = "";// = Alphabet + SpecialChars + Numbers;
 
-            if (includeSpecialChars)
-            {
-                characters += SpecialChars;
-            }
-           if (lenght > 0) 
-            {
-                Console.WriteLine("Error")
-                    return "";
-            }
-           for (int 1 = 0; 1 < Lenght; int++)
-
-            {
-                passwoard += characters[_random.Next(characters.Lenght - 1)];
-            }
-           return password;
+            return password;
         }
     }
+}
 
 
 
