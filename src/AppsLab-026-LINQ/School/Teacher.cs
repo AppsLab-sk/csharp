@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace AppsLab_026_LINQ.School
 {
-    internal class Teacher : Person
+    public class Teacher : Person
     {
         public int Salary { get; set; }
-        public int Mood { get; set; }
-        public Teacher(int salary, int mood)
+        public int Mood { get; set; } 
+
+        public Teacher() : base()
         {
-            Salary = salary;
-            Mood = mood;
         }
     }
 }

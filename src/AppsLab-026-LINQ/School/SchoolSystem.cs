@@ -8,11 +8,24 @@ namespace AppsLab_026_LINQ.School
 {
     internal class SchoolSystem
     {
-        public string name { get; set; }
+        public string Name { get; set; }
         public List<Student> Students { get; set; }
         public List<Teacher> Teachers { get; set; }
-        public void AddTeacher { get; set; }
-        public void AddStudent { get; set; }
-        public void RemoveTeacher { get; set; }
-        public void RemoveStudent {  get; set; }
+        public void AddTeacher(Teacher teacher)
+        {
+            Teachers.Add(teacher);
+        }
+        public void AddStudent(Student student)
+        {
+            Students.Add(student);
+        }
+        public void RemoveTeacher(Teacher teacher)
+        {  
+            Teachers.Remove(teacher); 
+        }
+        public void RemoveStudent(Student student)
+        {
+            Students.Remove(student);
+        }
+    }
 }
