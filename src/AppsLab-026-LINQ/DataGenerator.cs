@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace AppsLab_026_LINQ
             var random = new Random();
             var students = new List<Student>();
 
-            for (int i = 0; i < numberofstudents; i++) ;
+            for (int i = numberofstudents; i > 0; i--) ;
             var id = random.Next(1, 15);
             var firstname = FirstNames[random.Next(0, FirstNames.Count())];
             var lastname = LastNames[random.Next(0, LastNames.Count())];
@@ -41,21 +42,21 @@ namespace AppsLab_026_LINQ
             var @class = Classes[random.Next(0, Classes.Count())];
             var age = random.Next(15, 19);
             var height = (float)random.Next(16000, 21000) / 100f;
-            var behaviour = random.Next(1, 5);
+            var behavior = random.Next(1, 5);
             Student s = new Student(id, firstname, lastname, age, height, city, @class, behavior);
             students.Add(s);
-            return s;
+            return students;
 
         }
 
-        public static List<Teacher> GenerateTeachers(int numberofteachers) // cycle, list, generate students(count), generate teachers(count), 
+        public static List<Teacher> GenerateTeachers(int numberofteachers) 
         {
 
             
             var random = new Random();
             var teachers = new List<Teacher>();
 
-            for (int i = 0; i < numberofteachers; i++) ;
+            for (int i = numberofteachers; i > 0; i--) ;
             var id = random.Next(1, 15);
             var firstname = FirstNames[random.Next(0, FirstNames.Count())];
             var lastname = LastNames[random.Next(0, LastNames.Count())];
@@ -64,9 +65,9 @@ namespace AppsLab_026_LINQ
             var age = random.Next(30, 68);
             var height = (float)random.Next(16000, 21000) / 100f;
             var mood = random.Next(1, 5);
-            Teacher t = new Teacher(numberofteachers);
+            Teacher t = new Teacher(id, firstname, lastname, age, height, city, salary, mood);
             teachers.Add(t);
-            return t;
+            return teachers;
         }
 
     }   
