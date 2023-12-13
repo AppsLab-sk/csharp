@@ -15,6 +15,10 @@ namespace AppsLab_026_LINQ.School
         public Teacher()
         {
         }
+
+        public Teacher(int iD, string firstName, string lastName, string city, int age, double height, int salary, int mood) : base(iD, firstName, lastName, city, age, height)
+        {
+        }
     }
 
     
