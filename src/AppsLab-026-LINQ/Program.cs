@@ -8,8 +8,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            var student = new Student ("Jozef", "Malinský", 16, 1, "Kysuca", 1.5, "1.AI", 1   );
-            var studentDva = new Student("Hugo", "Dolinský", 15, 2, "Kysuca", 1.6, "1.BI", 2);
+            var generatedStudents = DataGenerator.GenerateStudents(50);
+            var generatedTeachers = DataGenerator.GenerateTeachers(10);
+            SchoolSystem schoolSystem_SPSKNM = new SchoolSystem("SPSKNM", generatedStudents, generatedTeachers);
+
+
+
+
+            var sknm = schoolSystem_SPSKNM.Students.Where(x => x.City == "KNM").ToList();
+            foreach (var student in sknm)
+            {
+                Console.WriteLine("ID: " + student.ID + "Name: ");
+            }
+            
+
+
+
+
+
         }
     }
 
