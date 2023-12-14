@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppsLab_026_LINQ.School
 {
-    internal class teacher:Person
+    public class teacher :Person
     {
         int Salary {  get; set; }
         int Mood { get; set; }
