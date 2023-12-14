@@ -5,12 +5,14 @@
 /// </summary>
 public class Calculator
 {
+    private const int V = 5;
+
     /// <summary>
     /// This method adds two integers and returns the sum.
     /// </summary>
     public int Add(int a, int b)
     {
-        throw new NotImplementedException();
+       return a + b;
     }
 
     /// <summary>
@@ -18,7 +20,7 @@ public class Calculator
     /// </summary>
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 
     /// <summary>
@@ -26,7 +28,7 @@ public class Calculator
     /// </summary>
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException();
+        return (a * b);
     }
 
     /// <summary>
@@ -34,7 +36,7 @@ public class Calculator
     /// </summary>
     public double Divide(int a, int b)
     {
-        throw new NotImplementedException();
+        return (double)a / b;
     }
 
     /// <summary>
@@ -42,7 +44,7 @@ public class Calculator
     /// </summary>
     public int Remainder(int a, int b)
     {
-        throw new NotImplementedException();
+        return a % b;
     }
 
     /// <summary>
@@ -50,7 +52,7 @@ public class Calculator
     /// </summary>
     public bool AreEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return a == b;
     }
 
     /// <summary>
@@ -58,7 +60,7 @@ public class Calculator
     /// </summary>
     public bool AreNotEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return a != b; 
     }
 
     /// <summary>
@@ -66,7 +68,7 @@ public class Calculator
     /// </summary>
     public bool IsGreater(int a, int b)
     {
-        throw new NotImplementedException();
+        return a > b;
     }
 
     /// <summary>
@@ -74,7 +76,7 @@ public class Calculator
     /// </summary>
     public bool IsLesser(int a, int b)
     {
-        throw new NotImplementedException();
+        return a < b;
     }
 
     /// <summary>
@@ -82,7 +84,7 @@ public class Calculator
     /// </summary>
     public bool IsGreaterOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return a >= b;
     }
 
     /// <summary>
@@ -90,6 +92,6 @@ public class Calculator
     /// </summary>
     public bool IsLesserOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return (a <= b);
     }
 }
