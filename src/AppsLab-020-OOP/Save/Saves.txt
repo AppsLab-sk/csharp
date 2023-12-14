@@ -1,0 +1,2 @@
+Bojovnik;200;20
+Carodej:200;20;20
