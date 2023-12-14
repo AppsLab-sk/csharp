@@ -35,14 +35,14 @@ namespace AppsLab_026_LINQ.School
 
             for (int i = numberOfStudents; i > 0; i--)
             {
-                int ID = rnd.Next(0, 1000);
+                int ID = rnd.Next(0, 1001); 
                 string firstName = FirstName[rnd.Next(FirstName.Count)];
                 string lastName = LastName[rnd.Next(LastName.Count)];
                 string city = Cities[rnd.Next(Cities.Count)];
-                int age = rnd.Next(14, 18);
-                double height = rnd.Next(15000, 21000) / 100;
+                int age = rnd.Next(14, 19);
+                double height = rnd.Next(15000, 21001) / 100;
                 string clas = Classes[rnd.Next(Classes.Count)];
-                int behavior = rnd.Next(0, 10);
+                int behavior = rnd.Next(0, 11);
 
                 var student = new Student(ID, firstName, lastName, city, age, height, clas, behavior);
 
@@ -88,14 +88,14 @@ namespace AppsLab_026_LINQ.School
 
             for (int i = numberOfTeachers; i > 0; i--)
             {
-                int ID = rnd.Next(0, 1000);
+                int ID = rnd.Next(1001, 2001);
                 string firstName = FirstName[rnd.Next(FirstName.Count)];
                 string lastName = LastName[rnd.Next(LastName.Count)];
                 string city = Cities[rnd.Next(Cities.Count)];
                 int age = rnd.Next(14, 18);
-                double height = rnd.Next(15000, 21000) / 100;
-                int salary = rnd.Next(0, 1000);
-                int mood = rnd.Next(0, 100);
+                double height = rnd.Next(15000, 21001) / 100;
+                int salary = rnd.Next(0, 1001);
+                int mood = rnd.Next(0, 101);
 
                 var teacher = new Teacher(ID, firstName, lastName, city, age, height, salary, mood);
 
