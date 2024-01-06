@@ -39,7 +39,7 @@ class Program
             MoveEnemies();
             CheckCollisions();
 
-            Thread.Sleep(50); // Adjusted sleep time for a slower game
+            Thread.Sleep(50); 
         }
     }
 
