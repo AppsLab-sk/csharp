@@ -34,9 +34,9 @@ namespace AppsLab_026_LINQ
             var random = new Random();
             var students = new List<Student>();
 
-            for (int i = numberofstudents; i > 0; i--)
+            for (int i = 0; i < numberofstudents; i++)
             {
-                var id = random.Next(1, 15);
+                var id = random.Next(1, 50);
                 var firstname = FirstNames[random.Next(0, FirstNames.Count())];
                 var lastname = LastNames[random.Next(0, LastNames.Count())];
                 var city = Cities[random.Next(0, Cities.Count())];
@@ -47,7 +47,7 @@ namespace AppsLab_026_LINQ
                 List<int> grades = new List<int>();
                 for (int g = 0; g < 5; g++)
                 {
-                    grades.Add(random.Next(6));
+                    grades.Add(random.Next(1, 5));
                 }
                 Student s = new Student(id, firstname, lastname, age, height, city, @class, behavior, grades);
                 students.Add(s);
@@ -63,9 +63,9 @@ namespace AppsLab_026_LINQ
             var random = new Random();
             var teachers = new List<Teacher>();
 
-            for (int i = numberofteachers; i > 0; i--)
+            for (int i = 0; i < numberofteachers; i++)
             {
-                var id = random.Next(1, 15);
+                var id = random.Next(1, 50);
                 var firstname = FirstNames[random.Next(0, FirstNames.Count())];
                 var lastname = LastNames[random.Next(0, LastNames.Count())];
                 var city = Cities[random.Next(0, Cities.Count())];
