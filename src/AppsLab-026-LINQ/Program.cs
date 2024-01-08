@@ -19,8 +19,11 @@ public class Program
             Mood = 50,
         };
 
-        DataGenerator.GenerateStudents(5);
-        DataGenerator.GenerateTeachers(2);
+        //DataGenerator.GenerateStudents(5);
+        //DataGenerator.GenerateTeachers(2);
+
+        schoolSystem.Students = DataGenerator.GenerateStudents(5);
+        schoolSystem.Teachers = DataGenerator.GenerateTeachers(2);
 
         
 
