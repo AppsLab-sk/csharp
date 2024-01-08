@@ -26,5 +26,7 @@ namespace BatteSimulator.functions
             Console.WriteLine(text);
             Console.ResetColor();
         }
+
+        public void Soon() { Console.WriteLine("Comming soon..."); }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BatteSimulator.functions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,33 +11,28 @@ namespace BatteSimulator.Modules
     {
         public double SetDiff() 
         {
-            double diff = 0; 
+            double diff = 0;
+            var print = new Print();
+            Console.Clear();
+            print.Intro();
             Console.WriteLine("Choose difficulty: \n1 Easy \n2 Medium \n3 Hard \n4 Imposible \n5 Custom");
             int action = int.Parse(Console.ReadLine());
 
-            if (action == 1)
-            {
-                diff = 1;
-            }
-            if (action == 2)
-            {
-                diff = 1.25;
-            }
-            if (action == 3)
-            {
-                diff = 1.5;
-            }
-            if (action == 4)
-            {
-                diff = 2;
-            }
+            if (action == 1) { diff = 1; }
+            if (action == 2) { diff = 1.25; }
+            if (action == 3) { diff = 1.5; } 
+            if (action == 4){ diff = 2;}
             if (action == 5)
             {
                 Console.WriteLine("Set custom difficulty: ");
                 diff = double.Parse(Console.ReadLine());
             }
+            
+            Console.Clear();
+            print.Intro();
 
-            return diff; 
+            return diff;
+            
         }
     }
 }

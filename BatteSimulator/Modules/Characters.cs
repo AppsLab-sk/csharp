@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BatteSimulator.functions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,44 +9,30 @@ namespace BatteSimulator.Modules
 {
     public class Characters
     {
-        public interface IWarrior
+        public void SetCH(double diffX, int gIndex)
         {
-            string Name { get; set; }
-            int Health { get; set; }
-            int AttackPower { get; set; }
-            int HealAmount { get; set; }
+            var ch1 = new Warrior("Bojovník", 200, 50, 2);
 
-            void Attack(IWizzard wizzard);
+            var ch2 = new Wizzard("Čarodej", 100, 60, 2);
+            
+            var enemy = new Enemy("Enemy", 100 * diffX, 25 * diffX, 2 * diffX);
 
-            void Heal(IWarrior warrior);
+            var gm = new GameModes();
 
-        }
+            Console.WriteLine($"Choose your character: \n1. {ch1.Name}, Health: {ch1.Health}, Damage: {ch1.AttackPower} \n2. {ch2.Name}, Health: {ch2.Health}, Damage: {ch2.AttackPower}");
+            int action = int.Parse(Console.ReadLine());
 
-        public class Warrior : IWarrior
-        {
-            public string Name { get; set; }
-            public int Health { get; set; }
-            public int AttackPower { get; set; }
-            public int HealAmount { get; set; }
-
-            public Warrior(string name, int health, int attackpower, int healamount)
+            if (action == 1)
             {
-                Name = name;
-                Health = health;
-                AttackPower = attackpower;
-                HealAmount = healamount;
+                var usedCh = ch1;
+                gm.ExeGameMode(gIndex, usedCh, enemy);
             }
 
-            public void Attack(IWizzard wizzard)
+            if(action == 2)
             {
-                //wizzard.Health -= AttackPower;
-                wizzard.Health = Math.Max(0, wizzard.Health - AttackPower);
+                var usedCh = ch2;
+                gm.ExeGameMode(gIndex, usedCh, enemy);
             }
-
-            public void Heal(IWarrior warrior)
-            {
-                warrior.Health += 40;
-            }
-        }
+        } 
     }
 }

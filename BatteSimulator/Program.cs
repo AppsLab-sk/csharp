@@ -6,12 +6,9 @@ public class Program
     static void Main()
     {
         var print =  new Print();
-        var diff = new Difficulties();
-
+        var gm = new GameModes();
         print.Intro();
-
-        double diffX = diff.SetDiff();
-
-        Console.WriteLine(diffX);
+        //gm.SetGameMode();
+        print.Soon();
     }
 }
