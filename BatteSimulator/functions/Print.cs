@@ -39,11 +39,48 @@ namespace BatteSimulator.functions
         {
             Console.WriteLine("══════════════════════════════════════════════════════════════════════════════════════╝");
         }
+
+
+        //============== Game Modes ================================
+
+        public void GmChoose()
+        {
+            Console.WriteLine("Choose your game mode: ");
+
+            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+        }
+
+        public void GmList(int i, List<IGameMode> gm)
+        {
+            Console.SetCursorPosition(86, Console.CursorTop);
+            Console.WriteLine("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+
+            Console.Write($"{i + 1}. {gm[i].Name}");
+
+            Console.SetCursorPosition(86, Console.CursorTop);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+        }
         
+        public void GmInput()
+        {
+            Console.SetCursorPosition(0, Console.CursorTop + 2);
+            EndLine();
+            Console.SetCursorPosition(86, Console.CursorTop - 2);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+        }
+        
+
+        //============== Game Mode -- Comming soon... ==============
+
         public void Soon() { Console.WriteLine("Comming soon..."); }
 
         
-        //==================== Game Mode -- 1v1 ====================
+        //============== Game Mode -- 1v1 ==========================
         
         public void Stats(ICharacter usedCh, IEnemy enemy)
         {
