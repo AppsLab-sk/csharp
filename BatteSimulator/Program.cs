@@ -8,7 +8,7 @@ public class Program
         var print =  new Print();
         var gm = new GameModes();
         print.Intro();
-        //gm.SetGameMode();
-        print.Soon();
+        gm.SetGameMode();
+        //print.Soon();
     }
 }

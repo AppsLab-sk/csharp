@@ -15,7 +15,7 @@ namespace BatteSimulator.functions
             var ch = new Characters();
             //var _1v1 = new _1v1();
 
-            Console.WriteLine("Choose your game mode: \n1. 1v1 (1 enemy) \n2. Comming soon... ");
+            Console.WriteLine("Choose your game mode: \n1. 1v1 (1 enemy) \n2. 1v1 (2 players) \n3. Comming soon... ");
             int action = int.Parse(Console.ReadLine());
 
             if (action == 1) 
@@ -25,23 +25,16 @@ namespace BatteSimulator.functions
                 double diffX = diff.SetDiff();
                 ch.SetCH(diffX, gIndex);
             }
-        }
 
-        public void ExeGameMode(int gIndex, Warrior usedCh, Enemy enemy) 
-        {
-            if (gIndex == 1)
+            if (action == 2)
             {
-                var _1v1 = new _1v1();
-                _1v1.Execute(usedCh, enemy);
-            }
-
-            if (gIndex == 2)
-            {
-                Console.WriteLine("Comming soon...");
+                int gIndex = 2;
+                double diffX = diff.SetDiff();
+                ch.SetCH(diffX, gIndex);
             }
         }
 
-        public void ExeGameMode(int gIndex, Wizzard usedCh, Enemy enemy)
+        public void ExeGameMode(int gIndex, ICharacter usedCh, IEnemy enemy) 
         {
             if (gIndex == 1)
             {

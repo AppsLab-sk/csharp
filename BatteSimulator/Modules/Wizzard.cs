@@ -7,21 +7,9 @@ using static BatteSimulator.Modules.Warrior;
 
 namespace BatteSimulator.Modules
 {
-    public interface IWizzard
-    {
-        string Name { get; set; }
-        int Health { get; set; }
-        int AttackPower { get; set; }
-        int HealAmount { get; set; }
+    
 
-        void Attack(IEnemy enemy);
-
-
-        void Heal(IWizzard wizzard);
-
-    }
-
-    public class Wizzard : IWizzard
+    public class Wizzard : ICharacter
     {
         public string Name { get; set; }
         public int Health { get; set; }
@@ -42,9 +30,9 @@ namespace BatteSimulator.Modules
             enemy.Health = Math.Max(0, enemy.Health - AttackPower);
         }
 
-        public void Heal(IWizzard wizzard)
+        public void Heal()
         {
-            wizzard.Health += 40;
+            Health += 40;
         }
     }
 }

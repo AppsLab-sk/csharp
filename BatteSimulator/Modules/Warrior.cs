@@ -6,20 +6,7 @@ using System.Threading.Tasks;
 
 namespace BatteSimulator.Modules
 {
-    public interface IWarrior
-    {
-        string Name { get; set; }
-        int Health { get; set; }
-        int AttackPower { get; set; }
-        int HealAmount { get; set; }
-
-        void Attack(IEnemy enemy);
-
-        void Heal(IWarrior warrior);
-
-    }
-
-    public class Warrior : IWarrior
+    public class Warrior : ICharacter
     {
         public string Name { get; set; }
         public int Health { get; set; }
@@ -40,9 +27,9 @@ namespace BatteSimulator.Modules
             enemy.Health = Math.Max(0, enemy.Health - AttackPower);
         }
 
-        public void Heal(IWarrior warrior)
+        public void Heal()
         {
-            warrior.Health += 40;
+            Health += 40;
         }
     }
 }

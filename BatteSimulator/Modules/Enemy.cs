@@ -13,11 +13,9 @@ namespace BatteSimulator.Modules
         double AttackPower { get; set; }
         double HealAmount { get; set; }
 
-        void Attack(IWarrior warrior);
+        void Attack(ICharacter warrior);
 
-
-        void Heal(IWizzard wizzard);
-
+        void Heal();
     }
 
     public class Enemy : IEnemy
@@ -35,15 +33,14 @@ namespace BatteSimulator.Modules
             HealAmount = healamount;
         }
 
-        public void Attack(IWarrior warrior)
+        public void Attack(ICharacter enemy)
         {
-            //warrior.Health -= AttackPower;
             //warrior.Health = Math.Max(0, warrior.Health - AttackPower);
         }
 
-        public void Heal(IWizzard wizzard)
+        public void Heal()
         {
-            //wizzard.Health += 40;
+            Health += 40;
         }
     }
 }
