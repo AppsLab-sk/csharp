@@ -33,14 +33,14 @@ namespace BatteSimulator.Modules
             HealAmount = healamount;
         }
 
-        public void Attack(ICharacter enemy)
+        public void Attack(ICharacter usedCh)
         {
-            //warrior.Health = Math.Max(0, warrior.Health - AttackPower);
+            usedCh.Health = Math.Max(0, usedCh.Health - Convert.ToInt32(AttackPower));
         }
 
         public void Heal()
         {
-            Health += 40;
+            Health += 20;
         }
     }
 }

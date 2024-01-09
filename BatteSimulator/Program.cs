@@ -5,6 +5,7 @@ public class Program
 {
     static void Main()
     {
+        Console.BufferWidth = 1000;
         var print =  new Print();
         var gm = new GameModes();
         print.Intro();

@@ -15,17 +15,66 @@ namespace BatteSimulator.Modules
             var print = new Print();
             Console.Clear();
             print.Intro();
-            Console.WriteLine("Choose difficulty: \n1 Easy \n2 Medium \n3 Hard \n4 Imposible \n5 Custom");
+
+            List<string> diffs = new List<string>()
+            {
+                "Easy",
+                "Medium",
+                "Hard",
+                "Impossible",
+                "Custom"
+            };
+            
+            Console.SetCursorPosition(86, Console.CursorTop);
+            Console.WriteLine("║");
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            
+
+            Console.Write("Choose difficulty: ");
+
+            for (int i = 0; i < diffs.Count; i++)
+            {
+                Console.SetCursorPosition(86, Console.CursorTop);
+                Console.WriteLine("║");
+                Console.SetCursorPosition(0, Console.CursorTop);
+
+                Console.Write($"{i + 1}. {diffs[i]}");
+
+                Console.SetCursorPosition(86, Console.CursorTop);
+                Console.Write("║");
+                Console.SetCursorPosition(0, Console.CursorTop);
+            }
+
+            Console.SetCursorPosition(0, Console.CursorTop + 2);
+            print.EndLine();
+            Console.SetCursorPosition(86, Console.CursorTop - 2);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+
             int action = int.Parse(Console.ReadLine());
 
             if (action == 1) { diff = 1; }
-            if (action == 2) { diff = 1.25; }
-            if (action == 3) { diff = 1.5; } 
-            if (action == 4){ diff = 2;}
+            if (action == 2) { diff = 1.5; }
+            if (action == 3) { diff = 2; } 
+            if (action == 4){ diff = 4;}
             if (action == 5)
             {
+                Console.Clear();
+                print.Intro();
+
+                Console.SetCursorPosition(86, Console.CursorTop);
+                Console.WriteLine("║");
+                Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                 Console.WriteLine("Set custom difficulty: ");
-                diff = double.Parse(Console.ReadLine());
+
+                Console.SetCursorPosition(0, Console.CursorTop + 1);
+                print.EndLine();
+                Console.SetCursorPosition(86, Console.CursorTop - 2);
+                Console.Write("║");
+                Console.SetCursorPosition(0, Console.CursorTop);
+
+                diff = int.Parse(Console.ReadLine());
             }
             
             Console.Clear();

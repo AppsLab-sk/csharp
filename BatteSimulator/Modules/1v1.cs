@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace BatteSimulator.Modules
 {
-    public class _1v1
+    public class _1v1 : IGameMode
     {
+        public string Name {  get; set; }
+        public _1v1(string name) { Name = name; }
+
         public void Execute(ICharacter usedCh, IEnemy enemy)
         {
             var print = new Print();
             Console.Clear();
             print.Intro();
-            //Console.WriteLine("You succesfully got there!");
-            //Console.WriteLine(usedCh.Name);
-            //Console.WriteLine(enemy.Health);
             
             while (usedCh.Health > 0 && enemy.Health > 0) //pokiaľ sú všetci nažive
             {

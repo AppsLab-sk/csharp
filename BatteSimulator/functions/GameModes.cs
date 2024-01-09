@@ -9,43 +9,55 @@ namespace BatteSimulator.functions
 {
     public class GameModes
     {
+        List<IGameMode> gm = new List<IGameMode>()
+        {
+            new _1v1("1v1 (1 enemy)"),
+            new CommingSoon("Comming soon..."),
+            new CommingSoon("Comming soon..."),
+            new CommingSoon("Comming soon..."),
+        };
         public void SetGameMode()
         {
+            var print = new Print();
             var diff = new Difficulties();
             var ch = new Characters();
-            //var _1v1 = new _1v1();
+            
+            Console.WriteLine("Choose your game mode: "); //\n1. 1v1 (1 enemy) \n2. 1v1 (2 players) \n3. Comming soon... ");
+            
+            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
 
-            Console.WriteLine("Choose your game mode: \n1. 1v1 (1 enemy) \n2. 1v1 (2 players) \n3. Comming soon... ");
+            for (int i = 0; i < gm.Count; i++)
+            {
+                Console.SetCursorPosition(86, Console.CursorTop);
+                Console.WriteLine("║");
+                Console.SetCursorPosition(0, Console.CursorTop);
+
+                Console.Write($"{i + 1}. {gm[i].Name}");
+
+                Console.SetCursorPosition(86, Console.CursorTop);
+                Console.Write("║");
+                Console.SetCursorPosition(0, Console.CursorTop);
+            }
+            
+            Console.SetCursorPosition(0, Console.CursorTop + 2);
+            print.EndLine();
+            Console.SetCursorPosition(86, Console.CursorTop - 2);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop);
+
             int action = int.Parse(Console.ReadLine());
-
-            if (action == 1) 
-            {
-                //var gameMode = new _1v1();
-                int gIndex = 1;
-                double diffX = diff.SetDiff();
-                ch.SetCH(diffX, gIndex);
-            }
-
-            if (action == 2)
-            {
-                int gIndex = 2;
-                double diffX = diff.SetDiff();
-                ch.SetCH(diffX, gIndex);
-            }
+            
+            int gIndex = action - 1;
+            double diffX = diff.SetDiff();
+            ch.SetCH(diffX, gIndex);
         }
 
-        public void ExeGameMode(int gIndex, ICharacter usedCh, IEnemy enemy) 
+        public void ExeGameMode(int gIndex, ICharacter usedCh, IEnemy enemy)
         {
-            if (gIndex == 1)
-            {
-                var _1v1 = new _1v1();
-                _1v1.Execute(usedCh, enemy);
-            }
-
-            if (gIndex == 2)
-            {
-                Console.WriteLine("Comming soon...");
-            }
+            IGameMode gmAtIndex = gm[gIndex];
+            gmAtIndex.Execute(usedCh, enemy);
         }
     }
 }
