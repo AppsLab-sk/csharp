@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,15 +23,32 @@ namespace BatteSimulator.Modules
             
             while (usedCh.Health > 0 && enemy.Health > 0) //pokiaľ sú všetci nažive
             {
-                print.Stats(usedCh, enemy);
+                //print.Stats(usedCh, enemy);
+                print._1v1Choose();// \n1 = Útok \n2 = Uzdraviť (počet: {usedCh.HealAmount})");
+                
+                ICharacter chInstance = usedCh;
+                Type chType = chInstance.GetType();
+                MethodInfo[] chMethods = chType.GetMethods();
+                int j = 1; 
+                for (int i = 0; i < chMethods.Length; i++) 
+                {
+                    if (!chMethods[i].Name.StartsWith("set_") && chMethods[i].ReturnType == typeof(void)) //vypíše schopnosť
+                    {
+                        print._1v1List(i, j, chMethods);
 
-                Console.WriteLine($"Vyberte schopnosť: \n1 = Útok \n2 = Uzdraviť (počet: {usedCh.HealAmount})");
+                        j = j + 1;
+                    }
+                }
+
+                print.Input();
+
                 int action = int.Parse(Console.ReadLine());
+                Console.SetCursorPosition(0, Console.CursorTop + 1);
 
                 if (action == 1) //útok
                 {
                     usedCh.Attack(enemy);
-                    print.PlayerAttack(usedCh, enemy);
+                    print._1v1ChAttack(usedCh, enemy);
                 }
                 if (action == 2) //uzdravenie
                 {
@@ -38,12 +56,13 @@ namespace BatteSimulator.Modules
                     {
                         usedCh.HealAmount = Math.Max(0, usedCh.HealAmount - 1);
                         usedCh.Heal();
-                        Console.WriteLine($"Ostávajúci počet uzdravení: {usedCh.HealAmount}");
+                        print._1v1ChHeal(usedCh);
                     }
                     else //ak nie je čím, útok
                     {
+                        print._1v1ChNoHeal(usedCh);
                         usedCh.Attack(enemy);
-                        print.PlayerAttack(usedCh, enemy);
+                        print._1v1ChAttack(usedCh, enemy);
                     }
                 }
 
@@ -55,29 +74,29 @@ namespace BatteSimulator.Modules
                         {
                             enemy.HealAmount = Math.Max(0, enemy.HealAmount - 1);
                             enemy.Heal();
-                            Console.WriteLine($"Ostávajúci počet uzdravení: {enemy.HealAmount} pre {enemy.Name}");
+                            print._1v1EHeal(enemy);
                         }
                         else //ak nie, zaútoč
                         {
                             enemy.Attack(usedCh);
-                            print.EnemyAttack(usedCh, enemy);
+                            print._1v1EnemyAttack(usedCh, enemy);
                         }
                     }
                     else //ak má dostatok životov, zaútočí
                     {
                         enemy.Attack(usedCh);
-                        print.EnemyAttack(usedCh, enemy);
+                        print._1v1EnemyAttack(usedCh, enemy);
                     }
                 }
-                print.Stats(usedCh, enemy);
+                print._1v1Stats(usedCh, enemy);
 
                 if (usedCh.Health > 0 && enemy.Health > 0) //pokiaľ sú obydvaja naživu, ide nové kolo
                 {
-                    Console.WriteLine("Stlač akúkoľvek klávesu pre pokračovanie . . .");
+                    print._1v1Continue();
                     Console.ReadKey(true);
                     Console.Clear();
                     print.Intro();
-                    print.NewRound();
+                    print._1v1NewRound();
                     print.Intro();
                 }
             }
@@ -86,24 +105,24 @@ namespace BatteSimulator.Modules
                 Thread.Sleep(2000);
                 Console.Clear();
                 print.Intro();
-                print.Stats(usedCh, enemy);
-                Console.WriteLine("Remíza.");
+                print._1v1Stats(usedCh, enemy);
+                print._1v1Draw();
             }
             if (usedCh.Health <= 0 && enemy.Health > 0) //nepriateľ vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();
                 print.Intro();
-                print.Stats(usedCh, enemy);
-                Console.WriteLine(enemy.Name + " vyhral.");
+                print._1v1Stats(usedCh, enemy);
+                print._1v1Lose(enemy);
             }
-            if (enemy.Health <= 0 && usedCh.Health > 0) //bojovník vyhral
+            if (enemy.Health <= 0 && usedCh.Health > 0) //hráč vyhral
             {
                 Thread.Sleep(2000);
                 Console.Clear();
                 print.Intro();
-                print.Stats(usedCh, enemy);
-                Console.WriteLine(usedCh.Name + " vyhral.");
+                print._1v1Stats(usedCh, enemy);
+                print._1v1Win(usedCh);
             }
         }
     }

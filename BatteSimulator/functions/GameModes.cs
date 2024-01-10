@@ -16,6 +16,7 @@ namespace BatteSimulator.functions
             new CommingSoon("Comming soon..."),
             new CommingSoon("Comming soon..."),
         };
+
         public void SetGameMode()
         {
             var print = new Print();
@@ -29,7 +30,7 @@ namespace BatteSimulator.functions
                 print.GmList(i, gm);
             }
 
-            print.GmInput();
+            print.Input();
 
             int action = int.Parse(Console.ReadLine());
             

@@ -24,32 +24,15 @@ namespace BatteSimulator.Modules
                 "Impossible",
                 "Custom"
             };
-            
-            Console.SetCursorPosition(86, Console.CursorTop);
-            Console.WriteLine("║");
-            Console.SetCursorPosition(0, Console.CursorTop - 1);
-            
 
-            Console.Write("Choose difficulty: ");
+            print.DfChoose();
 
             for (int i = 0; i < diffs.Count; i++)
             {
-                Console.SetCursorPosition(86, Console.CursorTop);
-                Console.WriteLine("║");
-                Console.SetCursorPosition(0, Console.CursorTop);
-
-                Console.Write($"{i + 1}. {diffs[i]}");
-
-                Console.SetCursorPosition(86, Console.CursorTop);
-                Console.Write("║");
-                Console.SetCursorPosition(0, Console.CursorTop);
+                print.DfList(i, diffs);
             }
 
-            Console.SetCursorPosition(0, Console.CursorTop + 2);
-            print.EndLine();
-            Console.SetCursorPosition(86, Console.CursorTop - 2);
-            Console.Write("║");
-            Console.SetCursorPosition(0, Console.CursorTop);
+            print.Input();
 
             int action = int.Parse(Console.ReadLine());
 
@@ -59,20 +42,7 @@ namespace BatteSimulator.Modules
             if (action == 4){ diff = 4;}
             if (action == 5)
             {
-                Console.Clear();
-                print.Intro();
-
-                Console.SetCursorPosition(86, Console.CursorTop);
-                Console.WriteLine("║");
-                Console.SetCursorPosition(0, Console.CursorTop - 1);
-
-                Console.WriteLine("Set custom difficulty: ");
-
-                Console.SetCursorPosition(0, Console.CursorTop + 1);
-                print.EndLine();
-                Console.SetCursorPosition(86, Console.CursorTop - 2);
-                Console.Write("║");
-                Console.SetCursorPosition(0, Console.CursorTop);
+                print.DfCustom();
 
                 diff = int.Parse(Console.ReadLine());
             }

@@ -22,37 +22,23 @@ namespace BatteSimulator.Modules
                 new Enemy("Enemy", 50 * diffX, 25 * diffX, 2 * diffX),
                 //new Enemy("Enemy2", 100, 60, 2),
             };
+
             Random random = new Random();
             int randomIndex;
             randomIndex = random.Next(chE.Count);
             var enemy = chE[randomIndex];
+            
             var print = new Print();
             var gm = new GameModes();
 
-            Console.SetCursorPosition(86, Console.CursorTop);
-            Console.WriteLine("║");
-            Console.SetCursorPosition(0, Console.CursorTop - 1);
-
-            Console.Write($"Choose your character: ");//\n1. {ch1.Name}, Health: {ch1.Health}, Damage: {ch1.AttackPower} \n2. {ch2.Name}, Health: {ch2.Health}, Damage: {ch2.AttackPower}");
+            print.ChChoose();
             
             for (int i = 0;  i < ch.Count; i++) 
             {
-                Console.SetCursorPosition(86, Console.CursorTop);
-                Console.WriteLine("║");
-                Console.SetCursorPosition(0, Console.CursorTop);
-
-                Console.Write($"{i+1}. {ch[i].Name}, Health: {ch[i].Health}, Damage: {ch[i].AttackPower}");
-
-                Console.SetCursorPosition(86, Console.CursorTop);
-                Console.Write("║");
-                Console.SetCursorPosition(0, Console.CursorTop);
+                print.ChList(i, ch);
             }
 
-            Console.SetCursorPosition(0, Console.CursorTop + 2);
-            print.EndLine();
-            Console.SetCursorPosition(86, Console.CursorTop - 2);
-            Console.Write("║");
-            Console.SetCursorPosition(0, Console.CursorTop);
+            print.Input();
 
             int action = int.Parse(Console.ReadLine());
 
