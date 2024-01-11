@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
+using System.Timers;
 
 class Program
 {
@@ -33,13 +35,13 @@ class Program
             DrawPlayer();
             DrawProjectiles();
             DrawEnemies();
-
+            TimerF();
             ProcessInput();
             MoveProjectiles();
             MoveEnemies();
             CheckCollisions();
 
-            Thread.Sleep(50); // Adjusted sleep time for a slower game
+            Thread.Sleep(40);
         }
     }
 
@@ -74,7 +76,7 @@ class Program
         foreach (var enemy in enemies)
         {
             Console.SetCursorPosition(enemy.X, enemy.Y);
-            Console.Write("V");
+            Console.Write("X");
         }
     }
 
@@ -150,32 +152,48 @@ class Program
             }
         }
     }
-}
-
-class Projectile
-{
-    public int X { get; set; }
-    public int Y { get; set; }
-    public bool IsAlive { get; set; }
-
-    public Projectile(int x, int y)
+    static void TimerF()
     {
-        X = x;
-        Y = y;
-        IsAlive = true;
+        Console.Clear();
+       
+
+        int num = 1; 
+
+        while (true) 
+        {
+            Console.SetCursorPosition(70, 24); 
+            Console.Write(num); 
+            num = (num % 9) + 1; 
+            System.Threading.Thread.Sleep(1000);
+            
+        }
     }
-}
 
-class Enemy
-{
-    public int X { get; set; }
-    public int Y { get; set; }
-    public bool IsAlive { get; set; }
-
-    public Enemy(int x, int y)
+    class Projectile
     {
-        X = x;
-        Y = y;
-        IsAlive = true;
+        public int X { get; set; }
+        public int Y { get; set; }
+        public bool IsAlive { get; set; }
+
+        public Projectile(int x, int y)
+        {
+            X = x;
+            Y = y;
+            IsAlive = true;
+        }
+    }
+
+    class Enemy
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public bool IsAlive { get; set; }
+
+        public Enemy(int x, int y)
+        {
+            X = x;
+            Y = y;
+            IsAlive = true;
+        }
     }
 }
