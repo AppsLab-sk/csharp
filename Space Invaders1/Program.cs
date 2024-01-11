@@ -33,12 +33,12 @@ class Program
             DrawPlayer();
             DrawProjectiles();
             DrawEnemies();
-
             ProcessInput();
             MoveProjectiles();
             MoveEnemies();
             CheckCollisions();
-
+            GameOver();
+           
             Thread.Sleep(50); 
         }
     }
@@ -74,7 +74,7 @@ class Program
         foreach (var enemy in enemies)
         {
             Console.SetCursorPosition(enemy.X, enemy.Y);
-            Console.Write("V");
+            Console.Write("X");
         }
     }
 
@@ -120,19 +120,32 @@ class Program
     {
         foreach (var enemy in enemies)
         {
-            enemy.X++;
-            enemy.X--;
 
-            if (enemy.X >= ConsoleWidth)
-                enemy.IsAlive = false;
+            enemy.X++;
+            //enemy.X--;
+
+            if (enemy.X >= ConsoleWidth - 30)
+            {
+            enemy.X--;
+            }
+             if (enemy.X < 0)
+            {
+             enemy.X++;
+            }
+            //enemy.IsAlive = false;
         }
 
         enemies.RemoveAll(e => !e.IsAlive);
 
-        
+
+ 
+    }
+    static void GameOver()
+    {
         if (enemies.Count == 0)
         {
-            InitializeEnemies();
+            Console.SetCursorPosition(7, 20);
+            Console.Write("You've slain all of the enemies! Congratulations!");
         }
     }
 
@@ -144,7 +157,7 @@ class Program
             {
                 if (projectile.X == enemy.X && projectile.Y == enemy.Y)
                 {
-                    projectile.IsAlive = false;
+                    projectile.IsAlive = true;
                     enemy.IsAlive = false;
                 }
             }
@@ -179,3 +192,4 @@ class Enemy
         IsAlive = true;
     }
 }
+
