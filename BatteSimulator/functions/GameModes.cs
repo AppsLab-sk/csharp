@@ -36,6 +36,11 @@ namespace BatteSimulator.functions
             
             int gIndex = action - 1;
             double diffX = diff.SetDiff();
+
+            if (gm[gIndex].Name.StartsWith("Comming soon..."))
+            {
+                //gm[gIndex].Execute();
+            }
             ch.SetCH(diffX, gIndex);
         }
 
