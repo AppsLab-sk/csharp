@@ -1,4 +1,7 @@
-﻿namespace AppsLab_013_Conditions;
+﻿using System;
+using System.Xml.Linq;
+
+namespace AppsLab_013_Conditions;
 
 /// <summary>
 /// Represents the rules of a game.
@@ -13,7 +16,19 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
+        if (playerAge >=18)  
+        {
+            if (playerName != null && playerName != "")
+            {
+                return true;    
+            }
+
+        }
+           return false;
+        }
+                
+
+
     }
 
     /// <summary>
@@ -23,7 +38,11 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
-        throw new NotImplementedException();
+        if (playerHealth == 0) 
+        { 
+           Console.WriteLine("You dead");
+        }
+        return true;
     }
 
     /// <summary>
@@ -34,6 +53,16 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+        if (!hasKey)
+        { 
+        Console.WriteLine("You have found your key");
+        return false;
+        }
+        if (!knowsPassword) 
+        { 
+        Console.WriteLine("You have found your password");
+        return true;   
+        }
+       
     }
 }

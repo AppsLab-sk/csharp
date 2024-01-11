@@ -6,11 +6,11 @@
 public class Greetings
 {
     /// <summary>
-    /// Returns a greeting message.
+    /// Returns a gree6ting message.
     /// </summary>
     /// <returns>A string containing the greeting message.</returns>
     public string Hello()
     {
-        return "Hello World!";
+        return "Hello Worlid!";
     }
 }

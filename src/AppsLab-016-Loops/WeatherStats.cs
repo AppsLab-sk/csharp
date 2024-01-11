@@ -1,4 +1,6 @@
-﻿namespace AppsLab_016_Loops;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace AppsLab_016_Loops;
 
 /// <summary>
 /// Class to calculate weather statistics.
@@ -12,7 +14,13 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double sum = 0;
+
+        foreach (var temperature in temperatures)
+        {
+            sum += temperature;
+        }
+        return sum / (double)temperatures.Length;
     }
 
     /// <summary>
@@ -22,7 +30,13 @@ public class WeatherStats
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double max = double.MinValue;
+        foreach (double temperature in temperatures)
+        {
+            if (max <= temperature)
+                max = temperature;
+        }
+        return max;
     }
 
     /// <summary>
@@ -32,6 +46,16 @@ public class WeatherStats
     /// <returns>Minimum temperature.</returns>
     public double MinTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double min = double.MaxValue;
+        foreach (double temperature in temperatures)
+        {
+            if (min >= temperature)
+                min = temperature;
+        }
+        return min;
     }
 }
+
+
+
+
