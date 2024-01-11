@@ -43,7 +43,8 @@ namespace BatteSimulator.Modules
             int action = int.Parse(Console.ReadLine());
 
             var usedCh = ch[action - 1];
-            gm.ExeGameMode(gIndex, usedCh, enemy);            
+            gm.ExeGameMode(gIndex, usedCh, enemy);
+            //print._1v1Stats(usedCh, enemy);
         } 
     }
 }

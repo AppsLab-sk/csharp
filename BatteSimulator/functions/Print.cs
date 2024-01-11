@@ -177,13 +177,16 @@ namespace BatteSimulator.functions
 
         public void _1v1Stats(ICharacter usedCh, IEnemy enemy)
         {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Line();
             Console.WriteLine($"{usedCh.Name} {usedCh.Health} : {enemy.Name} {enemy.Health}");
             
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.SetCursorPosition(86, Console.CursorTop - 1);
             Console.Write("║");
-            Console.SetCursorPosition(0, Console.CursorTop);
-        }
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
+            EndLine();
+        } //vypíše životy hráča aj nepriateľa
 
         public void _1v1ChAttack(ICharacter usedCh, IEnemy enemy)
         {
@@ -349,17 +352,20 @@ namespace BatteSimulator.functions
 
         public void _1v1Draw() 
         {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Line();
             Console.WriteLine("Remíza.");
             Console.SetCursorPosition(86, Console.CursorTop - 1);
             Console.Write("║");
-            //Console.SetCursorPosition(0, Console.CursorTop - 1);
-            //Line();
+            
             Console.SetCursorPosition(0, Console.CursorTop + 1);
             EndLine();
         }//remíza
 
         public void _1v1Lose(IEnemy enemy) 
         {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Line();
             Console.WriteLine(enemy.Name + " vyhral.");
             Console.SetCursorPosition(86, Console.CursorTop - 1);
             Console.Write("║");
@@ -371,6 +377,8 @@ namespace BatteSimulator.functions
 
         public void _1v1Win(ICharacter usedCh) 
         {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Line();
             Console.WriteLine(usedCh.Name + " vyhral.");
             Console.SetCursorPosition(86, Console.CursorTop - 1);
             Console.Write("║");
@@ -379,6 +387,22 @@ namespace BatteSimulator.functions
             Console.SetCursorPosition(0, Console.CursorTop + 1);
             EndLine();
         }//hráč vyhral
+
+
+        //============== End ==================================================
+
+        public void End()
+        {
+            Console.WriteLine("1. Play again");
+            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
+            Console.WriteLine("2. Exit");
+            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
+        }
+
 
         //======================================================================
     }

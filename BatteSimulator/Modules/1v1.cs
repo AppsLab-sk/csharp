@@ -107,6 +107,8 @@ namespace BatteSimulator.Modules
                 print.Intro();
                 print._1v1Stats(usedCh, enemy);
                 print._1v1Draw();
+                print._1v1Continue();
+                Console.ReadKey(true);
             }
             if (usedCh.Health <= 0 && enemy.Health > 0) //nepriateľ vyhral
             {
@@ -115,6 +117,8 @@ namespace BatteSimulator.Modules
                 print.Intro();
                 print._1v1Stats(usedCh, enemy);
                 print._1v1Lose(enemy);
+                print._1v1Continue();
+                Console.ReadKey(true);
             }
             if (enemy.Health <= 0 && usedCh.Health > 0) //hráč vyhral
             {
@@ -123,6 +127,8 @@ namespace BatteSimulator.Modules
                 print.Intro();
                 print._1v1Stats(usedCh, enemy);
                 print._1v1Win(usedCh);
+                print._1v1Continue();
+                Console.ReadKey(true);
             }
         }
     }
