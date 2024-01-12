@@ -35,13 +35,22 @@ namespace BatteSimulator.functions
             int action = int.Parse(Console.ReadLine());
             
             int gIndex = action - 1;
-            double diffX = diff.SetDiff();
 
             if (gm[gIndex].Name.StartsWith("Comming soon..."))
             {
-                //gm[gIndex].Execute();
+                Console.Clear();
+                print.Intro();
+                
+                print.Soon();
+                
+                print._1v1Continue();
+                Console.ReadKey(true);
             }
-            ch.SetCH(diffX, gIndex);
+            else 
+            { 
+                double diffX = diff.SetDiff(); 
+                ch.SetCH(diffX, gIndex); 
+            }
         }
 
         public void ExeGameMode(int gIndex, ICharacter usedCh, IEnemy enemy)

@@ -147,7 +147,14 @@ namespace BatteSimulator.functions
 
         //============== Game Mode -- Comming soon... =========================
 
-        public void Soon() { Console.WriteLine("Comming soon..."); }
+        public void Soon() 
+        { 
+            Console.WriteLine("Comming soon...");
+            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.Write("║");
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
+            EndLine();
+        }
 
 
         //============== Game Mode -- 1v1 =====================================
@@ -330,7 +337,7 @@ namespace BatteSimulator.functions
             Console.Clear();
 
             Intro();
-            Console.SetCursorPosition(86, Console.CursorTop - 1);
+            Console.SetCursorPosition(86, Console.CursorTop);
             Console.Write("║");
             Console.WriteLine(@"
                                                                                       ║
