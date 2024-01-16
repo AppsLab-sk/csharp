@@ -13,6 +13,7 @@ class Program
 
     const int ConsoleWidth = 80;
     const int ConsoleHeight = 24;
+    const int StepsBeforeChangeDirection = 23;
 
     static void Main()
     {
@@ -32,14 +33,15 @@ class Program
             Console.Clear();
             DrawPlayer();
             DrawProjectiles();
-            DrawEnemies();
             ProcessInput();
+            DrawEnemies();
             MoveProjectiles();
             MoveEnemies();
             CheckCollisions();
             GameOver();
-           
-            Thread.Sleep(50); 
+
+            Thread.Sleep(40);
+
         }
     }
 
@@ -49,7 +51,7 @@ class Program
         {
             for (int j = 0; j < 10; j++)
             {
-                enemies.Add(new Enemy(j * 6, i * 3));
+                enemies.Add(new Enemy(j * 6, i * 3, 1));
             }
         }
     }
@@ -62,7 +64,7 @@ class Program
 
     static void DrawProjectiles()
     {
-        foreach (var projectile in playerProjectiles)
+        foreach (var projectile in playerProjectiles.ToList())
         {
             Console.SetCursorPosition(projectile.X, projectile.Y);
             Console.Write("|");
@@ -71,6 +73,7 @@ class Program
 
     static void DrawEnemies()
     {
+    
         foreach (var enemy in enemies)
         {
             Console.SetCursorPosition(enemy.X, enemy.Y);
@@ -109,7 +112,7 @@ class Program
         {
             projectile.Y--;
 
-            if (projectile.Y < 0)
+            if (projectile.Y <0)
                 projectile.IsAlive = false;
         }
 
@@ -118,33 +121,33 @@ class Program
 
     static void MoveEnemies()
     {
+        
         foreach (var enemy in enemies)
         {
-
-            enemy.X++;
-            //enemy.X--;
-
-            if (enemy.X >= ConsoleWidth - 30)
+            enemy.X += enemy.XDirection;
+            if (enemy.X <= 0 || enemy.X >= ConsoleWidth - 2)
             {
-            enemy.X--;
+                enemy.XDirection *= -1;
+                enemy.StepsCount = 0;
             }
-             if (enemy.X < 0)
+
+            enemy.StepsCount++;
+
+            if (enemy.StepsCount >= StepsBeforeChangeDirection)
             {
-             enemy.X++;
+                enemy.XDirection *= -1;
+                enemy.StepsCount = 0;
             }
-            //enemy.IsAlive = false;
+
         }
-
         enemies.RemoveAll(e => !e.IsAlive);
 
-
- 
     }
     static void GameOver()
     {
         if (enemies.Count == 0)
         {
-            Console.SetCursorPosition(7, 20);
+            Console.SetCursorPosition(10,15);
             Console.Write("You've slain all of the enemies! Congratulations!");
         }
     }
@@ -157,7 +160,7 @@ class Program
             {
                 if (projectile.X == enemy.X && projectile.Y == enemy.Y)
                 {
-                    projectile.IsAlive = true;
+                    projectile.IsAlive = false;
                     enemy.IsAlive = false;
                 }
             }
@@ -184,12 +187,16 @@ class Enemy
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsAlive { get; set; }
+    public int StepsCount { get; set; }
+    public int XDirection { get; set; }
 
-    public Enemy(int x, int y)
+    public Enemy(int x, int y, int xDirection)
     {
         X = x;
         Y = y;
         IsAlive = true;
+        StepsCount = 0;
+        XDirection = xDirection;
     }
 }
 
