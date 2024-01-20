@@ -51,6 +51,11 @@ namespace BatteSimulator.functions
         }
 
 
+        //============== Levels ===============================================
+
+
+
+
         //============== Difficulties =========================================
 
         public void DfChoose()
