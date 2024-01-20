@@ -11,8 +11,11 @@ public class Program
         var gm = new GameModes();
         var end = new End();
         print.Intro();
-        gm.SetGameMode();
+        
+        var lelevs = new Levels();
+        lelevs.SetPlayer();
+        //gm.SetGameMode();
 
-        end.EndGame();
+        //end.EndGame();
     }
 }//872 r
