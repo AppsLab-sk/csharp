@@ -47,9 +47,9 @@ class Program
 
     static void InitializeEnemies()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 1; i < 5; i++)
         {
-            for (int j = 0; j < 10; j++)
+            for (int j = 1; j < 10; j++)
             {
                 enemies.Add(new Enemy(j * 6, i * 3, 1));
             }
@@ -147,7 +147,7 @@ class Program
     {
         if (enemies.Count == 0)
         {
-            Console.SetCursorPosition(10,15);
+            Console.SetCursorPosition(15,12);
             Console.Write("You've slain all of the enemies! Congratulations!");
         }
     }
