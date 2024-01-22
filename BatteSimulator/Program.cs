@@ -12,7 +12,7 @@ public class Program
         var end = new End();
         print.Intro();
         
-        var lelevs = new Levels();
+        var lelevs = new PlayerData();
         lelevs.SetPlayer();
         //gm.SetGameMode();
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BatteSimulator.Modules
 {
-    public class Levels
+    public class PlayerData
     {
         List<string> pList = new List<string>();
 

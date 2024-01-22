@@ -20,7 +20,7 @@ namespace BatteSimulator.functions
         public void SetGameMode()
         {
             var print = new Print();
-            var levels = new Levels();
+            var levels = new PlayerData();
             var diff = new Difficulties();
             var ch = new Characters();
 
