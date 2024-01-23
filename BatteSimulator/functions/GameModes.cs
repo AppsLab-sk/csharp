@@ -20,7 +20,7 @@ namespace BatteSimulator.functions
         public void SetGameMode()
         {
             var print = new Print();
-            var levels = new PlayerData();
+            //var levels = new PlayerData();
             var diff = new Difficulties();
             var ch = new Characters();
 
@@ -49,7 +49,7 @@ namespace BatteSimulator.functions
             }
             else 
             {
-                levels.SetPlayer();
+                //levels.SetPlayer();
                 double diffX = diff.SetDiff(); 
                 ch.SetCH(diffX, gIndex); 
             }

@@ -12,10 +12,10 @@ public class Program
         var end = new End();
         print.Intro();
         
-        var lelevs = new PlayerData();
-        lelevs.SetPlayer();
-        //gm.SetGameMode();
+        //var lelevs = new PlayerData();
+        //lelevs.SetPlayer();
+        gm.SetGameMode();
 
-        //end.EndGame();
+        end.EndGame();
     }
 }//872 r
