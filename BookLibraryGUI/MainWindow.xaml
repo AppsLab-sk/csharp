@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookLibraryGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Murin nevie C#" Height="450" Width="800">
     <Grid>
-        <ListView Name="ListView" d:ItemsSource="{Binding}" Margin="0,0,600,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView Name="ListView" d:ItemsSource="{Binding}" Margin="0,0,600,0" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -15,7 +19,27 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Knihy na zapožičanie" Margin="0,0,600,0"/>
+        <Label Content="Knihy na zapožičanie" Margin="0,0,600,170"/>
+
+        <ListView Name="ListView2" d:ItemsSource="{Binding}" Grid.RowSpan="2" Margin="200,0,450,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label Content="Autor" Margin="200,0,450,170"/>
+
+        <ListView Name="ListView3" d:ItemsSource="{Binding}" Margin="350,0,0,0" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label Content="Dátum Vydania" Margin="350,0,300,170"/>
     </Grid>
- 
+
 </Window>

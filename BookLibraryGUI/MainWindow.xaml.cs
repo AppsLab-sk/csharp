@@ -38,10 +38,11 @@ namespace BookLibraryGUI
             book[2].BorrowedBy = murin;
             book[2].BorrowedTime = DateTime.Now;
 
-            foreach (Book bookItem in book)
+            for (int i = 0; i < book.Count; i++)
             {
-                
-                ListView.Items.Add(bookItem);
+                ListView.Items.Add(book[i].Name);
+                ListView2.Items.Add(book[i].Author);
+                ListView3.Items.Add(book[i].ReleaseDate);
             }
                       
         }
