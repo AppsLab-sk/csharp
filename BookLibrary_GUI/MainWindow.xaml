@@ -1,0 +1,20 @@
+﻿<Window x:Class="BookLibrary_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookLibrary_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name = "ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,83,620,204" FontSize="13" FontWeight="Bold">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Knihy na zapožičanie" HorizontalAlignment="Left" Margin="0,44,0,0" VerticalAlignment="Top" Height="70" Width="180" FontWeight="Bold" FontSize="17"/>
+
+    </Grid>
+</Window>
