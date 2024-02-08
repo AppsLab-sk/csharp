@@ -40,21 +40,14 @@ namespace BookLibrary
                 return $"{Name.PadRight(15, ' ')}";
 
         }
-
-
-
-
-        public enum BookGenre
-        {
-            SciFi,
-            Comedy,
-            Cartoon,
-            Comix,
-            Religion,
-            Educational,
-
-
-
-        }
+    }
+    public enum BookGenre
+    {
+        SciFi,
+        Comedy,
+        Cartoon,
+        Comix,
+        Religion,
+        Educational,
     }
 }

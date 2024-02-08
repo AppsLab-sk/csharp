@@ -25,9 +25,9 @@ namespace BookLibrary_GUI
         {
             InitializeComponent();
 
-            var book1 = new Book(1,"PromileTour","MilanNevedal",new DateTime(2017, 5 , 5), Book.BookGenre.Religion);
-            var book2 = new Book(2, "IdentitaMuza","MilanNevedal", new DateTime(2019 , 6 , 9), Book.BookGenre.Educational);
-            var book3 = new Book(3, "KatechezyPreKazdeho", "MilanNevedal", new DateTime(2020, 4 , 5), Book.BookGenre.Religion);
+            var book1 = new Book(1,"Promile Tour","Milan Nevedal",new DateTime(2017, 5 , 5), BookGenre.Religion);
+            var book2 = new Book(2, "Identita Muza","Milan Nevedal", new DateTime(2019 , 6 , 9), BookGenre.Educational);
+            var book3 = new Book(3, "Katechezy Pre Kazdeho", "Milan Nevedal", new DateTime(2020, 4 , 5), BookGenre.Religion);
 
             ListView_AllBooks.Items.Add(book1);
             ListView_AllBooks.Items.Add(book2);
