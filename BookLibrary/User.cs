@@ -12,7 +12,7 @@ namespace BookLibrary
         public string FullName { get; set; }
         public string City { get; set; }
         public DateTime BirthDay { get; set; }
-        public List<Book> BorrowedBook { get; set; }
+        public List<Book> BorrowedBooks { get; set; }
         public Gender Gender { get; set; }
 
 

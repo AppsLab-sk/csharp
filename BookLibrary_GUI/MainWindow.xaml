@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" RenderTransformOrigin="0.502,0.53" Margin="0,43,602,0">
+        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.502,0.53" Margin="0,43,602,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
