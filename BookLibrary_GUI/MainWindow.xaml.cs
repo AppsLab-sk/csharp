@@ -1,7 +1,9 @@
 ﻿using BookLibrary;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,22 +24,20 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Library LibraryKNM { get; set; }
         public MainWindow()
         {
             InitializeComponent();
 
-            List<Book> books = new List<Book>();
-
-            var book1 = new Book(1, "Kniha1", "Autor1", new DateTime(2012, 12, 13), BookGenre.Comix);
-            var book2 = new Book(2, "Kniha2", "Autor2", new DateTime(2006, 4, 5), BookGenre.Cartoon);
-            var book3 = new Book(3, "Kniha3", "Autor3", new DateTime(2015, 2, 6), BookGenre.Comedy);
-
-            books.Add(book1);
-            books.Add(book2);
-            books.Add(book3);
-
-            ListView_AllBooks = new ListView();
-
+            Refresh();
+        }
+        private void Refresh()
+        {
+            ListView_AllBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
+            {
+                ListView_AllBooks.Items.Add(book.ToString());
+            }
         }
 
         private void ListView_AllBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
