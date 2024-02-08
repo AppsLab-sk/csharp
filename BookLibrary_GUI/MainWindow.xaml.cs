@@ -21,25 +21,22 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public Library LibraryKNM { get; set; } = Library.Instance;
+        
+        public MainWindow() 
         {
             InitializeComponent();
-            var book1 = new Book(1, "King", "Sladkovic", new DateTime(2013, 07, 06), BookGenre.Cartoon);
-
-            var book2 = new Book(2, "Pinokio", "Kolár", new DateTime(2016, 04, 06), BookGenre.Cartoon);
-
-            var book3 = new Book(3, "Hobbit", "Tolkien", new DateTime(1950, 02, 01), BookGenre.SciFi);       
-        
-        
-            ListView_AllBooks.Items.Add(book1);
-            ListView_AllBooks.Items.Add(book2);
-            ListView_AllBooks.Items.Add(book3);
-
-
-
-
-
-
+            Refresh();
         }
+    
+        private void Refresh()
+        {
+            ListView_AllBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
+            {
+                ListView_AllBooks.Items.Add(book.ToString());
+
+            }
+        }   
     }
 }
