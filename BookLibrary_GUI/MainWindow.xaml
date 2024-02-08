@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name = "ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,83,620,204" FontSize="13" FontWeight="Bold">
+        <ListView Name = "ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,83,592,154" FontSize="13" FontWeight="Bold">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

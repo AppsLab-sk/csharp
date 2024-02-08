@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,20 +23,23 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public Library LibraryKNM { get; set; } = Library.Instance;
+
+        public MainWindow() 
         {
             InitializeComponent();
-            var book1 = new Book(1, "Harry Humenčan", "Tik-Tok", DateTime.Now, Book.BookGenre.Comedy);
-            var book2 = new Book(2, "Plomile Toul", "Milan Nevedal", DateTime.Now, Book.BookGenre.education);
-            var book3 = new Book(3, "Dano Drevo", "PPPier", DateTime.Now, Book.BookGenre.Comedy);
-
-            ListView_AllBooks.Items.Add(book1);
-            ListView_AllBooks.Items.Add(book2);
-            ListView_AllBooks.Items.Add(book3);
-
-
-
+            Refresh();
         }
+        private void Refresh()
+        {
+            ListView_AllBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x=> !x.IsBorrowed).ToList()) 
+            { 
+             ListView_AllBooks.Items.Add(book.ToString());
+            }
+        }
+        
+        
 
 
 

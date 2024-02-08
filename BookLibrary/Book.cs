@@ -43,15 +43,16 @@ namespace BookLibrary
 
 
 
-        public enum BookGenre
-        {
-            SciFi,
-            Comedy,
-            Cartoon,
-            Comix,
-            education,
+        
+    }
+    public enum BookGenre
+    {
+        SciFi,
+        Comedy,
+        Cartoon,
+        Comix,
+        education,
 
 
-        }
     }
 }
