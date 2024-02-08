@@ -1,6 +1,7 @@
 ﻿using BookLibrary;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,23 +22,21 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Library LibraryKNM { get; set; } = Library.Instance;
         public MainWindow()
         {
             InitializeComponent();
 
-            var book1 = new Book(1,"Promile Tour","Milan Nevedal",new DateTime(2017, 5 , 5), BookGenre.Religion);
-            var book2 = new Book(2, "Identita Muza","Milan Nevedal", new DateTime(2019 , 6 , 9), BookGenre.Educational);
-            var book3 = new Book(3, "Katechezy Pre Kazdeho", "Milan Nevedal", new DateTime(2020, 4 , 5), BookGenre.Religion);
-
-            ListView_AllBooks.Items.Add(book1);
-            ListView_AllBooks.Items.Add(book2);
-            ListView_AllBooks.Items.Add(book3);
+            Refresh();
 
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Refresh()
         {
-            
+            ListView_AllBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
+            {
+                ListView_AllBooks.Items.Add(book.ToString());
+            }
         }
     }
 }
