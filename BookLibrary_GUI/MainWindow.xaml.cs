@@ -24,7 +24,7 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Library LibraryKNM { get; set; }
+        public Library LibraryKNM { get; set; } = Library.Instance;
         public MainWindow()
         {
             InitializeComponent();
