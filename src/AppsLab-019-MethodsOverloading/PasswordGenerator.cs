@@ -1,3 +1,6 @@
+using System.Text;
+using System;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -18,7 +21,13 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            var random = new Random();
+            var result = "";
+            for (int i = 0; i < 8; i++) 
+            {
+                result += Alphabet[random.Next(0, 25)];
+            }
+            return result;
         }
 
         /// <summary>
@@ -28,19 +37,46 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            var random = new Random();
+            var result = "";
+            for (int i = 0; i < length; i++)
+            {
+                result += Alphabet[random.Next(Alphabet.Length - 1)];
+            }
+            return result;
         }
-
-        /// <summary>
         /// Generates a random password with the specified length, and optionally includes special characters and/or numbers.
         /// </summary>
         /// <param name="length">The length of the password to generate.</param>
         /// <param name="includeSpecialChars">Whether to include special characters in the password.</param>
         /// <param name="includeNumbers">Whether to include numbers in the password.</param>
         /// <returns>A randomly generated password.</returns>
-        public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
+        public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers, string password, string password, string password)
         {
-            throw new NotImplementedException();
+            string Password = "";
+            string characters = Alphabet;
+            if (includeNumbers)
+            {
+                characters += Numbers;
+            }
+            if (includeSpecialChars)
+            {
+                characters += SpecialChars;
+            }
+            if(length <= 0) 
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+            for(int i = 0; i < length;i++)
+            {
+                Password += characters[_random.Next(characters.Length - 1)];
+            }
+            return Password;
+
+
+
+   
         }
     }
 }
