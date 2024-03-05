@@ -57,5 +57,12 @@ namespace BookLibraryGUI
                 ListView.Items.Add(book.ToString());
             }
         }
+        private void MenuItem_Add_Click(object sender, RoutedEventArgs e)
+        {
+            // Create a new instance of the window you want to open
+            AddWindow addWindow = new AddWindow();
+            // Show the window
+            addWindow.Show();
+        }
     }
 }

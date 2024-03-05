@@ -11,7 +11,16 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListView Name="ListView" d:ItemsSource="{Binding}" Margin="0,0,600,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="200" Height="410" VerticalAlignment="Bottom">
+        <Menu>
+            <MenuItem Header="_Application">
+                <MenuItem Header="_Preferences" InputGestureText="Ctrl+P" />
+                
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="_Add book" Click="MenuItem_Add_Click"/>
+            </MenuItem>
+        </Menu>
+        <ListView Name="ListView" Margin="0,0,590,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="200" Height="386" VerticalAlignment="Bottom">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -19,9 +28,9 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Knihy na zapožičanie" Margin="0,0,600,170"/>
+        <Label Content="Knihy na zapožičanie" Margin="0,24,600,146"/>
 
-        <ListView Name="ListView2" d:ItemsSource="{Binding}" Grid.RowSpan="2" Margin="0,24,450,0" HorizontalAlignment="Right" Width="150">
+        <ListView Name="ListView2" d:ItemsSource="{Binding}" Grid.RowSpan="2" Margin="0,47,440,0" HorizontalAlignment="Right" Width="150">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -29,9 +38,9 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Autor" Margin="200,0,450,170"/>
+        <Label Content="Autor" Margin="215,24,435,146"/>
 
-        <ListView Name="ListView3" d:ItemsSource="{Binding}" Grid.RowSpan="2" HorizontalAlignment="Right" Width="450" Height="410" VerticalAlignment="Bottom">
+        <ListView Name="ListView3" d:ItemsSource="{Binding}" Grid.RowSpan="2" HorizontalAlignment="Right" Width="450" Height="387" VerticalAlignment="Bottom" Margin="0,0,-10,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -39,7 +48,8 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Dátum Vydania" Margin="350,0,300,170"/>
+        <Label Content="Dátum Vydania" Margin="365,24,285,146"/>
     </Grid>
 
 </Window>
+    

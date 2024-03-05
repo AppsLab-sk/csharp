@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +41,43 @@ namespace BookLibrary
             Comedy,
             Cartoon,
             Comix   
-        }   
+        }
+
+    public static class EnumExtensions
+    {
+        public static NameValueBinder ToListItem(this Enum value)
+        {
+            string description = value.GetDescription();
+            return new NameValueBinder(value, description);
+        }
+
+        public static string GetDescription(this Enum enumVal)
+        {
+            var type = enumVal.GetType();
+            var memInfo = type.GetMember(enumVal.ToString());
+            var attributes = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
+
+            foreach (var attribute in attributes)
+            {
+                if (attribute.GetType() == typeof(DescriptionAttribute))
+                    return (attribute as DescriptionAttribute).Description;
+            }
+
+            // No description attribute found, just return the name
+            return enumVal.ToString();
+        }
+    }
+
+    public class NameValueBinder
+    {
+        public object Value { get; set; }
+        public string Name { get; set; }
+
+        public NameValueBinder(object value, string name)
+        {
+            this.Value = value;
+            this.Name = name;
+        }
+    }
+
 }
