@@ -7,14 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.502,0.53" Margin="0,43,602,0">
+        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.508,0.933" Margin="0,86,602,55">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="&#xD;&#xA;Knihy na zapozicanie" HorizontalAlignment="Left" Margin="27,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.86,0.586" Width="232" Height="52" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="&#xD;&#xA;Knihy na zapozicanie" HorizontalAlignment="Left" Margin="27,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.86,0.586" Width="232" Height="55" FontWeight="Bold" FontStyle="Italic"/>
+        <Menu Height="22" Name="menu1" Width="800" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="GhostWhite">
+            <MenuItem Header="Application">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Add a new user" Click="Window_AddBook"/>
+                <MenuItem Header="Terms Of Conditions"/>
+            </MenuItem>
+            
+        </Menu>
 
     </Grid>
 </Window>

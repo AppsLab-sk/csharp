@@ -42,6 +42,14 @@ namespace BookLibrary_GUI
 
        
         }
+        
+
+        private void Window_AddBook(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_AddBook();
+            window.ShowDialog();
+            Refresh();
+        }
 
     }
 } 
