@@ -8,7 +8,7 @@ namespace BookLibrary
 {
     public class User
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string FullName { get; set; }
         public string City { get; set; }
         public DateTime BirthDay { get; set; }

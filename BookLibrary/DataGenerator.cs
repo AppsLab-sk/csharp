@@ -9,7 +9,7 @@ namespace BookLibrary
     internal class DataGenerator
     {
         public static List<string> BookNames { get; set; } = new List<string>() { "Harry Potter", "Pan prstenov", "Hobbit", "Witcher", "Mala morska vila" };
-        public static List<string> Authors { get; set; } = new List<string>() { "J.K. Rowling", "J.R.R. Tolkien", "Andrzej Sapkowski" };
+        public static List<string> Authors { get; set; } = new List<string>() { "J.K. Rowling", "J.R.R. Tolkien","J.R.R. Tolkien", "Andrzej Sapkowski" , "Andersen" };
         public static List<string> FirstNames { get; set; } = new List<string>() { "Michal", "Igor", "Marek", "Adam", "Patrik", "Jan" };
         public static List<string> LastNames { get; set; } = new List<string>() { "Maly", "Pekny", "Vysoky", "Malina", "Hrasko", "Slepy" };
         public static List<string> Cities { get; set; } = new List<string>() { "KNM", "ZA", "CA", "MT", "BA", "KE" };

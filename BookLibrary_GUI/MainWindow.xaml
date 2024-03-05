@@ -15,6 +15,22 @@
             </ListView.View>
         </ListView>
         <Label x:Name="Knihy_na_zapozicanie" Content="Knihy na zapozicanie" HorizontalAlignment="Left" Margin="27,44,0,0" VerticalAlignment="Top" Width="156" Height="34"/>
+        
 
+        <Menu Height="29" Name="menu1" Width="780" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="GhostWhite">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Add new user" />
+                <MenuItem Header="Add new book" Click="Window_AddNewBook"/>
+        
+            </MenuItem>
+
+        </Menu>
     </Grid>
 </Window>
