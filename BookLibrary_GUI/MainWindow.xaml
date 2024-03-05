@@ -7,14 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,69,669,121" SelectionChanged="ListView_AllBooks_SelectionChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="525*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,69,0,121" SelectionChanged="ListView_AllBooks_SelectionChanged" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
-        </ListView> 
-        <Label Content="Knihy na zapožičanie" HorizontalAlignment="Left" Margin="6,38,0,0" VerticalAlignment="Top" Height="31" Width="125"/>
+        </ListView>
+        <Label Content="Knihy na zapožičanie" HorizontalAlignment="Left" Margin="6,38,0,0" VerticalAlignment="Top" Height="31" Width="125" Grid.RowSpan="2"/>
+        <ListView x:Name="ListView_AllUsers"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="156,71,0,118" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Zapožičané knihy&#xA;Zapožičané knihy" Margin="28,43,457,365" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <ListView x:Name="ListView_BorrowedBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="28,69,0,121"  Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="131">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Uživatelia" Margin="156,44,238,363" Grid.Column="3" Grid.RowSpan="2"/>
+        <Menu Height="22" Name="menu" VerticalAlignment="Top" Background="Gray" BorderThickness="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <MenuItem Header="_Application">
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Close" />
+                <MenuItem Header="_Save" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Add new user" />
+                <MenuItem Header="Add new book" Click="Window_AddNewBook" />
+            </MenuItem>
+        </Menu>
+
 
     </Grid>
 </Window>
