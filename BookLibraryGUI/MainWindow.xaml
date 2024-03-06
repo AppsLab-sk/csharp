@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookLibraryGUI"
         mc:Ignorable="d"
-        Title="Murin nevie C#" Height="450" Width="800"
-        Icon="/icon.ico">
+        Title="Murin nevie C#" Height="450" Width="800">
     <Grid>
         <Menu Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800">
             <MenuItem Header="_Application">
@@ -15,6 +14,8 @@
             </MenuItem>
             <MenuItem Header="_Add">
                 <MenuItem Header="_Add book" Click="MenuItem_AddBook_Click"/>
+                <MenuItem Header="_Add user" Click="MenuItem_AddBook_Click"/>
+                
             </MenuItem>
         </Menu>
 

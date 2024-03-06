@@ -39,7 +39,7 @@ namespace BookLibraryGUI
         private string GetBookIdText()
         {
             var library = Library.Instance;
-            int i = library.Books.Count + 1;
+            int i = library.Books.Count;
 
             return $"Book ID {i}";
         }
@@ -47,7 +47,7 @@ namespace BookLibraryGUI
         {
             var library = Library.Instance;
 
-            int i = library.Books.Count + 1;
+            int i = library.Books.Count;
             DateTime releaseDate = (DateTime)BRelease.SelectedDate;
 
             string author = BAuthorTextBox.Text;
