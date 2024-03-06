@@ -19,15 +19,15 @@ namespace BookLibraryGUI
     /// <summary>
     /// Interaction logic for AddWindow.xaml
     /// </summary>
-    public partial class AddWindow : Window
+    public partial class AddBookWindow : Window
     {
-        public AddWindow()
+        public MainWindow MainWindowReference { get; set; }
+        public AddBookWindow()
         {
             InitializeComponent();
             PopulateComboBox();
-            //GenreComboBox();
+            BookId.Text = GetBookIdText();
         }
-
         private void PopulateComboBox()
         {
             var genres = Enum.GetValues(typeof(BookGenre))
@@ -35,6 +35,13 @@ namespace BookLibraryGUI
                               .Select(e => e.ToListItem())
                               .ToList();
             GenreComboBox.ItemsSource = genres;
+        }
+        private string GetBookIdText()
+        {
+            var library = Library.Instance;
+            int i = library.Books.Count + 1;
+
+            return $"Book ID {i}";
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -52,6 +59,14 @@ namespace BookLibraryGUI
             var newBook = new Book(i, bookName, author, releaseDate, bookGenre);
 
             library.Books.Add(newBook);
+
+            MainWindowReference.Refresh();
+
+            Close();
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

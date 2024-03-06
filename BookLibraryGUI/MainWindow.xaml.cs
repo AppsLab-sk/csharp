@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,18 +50,31 @@ namespace BookLibraryGUI
             Refresh();
 
         }
-        private void Refresh()
+        public void Refresh()
         {
-            ListView.Items.Clear();
+            IDsList.Items.Clear();
+            BookList.Items.Clear();
+            AuthorList.Items.Clear();
+            ReleaseList.Items.Clear();
+            GenreList.Items.Clear();
             foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
             {
-                ListView.Items.Add(book.ToString());
+                IDsList.Items.Add(book.ID); 
+                BookList.Items.Add(book.ToString()); 
+                AuthorList.Items.Add(book.Author); 
+                ReleaseList.Items.Add(book.ReleaseDate);
+                GenreList.Items.Add(book.Genre);
             }
         }
-        private void MenuItem_Add_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void MenuItem_AddBook_Click(object sender, RoutedEventArgs e)
         {
             // Create a new instance of the window you want to open
-            AddWindow addWindow = new AddWindow();
+            AddBookWindow addWindow = new AddBookWindow();
+            addWindow.MainWindowReference = this;
             // Show the window
             addWindow.Show();
         }

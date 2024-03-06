@@ -99,9 +99,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatteSimulator", "BatteSimu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{0B370267-1D85-415A-BC31-9AFF50CBD289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary", "BookLibrary\BookLibrary.csproj", "{68609F4E-652C-4654-878E-C608F8A3AB12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary", "BookLibrary\BookLibrary.csproj", "{68609F4E-652C-4654-878E-C608F8A3AB12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibraryGUI", "BookLibraryGUI\BookLibraryGUI.csproj", "{83B2046F-D09A-4440-9F1B-8BB5863CC854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibraryGUI", "BookLibraryGUI\BookLibraryGUI.csproj", "{83B2046F-D09A-4440-9F1B-8BB5863CC854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

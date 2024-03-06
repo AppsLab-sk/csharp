@@ -70,13 +70,19 @@ namespace BookLibrary
 
     public class NameValueBinder
     {
-        public object Value { get; set; }
-        public string Name { get; set; }
+        public BookGenre Value { get; private set; }
+        public string Description { get; private set; }
 
-        public NameValueBinder(object value, string name)
+        public NameValueBinder(Enum value, string description)
         {
-            this.Value = value;
-            this.Name = name;
+            Value = (BookGenre)value;
+            Description = description;
+        }
+
+        // Override ToString to return the Description
+        public override string ToString()
+        {
+            return Description;
         }
     }
 
