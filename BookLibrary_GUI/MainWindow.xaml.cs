@@ -34,6 +34,13 @@ namespace BookLibrary_GUI
 
 
         }
+
+        private void Window_AddNewBook(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_AddBook();
+            window.ShowDialog();
+            Refresh();
+        }
         private void Refresh() 
         { 
             ListView_AllBooks.Items.Clear();

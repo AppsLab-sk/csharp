@@ -15,6 +15,20 @@
             </ListView.View>
         </ListView>
         <Label Content="Knihy na zapožičanie" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="208" Height="43" RenderTransformOrigin="0.494,1.179"/>
-
+        <Menu Height="22" Name="menu1" Width="780" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="GhostWhite">
+            <MenuItem Header="Application">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Add user" />
+                <MenuItem Header="Add new book" Click="Window_AddNewBook" />
+            </MenuItem>
+        </Menu>
+        
     </Grid>
 </Window>
+    

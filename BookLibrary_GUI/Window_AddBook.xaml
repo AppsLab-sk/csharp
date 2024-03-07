@@ -1,0 +1,24 @@
+﻿<Window x:Class="BookLibrary_GUI.Window_AddBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookLibrary_GUI"
+        mc:Ignorable="d"
+        Title="Window_AddBook" Height="450" Width="800">
+    <Grid>
+        <Label Content="Book name" HorizontalAlignment="Left" Margin="142,46,0,0" VerticalAlignment="Top" Width="170" Height="57" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Book author" HorizontalAlignment="Left" Margin="142,124,0,0" VerticalAlignment="Top" Width="130" Height="52" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Book genre" HorizontalAlignment="Left" Margin="142,207,0,0" VerticalAlignment="Top" Width="127" Height="38" FontFamily="Trebuchet MS" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Book  release date&#xD;&#xA;" HorizontalAlignment="Left" Margin="142,302,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="124" Height="34" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="BookGenre_" Content="Add new book" HorizontalAlignment="Left" Margin="554,370,0,10" Width="146" Background="#FF149E17" FontSize="20" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <Button Content="Close" Margin="337,370,317,10" Background="#FFF71111" FontWeight="Bold" FontFamily="Bahnschrift" FontSize="24"/>
+        <TextBox x:Name="bookname" HorizontalAlignment="Left" Margin="418,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Height="41"/>
+        <TextBox x:Name="book_genre" HorizontalAlignment="Left" Margin="418,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Height="38" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="author_text" HorizontalAlignment="Left" Margin="418,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Height="39" TextChanged="TextBox_TextChanged_1"/>
+        <DatePicker x:Name="date" HorizontalAlignment="Left" Margin="418,302,0,0" VerticalAlignment="Top" Height="34" Width="188" FontSize="20" FontWeight="Bold"/>
+
+
+
+    </Grid>
+</Window>
