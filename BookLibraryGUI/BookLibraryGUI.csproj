@@ -5,10 +5,29 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="biohazard.png" />
+    <None Remove="favicon.ico" />
+    <None Remove="wallpaperflare.com_wallpaper.jpg" />
+    <None Remove="wallpaperflare.com_wallpaper2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BookLibrary\BookLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="biohazard.png" />
+    <Resource Include="favicon.ico" />
+    <Resource Include="wallpaperflare.com_wallpaper.jpg" />
+    <Resource Include="wallpaperflare.com_wallpaper2.jpg" />
   </ItemGroup>
 
 </Project>
