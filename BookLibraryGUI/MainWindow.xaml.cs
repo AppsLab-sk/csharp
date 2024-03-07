@@ -52,10 +52,26 @@ namespace BookLibraryGUI
         private void MenuItem_AddBook_Click(object sender, RoutedEventArgs e)
         {
             // Create a new instance of the window you want to open
-            AddBookWindow addWindow = new AddBookWindow();
-            addWindow.MainWindowReference = this;
+            AddBookWindow addBookWindow = new AddBookWindow();
+            addBookWindow.MainWindowReference = this;
             // Show the window
-            addWindow.Show();
+            addBookWindow.Show();
+        }
+        private void MenuItem_AddUser_Click(object sender, RoutedEventArgs e)
+        {
+            AddUserWindow addUserWindow = new AddUserWindow();
+            addUserWindow.MainWindowReference = this;
+            addUserWindow.Show();
+        }
+        private void MenuItem_ViewUser_Click(Object sender, RoutedEventArgs e)
+        {
+            ViewUserWindow viewUserWindow = new ViewUserWindow();
+            viewUserWindow.MainWindowReference = this;
+            viewUserWindow.Show();
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

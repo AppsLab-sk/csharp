@@ -13,9 +13,11 @@
 
             </MenuItem>
             <MenuItem Header="_Add">
-                <MenuItem Header="_Add book" Click="MenuItem_AddBook_Click"/>
-                <MenuItem Header="_Add user" Click="MenuItem_AddBook_Click"/>
-                
+                <MenuItem Header="_Add Book" Click="MenuItem_AddBook_Click"/>
+                <MenuItem Header="_Add User" Click="MenuItem_AddUser_Click"/>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="_View User" Click="MenuItem_ViewUser_Click"/>
             </MenuItem>
         </Menu>
 
@@ -69,7 +71,7 @@
 
         <Label Content="Genre" HorizontalAlignment="Left" Margin="568,19,0,0" VerticalAlignment="Top"/>
 
-
+        <Button x:Name="CloseButton" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Left" Margin="704,383,0,0" VerticalAlignment="Top" Height="30" Width="86" Background="#ff7d7d"/>
     </Grid>
 
 </Window>
