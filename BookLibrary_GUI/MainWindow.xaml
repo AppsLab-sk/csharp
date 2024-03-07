@@ -17,7 +17,7 @@
             <ColumnDefinition Width="91*"/>
             <ColumnDefinition Width="525*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,69,0,121" SelectionChanged="ListView_AllBooks_SelectionChanged" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131">
+        <ListView Name="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,69,0,121" SelectionChanged="ListView_AllBooks_SelectionChanged" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

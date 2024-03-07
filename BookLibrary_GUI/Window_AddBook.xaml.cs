@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,31 @@ namespace BookLibrary_GUI
         public Window_AddBook()
         {
             InitializeComponent();
+
+            Genres_ComboBox.ItemsSource = Enum.GetValues(typeof(BookGenre)).Cast<BookGenre>();
         }
 
-   
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var library = Library.Instance;
+            var title = BookTitle_TextBox.Text;
+            var author = AuthorName_TextBook.Text;
+            var genre = Genres_ComboBox.Text;
+            var date = Date_DatePicker.SelectedDate.Value.Date;
+            var newbook = new Book();
+            library.Books.Add(newbook);
+            Close();
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
