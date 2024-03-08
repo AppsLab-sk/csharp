@@ -57,7 +57,7 @@ namespace BookLibraryGUI
             // Show the window
             addBookWindow.Show();
         }
-        private void MenuItem_AddUser_Click(object sender, RoutedEventArgs e)
+        public void MenuItem_AddUser_Click(object sender, RoutedEventArgs e)
         {
             AddUserWindow addUserWindow = new AddUserWindow();
             addUserWindow.MainWindowReference = this;

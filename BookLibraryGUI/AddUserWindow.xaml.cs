@@ -21,6 +21,8 @@ namespace BookLibraryGUI
     public partial class AddUserWindow : Window
     {
         public MainWindow MainWindowReference { get; set; }
+        public ViewUserWindow ViewUserWindowReference { get; set; }
+
         public AddUserWindow()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace BookLibraryGUI
 
             library.Users.Add(newUser);
 
-            MainWindowReference.Refresh();
+            ViewUserWindowReference.Refresh();
 
             Close();
         }

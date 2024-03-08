@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="biohazard.png" />
     <None Remove="favicon.ico" />
-    <None Remove="wallpaperflare.com_wallpaper.jpg" />
     <None Remove="wallpaperflare.com_wallpaper2.jpg" />
   </ItemGroup>
 
@@ -24,10 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="biohazard.png" />
     <Resource Include="favicon.ico" />
-    <Resource Include="wallpaperflare.com_wallpaper.jpg" />
     <Resource Include="wallpaperflare.com_wallpaper2.jpg" />
   </ItemGroup>
-
 </Project>
