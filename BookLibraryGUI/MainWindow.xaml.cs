@@ -94,22 +94,30 @@ namespace BookLibraryGUI
             Worksheet worksheet = workbook.Worksheets[1];
 
             int rowIndex = 1;
+            int columnIndex = 1;
 
             // Iterate through each ListView
             foreach (ListView listView in listViews)
             {
+                // Write the column header to the first row of the Excel sheet
+                worksheet.Cells[1, columnIndex] = listView.Name;
+
                 // Iterate through each item in the ListView
                 foreach (dynamic listViewItem in listView.Items)
                 {
                     // Write the item's content to the Excel worksheet
-                    // Use ToString() to handle different types of data
-                    worksheet.Cells[rowIndex, 1] = listViewItem.ToString();
+                    worksheet.Cells[rowIndex + 1, columnIndex] = listViewItem.ToString();
                     rowIndex++;
                 }
 
-                // Add a blank row between ListViews for clarity
-                rowIndex++;
+                // Move to the next column for the next ListView
+                columnIndex++;
+                rowIndex = 1; // Reset rowIndex for the next ListView
             }
+
+            // AutoSet Cell Widths to Content Size
+            worksheet.Cells.Select();
+            worksheet.Cells.EntireColumn.AutoFit();
 
             // Save the workbook to a file
             workbook.SaveAs(filePath);
