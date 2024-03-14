@@ -26,8 +26,8 @@
                 <MenuItem Header="_Exit" />
             </MenuItem>
             <MenuItem Header="View" >
-                <MenuItem Header="Add a new user" Click="Window_AddBook" />
-                <MenuItem Header="Terms Of Conditions" />
+                <MenuItem Header="Add a new user"  />
+                <MenuItem Header="Add a book" Click="AddNewBook"/>
             </MenuItem>
 
         </Menu>

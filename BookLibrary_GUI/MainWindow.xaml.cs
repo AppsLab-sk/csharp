@@ -38,5 +38,12 @@ namespace BookLibrary_GUI
                 ListView_AllBooks.Items.Add(book.ToString());
             }
         }
+
+        private void AddNewBook(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_AddBook();
+            window.ShowDialog();
+            Refresh();
+        }
     }
 }

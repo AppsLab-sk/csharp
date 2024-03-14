@@ -63,7 +63,7 @@ namespace AppsLab_026_LINQ.School
                 var height = (float)r.Next(15000, 18000) / 100f;
                 var salary = r.Next(1000, 3000);
                 var mood = r.Next(0, 100);
-                Teachers.Add(new Teacher() { ID = i, FirstName = firstname, LastName = lastName, City = city, Age = age, Height = height, Salary = salary, Mood = mood }
+                Teachers.Add(new Teacher() { ID = i, FirstName = firstname, LastName = lastName, City = city, Age = age, Height = height, Salary = salary, Mood = mood });
             }
             return Teachers;
 
