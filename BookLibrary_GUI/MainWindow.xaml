@@ -25,7 +25,7 @@
             </ListView.View>
         </ListView>
         <Label Content="Knihy na zapožičanie" HorizontalAlignment="Left" Margin="6,38,0,0" VerticalAlignment="Top" Height="31" Width="125" Grid.RowSpan="2"/>
-        <ListView x:Name="ListView_AllUsers"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="156,71,0,118" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131">
+        <ListView x:Name="ListView_AllUsers"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="156,71,0,118" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" Width="131" SelectionChanged="ListView_AllUsers_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -33,7 +33,7 @@
             </ListView.View>
         </ListView>
         <Label Content="Zapožičané knihy&#xA;Zapožičané knihy" Margin="28,43,457,365" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <ListView x:Name="ListView_BorrowedBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="28,69,0,121"  Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="131">
+        <ListView x:Name="ListView_BorrowedBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="28,69,0,121"  Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="131" SelectionChanged="ListView_BorrowedBooks_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

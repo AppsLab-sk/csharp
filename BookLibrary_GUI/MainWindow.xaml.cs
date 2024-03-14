@@ -38,6 +38,12 @@ namespace BookLibrary_GUI
             {
                 ListView_AllBooks.Items.Add(book.ToString());
             }
+            ListView_AllUsers.Items.Clear();
+            foreach (var user in LibraryKNM.Users)
+            {
+                ListView_AllUsers.Items.Add(user.ToString());
+            }
+
         }
         private void Window_AddNewBook(object sender, RoutedEventArgs e)
         {
@@ -47,6 +53,16 @@ namespace BookLibrary_GUI
         }
 
         private void ListView_AllBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_BorrowedBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_AllUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

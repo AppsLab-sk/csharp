@@ -9,7 +9,7 @@ namespace BookLibrary
     public class Book
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string Title { get; set; }
         public string Author { get; set; }
         public DateTime ReleaseDate { get; set; }
         public BookGenre Genre { get; set; }
@@ -17,10 +17,10 @@ namespace BookLibrary
         public DateTime BorrowedTime { get; set; }
         public User BorrowedBy { get; set; }
 
-        public Book(int iD, string name, string author, DateTime releaseDate, BookGenre genre)
+        public Book(int iD, string title, string author, DateTime releaseDate, BookGenre genre)
         {
             ID = iD;
-            Name = name;
+            Title = title;
             Author = author;
             ReleaseDate = releaseDate;
             Genre = genre;
@@ -30,9 +30,9 @@ namespace BookLibrary
         {
             if (IsBorrowed)
 
-                return $"{Name.PadRight(15, ' ')}{BorrowedBy.FullName.PadRight(15, ' ')}{BorrowedTime.ToString().PadRight(15, ' ')}";
+                return $"{Title.PadRight(15, ' ')}{BorrowedBy.FullName.PadRight(15, ' ')}{BorrowedTime.ToString().PadRight(15, ' ')}";
             else
-                return $"{Name.PadRight(15, ' ')}";
+                return $"{Title.PadRight(15, ' ')}";
         }
     }
     public enum BookGenre

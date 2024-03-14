@@ -30,11 +30,12 @@ namespace BookLibrary_GUI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var library = Library.Instance;
+            var iD = library.Books.Count;
             var title = BookTitle_TextBox.Text;
             var author = AuthorName_TextBook.Text;
-            var genre = Genres_ComboBox.Text;
-            var date = Date_DatePicker.SelectedDate.Value.Date;
-            var newbook = new Book();
+            var genre = (BookGenre)Enum.Parse(typeof(BookGenre), Genres_ComboBox.SelectedValue.ToString(), true);
+            var releaseDate = Date_DatePicker.SelectedDate.Value.Date;
+            var newbook = new Book(iD, title, author, releaseDate, genre);
             library.Books.Add(newbook);
             Close();
 
