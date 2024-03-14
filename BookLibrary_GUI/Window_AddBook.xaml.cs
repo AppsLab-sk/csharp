@@ -26,5 +26,21 @@ namespace BookLibrary_GUI
 
             ComboBox_BookGenre.ItemsSource = Enum.GetValues(typeof(BookGenre));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var name = TextBoxBookName.Text;
+
+            var author = TextBoxAuthorName.Text;
+
+
+            Book b = new Book(name);
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
