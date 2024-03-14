@@ -24,7 +24,7 @@ namespace BookLibrary
             {
                 var bookName = BookNames[i];
                 var author = Authors[i];
-                var releaseDate = new DateTime(random.Next(1900,2000), random.Next(1,13), random.Next(1,28));
+                var releaseDate = new DateOnly(random.Next(1900,2000), random.Next(1,13), random.Next(1,28));
                 var bookGenre = (BookGenre)Enum.ToObject(typeof(BookGenre), random.Next(0,4));
 
                 var newBook = new Book(i, bookName, author, releaseDate, bookGenre);

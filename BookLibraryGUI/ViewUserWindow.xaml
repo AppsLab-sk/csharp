@@ -5,9 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookLibraryGUI"
         mc:Ignorable="d"
-        Title="ViewUserWindow" Height="450" Width="800">
+        Title="View Users" Height="450" Width="600">
+    <Window.Background>
+        <ImageBrush ImageSource="/wallpaperflare.com_wallpaper2.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="IDsList" Margin="10,32,0,0" Background="#66969696" Foreground="White" Width="40" Height="392" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="ID" Margin="19,1,0,0" Foreground="White" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="22"/>
 
         <Button x:Name="CloseButton" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="30" Width="86" Background="#ff7d7d"/>
+
+        <ListView x:Name="NameList" Margin="55,32,0,0" Background="#66969696" Foreground="White" Height="392" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Full Names" HorizontalAlignment="Left" Margin="101,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <ListView x:Name="CityList" Margin="210,32,0,0" Background="#66969696" Foreground="White" HorizontalAlignment="Left" Width="132" Height="392" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Cities" HorizontalAlignment="Left" Margin="257,6,0,0" VerticalAlignment="Top" Foreground="White" Height="26"/>
+
+        <ListView x:Name="BirthList" Margin="347,32,0,0" Width="130" Background="#66969696" Foreground="White" Height="392" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Birth Dates" HorizontalAlignment="Left" Margin="378,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Button Content="Create new user" Click="Button_AddUser" HorizontalAlignment="Left" Margin="482,0,0,0" VerticalAlignment="Center" Height="30" Width="108" Background="#FF7DFF82"/>
     </Grid>
 </Window>

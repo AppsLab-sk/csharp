@@ -48,7 +48,7 @@ namespace BookLibraryGUI
             var library = Library.Instance;
 
             int i = library.Books.Count;
-            DateTime releaseDate = (DateTime)BRelease.SelectedDate;
+            DateOnly releaseDate = DateOnly.FromDateTime((DateTime)BRelease.SelectedDate);
 
             string author = BAuthorTextBox.Text;
 
