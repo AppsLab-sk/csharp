@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.508,0.933" Margin="0,86,602,55">
+        <ListView Name ="ListView_AllBooks" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.508,0.933" Margin="0,91,602,50" SelectionChanged="ListView_AllBooks_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -22,12 +22,29 @@
                 <MenuItem Header="_Save" />
                 <MenuItem Header="_Exit" />
             </MenuItem>
-            <MenuItem Header="View">
-                <MenuItem Header="Add a new user" Click="Window_AddBook"/>
-                <MenuItem Header="Terms Of Conditions"/>
+            <MenuItem Header="View" Click="MenuItem_Click">
+                <MenuItem Header="Add a new book" Click="Window_AddBook"/>
+                <MenuItem Header="Add a new user" Click="WindowUser"/>
             </MenuItem>
-            
+
         </Menu>
+        <ListView x:Name ="ListView_AllBooks_Copy" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.508,0.933" Margin="444,91,158,50" SelectionChanged="ListView_AllBooks_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="&#xD;&#xA;Uživatelia" HorizontalAlignment="Left" Margin="444,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.86,0.586" Width="232" Height="55" FontWeight="Bold" FontStyle="Italic"/>
+        <ListView x:Name ="ListView_AllBooks_Copy1" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.508,0.933" Margin="223,91,379,50" SelectionChanged="ListView_AllBooks_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Požičané knihy" HorizontalAlignment="Left" Margin="223,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.86,0.586" Width="232" Height="55" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="BorrowBook" Content="Borrow Book" HorizontalAlignment="Left" Margin="659,105,0,0" VerticalAlignment="Top" Height="262" Width="119" Background="#FF38E612" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="4,4,4,4" Click="BorrowBook_Click"/>
 
     </Grid>
 </Window>

@@ -31,18 +31,18 @@ namespace BookLibrary_GUI
         }
 
         private void Refresh()
-        
+
         {
             ListView_AllBooks.Items.Clear();
-            foreach (var book  in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
+            foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
             {
                 ListView_AllBooks.Items.Add(book.ToString());
             }
-               
 
-       
+
+
         }
-        
+
 
         private void Window_AddBook(object sender, RoutedEventArgs e)
         {
@@ -51,5 +51,28 @@ namespace BookLibrary_GUI
             Refresh();
         }
 
+        private void WindowUser(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowUser();
+            window.ShowDialog();
+            Refresh();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_AllBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BorrowBook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
-} 
+}
+
+        
