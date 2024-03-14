@@ -45,8 +45,17 @@ namespace BookLibrary_GUI
             window.ShowDialog();
             Refresh();
         }
+        private void Window_AddUser(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_AddUser();
+            window.ShowDialog();
+            Refresh();
+        }
 
-        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -37,7 +37,7 @@ namespace BookLibrary_GUI
 
         private void Add_book_Click_1(object sender, RoutedEventArgs e)
         {
- var library = Library.Instance;
+           var library = Library.Instance;
             
             var id = library.Books.Count;
             var name = bookname.Text;

@@ -11,12 +11,12 @@
         <TextBox x:Name="author_text" HorizontalAlignment="Left" Margin="463,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" Height="43" />
         <Label HorizontalAlignment="Left" Margin="122,51,0,0" VerticalAlignment="Top" Width="232" Height="43" Content="Book name" FontSize="17" FontWeight="Bold"/>
         <Label Content="Book author" HorizontalAlignment="Left" Margin="124,119,0,0" VerticalAlignment="Top" Width="230" Height="43" FontSize="17" FontWeight="Bold"/>
-        <Label Content="Book genre" HorizontalAlignment="Left" Margin="122,200,0,0" VerticalAlignment="Top" Width="229" Height="45" FontSize="17" FontWeight="Bold"/>
+        <Label Content="Book genre" HorizontalAlignment="Left" Margin="122,201,0,0" VerticalAlignment="Top" Width="227" Height="44" FontSize="17" FontWeight="Bold"/>
         <ComboBox x:Name="book_genre" HorizontalAlignment="Left" Margin="463,201,0,0" VerticalAlignment="Top" Width="251" Height="44"/>
         <Label Content="Book relase date" HorizontalAlignment="Left" Margin="122,280,0,0" VerticalAlignment="Top" Width="227" Height="34" FontSize="17" FontWeight="Bold"/>
         <DatePicker x:Name="date" HorizontalAlignment="Left" Margin="463,280,0,0" VerticalAlignment="Top" Height="34" Width="251"/>
         <Button x:Name="close" Content="Close" HorizontalAlignment="Left" Margin="109,341,0,0" VerticalAlignment="Top" Height="69" Width="186" Background="#FFF00505" FontSize="25" FontWeight="Bold" Click="close_Click"/>
-        <Button x:Name="Add_book" Content="Add new book" HorizontalAlignment="Left" Margin="463,341,0,0" VerticalAlignment="Top" Height="69" Width="201" FontSize="25" FontWeight="Bold" Background="#FF37FF00" Click="Add_book_Click_1"/>
+        <Button x:Name="Add_book" Content="Add new book" HorizontalAlignment="Left" Margin="463,341,0,0" VerticalAlignment="Top" Height="69" Width="211" FontSize="25" FontWeight="Bold" Background="#FF37FF00" Click="Add_book_Click_1" RenderTransformOrigin="0.622,0.078"/>
 
     </Grid>
 </Window>
