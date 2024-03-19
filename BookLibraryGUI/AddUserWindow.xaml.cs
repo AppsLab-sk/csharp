@@ -44,6 +44,12 @@ namespace BookLibraryGUI
 
             return $"User ID {i}";
         }
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             var library = Library.Instance;

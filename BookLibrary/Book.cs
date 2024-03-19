@@ -9,12 +9,12 @@ namespace BookLibrary
 {
     public class Book
     {
-        public int ID {  get; set; }
-        public string Name {  get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
         public string Author { get; set; }
         public DateOnly ReleaseDate { get; set; }
         public BookGenre Genre { get; set; }
-        
+
         public bool IsBorrowed { get; set; }
         public DateTime BorrowedTime { get; set; }
         public User BorrowedBy { get; set; }
@@ -33,15 +33,15 @@ namespace BookLibrary
                 return $"{Name.PadRight(15, ' ')}{BorrowedBy.FullName.PadRight(15, ' ')}{BorrowedTime.ToString().PadRight(15, ' ')}";
             else
                 return $"{Name.PadRight(15, ' ')}";
-        }  
+        }
     }
     public enum BookGenre
-        {
-            Scifi,
-            Comedy,
-            Cartoon,
-            Comix   
-        }
+    {
+        Scifi,
+        Comedy,
+        Cartoon,
+        Comix
+    }
 
     public static class EnumExtensions
     {

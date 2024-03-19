@@ -13,7 +13,6 @@
         <Menu Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800" Grid.ColumnSpan="2" Background="#7FF0F0F0">
             <MenuItem Header="_Application">
                 <MenuItem Header="_Exit" Click="MenuItem_Exit_Click"/>
-
             </MenuItem>
             <MenuItem Header="_Add">
                 <MenuItem Header="_Add Book" Click="MenuItem_AddBook_Click"/>

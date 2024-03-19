@@ -16,8 +16,8 @@
         <TextBlock Margin="22,128,0,0" TextWrapping="Wrap" Text="User Birth Date" HorizontalAlignment="Left" Width="97" Height="16" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="UserID" HorizontalAlignment="Left" Margin="140,156,0,0" TextWrapping="Wrap" Text="{Binding GetUserID}" VerticalAlignment="Top" Height="28" Width="175" Foreground="White" />
 
-        <TextBox x:Name="UNameTextBox" Margin="0,16,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter user name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
-        <TextBox x:Name="UCityTextBox" Margin="0,51,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter user city" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
+        <TextBox x:Name="UNameTextBox" GotFocus="TextBox_GotFocus" Margin="0,16,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter user name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
+        <TextBox x:Name="UCityTextBox" GotFocus="TextBox_GotFocus" Margin="0,51,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter user city" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
         <DatePicker x:Name="UBirth" Margin="0,121,14,0" Height="30" HorizontalAlignment="Right" Width="266" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
         <ComboBox x:Name="UGenreComboBox" ItemsSource="{Binding}" Margin="0,86,14,0" Height="30" HorizontalAlignment="Right" Width="266" VerticalAlignment="Top" />
 

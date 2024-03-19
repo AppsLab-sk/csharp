@@ -43,19 +43,27 @@ namespace BookLibraryGUI
 
             return $"Book ID {i}";
         }
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             var library = Library.Instance;
 
             int i = library.Books.Count;
-            DateOnly releaseDate = DateOnly.FromDateTime((DateTime)BRelease.SelectedDate);
-
-            string author = BAuthorTextBox.Text;
-
+            
             string bookName = BNameTextBox.Text;
+
+            string author = BAuthorTextBox.Text;   
+            
+            DateOnly releaseDate = DateOnly.FromDateTime((DateTime)BRelease.SelectedDate);
 
             var selectedItem = GenreComboBox.SelectedItem as NameValueBinder;
             var bookGenre = (BookGenre)selectedItem.Value;
+
             var newBook = new Book(i, bookName, author, releaseDate, bookGenre);
 
             library.Books.Add(newBook);

@@ -16,8 +16,8 @@
         <TextBlock Margin="22,128,0,0" TextWrapping="Wrap" Text="Book release date" HorizontalAlignment="Left" Width="97" Height="16" VerticalAlignment="Top" Foreground="White"/>
         <TextBlock x:Name="BookId" HorizontalAlignment="Left" Margin="140,156,0,0" TextWrapping="Wrap" Text="{Binding GetBookID}" VerticalAlignment="Top" Height="28" Width="175" Foreground="White" TextAlignment="Center" />
 
-        <TextBox x:Name="BNameTextBox" Margin="0,16,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter book name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
-        <TextBox x:Name="BAuthorTextBox" Margin="0,51,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter author name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
+        <TextBox x:Name="BNameTextBox" GotFocus="TextBox_GotFocus" Margin="0,16,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter book name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
+        <TextBox x:Name="BAuthorTextBox" GotFocus="TextBox_GotFocus" Margin="0,51,14,0" HorizontalAlignment="Right" Width="266" Height="30" VerticalAlignment="Top" Text="Enter author name" VerticalContentAlignment="Center" Background="#66969696" Foreground="White"/>
         <DatePicker x:Name="BRelease" Margin="0,121,14,0" Height="30" HorizontalAlignment="Right" Width="266" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="#FFABADB3"/>
         <ComboBox x:Name="GenreComboBox" ItemsSource="{Binding}" Margin="0,86,14,0" Height="30" HorizontalAlignment="Right" Width="266" VerticalAlignment="Top" />
 
