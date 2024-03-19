@@ -39,9 +39,10 @@ namespace BookLibrary
         {
             if (book.IsBorrowed)
                 return false;
-
+            
             user.BorrowedBooks.Add(book);
-            book.IsBorrowed = true;
+            book.IsBorrowed = false;
+            book.IsNew = true;
             book.BorrowedBy = user;
             book.BorrowedTime = DateTime.Now.AddDays(BorrowedTime);
 

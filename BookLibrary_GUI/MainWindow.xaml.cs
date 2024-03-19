@@ -21,6 +21,8 @@ namespace BookLibrary_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public Library LibraryKNM { get; set; } = Library.Instance;
         public MainWindow()
         {
@@ -31,18 +33,33 @@ namespace BookLibrary_GUI
 
         private void Refresh()
         {
-            ListView_AllBooks.Items.Clear();
+            ListView_AllNewBooks.Items.Clear();
             foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
-
-
             {
-                ListView_AllBooks.Items.Add(book.ToString());
+                ListView_AllNewBooks.Items.Add(book.ToString());
+            
+            }
+            ListView_AllBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x => x.IsBorrowed).ToList());
+            {
+                ListView_AllBooks.Items.Add(ListView_AllBooks.ToString());
             }
         }
+        
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void ListView_AllBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        
+        
+    
     }
+
+    
 }
