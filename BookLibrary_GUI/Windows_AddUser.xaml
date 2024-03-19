@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Windows_AddUser" Height="450" Width="800">
     <Grid>
-        <Label Content="User FullName" RenderTransformOrigin="0.314,0.366" Margin="57,40,643,344" Width="100" Height="50">
+        <Label RenderTransformOrigin="0.314,0.366" Margin="57,42,563,332" FontSize="24" Width="180" Height="60">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,7 +17,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="User City" RenderTransformOrigin="0.314,0.366" Margin="56,100,644,284" Width="100" Height="50">
+        <TextBox x:Name="fullname_text" HorizontalAlignment="Center" Margin="482,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
+        <Label Content="User FullName" RenderTransformOrigin="0.314,0.366" Margin="38,36,582,338" FontSize="24" Width="180" Height="60">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,7 +28,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="User Birthday" RenderTransformOrigin="0.314,0.366" Margin="56,160,644,224" Width="100" Height="50">
+        <Label Content="User City" RenderTransformOrigin="0.314,0.366" Margin="38,114,582,260" FontSize="24" Width="180" Height="60">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,7 +38,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="User Gender" RenderTransformOrigin="0.314,0.366" Margin="56,220,644,164" Width="100" Height="50">
+        <Label Content="User Birthday" RenderTransformOrigin="0.314,0.366" Margin="38,193,582,181" FontSize="24" Width="180" Height="60">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,6 +48,29 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Label Content="User Gender" RenderTransformOrigin="0.314,0.366" Margin="38,281,582,93" FontSize="24" Width="180" Height="60">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="city_text" HorizontalAlignment="Center" Margin="482,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
+        <ComboBox x:Name="Gender_box" HorizontalAlignment="Left" Margin="551,277,0,0" VerticalAlignment="Top" Width="180" Height="60" SelectionChanged="Gender_box_SelectionChanged"/>
+        <DatePicker Name="date2" HorizontalAlignment="Left" Margin="551,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="60" Width="180">
+            <DatePicker.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.234"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DatePicker.RenderTransform>
+        </DatePicker>
+        <Button x:Name="Close_Button2" Content="Close" Margin="43,365,537,0" Background="Red" FontSize="48" Click="Close_Button2_Click" Width="220" Height="69"/>
 
     </Grid>
 </Window>
