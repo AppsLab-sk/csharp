@@ -32,7 +32,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Zapožičané knihy&#xA;Zapožičané knihy" Margin="28,43,457,365" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Content="Zapožičané knihy&#xA;Zapožičané knihy" Margin="28,0,457,365" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="26" VerticalAlignment="Bottom"/>
         <ListView x:Name="ListView_BorrowedBooks" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="28,69,0,121"  Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="131" SelectionChanged="ListView_BorrowedBooks_SelectionChanged">
             <ListView.View>
                 <GridView>
@@ -40,15 +40,15 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Uživatelia" Margin="156,44,238,363" Grid.Column="3" Grid.RowSpan="2"/>
+        <Label Content="Uživatelia" Margin="156,0,238,363" Grid.Column="3" Grid.RowSpan="2" Height="27" VerticalAlignment="Bottom"/>
         <Menu Height="22" Name="menu" VerticalAlignment="Top" Background="Gray" BorderThickness="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
             <MenuItem Header="_Application">
                 <MenuItem Header="_Open" />
                 <MenuItem Header="_Close" />
                 <MenuItem Header="_Save" />
             </MenuItem>
-            <MenuItem Header="View">
-                <MenuItem Header="Add new user" />
+            <MenuItem Header="View" >
+                <MenuItem Header="Add new user" Click="Window_AddNewUser"/>
                 <MenuItem Header="Add new book" Click="Window_AddNewBook" />
             </MenuItem>
         </Menu>

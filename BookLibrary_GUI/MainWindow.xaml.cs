@@ -51,6 +51,12 @@ namespace BookLibrary_GUI
             window.ShowDialog();
             Refresh();
         }
+        private void Window_AddNewUser(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_AddUser();
+            window.ShowDialog();
+            Refresh();
+        }
 
         private void ListView_AllBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -66,5 +72,6 @@ namespace BookLibrary_GUI
         {
 
         }
+
     }
 }
