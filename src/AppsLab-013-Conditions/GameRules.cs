@@ -1,4 +1,6 @@
-﻿namespace AppsLab_013_Conditions;
+﻿using System.ComponentModel.Design;
+
+namespace AppsLab_013_Conditions;
 
 /// <summary>
 /// Represents the rules of a game.
@@ -13,7 +15,16 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
+        if (playerAge >= 15 && playerName != null && playerName != "") 
+        {
+            Console.WriteLine("You can enter the game!");
+            return true;
+        }
+        else if (playerAge <= 15 || playerName == "")
+        {
+            Console.WriteLine("You're either underage, or you haven't filled in your name.");
+            return false;
+        }
     }
 
     /// <summary>
@@ -23,7 +34,16 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
-        throw new NotImplementedException();
+        if (playerHealth == 0)
+        {
+            Console.WriteLine("Game over.");
+            return true;
+        }
+        else if (playerHealth >=1)
+        {
+            Console.WriteLine("Game's not over yet!");
+                    return false;
+        }
     }
 
     /// <summary>
@@ -34,6 +54,15 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+        if (hasKey == true && knowsPassword == true)
+        {
+            Console.WriteLine("You can enter!");
+            return true;
+        }
+        else if (hasKey == false || knowsPassword == false)
+        {
+            Console.WriteLine("Error! You're still missing the key or the password is incorrect!");
+            return false;
+        }
     }
 }

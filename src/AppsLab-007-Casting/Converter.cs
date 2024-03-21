@@ -1,4 +1,6 @@
-﻿namespace AppsLab_007_Casting;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace AppsLab_007_Casting;
 
 /// <summary>
 /// This class contains methods to convert between different data types.
@@ -10,7 +12,9 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double r;
+        r = (double)number;
+        return r;
     }
 
     /// <summary>
@@ -18,7 +22,9 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
+        int r;
+        r = (int)number;
+        return r;
     }
 
     /// <summary>
@@ -26,7 +32,9 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        double r;
+        r = Double.Parse(number);
+        return r;
     }
 
     /// <summary>
@@ -34,7 +42,9 @@ public class Converter
     /// </summary>
     public string DoubleToString(double number)
     {
-        throw new NotImplementedException();
+        string r;
+        r = number.ToString();
+        return r;
     }
 
     /// <summary>
@@ -42,7 +52,9 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        string r;
+        r = number.ToString();
+        return r;
     }
 
     /// <summary>
@@ -50,7 +62,9 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        bool r;
+        r = bool.Parse(boolValue);
+        return r;
     }
 
     /// <summary>
@@ -58,6 +72,8 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
     {
-        throw new NotImplementedException();
+        string r;
+        r = boolValue.ToString();
+        return r;
     }
 }
