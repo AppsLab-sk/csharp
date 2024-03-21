@@ -1,4 +1,8 @@
-﻿Console.WriteLine("Ako sa voláš?");
+﻿Console.WriteLine("Stlač Klávesu");
+var key = Console.ReadKey();
+Console.WriteLine();
+Console.WriteLine($"Stlačili ste klávesu: {key.KeyChar}");
+Console.WriteLine("Ako sa voláš ?");
 string? meno = Console.ReadLine();
 Console.WriteLine("Ahoj, " + meno);
 
