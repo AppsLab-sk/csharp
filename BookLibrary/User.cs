@@ -23,7 +23,13 @@ namespace BookLibrary
             BirthDay = birthDay;
             Gender = gender;
         }
+        public override string? ToString()
+        {
+
+            return $"{FullName.PadRight(15, ' ')}";
+        }
     }
+
     public enum Gender
     {
         male,

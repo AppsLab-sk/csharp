@@ -73,5 +73,11 @@ namespace BookLibrary_GUI
 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Window_BorrowBook();
+            window.ShowDialog();
+            Refresh();
+        }
     }
 }
