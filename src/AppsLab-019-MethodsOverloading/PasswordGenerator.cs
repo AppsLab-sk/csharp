@@ -1,3 +1,6 @@
+using System.Reflection.Metadata.Ecma335;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -18,9 +21,12 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            string passwoerd = "";
+            for (int i = 0; i < DefaultLength; i++)
+            {
+                passwoerd += Alphabet[_random.Next(Alphabet.Lenght - 1)];
+            }
         }
-
         /// <summary>
         /// Generates a random password with the specified length and no special characters or numbers.
         /// </summary>
@@ -28,7 +34,14 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            if (length == 0)
+            {
+                Console.WriteLine("Error");
+                return "";
+            }
+            string passwoard = "";
+
+            return passwoard;
         }
 
         /// <summary>
@@ -40,7 +53,37 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            string password = "";// = Alphabet + SpecialChars + Numbers;
+
+            return password;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
