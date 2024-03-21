@@ -17,7 +17,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="fullname_text" HorizontalAlignment="Center" Margin="482,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
+        <TextBox x:Name="fullname_text" HorizontalAlignment="Center" Margin="482,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
         <Label Content="User FullName" RenderTransformOrigin="0.314,0.366" Margin="38,36,582,338" FontSize="24" Width="180" Height="60">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -58,7 +58,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="city_text" HorizontalAlignment="Center" Margin="482,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
+        <TextBox x:Name="city_text" HorizontalAlignment="Center" Margin="482,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" Height="60" RenderTransformOrigin="0.508,-0.1"/>
         <ComboBox x:Name="Gender_box" HorizontalAlignment="Left" Margin="551,277,0,0" VerticalAlignment="Top" Width="180" Height="60" SelectionChanged="Gender_box_SelectionChanged"/>
         <DatePicker Name="date2" HorizontalAlignment="Left" Margin="551,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="60" Width="180">
             <DatePicker.RenderTransform>
@@ -71,6 +71,7 @@
             </DatePicker.RenderTransform>
         </DatePicker>
         <Button x:Name="Close_Button2" Content="Close" Margin="43,365,537,0" Background="Red" FontSize="48" Click="Close_Button2_Click" Width="220" Height="69"/>
+        <Button x:Name="Add_User" Content="Add a User" HorizontalAlignment="Right" Margin="0,365,69,0" VerticalAlignment="Top" Width="220" Height="69" FontSize="20" Background="#FF11FF00" Click="Add_User_Click_1"/>
 
     </Grid>
 </Window>

@@ -37,6 +37,13 @@ namespace BookLibrary_GUI
             {
                 ListView_AllBooks.Items.Add(book.ToString());
             }
+            ListView_AllUsers.Items.Clear();
+            foreach (var user in LibraryKNM.Users)
+            {
+                ListView_AllUsers.Items.Add(user.FullName);
+            }
+
+
         }
 
         private void AddNewBook(object sender, RoutedEventArgs e)

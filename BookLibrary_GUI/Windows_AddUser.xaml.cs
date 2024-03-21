@@ -35,19 +35,7 @@ namespace BookLibrary_GUI
         }
 
 
-        private void Add_book_Click_1(object sender, RoutedEventArgs e)
-        {
-            var library = Library.Instance;
-            var id = library.Users.Count;
-            var FullName = fullname_text.Text;
-            var City = city_text.Text;
-            var Birthday = date2.SelectedDate.Value.Date;
-            var Gender = (Gender)Enum.Parse(typeof(Gender), Gender_box.SelectedValue.ToString(), true);
-
-            var newUser = new User( id , FullName, City, Birthday, Gender);
-            library.Users.Add(newUser);
-            Close();
-        }
+       
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -57,6 +45,25 @@ namespace BookLibrary_GUI
         private void Close_Button2_Click(object sender, RoutedEventArgs e)
         {
                 Close();
+        }
+
+        private void Add_User_Click_1(object sender, RoutedEventArgs e)
+        {
+            var library = Library.Instance;
+            var id = library.Users.Count;
+            var FullName = fullname_text.Text;
+            var City = city_text.Text;
+            var Birthday = date2.SelectedDate.Value.Date;
+            var Gender = (Gender)Enum.Parse(typeof(Gender), Gender_box.SelectedValue.ToString(), true);
+
+            var newUser = new User(id, FullName, City, Birthday, Gender);
+            library.Users.Add(newUser);
+            Close();
+        }
+
+        private void Gender_box_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }    
