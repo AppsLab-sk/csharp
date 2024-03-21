@@ -23,6 +23,11 @@ namespace BookLibrary
             BirthDay = birthDay;
             Gender = gender;
         }
+
+        public override string? ToString()
+        {
+            return FullName;
+        }
     }
     public enum Gender
     {

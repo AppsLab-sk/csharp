@@ -37,7 +37,7 @@ namespace BookLibraryGUI
             AuthorList.Items.Clear();
             ReleaseList.Items.Clear();
             GenreList.Items.Clear();
-            foreach (var book in LibraryKNM.Books.Where(x => !x.IsBorrowed).ToList())
+            foreach (var book in LibraryKNM.Books.ToList())
             {
                 IDsList.Items.Add(book.ID); 
                 BookList.Items.Add(book.ToString()); 
@@ -76,8 +76,13 @@ namespace BookLibraryGUI
             string pathWithEnv = @"%USERPROFILE%\Desktop\test.xlsx";
             string filePath = Environment.ExpandEnvironmentVariables(pathWithEnv);
             ExportListViewsToExcel(listViews, filePath);
-            
-
+        }
+        private void Borrow_Click (object sender, RoutedEventArgs e)
+        {
+            BorrowWindow borrowWindow = new BorrowWindow();
+            borrowWindow.MainWindowReference = this;
+            borrowWindow.ShowDialog();
+            Refresh();
         }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {

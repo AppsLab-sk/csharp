@@ -16,7 +16,7 @@ namespace BookLibrary
         public BookGenre Genre { get; set; }
 
         public bool IsBorrowed { get; set; }
-        public DateTime BorrowedTime { get; set; }
+        public DateOnly BorrowedTime { get; set; }
         public User BorrowedBy { get; set; }
 
         public Book(int iD, string name, string author, DateOnly releaseDate, BookGenre genre)
@@ -85,5 +85,4 @@ namespace BookLibrary
             return Description;
         }
     }
-
 }

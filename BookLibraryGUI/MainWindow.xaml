@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookLibraryGUI"
         mc:Ignorable="d"
-        Title="Murin nevie C#" Height="450" Width="800">
+        Title="Murin nevie C#" Height="500" Width="800">
     <Window.Background>
         <ImageBrush ImageSource="/wallpaperflare.com_wallpaper2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
-    <Grid>
+    <Grid Margin="0,0,0,-6">
         <Menu Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800" Grid.ColumnSpan="2" Background="#7FF0F0F0">
             <MenuItem Header="_Application">
                 <MenuItem Header="_Exit" Click="MenuItem_Exit_Click"/>
@@ -73,9 +73,10 @@
 
         <Label Content="Genre" HorizontalAlignment="Left" Margin="568,19,0,0" VerticalAlignment="Top" Foreground="White"/>
 
-        <Button x:Name="CloseButton" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Left" Margin="644,383,0,0" VerticalAlignment="Top" Height="30" Width="86" Background="#99FF7D7D"/>
+        <Button x:Name="CloseButton" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Left" Margin="672,383,0,0" VerticalAlignment="Top" Height="30" Width="86" Background="#99FF7D7D"/>
         <Button Content="View Users" Click="MenuItem_ViewUser_Click" HorizontalAlignment="Left" Margin="673,213,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
         <Button Content="To Excel" Click="ToExcel_Click" HorizontalAlignment="Left" Margin="673,307,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
+        <Button Content="Borrow" Click="Borrow_Click" HorizontalAlignment="Left" Margin="674,80,0,0" VerticalAlignment="Top" Height="30" Width="81"/>
     </Grid>
 
 </Window>
