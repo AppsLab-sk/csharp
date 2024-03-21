@@ -1,0 +1,6 @@
+archer1,50,200
+archer2,40,250
+archer3,60,275
+archer4,30,175
+archer5,45,150
+

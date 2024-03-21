@@ -9,8 +9,10 @@ public class Greetings
     /// Returns a greeting message.
     /// </summary>
     /// <returns>A string containing the greeting message.</returns>
-    public string Hello()
-    {
-        return "Hello AppsLab!";
-    }
+
+
+        public string Hello()
+        {
+            return "Ahoj svet!";
+        }
 }

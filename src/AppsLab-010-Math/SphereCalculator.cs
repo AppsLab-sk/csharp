@@ -12,7 +12,9 @@ public class SphereCalculator
     /// <returns>The surface area of the sphere.</returns>
     public double CalculateSurface(double radius)
     {
-        throw new NotImplementedException();
+        double r; Convert.ToDouble(radius);
+        double surfaceArea = 4 * Math.PI * Math.Pow(r, 2);
+        return surfaceArea;
     }
 
     /// <summary>
@@ -22,6 +24,7 @@ public class SphereCalculator
     /// <returns>The volume of the sphere.</returns>
     public double CalculateVolume(double radius)
     {
-        throw new NotImplementedException();
+        double volume = (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3);
+        return volume; 
     }
 }
