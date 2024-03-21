@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace BookLibrary_GUI
 {
@@ -22,7 +23,7 @@ namespace BookLibrary_GUI
     public partial class MainWindow : Window
     {
         
-
+        
         public Library LibraryKNM { get; set; } = Library.Instance;
         public MainWindow()
         {
@@ -39,12 +40,21 @@ namespace BookLibrary_GUI
                 ListView_AllNewBooks.Items.Add(book.ToString());
             
             }
-            ListView_AllBooks.Items.Clear();
-            foreach (var book in LibraryKNM.Books.Where(x => x.IsBorrowed).ToList());
+            ListView_AllUsers.Items.Clear();
+            foreach (var user in LibraryKNM.Users)
             {
-                ListView_AllBooks.Items.Add(ListView_AllBooks.ToString());
+                ListView_AllUsers.Items.Add(user.FullName);
+
+            }
+            ListView_AllBorrowedBooks.Items.Clear();
+            foreach (var book in LibraryKNM.Books.Where(x => x.IsBorrowed).ToList())
+            {
+                ListView_AllBorrowedBooks.Items.Add(book.ToString());
+
             }
         }
+        
+
         
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -56,9 +66,16 @@ namespace BookLibrary_GUI
         {
 
         }
-        
-        
-    
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
     }
 
     

@@ -42,7 +42,7 @@ namespace BookLibrary
             
             user.BorrowedBooks.Add(book);
             book.IsBorrowed = false;
-            book.IsNew = true;
+            
             book.BorrowedBy = user;
             book.BorrowedTime = DateTime.Now.AddDays(BorrowedTime);
 

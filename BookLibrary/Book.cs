@@ -22,25 +22,18 @@ namespace BookLibrary
         public bool IsBorrowed { get; set; }
         public DateTime BorrowedTime { get; set; }
         public User BorrowedBy { get; set; }
-        public bool IsNew { get; set; }
-        public Book(int iD, string name, string author, DateTime releaseDate, BookGenre genre, bool isNew)
+        
+        public Book(int iD, string name, string author, DateTime releaseDate, BookGenre genre)
         {
             ID = iD;
             Name = name;
             Author = author;
             ReleaseDate = releaseDate;
             Genre = genre;
-            IsNew = isNew;
+            
         }
 
-        public Book(int i, string bookName, string author, DateTime releaseDate, BookGenre bookGenre)
-        {
-            this.i = i;
-            this.bookName = bookName;
-            Author = author;
-            ReleaseDate = releaseDate;
-            this.bookGenre = bookGenre;
-        }
+        
 
         public override string? ToString()
         {
