@@ -29,18 +29,23 @@ namespace BookLibrary_GUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+       
+            var library = Library.Instance;
+
+            var id = library.Books.Count;
             var name = TextBoxBookName.Text;
-
             var author = TextBoxAuthorName.Text;
+            var releasedate = DatePickerRelease.SelectedDate.Value.Date;
+            var genre = (BookGenre)Enum.Parse(typeof(BookGenre), ComboBox_BookGenre.SelectedValue.ToString(), true);
 
-
-            Book b = new Book(name);
-
+            var newBook = new Book(id, name, author, releasedate, genre);
+            library.Books.Add(newBook);
+            Close();
         }
-
+         
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-        }
+        } 
     }
 }
