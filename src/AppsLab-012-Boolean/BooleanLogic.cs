@@ -1,6 +1,4 @@
-﻿namespace AppsLab_012_Boolean;
-
-/// <summary>
+﻿// <summary>
 /// Provides methods for performing boolean logic operations.
 /// </summary>
 public class BooleanLogic
@@ -13,7 +11,7 @@ public class BooleanLogic
     /// <returns>The result of the logical AND operation.</returns>
     public bool And(bool a, bool b)
     {
-        throw new NotImplementedException();
+        return a && b;
     }
 
     /// <summary>
@@ -24,7 +22,7 @@ public class BooleanLogic
     /// <returns>The result of the logical OR operation.</returns>
     public bool Or(bool a, bool b)
     {
-        throw new NotImplementedException();
+        return a || b;
     }
 
     /// <summary>
@@ -34,6 +32,7 @@ public class BooleanLogic
     /// <returns>The result of the logical NOT operation.</returns>
     public bool Not(bool a)
     {
-        throw new NotImplementedException();
+        return !a;
     }
 }
+

@@ -1,4 +1,7 @@
-﻿namespace AppsLab_007_Casting;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+
+namespace AppsLab_007_Casting;
 
 /// <summary>
 /// This class contains methods to convert between different data types.
@@ -6,28 +9,35 @@
 public class Converter
 {
     /// <summary>
-    /// This method converts a string to an integer.
-    /// </summary>
+    /// This method converts a string to an integer. 
+    /// </summary>;                               
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = (double)number;
+        return result;  
+        
     }
-
-    /// <summary>
-    /// This method converts a double to an integer.
-    /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
-    }
+        int result;
+        result = (int)number;
+        return result;
 
-    /// <summary>
-    /// This method converts a string to a double.
-    /// </summary>
-    public double StringToDouble(string number)
+    }     
+
+ /// <summary>
+    /// This method converts a double to an integer.
+     public double DoubleToDouble(string number) 
     {
-        throw new NotImplementedException();
-    }
+        double result;
+        result = Double.Parse(number);
+        return result;
+
+      }   
+
+     
+   
 
     /// <summary>
     /// This method converts a double to a string.
@@ -42,7 +52,10 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        String result;
+        result = number + "";
+        return result;
+
     }
 
     /// <summary>
@@ -50,14 +63,35 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        bool result;
+        result= Convert.ToBoolean(boolValue);
+        return result;
+
     }
+
 
     /// <summary>
     /// This method converts a boolean to a string.
     /// </summary>
     public string BoolToString(bool boolValue)
-    {
-        throw new NotImplementedException();
-    }
-}
+        {
+            string result;  
+            result = boolValue.ToString();
+            return result;
+
+        }
+       }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+   

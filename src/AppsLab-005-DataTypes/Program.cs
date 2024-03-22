@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+int mojeCislo = 69;
+string mojeSlovo = "Ahoj Svet!";
+bool mojaBoolHodnota = true;
+DateTime dnesnyDatum = DateTime.Now;

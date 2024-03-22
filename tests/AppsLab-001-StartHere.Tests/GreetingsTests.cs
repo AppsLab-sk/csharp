@@ -2,7 +2,7 @@ namespace AppsLab_001_StartHere.Tests;
 
 /// <summary>
 /// Contains unit tests for the <see cref="Greetings"/> class.
-/// </summary>
+///// </summary>
 public class GreetingsTests
 {
     /// <summary>
