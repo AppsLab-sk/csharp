@@ -15,6 +15,8 @@ namespace BookLibrary
         public DateTime BirthDay { get; set; }
         public List<Book> BorrowedBooks { get; set; } = new List<Book>();
         public Gender Gender { get; set; }
+        public static object Instance { get; set; }
+        public static object Add { get; set; }
 
         public User(int iD, string fullName, string city, DateTime birthDay, Gender gender)
         {
