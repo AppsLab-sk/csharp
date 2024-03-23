@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
 
-        <ListView Name="IDsList" Margin="10,43,0,0" Height="370" VerticalAlignment="Top" HorizontalAlignment="Left" Width="52" Background="#66969696" Foreground="White">
+        <!--<ListView Name="IDsList" Margin="10,43,0,0" Height="370" VerticalAlignment="Top" HorizontalAlignment="Left" Width="52" Background="#66969696" Foreground="White">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -71,7 +71,48 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="568,19,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="568,19,0,0" VerticalAlignment="Top" Foreground="White"/> -->
+
+        <ListView Name="BookList" Margin="67,43,0,0" HorizontalAlignment="Left" Width="200" Height="370" VerticalAlignment="Top" Background="#66969696" Foreground="White">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsBorrowed}" Value="True">
+                            <Setter Property="Background" Value="#C20000"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Name}" Width="100"/>
+                    <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Author}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView Name="BorrowList" Margin="272,43,0,0" HorizontalAlignment="Left" Width="200" Height="370" VerticalAlignment="Top" Background="#66969696" Foreground="White" Visibility="{Binding IsBorrowed, ElementName=BorrowList}">
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsBorrowed}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsBorrowed}" Value="False">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Borrowed by" DisplayMemberBinding="{Binding BorrowedBy}" Width="100"/>
+                    <GridViewColumn Header="Time" DisplayMemberBinding="{Binding BorrowedTime}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
 
         <Button x:Name="CloseButton" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Left" Margin="672,383,0,0" VerticalAlignment="Top" Height="30" Width="86" Background="#99FF7D7D"/>
         <Button Content="View Users" Click="MenuItem_ViewUser_Click" HorizontalAlignment="Left" Margin="673,213,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
@@ -79,5 +120,5 @@
         <Button Content="Borrow" Click="Borrow_Click" HorizontalAlignment="Left" Margin="674,80,0,0" VerticalAlignment="Top" Height="30" Width="81"/>
     </Grid>
 
-</Window>
+</Window>   
     

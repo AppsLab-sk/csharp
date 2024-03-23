@@ -32,18 +32,20 @@ namespace BookLibraryGUI
         }
         public void Refresh()
         {
-            IDsList.Items.Clear();
+            //IDsList.Items.Clear();
             BookList.Items.Clear();
-            AuthorList.Items.Clear();
-            ReleaseList.Items.Clear();
-            GenreList.Items.Clear();
+            BorrowList.Items.Clear();
+            //AuthorList.Items.Clear();
+            //ReleaseList.Items.Clear();
+            //enreList.Items.Clear();
             foreach (var book in LibraryKNM.Books.ToList())
             {
-                IDsList.Items.Add(book.ID); 
-                BookList.Items.Add(book.ToString()); 
-                AuthorList.Items.Add(book.Author); 
-                ReleaseList.Items.Add(book.ReleaseDate);
-                GenreList.Items.Add(book.Genre);
+                //IDsList.Items.Add(book.ID); 
+                BookList.Items.Add(book);
+                BorrowList.Items.Add(book);
+                //AuthorList.Items.Add(book.Author); 
+                //ReleaseList.Items.Add(book.ReleaseDate);
+                //GenreList.Items.Add(book.Genre);
             }
         }
         private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
@@ -72,10 +74,10 @@ namespace BookLibraryGUI
         }
         public void ToExcel_Click(object sender, RoutedEventArgs e)
         {
-            ListView[] listViews = new ListView[] { IDsList, BookList, AuthorList, ReleaseList, GenreList};
+            /**ListView[] listViews = new ListView[] { IDsList, BookList, AuthorList, ReleaseList, GenreList};
             string pathWithEnv = @"%USERPROFILE%\Desktop\test.xlsx";
             string filePath = Environment.ExpandEnvironmentVariables(pathWithEnv);
-            ExportListViewsToExcel(listViews, filePath);
+            ExportListViewsToExcel(listViews, filePath);**/
         }
         private void Borrow_Click (object sender, RoutedEventArgs e)
         {
