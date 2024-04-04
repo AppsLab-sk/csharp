@@ -13,6 +13,7 @@ namespace AppsLab_017_List
         public Queue()
         {
             elements = new List<string>();
+
         }
 
         /// <summary>
