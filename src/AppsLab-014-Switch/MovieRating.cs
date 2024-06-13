@@ -1,4 +1,6 @@
-﻿namespace AppsLab_014_Switch;
+﻿using System;
+
+namespace AppsLab_014_Switch;
 
 /// <summary>
 /// Provides methods for working with movie ratings.
@@ -12,6 +14,18 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+
+        string numberDescription = rating switch
+        {
+            1 => "Veľmi zlý",
+            2 => "Zlý",
+            3 => "Priemerný",
+            4 => "Dobrý",
+            5 => "Výborný",
+            _ => "Neplatné hodnotenie",
+
+        };
+        return numberDescription;
     }
+        
 }

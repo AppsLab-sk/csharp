@@ -1,0 +1,69 @@
+﻿<Window x:Class="stopwatch1.pexeso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stopwatch1"
+        mc:Ignorable="d"
+        Title="pexeso" Height="736" Width="414
+        ">
+    <Grid>
+        <Button Content="" Margin="42,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/clock.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="102,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/1339-budik.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="252,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="stopwatch">
+            <Button.Background>
+                <ImageBrush ImageSource="/stopwatch.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="312,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="Button_Click_3">
+            <Button.Background>
+                <ImageBrush ImageSource="/timer.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="90">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="42,211,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.53,1.067"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="132,112,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="42,112,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="222,303,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="3.803,2.621"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="132,303,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.259,2.26"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="42,303,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="222,211,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.474,0.77"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="132,211,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.458,2.305"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="222,112,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.474,0.77"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="222,397,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.53,1.067"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="132,112,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="312,397,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="312,298,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="3.803,2.621"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="132,397,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.259,2.26"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="42,397,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="312,211,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.474,0.77"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="57" Margin="318,112,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="2.474,0.77">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.026"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="&#xD;&#xA;Pexeso" HorizontalAlignment="Left" Height="54" Margin="42,30,0,0" VerticalAlignment="Top" Width="300"/>
+    </Grid>
+</Window>

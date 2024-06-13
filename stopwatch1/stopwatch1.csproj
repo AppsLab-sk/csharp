@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="0b98aa531b5b60704df56da9e17b7bea.jpg" />
+    <None Remove="1339-budik.png" />
+    <None Remove="chrome.exe" />
+    <None Remove="clock.jpg" />
+    <None Remove="end.webp" />
+    <None Remove="images.png" />
+    <None Remove="Media-Icon-14-512.webp" />
+    <None Remove="pause-video-icon-free-vector.jpg" />
+    <None Remove="plusko.png" />
+    <None Remove="restart-icon-26.png" />
+    <None Remove="stiahnuť %281%29.htm" />
+    <None Remove="stiahnuť.htm" />
+    <None Remove="stopwatch.png" />
+    <None Remove="timer.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="0b98aa531b5b60704df56da9e17b7bea.jpg" />
+    <Resource Include="1339-budik.png" />
+    <Resource Include="chrome.exe" />
+    <Resource Include="clock.jpg" />
+    <Resource Include="end.webp" />
+    <Resource Include="images.png" />
+    <Resource Include="Media-Icon-14-512.webp" />
+    <Resource Include="pause-video-icon-free-vector.jpg" />
+    <Resource Include="plusko.png" />
+    <Resource Include="restart-icon-26.png" />
+    <Resource Include="stiahnuť (1).htm" />
+    <Resource Include="stiahnuť.htm" />
+    <Resource Include="stopwatch.png" />
+    <Resource Include="timer.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+Bojovnik;2000;10;256
+carodejnik;100000000;1000;2000
+Red
+Wizzard1;10000;10;30
+Wizzard2;20000;40;20
+Wizzard3;30000;60;20
+Wizzard4;40000;50;60
+Wizzard5;50000;20;30
+Blue
+Warior1;20000;90
+Warior2;30000;80
+Warior3;60000;30;50
+Warior4;10000;60;10
+Warior5;50000;50

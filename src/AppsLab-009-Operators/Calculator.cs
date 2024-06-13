@@ -10,7 +10,7 @@ public class Calculator
     /// </summary>
     public int Add(int a, int b)
     {
-        throw new NotImplementedException();
+        return a + b;
     }
 
     /// <summary>
@@ -18,7 +18,7 @@ public class Calculator
     /// </summary>
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ public class Calculator
     /// </summary>
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public class Calculator
     /// </summary>
     public double Divide(int a, int b)
     {
-        throw new NotImplementedException();
+        return a / b;
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class Calculator
     /// </summary>
     public int Remainder(int a, int b)
     {
-        throw new NotImplementedException();
+        return a % b;
     }
 
     /// <summary>
@@ -50,7 +50,7 @@ public class Calculator
     /// </summary>
     public bool AreEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return a == b;
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public class Calculator
     /// </summary>
     public bool AreNotEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return a != b; 
     }
 
     /// <summary>
@@ -66,15 +66,14 @@ public class Calculator
     /// </summary>
     public bool IsGreater(int a, int b)
     {
-        throw new NotImplementedException();
-    }
+        return (a < b);
 
     /// <summary>
     /// This method returns true if the first integer is lesser than the second.
     /// </summary>
     public bool IsLesser(int a, int b)
     {
-        throw new NotImplementedException();
+        return a < b;
     }
 
     /// <summary>
@@ -82,14 +81,14 @@ public class Calculator
     /// </summary>
     public bool IsGreaterOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
-    }
+            return a < b;
+        }
 
     /// <summary>
     /// This method returns true if the first integer is lesser than or equal to the second.
     /// </summary>
     public bool IsLesserOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
-    }
+            return a < b;
+        }
 }

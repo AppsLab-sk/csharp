@@ -10,7 +10,9 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        double result;
+        result = (int)number;
+        return result;  
     }
 
     /// <summary>
