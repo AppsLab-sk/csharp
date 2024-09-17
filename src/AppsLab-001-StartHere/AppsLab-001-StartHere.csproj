@@ -5,6 +5,7 @@
     <RootNamespace>AppsLab_001_StartHere</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
 </Project>

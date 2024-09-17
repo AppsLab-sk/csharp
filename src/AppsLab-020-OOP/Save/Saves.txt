@@ -1,0 +1,2 @@
+Bojovnik;2000;10
+Carodejnik;10000000;100;20

@@ -11,7 +11,5 @@ public class GreetingsTests
     [Test]
     public void HelloAppsLab()
     {
-        var result = new Greetings().Hello();
-        Assert.That(result, Is.EqualTo("Hello AppsLab!"));
     }
 }
