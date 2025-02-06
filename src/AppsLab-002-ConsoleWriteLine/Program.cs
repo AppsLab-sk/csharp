@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello, World!");
+﻿string meno = " jákub";
+Console.WriteLine("Hello"+meno);

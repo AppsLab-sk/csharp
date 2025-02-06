@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF_TestApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TestApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label  Content="Moje meno je:" HorizontalAlignment="Left" FontSize="15" Margin="232,196,0,0" VerticalAlignment="Top" Height="54" Width="107"/>
+        <Label Name="Label_Firstname" Content="_ _ _ _ _ _ " HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Margin="371,0,0,0" Height="44" Width="78" RenderTransformOrigin="0.743,0.501"/>
+        <Button Name="Button"  Content="Zaregistruj ma"  HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Height="65" Width="224" Margin="10,339,0,0"/>
+        <TextBox Name="ZadajMeno" HorizontalAlignment="Left" Margin="10,316,0,0" TextWrapping="Wrap" Text="Zadaj Meno" VerticalAlignment="Top" Width="120" TextChanged="ZadajMeno_TextChanged"/>
+        <CheckBox Name="Checkbox_Acceptrules" Content="Suhlasim" HorizontalAlignment="Left" Margin="10,296,0,0" VerticalAlignment="Top" Checked="Checkbox_Checked" Unchecked="Checkbox_Acceptrules_Unchecked" Click="Checkbox_Acceptrules_Click"/>
+        <CheckBox Name="Checkbox_NoAcceptrules" Content="Nesuhlasim" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Checked="Checkbox_Checked"  Click="Checkbox_Acceptrules_Click"/>
+        <ComboBox Name="ComboBox_AccountRole" HorizontalAlignment="Left" Margin="503,334,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_Roles_SelectionChanged"/>
+        <ListBox Name="List_AllUsers"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,10,10,301"/>
+        <Button Name ="Button_Teacher" Content="Vypis Ucitelov" HorizontalAlignment="Left" Margin="256,339,0,0" VerticalAlignment="Top" Height="65" Width="217" Click="Button_Teacher_Click"/>
+    </Grid>
+</Window>

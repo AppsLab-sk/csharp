@@ -1,0 +1,23 @@
+﻿<Window x:Class="PokemonGame.Windows.Window_PokemonBattle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonGame.Windows"
+        mc:Ignorable="d"
+        Title="Window_PokemonBattle" Height="600" Width="900" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Image Margin="531,60,101,264" Source="/images/charizardos.png" Stretch="Fill"/>
+        <Image Margin="55,215,549,110" Source="/images/mimikyu.png" Stretch="Fill"/>
+        <ProgressBar Name="ProgressBar_Pokemon1_HP"  HorizontalAlignment="Left" Height="22" Margin="30,179,0,0" VerticalAlignment="Top" Width="270" Background="White" Foreground="#FF71FF00"/>
+        <Label Name="Label_Pokemon1_HP" HorizontalContentAlignment="Center" Content="X/X" HorizontalAlignment="Left" Margin="30,201,0,0" VerticalAlignment="Top" Height="31" Width="270" FontSize="20"/>
+        <ProgressBar Name="ProgressBar_Pokemon2_HP"  HorizontalAlignment="Left" Height="22" Margin="576,323,0,0" VerticalAlignment="Top" Width="270" Background="White" Foreground="#FF71FF00"/>
+        <Label Name="Label_Pokemon2_HP" HorizontalContentAlignment="Center" Content="X/X" HorizontalAlignment="Left" Margin="576,345,0,0" VerticalAlignment="Top" Height="31" Width="270" FontSize="20"/>
+        <Button  Content="Light Attack" HorizontalAlignment="Left" Margin="72,474,0,0" VerticalAlignment="Top" Height="43" Width="131" Click="Button_Click"/>
+        <Button Content="Med_Attack" HorizontalAlignment="Left" Margin="203,474,0,0" VerticalAlignment="Top" Height="43" Width="123" Click="Button_Click_1"/>
+        <Button Content="Heavy_Attack" HorizontalAlignment="Left" Margin="326,474,0,0" VerticalAlignment="Top" Height="42" Width="113" Click="Button_Click_2"/>
+    </Grid>
+</Window>

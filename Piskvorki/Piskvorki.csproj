@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AC7_Su-33_Flyby.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AC7_Su-33_Flyby.png" />
+  </ItemGroup>
+
+</Project>
