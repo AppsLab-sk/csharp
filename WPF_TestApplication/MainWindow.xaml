@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPF_TestApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TestApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label  Content="Moje meno je:" HorizontalAlignment="Left" Margin="350,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.119"/>
+        <Label Name="Label_FirstName" Content=",,,,," HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.478,0.656" Width="180"/>
+        <Button Name="button" Content="Zaregistruj ma!"  FontSize="36" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Height="102" Width="212" Background="#FF17C78A" FontFamily="Freestyle Script"/>
+        <TextBox Name="TextBox_InputFirstName"  HorizontalAlignment="Center" Margin="0,156,0,0" TextWrapping="Wrap" Text=",,,,," VerticalAlignment="Top" Width="188" Height="46" TextChanged="Text11_TextChanged"/>
+        <CheckBox Name="CheckBox_AcceptRules" Content="Súhlasim s pravidlami aplikacie" HorizontalAlignment="Left" Margin="302,391,0,0" VerticalAlignment="Top" Checked="CheckBox_AcceptRules_Checked"/>
+        <CheckBox x:Name="CheckBox_AcceptRules_Copy" Content="Nesúhlasim s pravidlami aplikacie" HorizontalAlignment="Center" Margin="0,371,0,0" VerticalAlignment="Top" />
+        <ComboBox Name="ComboBox_AccountRole" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="556,217,42,55"/>
+
+
+
+
+    </Grid>
+</Window>

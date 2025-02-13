@@ -1,0 +1,33 @@
+﻿<Window x:Class="Pokemoni.Windows.Window_PokemonBattle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pokemoni.Windows"
+        mc:Ignorable="d"
+        Title="Window_PokemonBattle" Height="600" Width="900">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Windows/background.png"/>
+        </Grid.Background>
+        <Image Margin="564,122,71,292" Source="/Images/Cute-Pikachu-PNG-Clipart.png" Stretch="Fill"/>
+        <ProgressBar Name="ProgressBar_Pokemon1_HP" HorizontalAlignment="Left" Height="36" Margin="120,142,0,0" VerticalAlignment="Top" Width="184" RenderTransformOrigin="0.51,-0.373"/>
+        <Image Margin="40,183,568,135" Source="/Images/charizard.png" Stretch="Fill"/>
+        <Label Name="Label1_Pokemon1_HP"  Content="X/X" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="120,147,0,0" VerticalAlignment="Top" Width="184"/>
+        <ProgressBar Name="ProgressBar_Pokemon2_HP"  HorizontalAlignment="Left" Height="36" Margin="587,316,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label Name="Label2_Pokemon2_HP" Content="X/X" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="587,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.587,1.147" Width="184"/>
+        <Button x:Name="Button_LA" Content="LightAttack" HorizontalAlignment="Left" Margin="68,490,0,0" VerticalAlignment="Top" Height="49" Width="118"  Background="#FFA3E4D4" Click="Button_Click_4"/>
+        <Button x:Name="Button_MA" Content="MediumAttack" HorizontalAlignment="Left" Margin="186,490,0,0" VerticalAlignment="Top" Height="49" Width="118" Click="Button_Click_1" RenderTransformOrigin="0.474,0.582" Background="#FF7CCE50"/>
+        <Button x:Name="Button_HA" Content="CriticalAttack" HorizontalAlignment="Left" Margin="304,490,0,0" VerticalAlignment="Top" Height="49" Width="118" Click="Button_Click_2" Background="#FFDE6F22"/>
+        <Button x:Name="Button_Heal" Content="Heal" HorizontalAlignment="Left" Margin="422,490,0,0" VerticalAlignment="Top" Click="Button_Click_3" Height="49" Width="118" Background="#FFE019B4"/>
+        <ListView x:Name="ListView_FightLogger" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="309,63,307,377" FontSize="12" Background="#FF70DAE8" FontFamily="Arial Black">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>
