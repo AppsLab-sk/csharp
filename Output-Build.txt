@@ -1,0 +1,9 @@
+﻿Build started...
+1>------ Build started: Project: AppsLab-010-Math, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>AppsLab-010-Math -> C:\Users\bekem24\source\repos\csharp\src\AppsLab-010-Math\bin\Debug\net7.0\AppsLab-010-Math.dll
+2>------ Build started: Project: AppsLab-010-Math.Tests, Configuration: Debug Any CPU ------
+2>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+2>AppsLab-010-Math.Tests -> C:\Users\bekem24\source\repos\csharp\tests\AppsLab-010-Math.Tests\bin\Debug\net7.0\AppsLab-010-Math.Tests.dll
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build started at 10:29 AM and took 00.916 seconds ==========

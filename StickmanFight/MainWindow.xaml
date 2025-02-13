@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StickmanFight"
+        xmlns:Windows="clr-namespace:PokemonFight.Windows" x:Class="StickmanFight.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Windows:UserControl_Map x:Name="UserControl_World" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400"/>
+
+    </Grid>
+</Window>
