@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="eevee.png" />
+    <None Remove="images\eevee.png" />
+    <None Remove="images\pokemon_PNG9.png" />
+    <None Remove="pokemon_PNG9.png" />
+    <None Remove="Windows\deffeefw.png" />
+    <None Remove="Windows\qwddwq.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\eevee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\pokemon_PNG9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\deffeefw.png" />
+  </ItemGroup>
+
+</Project>
