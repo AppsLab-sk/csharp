@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AppsLab_033_NuGet
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var person = new { Name = "Jano", Age = 25 };
+
+            string json = JsonConvert.SerializeObject(person, Formatting.Indented);
+
+            Console.WriteLine(json);
+        }
+    }
+}

@@ -13,7 +13,7 @@ public class StringManipulator
     /// <returns>The concatenated string.</returns>
     public string AppendStrings(string first, string second)
     {
-        throw new NotImplementedException();
+        return first + second;
     }
 
     /// <summary>
@@ -23,7 +23,9 @@ public class StringManipulator
     /// <returns>The uppercase string.</returns>
     public string ConvertToUpper(string input)
     {
-        throw new NotImplementedException();
+        input = input ToUpper();
+            return input;
+        
     }
 
     /// <summary>
@@ -33,7 +35,9 @@ public class StringManipulator
     /// <returns>The lowercase string.</returns>
     public string ConvertToLower(string input)
     {
-        throw new NotImplementedException();
+        input = input ToLower();
+        
+        return input;
     }
 
     /// <summary>
@@ -44,7 +48,9 @@ public class StringManipulator
     /// <returns>True if the substring is found, false otherwise.</returns>
     public bool ContainsSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        input = input Contains(substring)
+            
+            ;
     }
 
     /// <summary>
@@ -55,6 +61,6 @@ public class StringManipulator
     /// <returns>True if the string starts with the substring, false otherwise.</returns>
     public bool StartsWithSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        ();
     }
 }

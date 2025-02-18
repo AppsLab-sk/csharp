@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kniznica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kniznica"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <TabControl>
+        <TabItem Header="Knihy">
+            <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <DataGrid x:Name="BooksDataGrid" Grid.Row="1" Margin="[all:]10" AutoGenerateColumns="False" Is 
+                <DataGrid.Columns>
+                <DataGridTextColumn Header="Nazov" Binding="{Binding Path=(???).ID}" Widths="*"/>
+                <DataGridTextColumn Header="Autor" Binding="{Binding Path=(???).Autor}" Widths="*"/>
+                <DataGridTextColumn Header="ISBN" Binding="{Binding Path=(???).ISBN}" Widths="Auto"/>
+                <DataGridTextColumn Header="RokVydania" Binding="{Binding Path=(???).RokVydania}" Widths="Auto"/>
+                <DataGridTextColumn Header="PocetDostupnychKnih" Binding="{Binding Path=(???).PocetDostupnychKnih}" Widths="Auto"/>
+                <DataGridTextColumn Header="Kategoria" Binding="{Binding Path=(???).Kategoria}" Widths="Auto"/>
+                </DataGrid.Columns>
+                <TabControl>
+    </Grid>
+</Window>

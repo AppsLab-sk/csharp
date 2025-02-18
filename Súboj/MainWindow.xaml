@@ -1,0 +1,14 @@
+﻿<Window Name="Pokemon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonGame"
+        xmlns:Windows="clr-namespace:PokemonGame.Windows" x:Class="PokemonGame.MainWindow"
+        mc:Ignorable="d"
+        Title="POKEMON GAME" Height="600" Width="900" ResizeMode="NoResize"
+        Background="Gray" >
+    <Grid >
+        <Windows:UserControl1 x:Name="UserControl_World" Margin="0,0,500,185"/>
+    </Grid>
+</Window>

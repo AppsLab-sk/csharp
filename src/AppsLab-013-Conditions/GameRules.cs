@@ -1,4 +1,6 @@
-﻿namespace AppsLab_013_Conditions;
+﻿using System.ComponentModel.Design;
+
+namespace AppsLab_013_Conditions;
 
 /// <summary>
 /// Represents the rules of a game.
@@ -13,7 +15,33 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
+        if (playerAge <= 15)
+        {
+            return false;
+        }
+
+        if (playerName == "")
+        {
+            return false;
+        }
+
+        if (playerName == null)
+        {
+            return false;
+        }
+
+        return true;
+
+
+
+
+
+
+
+        else if (playerAge <= 15 || playerName == null || playerName == ""){
+            return false;
+        }
+            return true;
     }
 
     /// <summary>
@@ -23,7 +51,11 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
-        throw new NotImplementedException();
+        if (playerHealth == 0) ;
+        {
+            return true;
+        }
+            return false;
     }
 
     /// <summary>
@@ -34,6 +66,6 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+        return false;
     }
 }
