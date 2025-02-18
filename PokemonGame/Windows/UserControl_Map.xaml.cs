@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace PokemonGame.Windows
+{
+    /// <summary>
+    /// Interaction logic for UserControl_Map.xaml
+    /// </summary>
+    public partial class UserControl_Map : UserControl
+
+
+    {
+        public GameEngine GameEngine { get; set; }
+        public Dictionary<Button, Pokemon> Enemies { get; set; } = new Dictionary<Button, Pokemon>();
+        public UserControl_Map ()
+        {
+            InitializeComponent();
+
+            
+
+            GenerateMap();
+
+        }
+        public void GenerateMap()
+        {
+            Random rnd = new Random();
+            int numberOfEnimies = 3;
+            for (int i = 0; i < 3; i++)
+            {
+                var PositionX = rnd.Next(-400, 275);
+                var PositionY = rnd.Next(-400, 325);
+
+                Button button = new Button();
+                button.Width = 100;
+                button.Height = 50;
+                button.Margin = new Thickness(PositionY, PositionX, 0, 0);
+                button.Click += Button_Click;
+                Grid_Map.Children.Add(button);
+
+                Pokemon pokemon = new Pokemon("Enemies:" +i, 200 + (100 * i), i);
+                button.Content = pokemon.Name + "LVL:" + pokemon.Level;
+
+                Enemies.Add(button, pokemon);
+
+            }
+
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var pokemon = Enemies[button];
+
+            GameEngine.SecondPokemon = pokemon;
+
+            var Window_PokemonBattle = new Window_PokemonBattle(GameEngine);
+            Window_PokemonBattle.Show();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}

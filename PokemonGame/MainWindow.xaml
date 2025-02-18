@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonGame"
+        xmlns:Windows="clr-namespace:PokemonGame.Windows" x:Class="PokemonGame.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="748" Width="1031">
+    <Grid RenderTransformOrigin="0.488,0.471" Margin="92,70,300,345" OpacityMask="#FF9A9191" Background="#FF7D7171">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.153"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <Image Margin="435,303,431,224" Source="/Image8.png" Stretch="Fill"/>
+
+        <Windows:UserControl_Map x:Name="UserControl_World" Margin="57,143,-247,-321"/>
+
+    </Grid>
+</Window>
