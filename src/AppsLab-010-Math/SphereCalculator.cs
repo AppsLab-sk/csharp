@@ -12,7 +12,8 @@ public class SphereCalculator
     /// <returns>The surface area of the sphere.</returns>
     public double CalculateSurface(double radius)
     {
-        throw new NotImplementedException();
+        double surface = (4.0 * Math.PI) * (radius * radius);
+        return surface;
     }
 
     /// <summary>
@@ -22,6 +23,7 @@ public class SphereCalculator
     /// <returns>The volume of the sphere.</returns>
     public double CalculateVolume(double radius)
     {
-        throw new NotImplementedException();
+        double volume = ((4.0 / 3.0) * Math.PI) * (radius * radius * radius);
+        return volume;
     }
 }
