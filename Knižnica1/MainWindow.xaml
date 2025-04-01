@@ -1,0 +1,37 @@
+﻿<Window x:Class="Knižnica1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Knižnica1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Knihy">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Pouzivatelia">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="BooksDataGrid" Grid.Row="1" Margin="0,58,0,0" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Nazov" Binding="{Binding Nazov}" Width="Auto"/>
+                            <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="Auto"/>
+                            <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="Auto"/>
+                            <DataGridTextColumn Header="Rok" Binding="{Binding Rok}" Width="Auto"/>
+                            <DataGridTextColumn Header="Copies" Binding="{Binding Copies}" Width="Auto"/>
+                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Categorie}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StackPanel Orientation="Horizontal" Margin="10"/>
+        <TabItem Header="Poziciavanie" Margin="123,1,596,411">
+            <Grid Background="#FFE5E5E5">
+            </Grid>
+        </TabItem>
+
+    </Grid>
+</Window>

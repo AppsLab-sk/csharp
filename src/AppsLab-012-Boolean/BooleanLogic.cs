@@ -1,4 +1,6 @@
-﻿namespace AppsLab_012_Boolean;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace AppsLab_012_Boolean;
 
 /// <summary>
 /// Provides methods for performing boolean logic operations.
@@ -13,7 +15,7 @@ public class BooleanLogic
     /// <returns>The result of the logical AND operation.</returns>
     public bool And(bool a, bool b)
     {
-        throw new NotImplementedException();
+        return a && b;
     }
 
     /// <summary>
@@ -24,8 +26,9 @@ public class BooleanLogic
     /// <returns>The result of the logical OR operation.</returns>
     public bool Or(bool a, bool b)
     {
-        throw new NotImplementedException();
+        return  a || b;
     }
+
 
     /// <summary>
     /// Performs a logical NOT operation on a boolean value.
@@ -34,6 +37,6 @@ public class BooleanLogic
     /// <returns>The result of the logical NOT operation.</returns>
     public bool Not(bool a)
     {
-        throw new NotImplementedException();
+        return !a;
     }
 }

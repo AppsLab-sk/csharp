@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF_TestApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TestApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Moje meno je:" HorizontalAlignment="Left" Margin="316,332,0,0" VerticalAlignment="Top" FontSize="20" Height="38" Width="154"/>
+        <Label Name="Label_FirstName" Content="_ _ _ _ _ _ " HorizontalAlignment="Left" Margin="455,333,0,0" VerticalAlignment="Top" FontSize="20" Background="#00000000" Foreground="#FFF94501"/>
+        <Button Name="Button_ShowName" Content="Zaregistruj ma!" FontSize="20" HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Height="60" Width="210" RenderTransformOrigin="0.5,0.5" Click="button_Click" Background="#FF49EF0E" Foreground="#FF033DF3">
+        </Button>
+        <TextBox Name="TextBox_InputFirstName" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" Text="Zadaj meno!" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.308,0.448" TextChanged="TextBox_InputFirstName_TextChanged_1"/>
+        <CheckBox Name="CheckBox_AcceptRules" Content="Suhlasim s pravidlami aplikacie" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Checked="CheckBox_AcceptRules_Checked" Unchecked="CheckBox_AcceptRules_Unchecked" Click="CheckBox_AcceptRules_Click"/>
+        <ComboBox Name="ComboBox_AccountRole" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox Name="ListBox_AllUsers" d:ItemsSource="{d:SampleData ItemCount=5}"  Margin="562,33,70,251"/>
+        <Button Name="Button_FilterOnlyTeacher"  Content="Vyfiltruj ucitelov" HorizontalAlignment="Left" Margin="340,283,0,0" VerticalAlignment="Top" Height="44" Width="106" Click="Button_FilterOnlyTeacher_Click"/>
+    </Grid>
+</Window>

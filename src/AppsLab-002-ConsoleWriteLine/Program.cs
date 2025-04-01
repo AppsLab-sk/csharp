@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello, World!");
+﻿int age = 14;
+Console.WriteLine(age);

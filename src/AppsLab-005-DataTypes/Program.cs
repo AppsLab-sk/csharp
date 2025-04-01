@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string name = "Martin";
+Console.WriteLine(name);
+int age = 15;
+Console.WriteLine(age);
+char inicialky = 'M';
+Console.WriteLine(inicialky);
+bool isAdult = false;
+Console.WriteLine(isAdult);
+float accountBalance = 120800.55f;
+Console.WriteLine(accountBalance);

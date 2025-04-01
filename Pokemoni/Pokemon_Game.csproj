@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\Charizard.png" />
+    <None Remove="images\Pikachu.png" />
+    <None Remove="Pikachu.png" />
+    <None Remove="Windows\background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\Charizard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Pikachu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pikachu.png" />
+    <Resource Include="Windows\background.png" />
+  </ItemGroup>
+
+</Project>

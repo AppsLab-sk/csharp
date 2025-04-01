@@ -1,0 +1,5 @@
+﻿<UserControl x:Class="PokemonGame.Windows.UserControl_Map" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:PokemonGame.Windows" mc:Ignorable="d" Height="400" Width="400">
+    <Canvas Name="Grid_Map" Background="#FFC0D4BA">
+        <Image x:Name="Image_MapBG" Source="/Images/Maps/World_Lavaland.png" Stretch="Fill" Height="400" Width="400" />
+    </Canvas>
+</UserControl>

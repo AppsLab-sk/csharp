@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Butterfree.png" />
+    <None Remove="Images\Chansey.png" />
+    <None Remove="Images\Charizard.png" />
+    <None Remove="Images\Lapras.png" />
+    <None Remove="Images\Maps\World_Iceland.png" />
+    <None Remove="Images\Maps\World_Lavaland.png" />
+    <None Remove="Images\Maps\World_Natureland.png" />
+    <None Remove="Images\Minccino.png" />
+    <None Remove="Images\Moltres.png" />
+    <None Remove="Images\Pikachu.png" />
+    <None Remove="Images\Pokemons\Butterfree.png" />
+    <None Remove="Images\Pokemons\Chansey.png" />
+    <None Remove="Images\Pokemons\Charizard.png" />
+    <None Remove="Images\Pokemons\Lapras.png" />
+    <None Remove="Images\Pokemons\Minccino.png" />
+    <None Remove="Images\Pokemons\Moltres.png" />
+    <None Remove="Images\Pokemons\Pikachu.png" />
+    <None Remove="Images\Pokemons\ShinyBulbasaur.png" />
+    <None Remove="Images\Pokemons\Squirtle.png" />
+    <None Remove="Images\ShinyBulbasaur.png" />
+    <None Remove="Images\Squirtle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Maps\World_Iceland.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Maps\World_Lavaland.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Maps\World_Natureland.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Images\Pokemons\Butterfree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Chansey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Charizard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Lapras.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Minccino.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Moltres.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Pikachu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\ShinyBulbasaur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pokemons\Squirtle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
