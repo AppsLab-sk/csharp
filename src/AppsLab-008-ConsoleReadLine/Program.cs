@@ -12,3 +12,5 @@ Console.WriteLine("Hmm Svieckova z rizou znie skvele");
 Console.WriteLine("pozicaj my peniaze prosim");
 string? text = Console.ReadLine();
 Console.WriteLine("skap");
+Console.WriteLine("preco si pididi");
+string pocasie = Console.ReadLine();
