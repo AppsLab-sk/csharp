@@ -1,44 +1,16 @@
-﻿/*Console.WriteLine("zadaj svoje meno");
-string name = Console.ReadLine();
-Console.WriteLine("zadaj svoj vek");
-int age = int.Parse(Console.ReadLine());
-Console.WriteLine($"ahoj tvoje meno je {name} a mas {age} rokov");
-*/
-Console.WriteLine("zadaj cislo od 1 do 7");
-int dayOfweek = int.Parse(Console.ReadLine());
-switch (dayOfweek)
+﻿
+string[] names = new string[] {"Jozef", "Marek", "Anna", "Eva", "Peter"};
+string[,] matrix = new string[30,5];
+matrix [0,2] = "Jozef";
+matrix [1,2] = "Marek";
+matrix [2,2] = "Anna";
+matrix [25,2] = "Eva";
+for (int i = 0; i < 30; i++)
 {
-    case 1:
-        Console.WriteLine("Pondelok");
-        break;
-    case 2:
-        Console.WriteLine("Utorok");
-        break;
-    case 3:
-        Console.WriteLine("Streda");
-        break;
-    case 4:
-        Console.WriteLine("Stvrtok");
-        break;
-    case 5:
-        Console.WriteLine("Piatok");
-        break;
-    case 6:
-        Console.WriteLine("Sobota");
-        break;
-    case 7:
-        Console.WriteLine("Nedela");
-        break;
+    for (int j = 0; j < 5; j++)
+    {
+     
+        Console.Write(matrix[i, j ] + " ,");
+    }
+    Console.WriteLine();
 }
-if (dayOfweek <1 || dayOfweek > 7)
-{
-    Console.WriteLine("Zadal si nespravne cislo");
-}
-
-
-
-
-
-
-
-

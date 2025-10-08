@@ -14,7 +14,8 @@ public class WeatherStats
     /// <returns>Average temperature.</returns>
     public double AverageTemperature(double[] temperatures)
     {
-        return temperatures.Length == 0 ? 0 : temperatures.Sum() / temperatures.Length;  
+        return temperatures.Length == 0 ? 0 : temperatures.Sum() / temperatures.Length;
+    }
 
     /// <summary>
     /// Find the maximum temperature from the provided values.
@@ -23,7 +24,7 @@ public class WeatherStats
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-       throw new NotImplementedException();
+       return 
     }
 
     /// <summary>

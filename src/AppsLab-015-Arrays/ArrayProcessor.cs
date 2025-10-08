@@ -13,11 +13,15 @@ public class ArrayProcessor
     /// <returns>First element of the array, or 0 if array is empty.</returns>
     public int GetFirstElement(int[] numbers)
     {
-        if (numbers == null || numbers.Length == 0) 
+        if (numbers == null || numbers.Length == 0)
+        //ak je pole null alebo prazdne
+
         {
             return 0;
+            // vrat 0
         }
         return numbers[0];
+        // vrat prvy prvok pola
     }
 
     /// <summary>
