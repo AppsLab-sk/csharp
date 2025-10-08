@@ -1,13 +1,24 @@
 ﻿Console.WriteLine("Zadaj prve cislo: ");
-int cislo1 = int.Parse(Console.ReadLine());
+decimal cislo1 = decimal.Parse(Console.ReadLine());
 Console.WriteLine("Zadaj druhe cislo:");
-int cislo2 = int.Parse(Console.ReadLine());
+decimal cislo2 = decimal.Parse(Console.ReadLine());
 Console.WriteLine("Zadaj operaciu (+, -, *, /, %):");
 string operacia = Console.ReadLine();
+if (operacia == "/" && cislo2 == 0)
+{
+    Console.WriteLine("Chyba: Delenie nulou nie je povolene.");
+    return;
+}
+if (operacia != "+" && operacia != "-" && operacia != "*" && operacia != "/" && operacia != "%")
+{
+    Console.WriteLine("Chyba: Neplatna operacia.");
+    return;
+}
 
-int vysedlok = operacia switch
+decimal vysedlok = operacia switch
 {
     "+" => (cislo1 + cislo2),
+    "-" => (cislo1 - cislo2),
     "*" => (cislo1 * cislo2),
     "/" => (cislo1 / cislo2),
     "%" => (cislo1 % cislo2),
@@ -26,6 +37,4 @@ System.Environment.Exit(0);
 //nacitam druhe cislo
 //vypisem vypisem operaciu
 //vypisem vysledok
-
-
 
