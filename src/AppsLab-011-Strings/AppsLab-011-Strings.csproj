@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppsLab-010-Math\AppsLab-010-Math.csproj" />
+  </ItemGroup>
+
 </Project>

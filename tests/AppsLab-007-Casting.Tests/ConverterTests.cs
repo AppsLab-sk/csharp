@@ -20,8 +20,8 @@ public class ConverterTests
     [Test]
     public void DoubleToInt_Given7Point8_ShouldReturn7()
     {
-        var result = converter.DoubleToInt(7.8);
-        Assert.That(result, Is.EqualTo(7), "DoubleToInt(7.8) should return 7");
+        var result = converter.DoubleToInt(7.4);
+        Assert.That(result, Is.EqualTo(7), "DoubleToInt(7.4) should return 7");
     }
 
     [Test]

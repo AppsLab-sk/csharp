@@ -13,7 +13,7 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
+        return (!string.IsNullOrEmpty(playerName) && playerAge >= 18);
     }
 
     /// <summary>
@@ -23,7 +23,7 @@ public class GameRules
     /// <returns>True if the game is over, false otherwise.</returns>
     public bool IsGameOver(int playerHealth)
     {
-        throw new NotImplementedException();
+        return (playerHealth <= 0);
     }
 
     /// <summary>
@@ -34,6 +34,6 @@ public class GameRules
     /// <returns>True if the secret door should be opened, false otherwise.</returns>
     public bool ShouldOpenSecretDoor(bool hasKey, bool knowsPassword)
     {
-        throw new NotImplementedException();
+        return (hasKey && knowsPassword);
     }
 }
