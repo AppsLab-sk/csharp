@@ -33,7 +33,7 @@ public class ArrayProcessor
     public int GetLastElement(int[] numbers)
 
     {
-        if (numbers == null|| numbers.Length == 0)
+        if (numbers == null || numbers.Length == 0)
         {
             return 0;
         }
