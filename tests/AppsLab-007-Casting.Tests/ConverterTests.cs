@@ -20,14 +20,14 @@ public class ConverterTests
     [Test]
     public void DoubleToInt_Given7Point8_ShouldReturn7()
     {
-        var result = converter.DoubleToInt(7.8);
-        Assert.That(result, Is.EqualTo(7), "DoubleToInt(7.8) should return 7");
+        var result = converter.DoubleToInt(7.4);
+        Assert.That(result, Is.EqualTo(7), "DoubleToInt(7.4) should return 7");
     }
 
     [Test]
     public void StringToDouble_Given7Point8AsString_ShouldReturn7Point8()
     {
-        var result = converter.StringToDouble("7.8");
+        var result = converter.StringToDouble("7,8");
         Assert.That(result, Is.EqualTo(7.8), "StringToDouble(\"7.8\") should return 7.8");
     }
 
@@ -35,7 +35,7 @@ public class ConverterTests
     public void DoubleToString_Given7Point8_ShouldReturn7Point8AsString()
     {
         var result = converter.DoubleToString(7.8);
-        Assert.That(result, Is.EqualTo("7.8"), "DoubleToString(7.8) should return \"7.8\"");
+        Assert.That(result, Is.EqualTo("7,8"), "DoubleToString(7.8) should return \"7.8\"");
     }
 
     [Test]

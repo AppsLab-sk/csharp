@@ -1,8 +1,17 @@
-﻿Console.WriteLine("Ako sa voláš?");
-string? meno = Console.ReadLine();
-Console.WriteLine("Ahoj, " + meno);
+﻿Console.WriteLine("Vitaj v kalkulacke");
+Console.WriteLine("Zadaj prve cislo: ");
+decimal cislo1 = decimal.Parse(Console.ReadLine());
+Console.WriteLine("Zadaj druhe cislo: ");
+decimal cislo2 = decimal.Parse(Console.ReadLine());
+Console.WriteLine("Zadaj operaciu (+,-,*,/,%):");
+string operacia = Console.ReadLine();
 
-Console.WriteLine("Koľko máš rokov?");
-string vstup = Console.ReadLine() ?? "0";
-int vek = int.Parse(vstup);
-Console.WriteLine("Máš " + vek + " rokov.");
+int vysledok = operacia switch
+{
+    "+" => (int)(cislo1 + cislo2),
+    "-" => (int)(cislo1 - cislo2),
+    "*" => (int)(cislo1 * cislo2),
+    "/" => (int)(cislo1 / cislo2),
+    "%" => (int)(cislo1 % cislo2),
+    _ => throw new Exception("Neznamy operator")
+};
