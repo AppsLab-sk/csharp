@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿const int Maxpoints = 150;
+const int MinAgeForDrivingLicense = 16;
+const string WelcomeMessage = "Vitajte v našej hre";
+
+Console.WriteLine(Maxpoints);
+Console.WriteLine(MinAgeForDrivingLicense);
+Console.WriteLine(WelcomeMessage);
