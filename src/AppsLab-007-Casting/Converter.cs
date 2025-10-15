@@ -10,7 +10,8 @@ public class Converter
     /// </summary>
     public double IntToDouble(int number)
     {
-        throw new NotImplementedException();
+        return Convert.ToDouble(number);
+        
     }
 
     /// <summary>
@@ -18,7 +19,7 @@ public class Converter
     /// </summary>
     public int DoubleToInt(double number)
     {
-        throw new NotImplementedException();
+        return Convert.ToInt32(number);
     }
 
     /// <summary>
@@ -26,7 +27,7 @@ public class Converter
     /// </summary>
     public double StringToDouble(string number)
     {
-        throw new NotImplementedException();
+        return Convert.ToDouble(number);
     }
 
     /// <summary>
@@ -34,7 +35,7 @@ public class Converter
     /// </summary>
     public string DoubleToString(double number)
     {
-        throw new NotImplementedException();
+        return Convert.ToString(number);   
     }
 
     /// <summary>
@@ -42,7 +43,7 @@ public class Converter
     /// </summary>
     public string IntToString(int number)
     {
-        throw new NotImplementedException();
+        return Convert.ToString(number);
     }
 
     /// <summary>
@@ -50,7 +51,7 @@ public class Converter
     /// </summary>
     public bool StringToBool(string boolValue)
     {
-        throw new NotImplementedException();
+        return Convert.ToBoolean(boolValue);
     }
 
     /// <summary>
@@ -58,6 +59,6 @@ public class Converter
     /// </summary>
     public string BoolToString(bool boolValue)
     {
-        throw new NotImplementedException();
+        return Convert.ToString(boolValue);
     }
 }
