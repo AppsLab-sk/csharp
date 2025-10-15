@@ -22,7 +22,7 @@ public class WeatherStats
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
