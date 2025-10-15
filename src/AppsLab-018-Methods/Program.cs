@@ -14,7 +14,7 @@ while (true)
     // Pre ukončenie programu môže používateľ zadať 'quit'
     if (input?.ToLower() == "quit")
     {
-        break;
+
     }
 
     // Je vstup platné číslo?

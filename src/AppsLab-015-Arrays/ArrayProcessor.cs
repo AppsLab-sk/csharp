@@ -1,4 +1,6 @@
-﻿namespace AppsLab_015_Arrays;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace AppsLab_015_Arrays;
 
 /// <summary>
 /// Class ArrayProcessor provides methods for working with integer arrays.
@@ -13,8 +15,10 @@ public class ArrayProcessor
     /// <returns>First element of the array, or 0 if array is empty.</returns>
     public int GetFirstElement(int[] numbers)
     {
-        throw new NotImplementedException();
+        return 0;
     }
+    
+            
 
     /// <summary>
     /// Returns the last element of the provided array.
@@ -46,6 +50,8 @@ public class ArrayProcessor
     /// <returns>Length of the array.</returns>
     public int GetLength(int[] numbers)
     {
-        throw new NotImplementedException();
+        return numbers .Length;
+
+
     }
 }
