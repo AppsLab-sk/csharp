@@ -17,6 +17,7 @@ public class WeatherStatsTests
     }
 
     /// <summary>
+    //
     /// Test the AverageTemperature method.
     /// </summary>
     [Test]

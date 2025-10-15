@@ -57,4 +57,12 @@ public class StringManipulator
     {
         return  input.StartsWith(substring);
     }
+    public int GetLegth (string input)
+    {
+        return input.Length;
+    }
+    public string BezMedzier(string input)
+    { 
+    return input.Trim();
+    }
 }

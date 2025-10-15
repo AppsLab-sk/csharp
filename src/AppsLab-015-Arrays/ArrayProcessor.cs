@@ -11,6 +11,7 @@ public class ArrayProcessor
     /// </summary>
     /// <param name="numbers">Array of integers.</param>
     /// <returns>First element of the array, or 0 if array is empty.</returns>
+    /// 
     public int GetFirstElement(int[] numbers)
     {
         if (numbers == null || numbers.Length == 0)
@@ -64,6 +65,10 @@ public class ArrayProcessor
     /// <returns>Length of the array.</returns>
     public int GetLength(int[] numbers)
     {
+        if (numbers == null)
+        {
+            return 0;
+        }
         return numbers.Length;
     }
 }
