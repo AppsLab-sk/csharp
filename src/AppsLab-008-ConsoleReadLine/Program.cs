@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Ako sa voláš?");
+﻿//ako sa voláš
+Console.WriteLine("Ako sa voláš?");
 string? meno = Console.ReadLine();
 Console.WriteLine("Ahoj, " + meno);
 
