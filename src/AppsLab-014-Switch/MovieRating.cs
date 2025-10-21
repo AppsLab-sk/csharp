@@ -10,8 +10,23 @@ public class MovieRating
     /// </summary>
     /// <param name="rating">The movie rating to get a description for.</param>
     /// <returns>A string describing the specified movie rating.</returns>
-    public string GetRatingDescription(int rating)
+    public static string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+        switch (rating)
+        {
+            case 1:
+                return "Veľmi zlý";
+            case 2:
+                return "zlý";
+            case 3:
+                return "Priemerný";
+            case 4:
+                return "Dobrý";
+            case 5:
+                return "Vyborný";
+            default:
+                return "Neplatné hodnotenie";
+        }
+
     }
 }

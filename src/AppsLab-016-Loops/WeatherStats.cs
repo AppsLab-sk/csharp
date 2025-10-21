@@ -10,10 +10,8 @@ public class WeatherStats
     /// </summary>
     /// <param name="temperatures">Array of temperatures.</param>
     /// <returns>Average temperature.</returns>
-    public double AverageTemperature(double[] temperatures)
-    {
-        throw new NotImplementedException();
-    }
+    public static double AverageTemperature(double[] temperatures);
+    
 
     /// <summary>
     /// Find the maximum temperature from the provided values.
@@ -22,7 +20,15 @@ public class WeatherStats
     /// <returns>Maximum temperature.</returns>
     public double MaxTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double maximum = double .MaxValue;
+        foreach (double temperature in temperatures)
+        {
+            if (temperature < maximum)
+            {
+                maximum = temperature;
+            }
+        }
+        return maximum;
     }
 
     /// <summary>
@@ -32,6 +38,14 @@ public class WeatherStats
     /// <returns>Minimum temperature.</returns>
     public double MinTemperature(double[] temperatures)
     {
-        throw new NotImplementedException();
+        double minimum = double.MaxValue;
+        foreach (double temperature in temperatures)
+        {
+            if (temperature < minimum)
+            {
+                minimum = temperature;
+            }
+        }
+        return minimum;
     }
 }
