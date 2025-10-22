@@ -85,4 +85,11 @@ public class StringManipulatorTests
         var result = _stringManipulator.StartsWithSubstring("Hello World", "Goodbye");
         Assert.That(result, Is.False, "The string starts with the substring when it should not.");
     }
+
+[Test]
+    public void StringJeBezMedzier()
+    {
+        var result = _stringManipulator.StartsWithSubstring(" Hello World   ");
+        Assert.That(result, Is.False, "The string starts with the substring when it should not.");
+    }
 }

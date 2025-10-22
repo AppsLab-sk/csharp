@@ -12,7 +12,7 @@ public class SphereCalculator
     /// <returns>The surface area of the sphere.</returns>
     public double CalculateSurface(double radius)
     {
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
