@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class MatejKolkus
+{
+    private decimal balance;
+        public void deposit(decimal amount)
+    {
+
+    }
+}

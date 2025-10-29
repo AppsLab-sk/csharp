@@ -70,7 +70,7 @@ Console.WriteLine(sucet);
 string meno = ziskajMeno();
 int vek = ziskajVek();
 VypisUdaje(meno, vek);
-
+        
 string ziskajMeno()
 {
     Console.WriteLine("zadaj svoje meno");
