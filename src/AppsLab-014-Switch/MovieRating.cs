@@ -12,6 +12,14 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+        return rating switch
+        {
+            1 => "Veľmi zlý",
+            2 => "Zlý",
+            3 =>  "Priemerný",
+            4 => "Dobrý",
+            5 => "Výborný",
+            _ => "Neplatné hodnotenie",
+        };
     }
 }

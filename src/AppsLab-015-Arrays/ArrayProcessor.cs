@@ -11,9 +11,18 @@ public class ArrayProcessor
     /// </summary>
     /// <param name="numbers">Array of integers.</param>
     /// <returns>First element of the array, or 0 if array is empty.</returns>
+    /// 
     public int GetFirstElement(int[] numbers)
     {
-        throw new NotImplementedException();
+        if (numbers == null || numbers.Length == 0)
+        //ak je pole null alebo prazdne
+
+        {
+            return 0;
+            // vrat 0
+        }
+        return numbers[0];
+        // vrat prvy prvok pola
     }
 
     /// <summary>
@@ -23,8 +32,13 @@ public class ArrayProcessor
     /// <param name="numbers">Array of integers.</param>
     /// <returns>Last element of the array, or 0 if array is empty.</returns>
     public int GetLastElement(int[] numbers)
+
     {
-        throw new NotImplementedException();
+        if (numbers == null || numbers.Length == 0)
+        {
+            return 0;
+        }
+        return numbers[numbers.Length - 1];
     }
 
     /// <summary>
@@ -36,7 +50,12 @@ public class ArrayProcessor
     /// <returns>Element at the specified position, or 0 if position is out of range.</returns>
     public int GetElementAtPosition(int[] numbers, int position)
     {
-        throw new NotImplementedException();
+        if (position < 0 || position >= numbers.Length ||
+            numbers == null || numbers.Length == 0)
+        {
+            return 0;
+        }
+        return numbers[position];
     }
 
     /// <summary>
@@ -46,6 +65,10 @@ public class ArrayProcessor
     /// <returns>Length of the array.</returns>
     public int GetLength(int[] numbers)
     {
-        throw new NotImplementedException();
+        if (numbers == null)
+        {
+            return 0;
+        }
+        return numbers.Length;
     }
 }

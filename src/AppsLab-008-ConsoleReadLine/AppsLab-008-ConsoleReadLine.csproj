@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppsLab-005-DataTypes\AppsLab-005-DataTypes.csproj" />
+  </ItemGroup>
+
 </Project>
