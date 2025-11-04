@@ -1,4 +1,7 @@
-﻿namespace AppsLab_011_Strings;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
+
+namespace AppsLab_011_Strings;
 
 /// <summary>
 /// Provides methods for manipulating strings.
@@ -13,9 +16,8 @@ public class StringManipulator
     /// <returns>The concatenated string.</returns>
     public string AppendStrings(string first, string second)
     {
-        throw new NotImplementedException();
+        return first + second;
     }
-
     /// <summary>
     /// Converts a string to uppercase.
     /// </summary>
@@ -23,7 +25,7 @@ public class StringManipulator
     /// <returns>The uppercase string.</returns>
     public string ConvertToUpper(string input)
     {
-        throw new NotImplementedException();
+        return input.ToUpper();
     }
 
     /// <summary>
@@ -33,7 +35,7 @@ public class StringManipulator
     /// <returns>The lowercase string.</returns>
     public string ConvertToLower(string input)
     {
-        throw new NotImplementedException();
+        return input.ToLower();
     }
 
     /// <summary>
@@ -44,9 +46,8 @@ public class StringManipulator
     /// <returns>True if the substring is found, false otherwise.</returns>
     public bool ContainsSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        return input.Contains(substring);
     }
-
     /// <summary>
     /// Determines if a string starts with a substring.
     /// </summary>
@@ -55,6 +56,12 @@ public class StringManipulator
     /// <returns>True if the string starts with the substring, false otherwise.</returns>
     public bool StartsWithSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        return input.StartsWith(substring);
+    }
+
+
+    public string BezMedzier(string input)
+    {
+        return input.Train();
     }
 }
