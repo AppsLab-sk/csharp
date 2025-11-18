@@ -35,63 +35,63 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-011-Strings", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-011-Strings.Tests", "tests\AppsLab-011-Strings.Tests\AppsLab-011-Strings.Tests.csproj", "{22097A4D-261D-4F21-8080-10B4DAAC9E01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-012-Boolean", "src\AppsLab-012-Boolean\AppsLab-012-Boolean.csproj", "{EE7C6CDA-F919-4078-81DB-E4BA7F7DE34A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-012-Boolean", "src\AppsLab-012-Boolean\AppsLab-012-Boolean.csproj", "{EE7C6CDA-F919-4078-81DB-E4BA7F7DE34A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-012-Boolean.Tests", "tests\AppsLab-012-Boolean.Tests\AppsLab-012-Boolean.Tests.csproj", "{E41ECA72-68B0-4B1B-8A47-39C0E5DA9B94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-012-Boolean.Tests", "tests\AppsLab-012-Boolean.Tests\AppsLab-012-Boolean.Tests.csproj", "{E41ECA72-68B0-4B1B-8A47-39C0E5DA9B94}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-013-Conditions", "src\AppsLab-013-Conditions\AppsLab-013-Conditions.csproj", "{AD575FD0-3F7B-4CA3-B802-9430C0F61A42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-013-Conditions", "src\AppsLab-013-Conditions\AppsLab-013-Conditions.csproj", "{AD575FD0-3F7B-4CA3-B802-9430C0F61A42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-013-Conditions.Tests", "tests\AppsLab-013-Conditions.Tests\AppsLab-013-Conditions.Tests.csproj", "{8B9BEF41-B5E2-4B56-AA43-F83249D4E639}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-013-Conditions.Tests", "tests\AppsLab-013-Conditions.Tests\AppsLab-013-Conditions.Tests.csproj", "{8B9BEF41-B5E2-4B56-AA43-F83249D4E639}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-014-Switch", "src\AppsLab-014-Switch\AppsLab-014-Switch.csproj", "{EBA30F52-B7DA-4B32-BE4F-6914145E2447}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-014-Switch", "src\AppsLab-014-Switch\AppsLab-014-Switch.csproj", "{EBA30F52-B7DA-4B32-BE4F-6914145E2447}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-014-Switch.Tests", "tests\AppsLab-014-Switch.Tests\AppsLab-014-Switch.Tests.csproj", "{6A95C2D3-3B32-4612-A909-2F2AC223416E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-014-Switch.Tests", "tests\AppsLab-014-Switch.Tests\AppsLab-014-Switch.Tests.csproj", "{6A95C2D3-3B32-4612-A909-2F2AC223416E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-015-Arrays", "src\AppsLab-015-Arrays\AppsLab-015-Arrays.csproj", "{DA216DFF-5EC8-4F02-9D0A-3D49212D6903}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-015-Arrays", "src\AppsLab-015-Arrays\AppsLab-015-Arrays.csproj", "{DA216DFF-5EC8-4F02-9D0A-3D49212D6903}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-015-Arrays.Tests", "tests\AppsLab-015-Arrays.Tests\AppsLab-015-Arrays.Tests.csproj", "{2BBC2988-4C3C-45B7-9EA6-F47A23260F32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-015-Arrays.Tests", "tests\AppsLab-015-Arrays.Tests\AppsLab-015-Arrays.Tests.csproj", "{2BBC2988-4C3C-45B7-9EA6-F47A23260F32}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-016-Loops", "src\AppsLab-016-Loops\AppsLab-016-Loops.csproj", "{2A373E5B-4048-4E70-99EE-2676D2DA9952}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-016-Loops", "src\AppsLab-016-Loops\AppsLab-016-Loops.csproj", "{2A373E5B-4048-4E70-99EE-2676D2DA9952}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-016-Loops.Tests", "tests\AppsLab-016-Loops.Tests\AppsLab-016-Loops.Tests.csproj", "{DB34DF8E-3B5B-44CC-9245-AD79F3198BD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-016-Loops.Tests", "tests\AppsLab-016-Loops.Tests\AppsLab-016-Loops.Tests.csproj", "{DB34DF8E-3B5B-44CC-9245-AD79F3198BD3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-017-List", "src\AppsLab-017-List\AppsLab-017-List.csproj", "{CEAA82FA-127F-47C2-B25F-5588FB63F7D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-017-List", "src\AppsLab-017-List\AppsLab-017-List.csproj", "{CEAA82FA-127F-47C2-B25F-5588FB63F7D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-017-List.Tests", "tests\AppsLab-017-List.Tests\AppsLab-017-List.Tests.csproj", "{FCEEAC1F-D3CF-4C18-9CA3-2288B5DFAA14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-017-List.Tests", "tests\AppsLab-017-List.Tests\AppsLab-017-List.Tests.csproj", "{FCEEAC1F-D3CF-4C18-9CA3-2288B5DFAA14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-018-Methods", "src\AppsLab-018-Methods\AppsLab-018-Methods.csproj", "{571B250E-E17D-4CD6-8778-52B838EB9DA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-018-Methods", "src\AppsLab-018-Methods\AppsLab-018-Methods.csproj", "{571B250E-E17D-4CD6-8778-52B838EB9DA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-018-Methods.Tests", "tests\AppsLab-018-Methods.Tests\AppsLab-018-Methods.Tests.csproj", "{526B06CA-4937-44F2-97FB-E85680DD7867}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-018-Methods.Tests", "tests\AppsLab-018-Methods.Tests\AppsLab-018-Methods.Tests.csproj", "{526B06CA-4937-44F2-97FB-E85680DD7867}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-019-MethodsOverloading", "src\AppsLab-019-MethodsOverloading\AppsLab-019-MethodsOverloading.csproj", "{24D704DB-AB81-4F18-899C-910E8D45FC8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-019-MethodsOverloading", "src\AppsLab-019-MethodsOverloading\AppsLab-019-MethodsOverloading.csproj", "{24D704DB-AB81-4F18-899C-910E8D45FC8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-019-MethodsOverloading.Tests", "tests\AppsLab-019-MethodsOverloading.Tests\AppsLab-019-MethodsOverloading.Tests.csproj", "{05E10AD6-94B3-4761-95E4-1F19E14F36D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-019-MethodsOverloading.Tests", "tests\AppsLab-019-MethodsOverloading.Tests\AppsLab-019-MethodsOverloading.Tests.csproj", "{05E10AD6-94B3-4761-95E4-1F19E14F36D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-020-OOP", "src\AppsLab-020-OOP\AppsLab-020-OOP.csproj", "{8CB5085F-5996-490C-90EC-022AB4AD9CBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-020-OOP", "src\AppsLab-020-OOP\AppsLab-020-OOP.csproj", "{8CB5085F-5996-490C-90EC-022AB4AD9CBC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-021-Interfaces", "src\AppsLab-021-Interfaces\AppsLab-021-Interfaces.csproj", "{9E3CBBE1-9A1A-4C1C-817C-28D383D18384}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-021-Interfaces", "src\AppsLab-021-Interfaces\AppsLab-021-Interfaces.csproj", "{9E3CBBE1-9A1A-4C1C-817C-28D383D18384}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-022-Files", "src\AppsLab-022-Files\AppsLab-022-Files.csproj", "{D3BFAA25-E460-4EC1-A60C-C183775DE8CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-022-Files", "src\AppsLab-022-Files\AppsLab-022-Files.csproj", "{D3BFAA25-E460-4EC1-A60C-C183775DE8CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-024-Events", "src\AppsLab-024-Events\AppsLab-024-Events.csproj", "{FC964C5F-0F80-4EDF-97E8-A4A20DE5492D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-024-Events", "src\AppsLab-024-Events\AppsLab-024-Events.csproj", "{FC964C5F-0F80-4EDF-97E8-A4A20DE5492D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-025-Lambda", "src\AppsLab-025-Lambda\AppsLab-025-Lambda.csproj", "{80DD908F-E015-4FD0-93AA-743A22E745EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-025-Lambda", "src\AppsLab-025-Lambda\AppsLab-025-Lambda.csproj", "{80DD908F-E015-4FD0-93AA-743A22E745EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-026-LINQ", "src\AppsLab-026-LINQ\AppsLab-026-LINQ.csproj", "{AE78C877-CE90-425B-BDDE-4951C6C3B577}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-026-LINQ", "src\AppsLab-026-LINQ\AppsLab-026-LINQ.csproj", "{AE78C877-CE90-425B-BDDE-4951C6C3B577}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-027-Generics", "src\AppsLab-027-Generics\AppsLab-027-Generics.csproj", "{0333D249-02A9-47AD-BDA6-5FD7ABF7F066}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-027-Generics", "src\AppsLab-027-Generics\AppsLab-027-Generics.csproj", "{0333D249-02A9-47AD-BDA6-5FD7ABF7F066}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-028-Indexers", "src\AppsLab-028-Indexers\AppsLab-028-Indexers.csproj", "{FA0DDC17-5730-4310-A421-7668B21E1CDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-028-Indexers", "src\AppsLab-028-Indexers\AppsLab-028-Indexers.csproj", "{FA0DDC17-5730-4310-A421-7668B21E1CDD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-029-Async", "src\AppsLab-029-Async\AppsLab-029-Async.csproj", "{EC3E5278-8120-4A67-A57B-B7DE5211E12A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-029-Async", "src\AppsLab-029-Async\AppsLab-029-Async.csproj", "{EC3E5278-8120-4A67-A57B-B7DE5211E12A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-030-JSON", "src\AppsLab-030-JSON\AppsLab-030-JSON.csproj", "{4D0AE262-0F9B-4E15-B5EA-6CCB0B81FE2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-030-JSON", "src\AppsLab-030-JSON\AppsLab-030-JSON.csproj", "{4D0AE262-0F9B-4E15-B5EA-6CCB0B81FE2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-031-XML", "src\AppsLab-031-XML\AppsLab-031-XML.csproj", "{7BEA7878-B5BA-4480-BC56-2F7B836F64B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-031-XML", "src\AppsLab-031-XML\AppsLab-031-XML.csproj", "{7BEA7878-B5BA-4480-BC56-2F7B836F64B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-033-NuGet", "src\AppsLab-033-NuGet\AppsLab-033-NuGet.csproj", "{38FFE1DF-4B49-40C1-9908-51860BCF2D3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-033-NuGet", "src\AppsLab-033-NuGet\AppsLab-033-NuGet.csproj", "{38FFE1DF-4B49-40C1-9908-51860BCF2D3E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-034-Debug", "src\AppsLab-034-Debug\AppsLab-034-Debug.csproj", "{83C963FD-DC23-46E8-9545-F56197164810}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsLab-034-Debug", "src\AppsLab-034-Debug\AppsLab-034-Debug.csproj", "{83C963FD-DC23-46E8-9545-F56197164810}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bonusova uloha mato", "bonusova uloha mato\bonusova uloha mato.csproj", "{098C4A3C-012A-431B-B923-ED87AC8A9837}"
 EndProject
@@ -665,18 +665,6 @@ Global
 		{BD75900C-0C16-433C-A21F-9FFAD4B50650}.Release|x64.Build.0 = Release|Any CPU
 		{BD75900C-0C16-433C-A21F-9FFAD4B50650}.Release|x86.ActiveCfg = Release|Any CPU
 		{BD75900C-0C16-433C-A21F-9FFAD4B50650}.Release|x86.Build.0 = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|x64.Build.0 = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Debug|x86.Build.0 = Debug|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|x64.ActiveCfg = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|x64.Build.0 = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|x86.ActiveCfg = Release|Any CPU
-		{548AB074-1F48-41CA-AB5B-9CC963BCEF7B}.Release|x86.Build.0 = Release|Any CPU
 		{C1C44D69-7827-4887-AC6B-AA70EC9D5846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1C44D69-7827-4887-AC6B-AA70EC9D5846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1C44D69-7827-4887-AC6B-AA70EC9D5846}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -824,6 +812,6 @@ Global
 		{07A43EA7-6415-4F24-BEB3-EFAA99783624} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9F81B22A-639D-4AD4-806B-1A99A73BDF19}
+		SolutionGuid = {D2F759E7-7B72-4D89-B331-C52016FBEA19}
 	EndGlobalSection
 EndGlobal
