@@ -48,7 +48,22 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-         throw new NotImplementedException();
+            String password = GeneratePassword(length);
+            if (includeSpecialChars)
+            {
+                int index = _random.Next(10);
+                    password.Replace(password[length - 1],SpecialChars[index]);
+                
+            }
+            if (includeNumbers)
+            {
+
+                
+                int index = _random.Next(10);
+                password.Replace(password[0], Numbers[index]);
+
+            }
+            return password; 
         }
     }
 }
