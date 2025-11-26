@@ -8,13 +8,17 @@ namespace Guesser_2._0
 {
     internal class Randomizer
     {
+        public Randomizer()
+        {
+            //idk man
+        }
         private int MaxNumber;
         private Random Rnd;
 
         public Randomizer(int maxNumber)
         {
-            Rnd = new Random();
             MaxNumber = maxNumber;
+            Rnd = new Random();
         }
 
 
@@ -26,4 +30,8 @@ namespace Guesser_2._0
             return nextNumber;
         }
     }
+    
 }
+
+
+//alt + šipka hore, ctrl + alt
