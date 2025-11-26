@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -11,6 +13,7 @@ namespace AppsLab_019_MethodsOverloading
         private const string Numbers = "0123456789";
 
         private readonly Random _random = new();
+        private readonly string password;
 
         /// <summary>
         /// Generates a random password with the default length of 8 characters and no special characters or numbers.
@@ -18,7 +21,9 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+           
+        
+            return GeneratePassword(DefaultLength);
         }
 
         /// <summary>
@@ -28,7 +33,13 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            string password = "";
+            for (int i = 0; i < length; i++)
+            {
+                int randomNumber = _random.Next(27);
+                password = password + Alphabet[randomNumber].ToString();
+            }
+            return password;
         }
 
         /// <summary>
@@ -40,7 +51,20 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
+            string password = GeneratePassword(length);
+            if (includeSpecialChars)
+            {
+                int index = _random.Next(0,9);
+                password.Replace(password[length - 1], SpecialChars[index]);
+                //
+            }
+            if (includeNumbers)
+            {
+                
+                int index1 = _random.Next(0,9);
+                password.Replace(password[0], SpecialChars[index1]);
+            }
+            return password;
         }
     }
 }
