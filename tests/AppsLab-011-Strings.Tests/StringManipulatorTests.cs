@@ -80,9 +80,9 @@ public class StringManipulatorTests
     /// Tests the <see cref="StringManipulator.StartsWithSubstring"/> method.
     /// </summary>
     [Test]
-    public void StartsWithSubstring_DoesNotStartWithSubstring()
+    public void StringJespace()
     {
-        var result = _stringManipulator.StartsWithSubstring("Hello World", "Goodbye");
-        Assert.That(result, Is.False, "The string starts with the substring when it should not.");
+        var result = _stringManipulator.Jespace("  Hello World  ");
+        Assert.That(result == "Hello World");
     }
 }
