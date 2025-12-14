@@ -86,4 +86,20 @@ public class ArrayProcessorTests
         int[] numbers = new int[] { 5, 3, 7 };
         Assert.That(_arrayProcessor.GetLength(numbers), Is.EqualTo(3), "Incorrect length returned for given array.");
     }
+
+
+
+    
+    public int GetLenght(string input)
+    {
+        return input.Length;
+    }
+
+   
+
+
+
 }
+
+
+

@@ -1,3 +1,6 @@
+using System.ComponentModel.Design;
+using System.Threading.Channels;
+
 namespace AppsLab_019_MethodsOverloading
 {
     /// <summary>
@@ -18,7 +21,8 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword()
         {
-            throw new NotImplementedException();
+            //ctrl + click
+          return GeneratePassword(DefaultLength);
         }
 
         /// <summary>
@@ -28,7 +32,17 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length)
         {
-            throw new NotImplementedException();
+            string password = "";
+
+            for (int i = 0; i < length; i++)
+            {
+                //generuje 27 cisiel
+                    int randomNumber = _random.Next(27);
+                //dava tie cisla do a-z alb to stringu, idk, asi, robi to ale podla dlzky
+                    password = password + Alphabet[randomNumber].ToString();
+            }
+
+            return password;
         }
 
         /// <summary>
@@ -40,7 +54,27 @@ namespace AppsLab_019_MethodsOverloading
         /// <returns>A randomly generated password.</returns>
         public string GeneratePassword(int length, bool includeSpecialChars, bool includeNumbers)
         {
-            throw new NotImplementedException();
-        }
+            
+            string pasword = GeneratePassword(length);
+
+            if (includeSpecialChars) 
+            {
+         
+                int index = _random.Next(0, 9);
+                pasword.Replace(pasword[length - 1], SpecialChars[index]);
+
+                //ask chat gpt or something....
+            }
+            if (includeNumbers)
+            {
+
+                int numIndex = _random.Next(0, 9);
+                pasword.Replace(pasword[0], Numbers[numIndex]);
+            }
+         return pasword;
+            }
     }
 }
+
+
+// napis "cw" a potom tab a mas insta Console.WriteLine();

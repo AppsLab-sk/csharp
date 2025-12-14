@@ -1,4 +1,6 @@
-﻿namespace AppsLab_014_Switch;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace AppsLab_014_Switch;
 
 /// <summary>
 /// Provides methods for working with movie ratings.
@@ -12,6 +14,26 @@ public class MovieRating
     /// <returns>A string describing the specified movie rating.</returns>
     public string GetRatingDescription(int rating)
     {
-        throw new NotImplementedException();
+  
+        switch (rating) 
+        {
+    case 1:
+                return "Veľmi zlý";
+    case 2:
+                return "Zlý";
+    case 3:
+                return "Priemerný";
+    case 4:
+                return "Dobrý";
+    case 5:
+                return "Výborný";
+
+            default:
+                return "Neplatné hodnotenie";
+
+        }
     }
 }
+
+
+

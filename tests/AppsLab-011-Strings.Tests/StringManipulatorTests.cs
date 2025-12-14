@@ -85,4 +85,14 @@ public class StringManipulatorTests
         var result = _stringManipulator.StartsWithSubstring("Hello World", "Goodbye");
         Assert.That(result, Is.False, "The string starts with the substring when it should not.");
     }
+
+
+
+    public string SpaceHater(string input)
+    {
+        return input.Trim();
+
+    }
+
+
 }
