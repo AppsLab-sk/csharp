@@ -27,8 +27,8 @@ namespace Fanfanfela
         private string ff2 = "o";
         private string ff1 = "x";
 
-        private string Map = "     o===o===o===o\n     |   |   |   |\n     o===o===o===o";
-        private string MiddleMap = "     |   |   |   |";
+        private string Map = "     o=====o=====o=====o\n     |     |     |     |\n     o=====o=====o=====o"; //10 == center
+        private string MiddleMap = "     |     |     |     |";
 
         private int x = 11;
         private int y = 3;
@@ -49,7 +49,8 @@ namespace Fanfanfela
                 string? userInput = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine($"{Map}\n{MiddleMap}\n{Map}");
+                //Console.WriteLine($"{Map}\n{MiddleMap}\n{Map}");
+                MapLoader();
 
                 if (userInput == "w")
                 {
@@ -113,7 +114,7 @@ namespace Fanfanfela
                 }
                 SavingWhatsOnTheBlock(setting);
                 Console.WriteLine(setting.DaChosenOne);
-                
+
             }
         }
         private void CheckingEadge(string userInput)
@@ -198,7 +199,7 @@ namespace Fanfanfela
             }
             else if (DaThingX == 15)
             {
-                TheX = 2; 
+                TheX = 2;
             }
         }
         private void PrettyPleaseWork(SettingTheMonster setting)
@@ -218,6 +219,10 @@ namespace Fanfanfela
                     setting.DaChosenOne = the3x3[TheX];
                 }
             }
+        }
+        private void MapLoader()
+        {
+
         }
     }
 }

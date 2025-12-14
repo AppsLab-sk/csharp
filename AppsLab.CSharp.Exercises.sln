@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11304.174 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{56555FB0-B513-49EF-9002-A5AF135EA090}"
 EndProject
@@ -150,6 +150,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoingShetAt-1.12.25", "DoingShetAt-1.12.25\DoingShetAt-1.12.25.csproj", "{A5FDCB54-B846-4825-8EA3-E834B3AA9AEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanfanfela", "Fanfanfela\Fanfanfela.csproj", "{19FB40AD-0EC7-4406-BDC1-629F580B88EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanfanfela Helper", "Fanfanfela Helper\Fanfanfela Helper.csproj", "{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1013,6 +1015,18 @@ Global
 		{19FB40AD-0EC7-4406-BDC1-629F580B88EA}.Release|x64.Build.0 = Release|Any CPU
 		{19FB40AD-0EC7-4406-BDC1-629F580B88EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{19FB40AD-0EC7-4406-BDC1-629F580B88EA}.Release|x86.Build.0 = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|x64.Build.0 = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Debug|x86.Build.0 = Debug|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|x64.ActiveCfg = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|x64.Build.0 = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|x86.ActiveCfg = Release|Any CPU
+		{C3426BE9-092F-40A7-BD53-DDA1DAB7F981}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
