@@ -17,13 +17,15 @@ bool moving = true;
 
 string movement = "o";
 
-int daMapPositionX = 0;
-int daMapPositionY = 0;
+int daMapPositionX = 42;
+int daMapPositionY = 5;
+
+int daMapPositionXBackup = 0;
+int daMapPositionYBackup = 0;
 
 
-
-int x = 14;
-int y = 7;
+int x = 14 + daMapPositionX; 
+int y = 7 + daMapPositionY;
 
 string userInput = "";
 
@@ -173,7 +175,7 @@ void DaMapThing()
     }
     else if (userInput == "d" && x - daMapPositionX == 24)
     {
-        x = 24;
+        x = 24 + daMapPositionX;
         offSet = true;
     }
 
@@ -184,7 +186,7 @@ void DaMapThing()
     }
     else if (userInput == "s" && y - daMapPositionY == 12)
     {
-        y = 12;
+        y = 12 + daMapPositionY;
         offSet = true;
     }
 
@@ -218,6 +220,7 @@ void SettingUpTheMapPlacement()
     {
         Console.WriteLine("da Map Position? X");
     }
+    daMapPositionXBackup = daMapPositionX;
     daMapPositionX = int.Parse(Console.ReadLine()); // 90 - max
     if (daMapPositionX < 90)
     {
@@ -227,14 +230,17 @@ void SettingUpTheMapPlacement()
     {
         Console.WriteLine("da Map Position? Y");
     }
+    daMapPositionYBackup = daMapPositionY;
     daMapPositionY = int.Parse(Console.ReadLine()); //14 - max
     if (daMapPositionY < 14)
     {
         daMapPositionX = 14;
     }
+    int bbX = daMapPositionXBackup - daMapPositionX;
+    int bbY = daMapPositionYBackup - daMapPositionY;
 
-    x += daMapPositionX;
-    y += daMapPositionY;
+    x -= bbX;
+    y -= bbY;
 
     Console.Clear();
 }
