@@ -1,0 +1,46 @@
+﻿ <Window x:Class="Semafor.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Title="Semafor"
+        Width="793"
+        Height="500"
+             WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Ellipse x:Name="Light1"
+                 Width="100"
+                 Height="100"
+                 Fill="DimGray"
+                 Margin="35,46,245,258" />
+        <Ellipse x:Name="Light2"
+                 Width="100"
+                 Height="100"
+                 Fill="DimGray"
+                 Margin="153,46,127,258" />
+        <Ellipse x:Name="Light3"
+                 Width="100"
+                 Height="100"
+                 Fill="DimGray"
+                 Margin="270,46,10,258" />
+
+        <Button x:Name="StartButton"
+                Content="Start"
+                Width="100"
+                Height="40"
+                Margin="45,338,355,106"
+                Click="StartButton_Click" />
+        <Button x:Name="StopButton"
+                Content="Stop"
+                Width="100"
+                Height="40"
+                Margin="200,338,200,106"
+                IsEnabled="False"
+                Click="StopButton_Click" />
+        <Button x:Name="ResetButton"
+                Content="Reset"
+                Width="100"
+                Height="40"
+                IsEnabled="False"
+                Click="ResetButton_Click"
+                Margin="346,338,54,106" />
+    </Grid>
+</Window>

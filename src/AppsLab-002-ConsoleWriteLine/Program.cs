@@ -1,1 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿
+
+//vypise do konzoli text
+Console.WriteLine("Hello, Matus!");
